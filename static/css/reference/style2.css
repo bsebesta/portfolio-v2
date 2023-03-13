@@ -1,0 +1,477 @@
+/**
+ * 
+ * Trying to keep to Idiomatic CSS (https://github.com/necolas/idiomatic-css)
+ * 
+ * I'm keeping what's below, because these Doxygen-style comments. Usually begin
+ * each block here with a long description, and then I can follow up with either
+ * tags or TODO's.
+ *
+ * @tag This is a tag named 'tag'
+ *
+ * TODO: This is a todo statement that describes an atomic task to be completed
+ *   at a later date. It wraps after 80 characters and following lines are
+ *   indented by 2 spaces.
+ */
+
+/*  ==========================================================================
+    Top-level params
+    ========================================================================== */
+
+:root {
+
+/*  Font Family
+    ========================================================================== */
+    --font-family-headers: ff-scala, sans-serif;
+    --font-family-body: ff-scala, serif;
+    font-family: var(--font-family-body);
+
+/*  Type Size
+    ========================================================================== */
+    --typesize-base: 22px;
+    font-size: var(--typesize-base);
+
+/*  Line Height
+    ========================================================================== */
+    --line-height: 1.25;
+    --line-height-px: calc(var(--typesize-base)*var(--line-height));
+    line-height: var(--line-height);
+
+/*  Type Scales
+    ========================================================================== */
+    --scale-minor-second: 1.067;
+    --scale-major-second: 1.125;
+    --scale-minor-third: 1.200;
+    --scale-major-third: 1.250;
+    --scale-perfect-fourth: 1.333;
+    --scale-augmented-fourth: 1.414;
+    --scale-perfect-fifth: 1.500;
+    --scale-golden-ratio: 1.618;
+
+    --scale: var(--scale-major-second);
+
+    --typesize-scale5: calc(var(--typesize-scale4) * var(--scale)); /* H1 */
+    --typesize-scale4: calc(var(--typesize-scale3) * var(--scale)); /* H2 */
+    --typesize-scale3: calc(var(--typesize-scale2) * var(--scale)); /* H3 */
+    --typesize-scale2: calc(var(--typesize-scale1) * var(--scale)); /* H4 */
+    --typesize-scale1: calc(var(--typesize-base) * var(--scale)); /* H5 */
+    --typesize-scale-1: calc(var(--typesize-base) / var(--scale)); /* Subtext */
+    --typesize-scale-2: calc(var(--typesize-scale-1) / var(--scale)); /* Sub-subtext */
+    --typesize-scale-3: calc(var(--typesize-scale-2) / var(--scale)); /* Sub-sub-subtext */
+
+/*  Line Length, Tracking, and Kearning
+    ========================================================================== */
+
+    /* Note: if I change this, I need to adjust the media query as well!
+    * Also, I have 1.5x the base font size worth of padding on <main>, so
+    * add that a little bit.
+    */ 
+    --line-length: 30rem;
+    font-kerning: auto;
+
+/*  Colors
+    ========================================================================== */
+    /* --color-accent: hsl(358, 52%, 48%) */
+    --color-accent: hsl(358,61%,58%);
+    --color-accent-faded: hsl(358, 40%, 63%);
+    --color-secondary-accent: #C67B7D;
+    --color-secondary-accent-faded: ;
+
+    --color-bg: #f5f5f5;
+    --color-bg-faded: hsl(0, 26%, 95%);;
+    --color-text: #0c0c0c;
+    --color-text-fade: #222;
+    --color-text-fade2: #333;
+    --color-title: #222;
+    --color-subtext: #5e5b5b; /* Datetime, Places, summary text */
+    --color-blockquote: var(--color-text);
+    --color-link: var(--color-text);
+    --color-link-hover: var(--color-accent);
+    --color-link-underline: var(--color-accent);
+    --color-nav-bg: var(--color-accent);
+    --color-nav-link: var(--color-bg);
+    --color-tag: var(--color-text);
+    /* --color-tag-bg: ; */
+    --color-inline-code-bg: var(--color-bg-faded);
+    --color-inline-code-text: var(--color-accent);
+    --color-highlight: hsl(54,61%,78%);
+
+    /* Fin */
+
+ }
+
+/*  High Contrast Adjustment
+    ========================================================================== */
+@media screen and (prefers-color-scheme: dark) {
+    :root {
+        --color-bg: #111;
+        --color-text: rgb(211, 210, 210);
+        --color-inline-code-bg: #333;
+        --color-accent: hsl(358, 52%, 48%);
+        --color-inline-code-text: hsl(358,61%,78%);
+        --color-link-underline: hsl(358, 52%, 48%);
+        --color-link-hover: hsl(358, 52%, 48%);
+        --color-title: #fff;
+        --color-nav-link: #eee;
+        --color-blockquote: rgb(122, 122, 122);
+    }
+}
+  
+
+/*  ==========================================================================
+    Layout: Mobile First!
+    ========================================================================== */
+
+/**
+ * 
+ * Now, it could be cool to do something like Andy Clarke's grid system:
+ * https://stuffandnonsense.co.uk/blog/layout-love-how-and-why-i-built-it
+ * https://stuffandnonsense.co.uk/layoutlove/tool.html
+ * 
+ * Now, that is SUPER COOL. And I need to think about it, because, look:
+ * That's neat! But I also don't see anyone using it? Or at least, fancy
+ * grid layouts seem rare. It could be that Clarke is just cutting edge,
+ * or that this really isn't that great of an idea (or really hard to maintain
+ * still). Need to think on this. Either way, I do think grid is probably the
+ * way to go. But how? Perhaps I just need to stick with flex.
+ * 
+ */
+
+body {
+    /* Flex, for alignment of <header>,<aside>,<main>, etc */
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    
+    color: var(--color-text);
+    background-color: var(--color-bg);
+}
+
+/**
+ * 
+ * The banner navigation is a series of five nested flex elements. 
+ * <header> / <nav> / <ul> / <li> / <a> 
+ * 
+ * I am not 100% sure this was necessary, but it SEEMS necessary to get everything
+ * center. So: hopefully!
+ * 
+ * I'm using a kind of janky animation to get a border to show up as you hover over
+ * each link. Don't know how it shows in a mobile format (I'm guess it just *doesn't*
+ * except maybe when it's "active").
+ */
+
+ /* This is what creates the nested flex containers, + change in font size */
+ #page-header,
+ #page-nav-primary,
+ #page-nav-primary ul,
+ #page-nav-primary li,
+ #page-nav-primary a {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--typesize-scale-1);
+ }
+
+ /* Set the three "top" elements to as much width as they can get */
+#page-header,
+#page-nav-primary,
+#page-nav-primary ul {
+    width: 100%;
+}
+
+/* Make everything within the outer-most element as much height as they can get */
+#page-nav-primary,
+#page-nav-primary ul,
+#page-nav-primary li,
+#page-nav-primary a {
+    height: 100%;
+}
+
+/* <header>... at the very surface */
+#page-header {
+    height: calc(var(--line-height-px)*2);
+    font-size: var(--typesize-scale-1);
+    background-color: var(--color-nav-bg);
+}
+
+/* <nav>... just starting to dive */
+#page-nav-primary {
+    max-width: var(--line-length);
+}
+
+/* <ul>... getting deeper */
+/* (I was giving this a column-gap, but opted to do padding for the <a> instead */
+
+/* <ul>... almost there */
+#page-nav-primary li {
+    height: 100%;
+}
+
+    /* A quick detour to get small cap "logotype" */
+    #page-nav-primary li:first-of-type {
+        font-weight: bold;
+        font-variant: small-caps;
+    }
+
+/* <a>... MAXIMUM DEPTH CAPTAIN! */
+#page-nav-primary a {
+    height: 100%;
+    color: var(--color-nav-link);
+    padding: 0 calc(var(--typesize-base)*.5);
+    text-decoration: none;
+}
+
+    #page-nav-primary a:hover,
+    #page-nav-primary a:active {
+        background-color: var(--color-bg);
+        color: var(--color-accent);
+    }
+
+/*  <aside> and the spacer <div> (when the aside isn't there)
+    ========================================================================== */
+
+#page-sidebar { 
+    width: 100%;
+    max-width: var(--line-length);
+
+    background-color: #E1CE7A;
+}
+
+/*  <main>
+    ========================================================================== */
+
+#page-main {
+    width: 100vw;
+    max-width: calc(var(--line-length));
+    margin-top: calc(var(--line-height-px)*1.5);
+    padding: 0 calc(var(--typesize-base)*1.5);
+}
+
+/*  Larger than mobile!
+    ========================================================================== */
+
+/* This is here for when I decide to apply a grid */
+/* @media screen and (min-width: 600px) {
+    body { }
+    #page-header {
+        font-size: var(--typesize-base);
+    }
+}*/
+
+/*  ==========================================================================
+    Typography
+    ========================================================================== */
+
+/*  Headers
+    ========================================================================== */
+
+/**
+ * 
+ * To be clear, I don't plan to support more than three levels of headers. I like how
+ * the tufte.css page puts it: "If you feel the urge to reach for a heading of level 4
+ * or greater, consider redesigning your document", and then quotes Tufte talking about
+ * Richard Feynman organizing his lectures using only 2 levels of hierarchical headings.
+ * 
+ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--color-title);
+}
+
+h1 { font-size: var(--typesize-scale5); }
+h2 { font-size: var(--typesize-scale4); }
+h3 { font-size: var(--typesize-scale3); }
+h4 { font-size: var(--typesize-scale2); }
+h5 { font-size: var(--typesize-scale1); }
+
+h3 {
+    border-bottom: solid 2px var(--color-text-fade2);
+    margin-bottom: calc(var(--typesize-base)*.4);
+    border-radius: 1px;
+    width: 80%;
+}
+
+/*  Content and Text Sectioning Elements
+    ========================================================================== */
+
+/* Okay, give all of these elements a bottom */
+main address,
+main article,
+main aside,
+main audio,
+main header,
+main footer,
+main nav,
+main blockquote,
+main dl,
+main figure,
+main img,
+main ul,
+main ol,
+main p,
+main picture,
+main pre,
+main table,
+main video {
+    margin-bottom: var(--line-height-px);
+}
+
+/* Adjust any of the above elements that are inside a figure! */
+figure > blockquote,
+figure > pre,
+figure > picture,
+figure > img,
+figure > video,
+figure > table,
+figure > audio {
+    margin-bottom: 0;
+}
+
+/* Give <hr> a special margin, plus some other things */
+main hr {
+    width: 100%;
+    border: solid 1px grey;
+    margin: calc(var(--line-height-px)*2) 0;
+}
+
+main ul {
+    list-style-type: disc;
+}
+
+main ol {
+    list-style-type: decimal;
+}
+
+/**
+ * 
+ * I need to make a choice here, with blockquotes. I have three options, I think:
+ * 1. Accept markdown's approach (easiest), which just puts <p>aragraphs within
+ *    nested blockquotes.
+ * 2. Do the above, but with a <footer> under the <p> tags, a la Tufte.css, or
+ *    with a <cite> under the <p> tags, a la Mandy Brown.
+ * 3. Go the route of a a figure element with a blockquote and figcaption
+ *    nested therein.
+ * 
+ * The first option is by far the easiest, and if I want to make regular use of
+ * markdown, makes the most sense. I could also stay semantic by providing any
+ * citation just before quote. Robin Rendle and Alan Jacobs both do this well.
+ * The 2nd and 3rd options, however, present me with really nice methods for
+ * semantic styling. Tufte.css does this nicely but the HTML is really ugly. 
+ * Mandy Brown's website "A Working Library" has nice HTML and uses media queries
+ * and absolute positioning to make it appear as a sidenote.
+ * 
+ * I could also combine them in the second approach. Use markdown for the quote,
+ * and, when I want to, provide a <footer> with a <cite> therein as a way of
+ * "styling."
+ * 
+ * Thinking this through, I want to keep this really simple. So I'm going to
+ * start by doing things the way Alan and Robin do it: just link to things
+ * before the long blockquote. I've already done that with my article on
+ * "Regret" (February 25, 2022), where I quote the poet David Whyte. And I
+ * think I will do something like Mandy Brown's approach eventually, and 
+ * perhaps do the full option 3 (which is semantically and stylistically
+ * my favorite option) down the road, or when Markdown adopts it.
+ * 
+ */
+
+blockquote {
+    border-left: solid 5px var(--color-subtext);
+    padding-left: 12px;
+    color: var(--color-blockquote);
+}
+
+blockquote footer {
+    text-align: right;
+    font-size: var(--typesize-scale-2);
+    color: var(--color-text-fade2);
+}
+
+/*
+ * Here's my attempt at Mandy Brown's effort. This works, so long as I
+ * stick with my flexbox layout.
+ *
+ */
+
+@media screen and (min-width: 55rem) {
+
+    blockquote {
+        position: relative;
+    }
+
+    blockquote footer {
+        position: absolute;
+        top: -9px;
+        left: 29rem;
+
+        width: 100%;
+        max-width: 8rem;
+
+        color: var(--color-text-fade2);
+        font-size: var(--typesize-scale-3);
+        text-align: right;
+    }
+
+}
+
+/*  Inline text elements
+    ========================================================================== */
+
+main a,
+main a:link,
+main a:visited {
+    color: var(--color-link);
+    text-decoration: underline;
+    text-decoration-color: var(--color-link-underline);
+}
+
+main a:hover,
+main a:active {
+    color: var(--color-link-hover);
+}
+
+main code {
+    display: inline-block;
+    border-radius: 4px;
+    padding: 0 6px;
+
+    font-family: monospace;
+
+    background-color: var(--color-inline-code-bg);
+    color: var(--color-inline-code-text);
+}
+
+small {
+    color: var(--color-subtext);
+    font-size: var(--typesize-scale-3);
+}
+
+main strong {
+    font-weight: 600;
+}
+ 
+main em {
+    font-style: italic;
+}
+
+main mark {
+    background-color: var(--color-highlight);
+}
+
+/*  Inline blocks
+    ========================================================================== */
+
+/*  */
+.list-item h2 {
+    font-size: var(--typesize-base);
+}
+
+/*  */
+.list-item a:link,
+.list-item a:visited {
+    color: var(--color-link-hover);
+}

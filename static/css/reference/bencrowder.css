@@ -1,0 +1,987 @@
+@charset "UTF-8";
+/* bencrowder.net (processed via SASS) */
+/* ----------------------------------------------------------------*/
+/* Variables */
+:root {
+  /* ----------------------*/
+  /* Colors */
+  --primary-color: hsl(350, 90%, 31%);
+  --primary-color-light: hsl(208, 65%, 86%);
+  --accent-color: hsl(19, 29%, 23%);
+  --accent-color-dark: hsl(5, 3%, 23%);
+  --accent-color-light: hsl(5, 3%, 70%);
+  /* Frame, nav, footer */
+  --frame-link-color: var(--accent-color-dark);
+  --frame-underline-color: var(--accent-color-light);
+  --nav-header-color: hsl(213, 44%, 44%);
+  --footer-color: var(--accent-color-dark);
+  --footer-link-color: var(--accent-color-dark);
+  /* Links */
+  --link-color: var(--primary-color);
+  --link-hover-color: var(--accent-color-dark);
+  --link-underline-color: var(--accent-color-light);
+  /* Lists */
+  --list-bullet-color: hsl(0, 0%, 30%);
+  /* Tags */
+  --tag-color: hsl(149, 65%, 30%); /* This is not being used right now. Interesting! It's good to have it, though, IN CASE. */
+  --tag-hash-color: hsl(149, 30%, 68%);
+  /* ----------------------*/
+  /* Layout */
+  /* Side padding at smaller sizes */
+  --side-padding: 1.1rem;
+}
+
+/* ----------------------------------------------------------------*/
+/* Transitional layout */
+@media screen and (min-width: 30em) {
+  :root {
+    --side-padding: 3rem;
+  }
+}
+@media screen and (min-width: 40em) {
+  :root {
+    --side-padding: 4rem;
+  }
+}
+@media screen and (min-width: 45em) {
+  :root {
+    --side-padding: 5rem;
+  }
+}
+/* ----------------------------------------------------------------*/
+/* Overall */
+@font-face {
+  font-family: english;
+  src: url("/fonts/imfellenglish/english-roman.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: english;
+  src: url("/fonts/imfellenglish/english-italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+}
+* {
+  box-sizing: border-box;
+  font-family: english, Georgia, serif;
+  font-variant-numeric: oldstyle-nums;
+}
+
+html {
+  background: #f6f4f3;
+  background-image: url("/page-border.svg?v2"), url("/page-border.svg?v2");
+  background-repeat: repeat-x, repeat-x;
+  background-size: 550px, 550px;
+  background-position: top, bottom;
+  color: #3c3939;
+  font-size: 130%;
+  line-height: 1.5;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* ----------------------------------------------------------------*/
+/* Logo */
+a#logo {
+  position: absolute;
+  height: 30px;
+  top: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+}
+a#logo img {
+  display: block;
+  width: 100%;
+}
+a#logo img.wide {
+  display: none;
+}
+@media screen and (min-width: 600px) {
+  a#logo img.wide {
+    display: block;
+  }
+  a#logo img.thin {
+    display: none;
+  }
+}
+
+/* ----------------------------------------------------------------*/
+/* Header */
+body > header {
+  padding: 2.25rem var(--side-padding) 0.35rem var(--side-padding);
+}
+body > header a {
+  color: var(--frame-link-color);
+  font-size: 1.2rem;
+  font-variant-caps: all-small-caps;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  line-height: 1.2;
+  text-decoration: none;
+  text-transform: lowercase;
+}
+body > header a:hover {
+  /* Use the link color since it's noticeably different */
+  color: var(--link-color);
+}
+
+/* ----------------------------------------------------------------*/
+/* Nav */
+body > nav {
+  padding: 0rem var(--side-padding) 0.2rem var(--side-padding);
+}
+body > nav .secondary {
+  display: none;
+  opacity: 0;
+  margin-top: 0.5rem;
+}
+body > nav h2, body > nav h2:first-child {
+  font-size: 0.9rem;
+  font-variant: small-caps;
+  font-weight: normal;
+  color: var(--nav-header-color);
+  letter-spacing: 0.05rem;
+  margin-top: 0.8rem;
+  margin-bottom: 0.1rem;
+}
+body > nav a {
+  color: var(--frame-link-color);
+  display: inline-block;
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-right: 0.6rem;
+  text-decoration-color: var(--frame-underline-color);
+}
+body > nav a:hover {
+  color: var(--link-color);
+}
+body > nav .fade-out {
+  transition: opacity 0.3s;
+  opacity: 0;
+}
+body > nav .fade-in {
+  transition: opacity 0.3s;
+  opacity: 1;
+}
+
+body.home > nav .secondary {
+  display: block;
+  opacity: 1;
+}
+body.home > nav a.more {
+  display: none;
+}
+
+/* ----------------------------------------------------------------*/
+/* Content area */
+body > main {
+  border-radius: 3pt;
+  padding: 2rem var(--side-padding) 2.5rem var(--side-padding);
+}
+
+/* ----------------------------------------------------------------*/
+/* Footer */
+body > footer {
+  color: var(--footer-color);
+  font-size: 0.85rem;
+  font-style: italic;
+  padding: 1rem var(--side-padding) 6rem var(--side-padding);
+}
+body > footer a {
+  color: var(--frame-link-color);
+  font-weight: 400;
+  margin-right: 0.7rem;
+  text-decoration-color: var(--frame-underline-color);
+}
+body > footer a:hover {
+  color: var(--link-color);
+}
+body > footer .metadata {
+  font-style: italic;
+  margin-top: 1rem;
+}
+body > footer .metadata a {
+  color: var(--footer-link-color);
+  margin-right: 0;
+}
+body > footer .metadata a:hover {
+  color: var(--link-color);
+}
+
+/* ----------------------------------------------------------------*/
+/* Expanded layout */
+@media screen and (min-width: 56em) {
+  body {
+    display: grid;
+    grid-template-columns: 34rem 0.8rem 8.5rem;
+    grid-template-rows: auto;
+    grid-template-areas: "main . header" "main . nav" "main . footer" "main . .";
+    margin: 1rem auto 5rem;
+    max-width: 44rem;
+  }
+
+  body > header {
+    font-size: 0.8rem;
+    grid-area: header;
+    margin-top: 4.5rem;
+    padding: 0;
+  }
+
+  /* Switch nav links to vertical list */
+  body > nav {
+    border-bottom: none;
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9rem;
+    grid-area: nav;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    margin-top: 0.6rem;
+    padding: 0;
+  }
+  body > nav .more {
+    display: none;
+  }
+  body > nav h2 {
+    margin-bottom: 0.2rem;
+    margin-top: 1rem;
+  }
+  body > nav > div {
+    display: block;
+  }
+  body > nav > div a {
+    display: block;
+  }
+  body > nav .secondary {
+    display: block;
+    opacity: 1;
+    margin-top: 1rem;
+  }
+  body > nav .secondary a {
+    display: block;
+  }
+  body > nav a {
+    line-height: 1.7;
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+
+  body > main {
+    grid-area: main;
+    line-height: 1.55;
+    padding: 4.5rem 3.5rem;
+  }
+
+  /* Switch footer links to vertical list */
+  body > footer {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.7rem;
+    grid-area: footer;
+    line-height: 1.7;
+    margin-top: 0.7rem;
+    padding: 0;
+  }
+  body > footer .metadata {
+    font-size: 0.6rem;
+    line-height: 1.6;
+    margin-top: 1.8rem;
+  }
+}
+@media screen and (min-width: 62em) {
+  body {
+    grid-template-columns: 40rem 0.8rem 8.5rem;
+    max-width: 50rem;
+  }
+}
+@media screen and (min-width: 80em) {
+  body {
+    font-size: 1.1rem;
+    grid-template-columns: 44rem 0.8rem 8.5rem;
+    max-width: 57rem;
+  }
+
+  body > header {
+    font-size: 0.95rem;
+    margin-top: 3.5rem;
+  }
+
+  body > main {
+    font-size: 1.1rem;
+    padding: 3.5rem 6rem;
+  }
+
+  body > nav {
+    font-size: 1.05rem;
+  }
+
+  body > footer {
+    font-size: 0.8rem;
+  }
+  body > footer .metadata {
+    font-size: 0.75rem;
+  }
+}
+/* ----------------------------------------------------------------*/
+/* Headings */
+h1 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.3;
+  margin: 1.75rem 0 0.6rem;
+}
+
+h2 {
+  font-size: 1.35rem;
+  font-weight: 400;
+  line-height: 1.3;
+  margin: 2.5rem 0 0.6rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.3;
+  margin: 1.75rem 0 0.6rem;
+}
+
+h4 {
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.3;
+  margin: 1.75rem 0 0.6rem;
+}
+
+/* Headings shouldn't have a top margin if they're the first element
+ * in their parent element */
+h1:first-child, h2:first-child, h3:first-child, h4:first-child {
+  margin-top: 0;
+}
+
+/* Collapse top margins on paragraphs and lists after headings, so
+ * the heading's bottom margin will dominate. Leave h1s out because
+ * we want more spacing on the page titles. */
+h2 + p, h3 + p, h4 + p {
+  margin-top: 0;
+}
+
+h2 + ul, h3 + ul, h4 + ul {
+  margin-top: 0;
+}
+
+/* Expanded layout */
+@media screen and (min-width: 80rem) {
+  h1 {
+    margin-bottom: 1.2rem;
+  }
+}
+/* ----------------------------------------------------------------*/
+/* Text miscellanea */
+p {
+  /* Hyphenation */
+  hyphens: auto;
+  /* Clear out top margins for first paragraph in a parent */
+}
+p:first-child, p:first-of-type {
+  margin-top: 0;
+}
+
+/* Links */
+a {
+  color: var(--link-color);
+  text-decoration: underline;
+  text-decoration-color: var(--link-underline-color);
+  text-decoration-skip: ink;
+  text-decoration-skip-ink: all;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2rem;
+}
+a:hover {
+  color: var(--link-hover-color);
+}
+
+/* Blockquotes */
+blockquote {
+  border-left: solid 4pt #d9d9d9;
+  padding-left: 1rem;
+  margin-left: 1rem;
+  margin-right: 0;
+  /* Handle nesting */
+}
+blockquote:first-of-type {
+  margin-top: 0;
+}
+blockquote:last-of-type {
+  margin-bottom: 0;
+}
+blockquote blockquote {
+  border-left-color: #e6cacf;
+  margin-left: 0;
+}
+
+/* Sections */
+.section:not(first-child) {
+  margin-top: 2.2rem;
+}
+.section:not(first-child)::before {
+  content: url("/section-line.svg?v2");
+  display: block;
+  padding-bottom: 1.6rem;
+}
+
+/* Fix for first section after title */
+h1 + .section {
+  border-top: none;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+/* Introduction */
+.intro {
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+
+/* Subtitle */
+.sub {
+  color: #666666;
+  font-size: 0.9em;
+  /* Use em because we want it relative to whatever it's with */
+  margin: 0.1rem 0 0;
+  line-height: 1.4;
+}
+
+/* Small subtitle */
+.subsmall {
+  color: #b3b3b3;
+  font-size: 0.65em;
+  /* Use em because we want it relative to whatever it's with */
+  margin: 0.1rem 0 0;
+  line-height: 1.4;
+}
+
+/* Colon-delimited lists */
+.colon-list {
+  color: #b3b3b3;
+}
+.colon-list span {
+  color: #4d4d4d;
+}
+
+/* Selection */
+::selection {
+  background: var(--link-color);
+  color: white;
+}
+
+/* Rules */
+hr {
+  background: #cccccc;
+  border-width: 0;
+  height: 0.75pt;
+  margin: 2rem auto;
+  text-align: center;
+  width: 80%;
+}
+
+/* Superscript/subscript */
+sup, sub {
+  position: relative;
+  vertical-align: 0;
+}
+
+sup {
+  top: -0.9ex;
+}
+
+sub {
+  top: 0.9ex;
+}
+
+/* Author names on book project pages */
+h1 + .author {
+  font-style: italic;
+  color: #333333;
+  /* On desktop, we have more of a bottom margin on the h1 so we
+   * need to tuck this in a bit */
+}
+@media screen and (min-width: 50em) {
+  h1 + .author {
+    margin-top: -0.7rem;
+  }
+}
+
+/* Small caps*/
+.smcp {
+  font-variant: all-small-caps;
+  letter-spacing: 0.08em;
+}
+
+/* ----------------------------------------------------------------*/
+/* Lists */
+ul {
+  padding-left: 0.25rem;
+  /* Override default list appearance */
+  /* 3/5 columns, used on reading page */
+  /* 2/3 columns, used on blog archive page */
+  /* 1/2 columns, used on project pages for tags */
+  /* Expanded lists (more padding), used on blog archive page */
+  /* Compact lists (less padding), used on reading page */
+  /* Reading page styles */
+}
+ul li {
+  line-height: 1.5;
+  list-style: none;
+  margin-left: 0;
+  padding-left: 1.1rem;
+  position: relative;
+  overflow: hidden;
+}
+ul li::before {
+  content: "•";
+  color: var(--list-bullet-color);
+  position: absolute;
+  left: 0.2rem;
+  top: -0.05rem;
+}
+ul li + li {
+  margin-top: 0.5rem;
+}
+ul li a.see-all {
+  font-style: italic;
+}
+ul li ul {
+  margin-top: 0.5rem;
+}
+ul.columns-5 {
+  /* Use three columns at smaller sizes */
+  column-count: 3;
+  /* Use five at larger sizes */
+}
+@media screen and (min-width: 30em) {
+  ul.columns-5 {
+    column-count: 5;
+  }
+}
+ul.columns-3 {
+  /* Use two columns at smaller sizes */
+  column-count: 2;
+  /* Use three columns at larger sizes */
+}
+@media screen and (min-width: 30em) {
+  ul.columns-3 {
+    column-count: 3;
+  }
+}
+ul.columns-2 {
+  /* Use two columns at larger sizes */
+}
+@media screen and (min-width: 30em) {
+  ul.columns-2 {
+    column-count: 2;
+  }
+}
+ul.expanded li + li {
+  margin-top: 1.2rem;
+}
+ul.compact li {
+  line-height: 1.4;
+}
+ul.compact li + li {
+  margin-top: 0.4rem;
+}
+ul.reading {
+  padding-left: 0;
+}
+ul.reading li {
+  line-height: 1.35;
+  padding: 0 0 0 1.1rem;
+}
+ul.reading li + li {
+  margin-top: 0.75rem;
+}
+ul.reading li::before {
+  content: none;
+}
+ul.reading .author {
+  font-size: 0.95rem;
+}
+ul.reading .star {
+  float: left;
+  font-size: 0.6rem;
+  line-height: 1.4;
+  margin-left: -0.8rem;
+  margin-right: 0.2rem;
+  margin-top: 0.3rem;
+}
+@media screen and (min-width: 30em) {
+  ul.reading .star {
+    margin-top: 0.3rem;
+  }
+}
+
+ol li {
+  line-height: 1.4;
+}
+ol li + li {
+  margin-top: 0.5rem;
+}
+
+/* ----------------------------------------------------------------*/
+/* Images & video */
+figure {
+  margin: 1.3rem 0;
+  /* Keep images from overflowing the page */
+  /* Hover */
+  /* Border around images that need it */
+  /* Round images, used pretty much only on about page */
+  /* Floating images to the right, used for about page and thumbnails */
+  /* Zero out top margins on headings following figures (project pages, etc.) */
+  /* Thumbnails are a bit smaller */
+  /* Smaller */
+  /* And small images are even smaller (used on the Collected Talks page) */
+  /* Marginless drop the margins (used on the Collected Talks page) */
+  /* Clamp vertical size, for phone screenshots on blog */
+}
+figure img {
+  max-width: 100%;
+}
+figure:hover a img {
+  filter: brightness(1.05) saturate(1.05);
+}
+figure.border img {
+  border: solid 0.5pt #999999;
+}
+figure.round img {
+  border-radius: 100%;
+}
+figure.right {
+  float: right;
+  margin: 0 0 1.5rem 1.5rem;
+  max-width: 10rem;
+  width: 30%;
+}
+figure + h1, figure + h2 {
+  margin-top: 0;
+}
+figure.thumbnail {
+  width: 25%;
+}
+figure.smaller {
+  width: 18%;
+}
+figure.small {
+  width: 10%;
+}
+figure.marginless {
+  margin: 0;
+}
+figure.clampvert img {
+  max-height: 25rem;
+}
+
+iframe {
+  max-width: 100%;
+}
+
+/* ----------------------------------------------------------------*/
+/* Tables */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 1rem 0;
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+table * {
+  font-variant-numeric: initial;
+}
+
+th {
+  font-style: italic;
+  font-weight: normal;
+  text-align: left;
+  border-bottom: solid 2pt #cccccc;
+  padding: 0 0.25rem 0.2rem 0;
+  line-height: 1.2;
+}
+@media screen and (min-width: 50em) {
+  th {
+    padding-right: 1.25rem;
+  }
+}
+
+td {
+  border-bottom: solid 0.5pt #999999;
+  padding: 0.5rem 1.25rem 0.5rem 0;
+  line-height: 1.2;
+  /* Used on writing statistics page */
+}
+td.faded {
+  color: #d9d9d9;
+}
+
+/* ----------------------------------------------------------------*/
+/* Code */
+code, pre {
+  background: #ede9e6;
+  border-radius: 5pt;
+  color: #383433;
+  font-family: Monaco, Menlo, Courier, monospace;
+  font-size: 0.9rem;
+}
+
+code {
+  padding: 0.1rem 0.2rem;
+}
+
+pre {
+  line-height: 1.35;
+  margin: 1.5rem 0;
+  overflow-x: scroll;
+  padding: 0.75rem 1rem;
+}
+pre code {
+  padding: 0;
+}
+
+/* ----------------------------------------------------------------*/
+/* Tag list */
+.tags .tag {
+  font-style: italic;
+  font-weight: normal;
+  margin-right: 0.3rem;
+}
+.tags a.tag:hover {
+  color: var(--link-hover-color);
+}
+
+/* ----------------------------------------------------------------*/
+/* Blog post list */
+body.blog main > header {
+  margin-bottom: 1.5rem;
+}
+body.blog main > header h1 .tag {
+  font-style: italic;
+}
+body.blog main > header .colon-list:first-of-type {
+  line-height: 1.3;
+  margin-bottom: 1rem;
+}
+body.blog main > footer {
+  margin-top: 3rem;
+}
+body.blog main > footer .colon-list {
+  font-style: italic;
+}
+
+/* ----------------------------------------------------------------*/
+/* Blog post */
+article.post {
+  /* In list view, include padding and border */
+  /* The post text */
+  /* Spacing */
+  /* Hide the RSS feed hr and tag list */
+  /* Hide the RSS feed footer in list view */
+  /* Style the RSS feed footer */
+  /* Post navigation in detail view */
+}
+article.post:not(.detail) {
+  padding-bottom: 1rem;
+}
+article.post:not(.detail)::before {
+  content: url("/section-line.svg");
+  display: block;
+  padding-bottom: 1rem;
+}
+article.post header {
+  margin-bottom: 1.5rem;
+  /* Date defaults */
+  /* Post title in detail view */
+  /* Post title in list view */
+  /* Post detail page */
+}
+article.post header time {
+  font-size: 1.1rem;
+}
+article.post header h1 {
+  margin: 0 0 0.5rem 0;
+}
+article.post header h2 {
+  margin: 0;
+  /* Titled posts */
+}
+article.post header h2 + a.date-link {
+  color: #575757;
+  margin-top: 0.3rem;
+  text-decoration-color: #e6e6e6;
+}
+article.post header h2 + a.date-link time {
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+article.post header h2 + a.date-link:hover {
+  color: black;
+}
+article.post header > time {
+  color: gray;
+}
+article.post header .tags {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+article.post main {
+  margin-top: 1rem;
+}
+article.post hr.feed-extra, article.post p.feed-extra.feed-tags {
+  display: none;
+}
+article.post:not(.detail) .feed-extra {
+  display: none;
+}
+article.post p.feed-mail {
+  font-style: italic;
+  margin-top: 5rem;
+}
+article.post.detail + nav {
+  margin-top: 2rem;
+}
+
+/* ----------------------------------------------------------------*/
+/* Artwork list */
+ul.artworks {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem 0 0;
+  padding-left: 0;
+  justify-content: start;
+}
+ul.artworks li {
+  /* Reset list elements */
+  padding: 0;
+  /* Set up art thumbnail layout */
+  display: inline-flex;
+  margin: 0 0.5rem 0.5rem 0;
+  width: 4rem;
+}
+ul.artworks li::before {
+  content: none;
+}
+@media screen and (min-width: 370px) {
+  ul.artworks li {
+    width: 4.7rem;
+  }
+}
+@media screen and (min-width: 400px) {
+  ul.artworks li {
+    width: 5.8rem;
+  }
+}
+ul.artworks li figure {
+  margin: 0;
+}
+ul.artworks li a.image {
+  background: #eee;
+  border-radius: 4pt;
+  display: block;
+  width: 4.7rem;
+  height: 4.7rem;
+}
+@media screen and (min-width: 400px) {
+  ul.artworks li a.image {
+    width: 5.8rem;
+    height: 5.8rem;
+  }
+}
+ul.artworks li a.image img {
+  border-radius: 4pt;
+  display: block;
+  max-width: 100%;
+}
+
+/* ----------------------------------------------------------------*/
+/* Artwork detail */
+article.art > footer {
+  /* Buy prints link */
+  /* Artwork navigation */
+}
+article.art > footer a.prints {
+  background: #c0e199;
+  border-radius: 5pt;
+  color: black;
+  float: right;
+  font-weight: 400;
+  margin: 0.25rem 0 0.25rem 0.8rem;
+  padding: 0.2rem 0.8rem 0.5rem;
+  text-decoration-color: #6d8354;
+}
+article.art > footer a.prints:hover {
+  background: #1a1a1a;
+  color: white;
+}
+article.art > footer nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2.5rem;
+}
+article.art > footer nav .previous {
+  text-align: right;
+}
+article.art > footer nav .previous ul.artworks {
+  justify-content: flex-end;
+}
+article.art > footer nav ul.artworks {
+  margin-top: 0.5rem;
+}
+article.art > footer nav ul.artworks li {
+  margin: 0;
+}
+article.art > footer .tags {
+  display: block;
+  margin-top: 0.7rem;
+}
+article.art > footer table.prints {
+  margin-bottom: 2rem;
+}
+article.art > footer .back-link {
+  margin-top: 3rem;
+}
+
+/* ----------------------------------------------------------------*/
+/* Poetry */
+.poetry {
+  margin: 2rem 0 0;
+}
+.poetry p {
+  margin: 0 0 0 2rem;
+  text-indent: -2rem;
+}
+.poetry p.stanza {
+  margin-top: 1rem;
+}
+.poetry p.indent {
+  margin-left: 5rem;
+}
+
+/* ----------------------------------------------------------------*/
+/* Reading page */
+.reading-years {
+  display: flex;
+  flex-wrap: wrap;
+}
+.reading-years a {
+  display: inline-block;
+  margin-right: 0.75em;
+}
+
+/*# sourceMappingURL=style.css.map */

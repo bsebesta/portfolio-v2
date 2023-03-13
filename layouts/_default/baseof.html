@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ .Site.Title }}{{ with .Params.title }} - {{ . }}{{ end }}</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/style.css">
+  {{ with $.Params.head }}{{ $.Params.head | safeHTML }}{{ end }}
+  <!-- Meta -->
+  <meta name="description" content="{{ .Site.Params.description }}">
+  <meta name="generator" content="Hugo 0.92.2">
+</head>
+<body>
+
+
+
+<main>
+
+{{ block "main" . }}{{ end }}
+
+</main>
+
+{{ with $.Params.foot }}{{ $.Params.foot | safeHTML }}{{ end }}
+
+</body>
+</html>
