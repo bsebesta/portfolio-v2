@@ -9,8 +9,13 @@
 /* Typography
    ========================================================================== */
 
-:root {
-    
+@font-face {
+   font-family: "Carter One";
+   src: url("/fonts/CarterOne-Regular.ttf");
+}
+
+body {
+   font-family: "Carter One", serif; 
 }
 
 /* Color
