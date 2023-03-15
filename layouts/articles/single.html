@@ -1,0 +1,64 @@
+{{- define "main" -}}
+
+<article class="main-article">
+
+<header>
+    <section class="article-metadata">
+        <time datetime="">March 14, 2023</time> &bull; Lehi, Utah, USA
+    </section>
+    <h1>{{ .Title }}</h1>
+</header>
+
+<!--
+<header>
+{{ if isset .Params "title" }}
+    <h2>{{ .Title }}</h2>
+    <small>
+        <time>{{ .Date.Format "Jan 2, 2006" }}</time>
+        {{ if ne .Date .Lastmod }}<br>Last updated <time>{{ .Lastmod.Format "Jan 2, 2006" }}</time>{{ end }}
+    </small>
+{{ else }}
+<h2>{{ .Date.Format "Jan 2, 2006" }}</h2>
+{{ end }}
+</header>
+-->
+
+<!-- Assumed Audience
+{{ with .Params.audience }}
+<section class="callout-audience"><strong>Assumed Audience</strong> {{ . }}</section>
+{{ end }}
+-->
+
+<section>
+{{ .Content }}
+</section>
+
+<footer>
+
+<!-- Feeds
+{{ if isset .Params "feeds" }}
+<ul class="tag-cloud">
+    <li>Feeds</li>
+    {{ range (.GetTerms "feeds") }}
+        <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
+    {{ end }}
+</ul>
+{{ end }}
+-->
+
+<!-- Tag Cloud
+{{ if isset .Params "tags" }}
+<ul class="tag-cloud">
+    <li>Tags</li>
+    {{ range (.GetTerms "tags") }}
+        <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
+    {{ end }}
+</ul>
+{{ end }}
+-->
+
+</footer>
+
+</article>
+
+{{- end -}}

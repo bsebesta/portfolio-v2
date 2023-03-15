@@ -4,25 +4,26 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ .Site.Title }}{{ with .Params.title }} - {{ . }}{{ end }}</title>
-  <!-- CSS -->
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/fonts.css">
   <link rel="stylesheet" href="/css/style.css">
-  {{ with $.Params.head }}{{ $.Params.head | safeHTML }}{{ end }}
-  <!-- Meta -->
+  {{- with $.Params.head -}}{{ $.Params.head | safeHTML }}{{- end }}
   <meta name="description" content="{{ .Site.Params.description }}">
   <meta name="generator" content="Hugo 0.92.2">
 </head>
 <body>
 
-
+{{ partial "header/banner-nav.html" . }}
 
 <main>
 
-  What?
 {{ block "main" . }}{{ end }}
 
 </main>
 
+{{ block "footer" . }}{{ end }}
 {{ with $.Params.foot }}{{ $.Params.foot | safeHTML }}{{ end }}
+{{ partial "scripts/script-darkmodebtn.html" . }}
 
 </body>
 </html>

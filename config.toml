@@ -1,3 +1,19 @@
 baseURL = 'http://example.org/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Bryan Sebesta'
+refLinksErrorLevel = 'WARNING'
+# refLinksNotFoundURL = '#'
+
+[menu]
+  [[menu.nav]]
+    name = "Work"
+    url = "/"
+    weight = 1
+  [[menu.nav]]
+    name = "Articles"
+    url = "/Articles/"
+    weight = 2
+  [[menu.nav]]
+    name = "About"
+    url = "/about/"
+    weight = 3

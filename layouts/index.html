@@ -1,5 +1,18 @@
 {{- define "main" -}}
 
-{{ .Content }}
+<header id="homepage-header">
+    <h1>Bryan Sebesta</h1>
+    <p>Experience designer // Systems thinker // Craftsman of pixels, words, and code.</p>
+    {{ partial "elements/button.html" (dict "link" "/docs/resume_bryansebesta.pdf" "text" "Resumé") }}
+</header>
+
+<section class="casestudy-list">
+    <header>
+        <h2 class="blockbg">Case Studies</h2>
+    </header>
+
+    {{ partial "lists/list-casestudies.html" . }}
+
+</section>
 
 {{- end -}}

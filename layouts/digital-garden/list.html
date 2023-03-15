@@ -1,14 +1,14 @@
 {{- define "main" -}}
 
 <header>
-    <h1 class="blockbg">{{ .Title }}</h1>
+<h1 class="blockbg">{{ .Title }}</h1>
 </header>
 
 <section>
 {{ .Content }}
 </section>
 
-<section>
+<section class="digital-garden-index">
 <ul>
     {{ range .Pages }}
     <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>

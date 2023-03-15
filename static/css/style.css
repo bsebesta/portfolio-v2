@@ -1,104 +1,556 @@
-*,*::before,*::after {
-    box-sizing: border-box;
-}
-
 /* ==========================================================================
    CUSTOM PROPERTIES
    ========================================================================== */
 
-/* Typography
-   ========================================================================== */
-
-@font-face {
-   font-family: "Carter One";
-   src: url("/fonts/CarterOne-Regular.ttf");
-}
-
-body {
-   font-family: "Carter One", serif; 
-}
-
-/* Color
+/* Custom Properties: Type
    ========================================================================== */
 
 :root {
-    
+   --font-family-body: "Noto Sans", sans-serif;
+   --font-family-headers: "Merriweather", serif;
+   --font-family-nav: "Noto Sans", sans-serif;
+   --font-family-logotype: "Merriweather", serif;
 }
+
+/* Custom Properties: Base Colors
+   ========================================================================== */
+
+/**
+ * For my dark mode implementation, I used the solutions described here:
+ * https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/
+ * 
+ * I need to revisit this, because I'm not sure I understand whether a CSS-only
+ * option is more viable. It's good enough for now, though.
+ * 
+ */
+
+:root {
+   --color-accent-000: #FAFBFC;
+   --color-accent-100: #F0F6FC;
+   --color-accent-200: #DEE6EE;
+   --color-accent-300: #A9C1D9;
+   --color-accent-400: #85A8CC;
+   --color-accent-500: #3F709E;
+   --color-accent-600: #3F709E;
+   --color-accent-700: #296094;
+   --color-accent-800: #114D84;
+   --color-accent-900: #023A6E;
+   --color-neutral-100: #F5F7FA; /* "White" */
+   --color-neutral-200: #DADDE0;
+   --color-neutral-300: #D2D5D9;
+   --color-neutral-400: #B3B8BD;
+   --color-neutral-500: #81868A;
+   --color-neutral-600: #5B5F63;
+   --color-neutral-700: #414447;
+   --color-neutral-800: #2E3133;
+   --color-neutral-900: #1C1D1F; /* "Black" */
+}
+
+/* Light theme */
+body {
+   --color-body-text: var(--color-neutral-900);
+   --color-body-bg: var(--color-accent-000);
+   --color-link: var(--color-accent-800);
+   --color-link-hover: var(--color-accent-200);
+   --color-bannernav-logotype: var(--color-neutral-900);
+   --color-bannernav-link: var(--color-accent-800);
+   --color-bannernav-link-hover: var(--color-neutral-900);
+   --color-bannernav-link-active: var(--color-neutral-900);
+   --color-bannernav-link-underline: var(--color-accent-200);
+   --color-bannernav-link-underline-active: var(--color-accent-800);
+   --color-button-text: var(--color-accent-800);
+   --color-button-border: var(--color-accent-800);
+   --color-button-bg: var(--color-accent-000);
+   --color-button-hover-text: var(--color-accent-000);
+   --color-button-hover-border: var(--color-accent-800);
+   --color-button-hover-bg: var(--color-accent-800);
+   --color-titles-text: var(--color-neutral-900);
+   --color-titles-stripe: var(--color-accent-200);
+   --color-tag-text: var(--color-accent-800);
+   --color-tag-bg: var(--color-accent-200);
+ }
+
+ /* Dark theme */
+ body.dark-theme {
+   --color-body-bg: var(--color-neutral-900);
+   --color-body-text: var(--color-neutral-100);
+   --color-link: var(--color-accent-300);
+   --color-link-hover: var(--color-accent-100);
+   --color-bannernav-logotype: var(--color-accent-300);
+   --color-bannernav-link: var(--color-accent-300);
+   --color-bannernav-link-hover: var(--color-accent-100);
+   --color-bannernav-link-active: var(--color-accent-100);
+   --color-bannernav-link-underline: var(--color-accent-300);
+   --color-bannernav-link-underline-active: var(--color-accent-100);
+   --color-button-text: var(--color-accent-200);
+   --color-button-border: var(--color-accent-200);;
+   --color-button-bg: var(--color-neutral-900);
+   --color-button-hover-text: var(--color-accent-900);
+   --color-button-hover-border: var(--color-accent-100);
+   --color-button-hover-bg: var(--color-accent-100);
+   --color-titles-text: var(--color-neutral-100);
+   --color-titles-stripe: var(--color-neutral-700);
+   --color-tag-text: var(--color-neutral-400);
+   --color-tag-bg: var(--color-neutral-700);
+ }
+
+@media (prefers-color-scheme: dark) {
+   /* Dark theme (should be identical to above) */
+   body { 
+      --color-body-bg: var(--color-neutral-900);
+      --color-body-text: var(--color-neutral-100);
+      --color-link: var(--color-accent-300);
+      --color-link-hover: var(--color-accent-100);
+      --color-bannernav-logotype: var(--color-accent-300);
+      --color-bannernav-link: var(--color-accent-300);
+      --color-bannernav-link-hover: var(--color-accent-100);
+      --color-bannernav-link-active: var(--color-accent-100);
+      --color-bannernav-link-underline: var(--color-accent-300);
+      --color-bannernav-link-underline-active: var(--color-accent-100);
+      --color-button-text: var(--color-accent-200);
+      --color-button-border: var(--color-accent-200);;
+      --color-button-bg: var(--color-neutral-900);
+      --color-button-hover-text: var(--color-accent-900);
+      --color-button-hover-border: var(--color-accent-100);
+      --color-button-hover-bg: var(--color-accent-100);
+      --color-titles-text: var(--color-neutral-100);
+      --color-titles-stripe: var(--color-neutral-700);
+      --color-tag-text: var(--color-neutral-400);
+      --color-tag-bg: var(--color-neutral-700);
+   }
+   /* Light theme (should be identical to above) */
+   body.light-theme {
+      --color-body-text: var(--color-neutral-900);
+      --color-body-bg: var(--color-accent-000);
+      --color-link: var(--color-accent-800);
+      --color-link-hover: var(--color-accent-200);
+      --color-bannernav-logotype: var(--color-neutral-900);
+      --color-bannernav-link: var(--color-accent-800);
+      --color-bannernav-link-hover: var(--color-neutral-900);
+      --color-bannernav-link-active: var(--color-neutral-900);
+      --color-bannernav-link-underline: var(--color-accent-200);
+      --color-bannernav-link-underline-active: var(--color-accent-800);
+      --color-button-text: var(--color-accent-800);
+      --color-button-border: var(--color-accent-800);
+      --color-button-bg: var(--color-accent-000);
+      --color-button-hover-text: var(--color-accent-000);
+      --color-button-hover-border: var(--color-accent-800);
+      --color-button-hover-bg: var(--color-accent-800);
+      --color-titles-text: var(--color-neutral-900);
+      --color-titles-stripe: var(--color-accent-200);
+      --color-tag-text: var(--color-accent-800);
+      --color-tag-bg: var(--color-accent-200);
+   }
+}
+
 
 /* ==========================================================================
    GRID & LAYOUT
    ========================================================================== */
 
-/* Grid
-   ========================================================================== */
-
 /* Mobile/Narrow */
 body {
+   background-color: var(--color-body-bg);
+   color: var(--color-body-text);
+}
 
+
+main {
+   padding: 1rem;
+   width: 100%;
+   display: flex;
+   flex-flow: column nowrap;
+   align-items: center;
 }
 
 /* Desktop/Wide */
+/*
 @media screen and (min-width: 600px) {
-    
+   main {
+      max-width: 50rem;
+   }
 }
-
-/* Header
-   ========================================================================== */
-
-
-/* Navigation
-   ========================================================================== */
-
-
-/* Main Content
-   ========================================================================== */
-
+*/
 
 /* ==========================================================================
-   <MAIN>'s Children
+   SECTION BLOCK ELEMENTS (Main, Section, Article, etc)
    ========================================================================== */
 
-/* Head
+main > header,
+main > footer,
+main > section,
+main > article {
+   width: 100%;
+   max-width: 45rem;
+}
+
+article > header,
+article > footer,
+article > section,
+article > article {
+   width: 100%;
+}
+
+main > header,
+main > article > header {
+   margin: 2rem 0 1rem 0;
+}
+
+.main-article > header {
+   display: flex;
+   flex-flow: column nowrap;
+   align-items: flex-start;
+}
+
+.article-metadata {
+   font-size: 16px;
+   color: var(--color-neutral-500);
+   padding-bottom: .3rem;
+}
+
+p + p {
+   margin-top: 1.2rem;
+}
+
+/* ==========================================================================
+   INLINE TYPOGRAPHY (Size, Vertical Rhythm, Style)
    ========================================================================== */
+
+/* Universal font settings
+   ========================================================================== */
+
+:root {
+   font-family: var(--font-family-body);
+   font-size: 20px; /* Base font size, desktop */
+}
 
 /* Headers
    ========================================================================== */
 
+h1,
+h2,
+h3,
+h4 {
+   font-family: var(--font-family-headers);
+   line-height: 1.2;
+   position: relative;
+   color: var(--color-titles-text);
+}
 
-/* Inline Text
+h1 {
+   font-size: 52px;
+}
+
+h2 {
+   font-size: 52px;
+}
+
+/* Specially styled headers (with solid rectangle as background)
+   ========================================================================== */
+
+.blockbg {
+   display: inline-block;
+   position: relative;
+   z-index: 1;
+}
+
+.blockbg::after {
+   content: ' ';
+   z-index: -1;
+   display: block;
+   position: absolute;
+   height: .4em;
+   width: 100%;
+   top: 0.75em;
+   left: 0.125em;
+   bottom: 1px;
+   background-color: var(--color-titles-stripe);
+}
+
+a {
+   text-decoration: underline;
+   text-underline-offset: 2px;
+   color: red;
+}
+
+a:link,
+a:visited {
+   color: var(--color-link);
+}
+
+a:hover,
+a:active {
+   color: var(--color-link-hover);
+}
+
+
+/* ==========================================================================
+   COMPONENT: BANNER NAVIGATION
+   ========================================================================== */
+
+/* Banner and Subsections (Logotype + List)
+   ========================================================================== */
+
+#mainnav-banner {
+   /*position: -webkit-sticky;
+   position: sticky;
+   top: 0;*/
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   flex-flow: row nowrap;
+   padding: 1rem;
+   font-size: 16px;
+   /*background-image: linear-gradient(hsla(0, 0%, 100%,1), hsla(0,0%,100%,0));*/
+   background: linear-gradient(180deg, var(--color-body-bg) 58.85%, rgba(255, 255, 255, 0) 100%);
+   font-family: var(--font-family-nav);
+}
+
+#mainnav-list {
+   display: flex;
+   flex-flow: row nowrap;
+   gap: 1rem;
+}
+
+#mainnav-logotype {
+   font-family: var(--font-family-logotype);
+   font-weight: bold;
+   font-size: 24px;
+}
+
+#mainnav-logotype a {
+   text-decoration: none;
+   color: var(--color-bannernav-logotype);
+}
+
+/* Link Behavior
+   ========================================================================== */
+
+/**
+   * CSS hover animation inspired by Nate Baldwin. Working implementation drawn
+   * from https://www.30secondsofcode.org/css/s/hover-underline-animation.
+   * 
+   */
+
+.mainnav-list-item:link,
+.mainnav-list-item:visited {
+   color: var(--color-bannernav-link);
+}
+
+.mainnav-list-item:hover,
+.mainnav-list-item:active {
+   color: var(--color-bannernav-link-hover)
+}
+
+/* Animated Links
+   ========================================================================== */
+
+/**
+ * CSS hover animation inspired by Nate Baldwin. Working implementation drawn
+ * from https://www.30secondsofcode.org/css/s/hover-underline-animation.
+ * 
+ */
+
+.animatedlink {
+   position: relative; /* Makes the pseudo-element work */
+   text-decoration: none;
+}
+
+.animatedlink::after {
+   content: '';
+   position: absolute;
+   width: 100%;
+   transform: scaleX(0);
+   height: 2px;
+   bottom: 0;
+   left: 0;
+   background-color: var(--color-bannernav-link-underline);
+   transform-origin: center;
+   transition: transform 0.25s ease-out;
+}
+
+.animatedlink:hover::after {
+   transform: scaleX(1);
+   transform-origin: center;
+}
+
+.animatedlink-selected {
+   color: var(--color-bannernav-link-active) !important;
+}
+
+.animatedlink-selected::after {
+   transform: scaleX(1);
+   background-color: var(--color-bannernav-link-underline-active);
+}
+
+/* Accessibility Button
+   ========================================================================== */
+
+.btn-toggle {
+   margin: 0;
+   padding: 0;
+   background-color: transparent;
+   border: none;
+   cursor: pointer;
+   @media screen and (-ms-high-contrast: active) {
+      border: 2px solid currentcolor;
+   }
+   display: inline-flex;
+   font-family: "Merriweather", serif;
+   color: var(--color-button-text);
+}
+
+.btn-toggle svg {
+   fill: var(--color-bannernav-link);
+}
+
+/* ==========================================================================
+   COMPONENTS: Article "Assumed Audience" callout box
    ========================================================================== */
 
 
-/* Audience Callout Box
-   ========================================================================== */
-
-
-/* Footnotes
+/* ==========================================================================
+   COMPONENTS: Article footnotes
    ========================================================================== */
 
 section.footnotes hr {
 
 }
 
-sup, sub {
+section.footnotes sup, sub {
     vertical-align: baseline;
     position: relative;
     top: -0.4em;
 }
 
-sub {
+section.footnotes sub {
     top: 0.4em;
 }
 
-/* Footer with Taxonomy Cloud
+/* ==========================================================================
+   COMPONENTS: Button
    ========================================================================== */
 
+button.button-link {
+   color: var(--color-button-text);
+   border: solid 1px var(--color-button-border);
+   background-color: var(--color-button-bg);
+   padding: 16px;
+   font-size: 16px;
+   border-radius: 50px;
+   transition: all 100ms ease-out;
+}
 
-/* Article List (usually applied to a <section>)
+button.button-link:hover {
+   color: var(--color-button-hover-text);
+   border: solid 1px var(--color-button-hover-border);
+   background-color: var(--color-button-hover-bg);
+   cursor: pointer;
+}
+
+/* ==========================================================================
+   Homepage
    ========================================================================== */
 
-.article-list {
-    display: flex;
-    flex-flow: column nowrap;
-    gap: 1rem;
+/* Header
+   ========================================================================== */
+
+#homepage-header {
+   margin-top: 5rem;
+   margin-bottom: 5rem;
+}
+
+#homepage-header h1 {
+   font-size: 76px;
+}
+
+#homepage-header p {
+   margin: 1rem 0;
+   font-size: 42px;
+}
+
+/* Container Link
+   ========================================================================== */
+
+.container-link {
+   text-decoration: none;
+   color: initial;
+}
+
+/* Case Study List
+   ========================================================================== */
+
+/* Flex list */
+.casestudy-list {
+   display: flex;
+   flex-flow: column nowrap;
+   gap: 64px;
+   margin-bottom: 10rem;
+}
+
+/* Container for an individual case study */
+.casestudy {
+   display: flex;
+   flex-flow: row wrap;
+   transition: all 200ms ease-out;
+   gap: 1rem;
+   cursor: pointer;
+}
+
+.casestudy:hover {
+   scale: 1.01;
+}
+
+/* IMAGE / Content */
+.casestudy-image {
+   aspect-ratio: 4/3;
+   background-color: var(--color-tag-bg);
+   border-radius: 4px;
+   flex: 0 1 30%;
+}
+
+/* Image / CONTENT */
+.casestudy-content {
+   flex: 0 1 60%;
+}
+
+.casestudy h2 {
+   font-size: 28px;
+   color: var(--color-body-text);
+}
+
+/* Tag cloud within content */
+.casestudy ul {
+   display: flex;
+   flex-flow: row wrap;
+   gap: 8px;
+   margin: 8px 0 16px 0;
+}
+
+.casestudy li {
+   padding: 8px;
+   font-size: 16px;
+   font-weight: bold;
+   background-color: var(--color-tag-bg);
+   border-radius: 4px;
+   color: var(--color-tag-text);
+}
+
+.casestudy p {
+   color: var(--color-body-text);
+}
+
+/* ==========================================================================
+   Digital Garden
+   ========================================================================== */
+
+/* Digital Garden List
+   ========================================================================== */
+
+.digital-garden-index {
+   column-count: 2;
+   line-height: 1.5;
+}
+
+.digital-garden-index ul {
 }
