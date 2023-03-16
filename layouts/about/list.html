@@ -1,0 +1,24 @@
+{{- define "main" -}}
+
+<main class="page-about">
+
+<header>
+    <h1 class="blockbg">{{ .Title }}</h1>
+</header>
+
+<section class="section-text">
+<p>My love for design began with LEGOs. I grew up building ships, castles, space shuttles, forts, and whatever else I could manage. I loved seeing how these interlocking systems came apart and together. At the same, I loved to read. Asimov’s sprawling Foundation saga, The Lord of the Rings, reading Greek myth—these and other books gave me a deep love of lore and story.</p>
+<p>Website design gave me the chance to combine these many interests. At age 11, I taught myself to code, and by age 14, I was running the largest LEGO Bionicle reference site. All this pushed me forward in technology: by age 18, I was “captain of the varsity web team” at my high school, leading developing on our High Schools’ website and teaching incoming Freshmen and Sophomores how to use HTML, CSS, and Javascript.</p>
+</section>
+
+<figure class="section-quote">
+    <blockquote>Design is the quintessential task of the human being.</blockquote>
+</figure>
+
+<section class="section-buttons">
+    {{ partial "buttons/primary.html" (dict "link" "#" "text" "Read Article: What is UX?") }}
+</section>
+
+</main>
+
+{{- end -}}

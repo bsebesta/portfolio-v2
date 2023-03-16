@@ -1,18 +1,38 @@
 {{- define "main" -}}
 
-<header id="homepage-header">
+<main class="page-home">
+
+<header>
     <h1>Bryan Sebesta</h1>
-    <p>Experience designer // Systems thinker // Craftsman of pixels, words, and code.</p>
-    {{ partial "elements/button.html" (dict "link" "/docs/resume_bryansebesta.pdf" "text" "Resumé") }}
+    <p>Experience designer <span class="text-decoration">//</span> Systems thinker <span class="text-decoration">//</span> Craftsman of pixels, words, and code.</p>
+    {{ partial "buttons/primary.html" (dict "link" "/docs/resume_bryansebesta.pdf" "text" "Resumé") }}
 </header>
 
 <section class="casestudy-list">
+
     <header>
         <h2 class="blockbg">Case Studies</h2>
     </header>
 
-    {{ partial "lists/list-casestudies.html" . }}
+    {{ range where .Site.RegularPages.ByWeight "Section" "case-studies" }}
+    <a href="{{ .Permalink }}" class="casestudy-container-link">
+        <article class="casestudy-list-entry">
+            <div class="casestudy-list-entry-image"></div>
+            <div class="casestudy-list-entry-content">
+                <h2>{{ .Title }}</h2>
+                <ul class="tags">
+                    {{ range .Params.tags  }}
+                    <li>{{ . }}</li>
+                    {{ end }}
+                </ul>
+                <p>{{ .Params.description }}</p>
+            </div>
+        </article>
+    </a>
+    {{ end }}
 
 </section>
+
+</main>
 
 {{- end -}}

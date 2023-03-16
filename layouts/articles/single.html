@@ -1,12 +1,17 @@
 {{- define "main" -}}
 
+<main class="page-article-single">
 <article class="main-article">
 
 <header>
+
     <section class="article-metadata">
-        <time datetime="">March 14, 2023</time> &bull; Lehi, Utah, USA
+        <time>{{ .Date.Format "January 2, 2006" }}</time> &bull; {{ .Params.place }}
     </section>
-    <h1>{{ .Title }}</h1>
+
+    <h1 class="article-title">{{ .Title }}</h1>
+    
+    <hr>
 </header>
 
 <!--
@@ -33,7 +38,12 @@
 {{ .Content }}
 </section>
 
-<footer>
+<footer class="article-footer">
+
+    <ul>
+        <li><a href="/articles/">&#8592; All Articles</a></li>
+        <li><a href="mailto:hello@bryansebesta.com" target="_blank">Reply via email</a></li>
+    </ul>
 
 <!-- Feeds
 {{ if isset .Params "feeds" }}
@@ -60,5 +70,6 @@
 </footer>
 
 </article>
+</main>
 
 {{- end -}}

@@ -3,6 +3,11 @@ languageCode = 'en-us'
 title = 'Bryan Sebesta'
 refLinksErrorLevel = 'WARNING'
 # refLinksNotFoundURL = '#'
+#[caches.modules]
+#  dir = '/modules/'
+
+[params]
+  microblogUrl = 'https://micro.bryansebesta.net'
 
 [menu]
   [[menu.nav]]

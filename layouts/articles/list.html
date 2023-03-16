@@ -1,0 +1,19 @@
+{{- define "main" -}}
+
+<main class="page-articles-list">
+
+<header class="article-list-header">
+    <h1 class="blockbg">{{ .Title }}</h1>
+</header>
+
+<section>
+{{ .Content }}
+</section>
+
+<section class="article-list">
+    {{ partial "lists/list-articles.html" . }}
+</section>
+
+</main>
+
+{{- end -}}
