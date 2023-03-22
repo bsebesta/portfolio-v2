@@ -11,7 +11,15 @@
 </section> -->
 
 <section class="article-list">
-    {{ partial "lists/list-articles.html" . }}
+    {{ range where .Site.RegularPages.ByWeight "Section" "articles" }}
+    <a href="{{ .Permalink }}" class="article-container-link">
+    <article class="article-list-entry">
+        <span class="article-list-metadata"><time>{{ .Date.Format "January 2, 2006" }}</time></span>
+        <h2>{{ .Title }}</h2>
+        <span class="article-list-deck">{{ .Params.deck }}</span>
+    </article>
+    </a>
+    {{ end }}
 </section>
 
 </main>

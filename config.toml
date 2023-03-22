@@ -1,4 +1,4 @@
-baseURL = 'http://example.org/'
+baseURL = 'https://splendid-peony-1aefa6.netlify.app/'
 languageCode = 'en-us'
 title = 'Bryan Sebesta'
 refLinksErrorLevel = 'WARNING'
