@@ -1,37 +1,8 @@
 /* ==========================================================================
-   ==========================================================================
-   
-   CUSTOM PROPERTIES!
-
-   ==========================================================================
+   CUSTOM PROPERTIES
    ========================================================================== */
 
-/* ==========================================================================
-   CUSTOM PROPERTIES: TYPE
-   ========================================================================== */
-
-/* Font Families
-   ========================================================================== */
-
-:root {
-   --font-family-body: "Noto Sans", sans-serif;
-   --font-family-headers: "Merriweather", serif;
-   --font-family-nav: "Noto Sans", sans-serif;
-   --font-family-logotype: "Merriweather", serif;
-
-   font-family: var(--font-family-body);
-}
-
-/* Type Scale
-   ========================================================================== */
-
-:root {
-   --type-scale: 0;
-
-   font-size: 20px; /* Base font size, desktop */
-}
-
-/* Vertical Rhythm (line height, spacing, etc)
+/* Type and Vertical Rhythm
    ========================================================================== */
 
 /**
@@ -54,6 +25,14 @@
  */
 
 :root {
+   /* Font Families */
+   --font-family-body: "Noto Sans", sans-serif;
+   --font-family-headers: "Merriweather", serif;
+   --font-family-nav: "Noto Sans", sans-serif;
+   --font-family-logotype: "Merriweather", serif;
+   /* Type Scale */
+   --type-scale-base: 20px;
+   /* Vertical rhythm */
    --type-lineheight-bodytext: 1.2rem;
    --type-lineheight-paragraph-spacing: var(--type-lineheight-bodytext);
    --type-lineheight-h1-stripebg: 3.2rem;
@@ -64,21 +43,30 @@
    --type-lineheight-homepage-description: 2.2rem;
 }
 
-.blockbg { line-height: var(--type-lineheight-h1-stripebg); }
-h1 { line-height: var(--type-lineheight-h1); }
-h2 { line-height: var(--type-lineheight-h2); }
-h3 { line-height: var(--type-lineheight-h3); }
-h4 { line-height: var(--type-lineheight-h4); }
-p { line-height: var(--type-lineheight-bodytext); }
-
-/* ==========================================================================
-   CUSTOM PROPERTIES: COLORS
+ /* Horizontal Rhythm
    ========================================================================== */
+
+/**
+ * BREAKPOINTS
+ * 
+ * Breakpoints can't be made into CSS properties as-of-code, and I'm not using
+ * a CSS preprocessor right now. So I'm just noting my breakpoints right here:
+ * 
+ * 1. @media screen and (min-width: 600px)
+ * 
+ */
+
+ :root {
+   --nav-maxwidth: 60rem;
+   --page-maxwidth: 45rem;
+   --page-maxwidth-singlecolum: 32rem;
+}
 
 /* Color Palettes
    ========================================================================== */
 
 :root {
+   /* Accent color palette */
    --color-accent-000: #FAFBFC;
    --color-accent-100: #F0F6FC;
    --color-accent-200: #DEE6EE;
@@ -89,11 +77,11 @@ p { line-height: var(--type-lineheight-bodytext); }
    --color-accent-700: #296094;
    --color-accent-800: #114D84;
    --color-accent-900: #1B2843;
-
+   /* Accent color palette (dark mode variations) */
    --color-accent-400-dark: #A0CBF3;
    --color-accent-800-dark: #3A5772;
    --color-accent-900-dark: #1B2843;
-
+   /* Neutral color palette */
    --color-neutral-100: #F5F7FA; /* "White" */
    --color-neutral-200: #DADDE0;
    --color-neutral-300: #D2D5D9;
@@ -105,7 +93,24 @@ p { line-height: var(--type-lineheight-bodytext); }
    --color-neutral-900: #1C1D1F; /* "Black" */
 }
 
-/* Light Theme
+/* ==========================================================================
+   Typography Implementation
+   ========================================================================== */
+
+:root {
+   font-family: var(--font-family-body);
+   font-size: var(--type-scale-base);
+}
+
+.blockbg { line-height: var(--type-lineheight-h1-stripebg); }
+h1 { line-height: var(--type-lineheight-h1); }
+h2 { line-height: var(--type-lineheight-h2); }
+h3 { line-height: var(--type-lineheight-h3); }
+h4 { line-height: var(--type-lineheight-h4); }
+p { line-height: var(--type-lineheight-bodytext); }
+
+/* ==========================================================================
+   Dark / Light Mode implementation
    ========================================================================== */
 
 /**
@@ -237,130 +242,10 @@ body.dark-theme {
 }
 
 /* ==========================================================================
-   CUSTOM PROPERTIES: LAYOUT, GRIDS, WIDTHS
+   LAYOUTS
    ========================================================================== */
 
-/**
- * BREAKPOINTS
- * 
- * Breakpoints can't be made into CSS properties as-of-code, and I'm not using
- * a CSS preprocessor right now. So I'm just noting my breakpoints right here:
- * 
- * 1. @media screen and (min-width: 600px)
- * 
- */
-
-:root {
-   --nav-maxwidth: 60rem;
-   --page-maxwidth: 45rem;
-   --page-maxwidth-singlecolum: 32rem;
-}
-
-/* ==========================================================================
-   ==========================================================================
-   
-   INLINE TEXT ELEMENTS
-
-   ==========================================================================
-   ========================================================================== */
-
-/* Headers
-   ========================================================================== */
-
-h1,
-h2,
-h3,
-h4 {
-   font-family: var(--font-family-headers);
-   position: relative;
-   color: var(--color-titles-text);
-}
-
-h1 { font-size: 52px; }
-h2 { font-size: 52px; }
-
-/* Paragraph
-   ========================================================================== */
-
-/*
-p + p {
-   text-indent: 1rem;
-}
-*/
-
-p + p,
-ul + p,
-ol + p {
-   margin-top: var(--type-lineheight-paragraph-spacing);
-}
-
-/* Blockquote
-   ========================================================================== */
-
-blockquote p {
-   hanging-punctuation: first;
-}
-   
-/* Links
-   ========================================================================== */
-
-a {
-   text-underline-offset: 2px;
-}
-
-a:link,
-a:visited {
-   text-decoration: none;
-   color: var(--color-link);
-}
-
-a:hover,
-a:active {
-   text-decoration: underline;
-   color: var(--color-link-hover);
-}
-
-/* Decorations
-   ========================================================================== */
-
-hr {
-   border: solid 1px var(--color-textdecoration);
-   width: 100px;
-}
-
-.text-decoration {
-   color: var(--color-textdecoration);
-}
-
-.blockbg {
-   display: inline-block;
-   position: relative;
-   z-index: 1;
-}
-
-.blockbg::after {
-   content: ' ';
-   z-index: -1;
-   display: block;
-   position: absolute;
-   height: .4em;
-   width: 100%;
-   top: 0.75em;
-   left: 0.125em;
-   bottom: 1px;
-   background-color: var(--color-titles-stripe);
-}
-
-/* ==========================================================================
-   ==========================================================================
-   
-   KEY SECTIONING ELEMENTS
-
-   ==========================================================================
-   ========================================================================== */
-
-/* ==========================================================================
-   HIGH-LEVEL BODY, LAYOUT DECISIONS
+/* body
    ========================================================================== */
 
 body {
@@ -368,22 +253,12 @@ body {
    color: var(--color-body-text);
 }
 
+/* MAIN
+   ========================================================================== */
+
 main {
    padding: 1rem;
    width: 100%;
-   display: flex;
-   flex-flow: column nowrap;
-   align-items: center;
-}
-
-/* 
- * .main-article
- * This class applies to an "article" wrapper nested within <main>;
- * basically we're "re-duplicating" the properties of main above.
- *
- */
-
-article.main-article {
    display: flex;
    flex-flow: column nowrap;
    align-items: center;
@@ -418,11 +293,204 @@ main > header,
    margin: 2rem 0 1rem 0;
 }
 
-/* ==========================================================================
-   GLOBAL: BANNER NAVIGATION
+/* .page-general
    ========================================================================== */
 
-/* Banner and Subsections (Logotype + List)
+.page-general > footer,
+.page-general > section,
+.page-general > article {
+   max-width: var(--page-maxwidth-singlecolum);
+}
+   
+.page-general > header {
+   display: flex;
+   flex-flow: column nowrap;
+   align-items: center;
+   text-align: center;
+   margin-bottom: 3rem;
+   max-width: var(--page-maxwidth);
+}
+
+.page-general > section,
+.page-general > figure {
+   width: 100%;
+   max-width: var(--page-maxwidth-singlecolum);
+   margin-bottom: var(--type-lineheight-paragraph-spacing);
+}
+
+/* .page-home
+   ========================================================================== */
+
+.page-home > header {
+   margin-top: 5rem;
+   margin-bottom: 5rem;
+}
+
+.page-home > header h1 {
+   font-size: 76px;
+}
+
+.page-home > header p {
+   margin: 1rem 0 1.2rem 0;
+   font-size: 42px;
+   line-height: var(--type-lineheight-homepage-description);
+}
+
+
+/* .main-article (Container within the <main> element)
+   ========================================================================== */
+
+article.main-article {
+   display: flex;
+   flex-flow: column nowrap;
+   align-items: center;
+}
+
+.main-article > footer,
+.main-article > section,
+.main-article > article {
+   max-width: var(--page-maxwidth-singlecolum);
+}
+   
+.main-article > header {
+   display: flex;
+   flex-flow: column nowrap;
+   align-items: center;
+   text-align: center;
+   margin-bottom: 3rem;
+   max-width: var(--page-maxwidth);
+}
+
+/* ==========================================================================
+   INLINE TEXT ELEMENTS (Defaults)
+   ========================================================================== */
+
+/* Headers
+   ========================================================================== */
+
+h1,
+h2,
+h3,
+h4 {
+   font-family: var(--font-family-headers);
+   position: relative;
+   color: var(--color-titles-text);
+}
+
+h1 { font-size: 52px; }
+h2 { font-size: 52px; }
+
+/* Vertical Rhythms
+   ========================================================================== */
+
+/*
+p + p {
+   text-indent: 1rem;
+}
+*/
+
+p + p,
+ul + p,
+ol + p {
+   margin-top: var(--type-lineheight-paragraph-spacing);
+}
+
+/* Blockquote
+   ========================================================================== */
+
+blockquote p {
+   hanging-punctuation: first;
+}
+
+/* Emphasis
+   ========================================================================== */
+
+em {
+   font-style: italic;
+}
+
+/* Lists
+   ========================================================================== */
+
+ol,
+ul {
+   margin-top: 1rem;
+}
+
+ol {
+   list-style-type: decimal;
+}
+
+ul {
+   list-style-type: disc;
+}
+
+ol li,
+ul li {
+   margin-left: 1rem;
+}
+
+ol::marker {
+   content: "Step " counter(list-item) ": ";
+ }
+   
+/* Links
+   ========================================================================== */
+
+a {
+   text-underline-offset: 2px;
+}
+
+a:link,
+a:visited {
+   text-decoration: none;
+   color: var(--color-link);
+}
+
+a:hover,
+a:active {
+   text-decoration: underline;
+   color: var(--color-link-hover);
+}
+
+/* Decorations
+   ========================================================================== */
+
+hr {
+   border: solid 1px var(--color-textdecoration);
+   width: 100px;
+}
+
+/* Usually used with a <span> */
+.text-decoration {
+   color: var(--color-textdecoration);
+}
+
+/* This is the striped block that appears behind some headers */
+.blockbg {
+   display: inline-block;
+   position: relative;
+   z-index: 1;
+}
+
+.blockbg::after {
+   content: ' ';
+   z-index: -1;
+   display: block;
+   position: absolute;
+   height: .4em;
+   width: 100%;
+   top: 0.75em;
+   left: 0.125em;
+   bottom: 1px;
+   background-color: var(--color-titles-stripe);
+}
+
+/* ==========================================================================
+   COMPONENT: Banner Navigation
+   ========================================================================== */
+
+/* Containers
    ========================================================================== */
 
 #nav-banner {
@@ -498,7 +566,7 @@ main > header,
       border: 2px solid currentcolor;
    }
    display: inline-flex;
-   font-family: "Merriweather", serif;
+   font-family: var(--font-family-nav);
    color: var(--color-button-text);
 }
 
@@ -548,58 +616,106 @@ main > header,
 }
 
 /* ==========================================================================
-   GLOBAL: Buttons
+   COMPONENT: Text-focused section
    ========================================================================== */
 
-/* Primary CTA
-   ========================================================================== */   
+.section-text h2 {
+   font-size: 1.4rem;
+}
 
-.button-primary {
-   color: var(--color-button-text);
-   border: solid 1px var(--color-button-border);
-   background-color: var(--color-button-bg);
+/* ==========================================================================
+   COMPONENT: <section> with a quote
+   ========================================================================== */
+
+.section-quote {
+   border-left: solid 1rem var(--color-textdecoration);
+   padding-left: 1rem;
+}
+
+/* ==========================================================================
+   COMPONENT: Interest List, featured on the "About" page
+   ========================================================================== */
+
+/* Interests
+   ========================================================================== */
+
+.section-about-interests > div {
+   display: flex;
+   flex-flow: row wrap;
+   justify-content: space-between;
+   row-gap: .8rem;
+   column-gap: .5rem;
+}
+
+.section-about-interests article {
+   flex: 0 1 auto;
+}
+
+@media screen and (min-width: 600px) {
+   .section-about-interests article {
+      flex: 0 1 30%;
+   }
+}
+
+.section-about-interests > div > article > h2 {
+   font-size: .9rem;
+   font-family: var(--font-family-body);
+   text-decoration: underline;
+   text-underline-offset: 2px;
+   line-height: 1.4rem;
+}
+
+.section-about-interests > div > article > p {
+   font-size: .8rem;
+   line-height: 1rem;
+}
+
+/* ==========================================================================
+   COMPONENT: Button List
+   ========================================================================== */
+
+.section-buttons {
+   display: flex;
+   flex-flow: column wrap;
+   gap: 1rem;
+}
+
+/* ==========================================================================
+   COMPONENT: Buttons
+   ========================================================================== */
+
+/* General Attributes
+   ========================================================================== */
+
+button {
    padding: 16px;
    font-size: 16px;
    border-radius: 50px;
    transition: all 100ms ease-out;
 }
 
-.button-primary:hover {
-   color: var(--color-button-hover-text);
-   border: solid 1px var(--color-button-hover-border);
-   background-color: var(--color-button-hover-bg);
+button:hover {
    cursor: pointer;
 }
 
+/* Primary CTA
+   ========================================================================== */
+
+button.button-primary {
+   color: var(--color-button-text);
+   border: solid 1px var(--color-button-border);
+   background-color: var(--color-button-bg);
+}
+
+button.button-primary:hover {
+   color: var(--color-button-hover-text);
+   border: solid 1px var(--color-button-hover-border);
+   background-color: var(--color-button-hover-bg);
+}
+
 /* ==========================================================================
-   ==========================================================================
-   
-   PAGE-LEVEL COMPONENTS
-
-   ==========================================================================
+   COMPONENT: Case Study List (featured on homepage)
    ========================================================================== */
-
-/* ==========================================================================
-   HOMEPAGE
-   ========================================================================== */
-
-/* Header
-   ========================================================================== */
-
-.page-home > header {
-   margin-top: 5rem;
-   margin-bottom: 5rem;
-}
-
-.page-home > header h1 {
-   font-size: 76px;
-}
-
-.page-home > header p {
-   margin: 1rem 0 1.2rem 0;
-   font-size: 42px;
-   line-height: var(--type-lineheight-homepage-description);
-}
 
 /* Container Link
    ========================================================================== */
@@ -695,7 +811,7 @@ main > header,
 }
 
 /* ==========================================================================
-   DIGITAL GARDEN
+   COMPONENT: Digital Garden List
    ========================================================================== */
 
 /* Digital Garden List
@@ -709,7 +825,7 @@ main > header,
 }
 
 /* ==========================================================================
-   ARTICLE (LIST)
+   COMPONENT: Article List
    ========================================================================== */
 
 /* Article List Container
@@ -759,29 +875,8 @@ main > header,
 }
 
 /* ==========================================================================
-   ARTICLE (SINGLE)
+   CLASSES: Article
    ========================================================================== */
-
-/* Layout
-   ========================================================================== */
-
-.main-article > footer,
-.main-article > section,
-.main-article > article {
-   max-width: var(--page-maxwidth-singlecolum);
-}
-
-/* Header
-   ========================================================================== */
-
-.main-article > header {
-   display: flex;
-   flex-flow: column nowrap;
-   align-items: center;
-   text-align: center;
-   margin-bottom: 3rem;
-   max-width: var(--page-maxwidth);
-}
 
 .article-title {
    color: var(--color-titles-article-text);
@@ -809,7 +904,8 @@ main > header,
    padding-bottom: 6px;
 }*/
 
-/* Footnotes
+/* ==========================================================================
+   COMPONENT: Footnotes (section generated by Hugo)
    ========================================================================== */
 
 section.footnotes hr {
@@ -826,7 +922,8 @@ section.footnotes sub {
     top: 0.4em;
 }
 
-/* Footer
+/* ==========================================================================
+   CLASSES: Article Footer (with reply, navigation back to article list)
    ========================================================================== */
 
 .article-footer {
@@ -854,115 +951,4 @@ section.footnotes sub {
 
 .article-footer li:last-of-type:after {
    content: '';
-}
-
-/* ==========================================================================
-   GENERAL PAGE LAYOUTS
-   ========================================================================== */
-
-/* Layout
-   ========================================================================== */
-
-.page-general > footer,
-.page-general > section,
-.page-general > article {
-   max-width: var(--page-maxwidth-singlecolum);
-}
-   
-.page-general > header {
-   display: flex;
-   flex-flow: column nowrap;
-   align-items: center;
-   text-align: center;
-   margin-bottom: 3rem;
-   max-width: var(--page-maxwidth);
-}
-
-.page-general > section,
-.page-general > figure {
-   width: 100%;
-   max-width: var(--page-maxwidth-singlecolum);
-   margin-bottom: var(--type-lineheight-paragraph-spacing);
-}
-
-/* Button Sections
-   ========================================================================== */
-
-.section-buttons {
-   display: flex;
-   flex-flow: column wrap;
-   gap: 1rem;
-}
-
-.section-text h2 {
-   font-size: 1.4rem;
-}
-
-.section-quote {
-   border-left: solid 1rem var(--color-textdecoration);
-   padding-left: 1rem;
-}
-
-em {
-   font-style: italic;
-}
-
-ol,
-ul {
-   margin-top: 1rem;
-}
-
-ol {
-   list-style-type: decimal;
-}
-
-ul {
-   list-style-type: disc;
-}
-
-ol li,
-ul li {
-   margin-left: 1rem;
-}
-
-ol::marker {
-   content: "Step " counter(list-item) ": ";
- }
-
-/* ==========================================================================
-   ABOUT
-   ========================================================================== */
-
-/* Interests
-   ========================================================================== */
-
-.section-about-interests > div {
-   display: flex;
-   flex-flow: row wrap;
-   justify-content: space-between;
-   row-gap: .8rem;
-   column-gap: .5rem;
-}
-
-.section-about-interests article {
-   flex: 0 1 auto;
-}
-
-@media screen and (min-width: 600px) {
-   .section-about-interests article {
-      flex: 0 1 30%;
-   }
-}
-
-.section-about-interests > div > article > h2 {
-   font-size: .9rem;
-   font-family: var(--font-family-body);
-   text-decoration: underline;
-   text-underline-offset: 2px;
-   line-height: 1.4rem;
-}
-
-.section-about-interests > div > article > p {
-   font-size: .8rem;
-   line-height: 1rem;
 }
