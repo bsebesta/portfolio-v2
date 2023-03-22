@@ -19,6 +19,10 @@ refLinksErrorLevel = 'WARNING'
     url = "/Articles/"
     weight = 2
   [[menu.nav]]
+    name = "Digital Garden"
+    url = "/digital-garden/"
+    weight = 3
+  [[menu.nav]]
     name = "About"
     url = "/about/"
-    weight = 3
+    weight = 4

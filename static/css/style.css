@@ -251,6 +251,7 @@ body.dark-theme {
  */
 
 :root {
+   --nav-maxwidth: 60rem;
    --page-maxwidth: 45rem;
    --page-maxwidth-singlecolum: 32rem;
 }
@@ -425,10 +426,18 @@ main > header,
    ========================================================================== */
 
 #nav-banner {
+   display: flex;
+   flex-flow: column nowrap;
+   align-items: center;
+   width: 100%;
+}
+
+#nav-banner-container {
    /*position: -webkit-sticky;
    position: sticky;
    top: 0;*/
    width: 100%;
+   max-width: var(--nav-maxwidth);
    display: flex;
    justify-content: space-between;
    flex-flow: row nowrap;
