@@ -18,7 +18,7 @@
         </section>
         {{ end }}
         
-        {{ range where .Site.RegularPages.ByDate "Section" "now" }}
+        {{ range where .Site.RegularPages.ByDate.Reverse "Section" "now" }}
         <article class="section-timeline-element">
             <h2>{{ .Title }}</h2>
             {{ .Content }}

@@ -6,22 +6,29 @@
     <h1>{{ .Title }}</h1>
 </header>
 
-{{ range .RegularPages.ByWeight }}
-<section>
-    {{ with .Title }}<h2>{{ . }}</h2>{{ end }}
-    {{ .Content }}
-</section>
+<!-- range where .Site.RegularPages "Section" "about" -->
+{{ $aboutSections := site.GetPage "/about/sections" }}
+{{ with $aboutSections }}
+    {{ range .Pages.ByWeight }}
+    <section>
+        {{ with .Title }}<h2>{{ . }}</h2>{{ end }}
+        {{ .Content }}
+    </section>
+    {{ end }}
 {{ end }}
 
-<!-- DON'T DELETE THIS! Finally figured out how to selectively range through a nested subfolder... -->
 <section>
     <h2>My Interests</h2>
     <div class="collection-interests">
-        {{ range (site.GetPage "about/interests").Pages }}
-        <article>
-            <h2>{{ .Title }}</h2>
-            <p>{{ .Content }}</p>
-        </article>
+        
+        {{ $aboutInterests := site.GetPage "/about/interests" }}
+        {{ with $aboutInterests }}
+            {{ range .Pages.ByWeight }}
+            <article>
+                <h2>{{ .Title }}</h2>
+                <p>{{ .Content }}</p>
+            </article>
+            {{ end }}
         {{ end }}
     </div>
 </section>

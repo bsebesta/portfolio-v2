@@ -287,6 +287,10 @@ figure {
    margin-bottom: var(--space-s);
 }
 
+p:last-of-type {
+   margin-bottom: 0;
+}
+
 blockquote {
    border-left: solid var(--space-3xs) var(--color-accent-200);
    padding-left: var(--space-3xs);

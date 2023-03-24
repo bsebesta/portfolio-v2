@@ -5,14 +5,36 @@ title = 'Bryan Sebesta'
 [params]
   microblogUrl = 'https://micro.bryansebesta.net'
 
+[taxonomies]
+  category = 'categories'
+    # Notes, Essays, Projects, Skills, Pattern, Pages
+    # It's possible that I will deprecate categories (in this sense) for type or layout, we'll see
+    # Also possible to think of relationship between notes and essays as similar to relationship between skills and project
+  tag = 'tags'
+    # Technology, Philosophy, UI Design, UX, etc
+  growthStage = 'growthStage'
+    # Budding, Sprouting, Evergreen
+  shelf = 'shelves'
+    # Fiction, Non-Fiction, Poetry, etc
+  author = 'authors'
+    # Terryl Givens, Fiona Givens, Rumi, etc
+
+[permalinks]
+  notes = '/:title/'
+  books = '/:title/'
+  essays = '/:title/'
+  patterns = '/:title/'
+  projects = '/:title/'
+  skills = '/:title/'
+
 [menu]
   [[menu.nav]]
-    name = "Work"
+    name = "Portfolio"
     url = "/"
     weight = 1
   [[menu.nav]]
-    name = "Garden"
-    url = "/digital-garden/"
+    name = "Digital Garden"
+    url = "/garden/"
     weight = 2
   [[menu.nav]]
     name = "Now"
