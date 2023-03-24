@@ -1,3 +1,3 @@
 ---
-title: About Bryan
+title: About
 ---

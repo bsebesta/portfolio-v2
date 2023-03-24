@@ -1,7 +1,11 @@
 ---
 title: Philosophy of Tech
+date: 2022-02-11
+lastmod: 2023-03-14
+category: notes
+epistemicStatus: I'm a novice, and so 
+assumedAudience: Anyone interested in thinking critically about technology
+tags: 
+- Philosophy of Technology
 ---
 
-Contrary to the [[vahealth]], technology is not morally neutral. It always has a moral valence. Or as Langdon Winner puts it, "all tools and technologies have been designed to predispose us toward certain patterns, behaviors, and consequences."
-
-{{< relref "vahealth.md" >}}

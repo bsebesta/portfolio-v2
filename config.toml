@@ -1,10 +1,6 @@
 baseURL = 'https://splendid-peony-1aefa6.netlify.app/'
 languageCode = 'en-us'
 title = 'Bryan Sebesta'
-refLinksErrorLevel = 'WARNING'
-# refLinksNotFoundURL = '#'
-#[caches.modules]
-#  dir = '/modules/'
 
 [params]
   microblogUrl = 'https://micro.bryansebesta.net'
@@ -15,12 +11,12 @@ refLinksErrorLevel = 'WARNING'
     url = "/"
     weight = 1
   [[menu.nav]]
-    name = "Articles"
-    url = "/Articles/"
+    name = "Garden"
+    url = "/digital-garden/"
     weight = 2
   [[menu.nav]]
-    name = "Digital Garden"
-    url = "/digital-garden/"
+    name = "Now"
+    url = "/now/"
     weight = 3
   [[menu.nav]]
     name = "About"

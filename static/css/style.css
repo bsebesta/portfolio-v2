@@ -2,66 +2,6 @@
    CUSTOM PROPERTIES
    ========================================================================== */
 
-/* Type and Vertical Rhythm
-   ========================================================================== */
-
-/**
- * Note to self: I have at least three different kinds of H1, and I SHOULD
- * SHOULD PROBABLY USE CLASSES FOR EACH OF THESE.
- * - Homepage H1, with my name in it
- * - "BlockBG" H1, with the stripe
- * - Article H1, with the color change
- * 
- * In addition, I have a situation where *most* of the time, I'm going to be
- * dividing headers up between different sections. So the vertical rhythm
- * is not going to be so much about margin-top, as margin-bottom, etc.
-
- * Remember, the key properties here are:
- * - Line-height
- * - Top and bottom offset
- * - Height, min-height, max-height
- * - Padding-top, padding-bottom, margin-top, margin-bottom
- * 
- */
-
-:root {
-   /* Font Families */
-   --font-family-body: "Noto Sans", sans-serif;
-   --font-family-headers: "Merriweather", serif;
-   --font-family-nav: "Noto Sans", sans-serif;
-   --font-family-logotype: "Merriweather", serif;
-   /* Type Scale */
-   --type-scale-base: 20px;
-   /* Vertical rhythm */
-   --type-lineheight-bodytext: 1.2rem;
-   --type-lineheight-paragraph-spacing: var(--type-lineheight-bodytext);
-   --type-lineheight-h1-stripebg: 3.2rem;
-   --type-lineheight-h1: 3rem;
-   --type-lineheight-h2: 2.8rem;
-   --type-lineheight-h3: 2.8rem;
-   --type-lineheight-h4: 2.8rem;
-   --type-lineheight-homepage-description: 2.2rem;
-}
-
- /* Horizontal Rhythm
-   ========================================================================== */
-
-/**
- * BREAKPOINTS
- * 
- * Breakpoints can't be made into CSS properties as-of-code, and I'm not using
- * a CSS preprocessor right now. So I'm just noting my breakpoints right here:
- * 
- * 1. @media screen and (min-width: 600px)
- * 
- */
-
- :root {
-   --nav-maxwidth: 60rem;
-   --page-maxwidth: 45rem;
-   --page-maxwidth-singlecolum: 32rem;
-}
-
 /* Color Palettes
    ========================================================================== */
 
@@ -92,22 +32,6 @@
    --color-neutral-800: #2E3133;
    --color-neutral-900: #1C1D1F; /* "Black" */
 }
-
-/* ==========================================================================
-   Typography Implementation
-   ========================================================================== */
-
-:root {
-   font-family: var(--font-family-body);
-   font-size: var(--type-scale-base);
-}
-
-.blockbg { line-height: var(--type-lineheight-h1-stripebg); }
-h1 { line-height: var(--type-lineheight-h1); }
-h2 { line-height: var(--type-lineheight-h2); }
-h3 { line-height: var(--type-lineheight-h3); }
-h4 { line-height: var(--type-lineheight-h4); }
-p { line-height: var(--type-lineheight-bodytext); }
 
 /* ==========================================================================
    Dark / Light Mode implementation
@@ -241,249 +165,131 @@ body.dark-theme {
    --color-textdecoration: var(--color-accent-800);
 }
 
+
+/* Type
+   ========================================================================== */
+
+   :root {
+      /* Font Families */
+      --font-family-body: "Noto Sans", sans-serif;
+      --font-family-headers: "Merriweather", serif;
+      --font-family-nav: "Noto Sans", sans-serif;
+      --font-family-logotype: "Merriweather", serif;
+      /* Type Scale */
+      /* @link https://utopia.fyi/type/calculator?c=320,18,1.2,1240,22,1.333,6,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+      --step--2: clamp(0.77rem, calc(0.78rem + -0.01vw), 0.78rem);
+      --step--1: clamp(0.94rem, calc(0.90rem + 0.16vw), 1.03rem);
+      --step-0: clamp(1.13rem, calc(1.04rem + 0.43vw), 1.38rem);
+      --step-1: clamp(1.35rem, calc(1.18rem + 0.84vw), 1.83rem);
+      --step-2: clamp(1.62rem, calc(1.33rem + 1.43vw), 2.44rem);
+      --step-3: clamp(1.94rem, calc(1.49rem + 2.28vw), 3.26rem);
+      --step-4: clamp(2.33rem, calc(1.63rem + 3.49vw), 4.34rem);
+      --step-5: clamp(2.80rem, calc(1.76rem + 5.20vw), 5.79rem);
+      --step-6: clamp(3.36rem, calc(1.84rem + 7.57vw), 7.71rem);
+   }
+   
+/* Space
+   ========================================================================== */
+
+   :root {
+      /* @link https://utopia.fyi/space/calculator?c=320,18,1.2,1240,22,1.333,6,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+      /* Fluid spaces (in "T-shirt sizes") */
+      --space-3xs: clamp(0.31rem, calc(0.29rem + 0.11vw), 0.38rem);
+      --space-2xs: clamp(0.56rem, calc(0.52rem + 0.22vw), 0.69rem);
+      --space-xs: clamp(0.88rem, calc(0.81rem + 0.33vw), 1.06rem);
+      --space-s: clamp(1.13rem, calc(1.04rem + 0.43vw), 1.38rem);
+      --space-m: clamp(1.69rem, calc(1.56rem + 0.65vw), 2.06rem);
+      --space-l: clamp(2.25rem, calc(2.08rem + 0.87vw), 2.75rem);
+      --space-xl: clamp(3.38rem, calc(3.11rem + 1.30vw), 4.13rem);
+      --space-2xl: clamp(4.50rem, calc(4.15rem + 1.74vw), 5.50rem);
+      --space-3xl: clamp(6.75rem, calc(6.23rem + 2.61vw), 8.25rem);
+      
+      /* One-up pairs */
+      --space-3xs-2xs: clamp(0.31rem, calc(0.18rem + 0.65vw), 0.69rem);
+      --space-2xs-xs: clamp(0.56rem, calc(0.39rem + 0.87vw), 1.06rem);
+      --space-xs-s: clamp(0.88rem, calc(0.70rem + 0.87vw), 1.38rem);
+      --space-s-m: clamp(1.13rem, calc(0.80rem + 1.63vw), 2.06rem);
+      --space-m-l: clamp(1.69rem, calc(1.32rem + 1.85vw), 2.75rem);
+      --space-l-xl: clamp(2.25rem, calc(1.60rem + 3.26vw), 4.13rem);
+      --space-xl-2xl: clamp(3.38rem, calc(2.64rem + 3.70vw), 5.50rem);
+      --space-2xl-3xl: clamp(4.50rem, calc(3.20rem + 6.52vw), 8.25rem);
+      
+      /* Custom pairs */
+      --space-s-l: clamp(1.13rem, calc(0.56rem + 2.83vw), 2.75rem);
+
+      /* Grid */
+      /* @link https://utopia.fyi/grid/calculator?c=330,18,1.2,1364,22,1.333,6,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+      --grid-max-width: 85.25rem;
+      --grid-gutter: var(--space-s-l, clamp(1.13rem, calc(0.61rem + 2.51vw), 2.75rem));
+      --grid-columns: 12;
+
+      /* My original widths and calculations... */
+      --nav-maxwidth: 60rem;
+      --page-maxwidth: 45rem;
+      --page-maxwidth-singlecolum: 32rem;
+   }
+
 /* ==========================================================================
    LAYOUTS
    ========================================================================== */
 
-/* body
-   ========================================================================== */
+   body {
+      text-rendering: optimizeSpeed;
+      background-color: var(--color-body-bg);
+      color: var(--color-body-text);
+   }
 
-body {
-   background-color: var(--color-body-bg);
-   color: var(--color-body-text);
-}
+   /* I can use this class on any page, whether flex or grid, mainly on elements directly nested under "body" (i.e. nav, main, etc) */
+   .u-container {
+      max-width: var(--grid-max-width);
+      padding-inline: var(--grid-gutter);
+      margin-inline: auto;
+   }
 
-/* MAIN
-   ========================================================================== */
-
-main {
-   padding: 1rem;
-   width: 100%;
-   display: flex;
-   flex-flow: column nowrap;
-   align-items: center;
-}
-
-main > header,
-main > footer,
-main > section,
-main > article {
-   width: 100%;
-}
-
-main > header,
-main > footer,
-main > section,
-.main-article > header,
-.main-article > footer,
-.main-article > section,
-.main-article > article {
-   max-width: var(--page-maxwidth);
-}
-
-article > header,
-article > footer,
-article > section,
-article > article {
-   width: 100%;
-}
-
-main > header,
-.main-article > header {
-   margin: 2rem 0 1rem 0;
-}
-
-/* .page-general
-   ========================================================================== */
-
-.page-general > footer,
-.page-general > section,
-.page-general > article {
-   max-width: var(--page-maxwidth-singlecolum);
-}
-   
-.page-general > header {
-   display: flex;
-   flex-flow: column nowrap;
-   align-items: center;
-   text-align: center;
-   margin-bottom: 3rem;
-   max-width: var(--page-maxwidth);
-}
-
-.page-general > section,
-.page-general > figure {
-   width: 100%;
-   max-width: var(--page-maxwidth-singlecolum);
-   margin-bottom: var(--type-lineheight-paragraph-spacing);
-}
-
-/* .page-home
-   ========================================================================== */
-
-.page-home > header {
-   margin-top: 5rem;
-   margin-bottom: 5rem;
-}
-
-.page-home > header h1 {
-   font-size: 76px;
-}
-
-.page-home > header p {
-   margin: 1rem 0 1.2rem 0;
-   font-size: 42px;
-   line-height: var(--type-lineheight-homepage-description);
-}
-
-
-/* .main-article (Container within the <main> element)
-   ========================================================================== */
-
-article.main-article {
-   display: flex;
-   flex-flow: column nowrap;
-   align-items: center;
-}
-
-.main-article > footer,
-.main-article > section,
-.main-article > article {
-   max-width: var(--page-maxwidth-singlecolum);
-}
-   
-.main-article > header {
-   display: flex;
-   flex-flow: column nowrap;
-   align-items: center;
-   text-align: center;
-   margin-bottom: 3rem;
-   max-width: var(--page-maxwidth);
-}
+   .u-grid {
+      display: grid;
+      gap: var(--grid-gutter);
+   }
 
 /* ==========================================================================
-   INLINE TEXT ELEMENTS (Defaults)
+   TEXT ELEMENTS
    ========================================================================== */
 
-/* Headers
-   ========================================================================== */
-
-h1,
-h2,
-h3,
-h4 {
-   font-family: var(--font-family-headers);
-   position: relative;
-   color: var(--color-titles-text);
+:root {
+   font-family: var(--font-family-body);
+   font-size: var(--step-0);
 }
 
-h1 { font-size: 52px; }
-h2 { font-size: 52px; }
-
-/* Vertical Rhythms
-   ========================================================================== */
-
-/*
-p + p {
-   text-indent: 1rem;
-}
-*/
-
-p + p,
-ul + p,
-ol + p {
-   margin-top: var(--type-lineheight-paragraph-spacing);
+a {
+   color: var(--color-accent-700);
+   text-underline-offset: 2px;
 }
 
-/* Blockquote
-   ========================================================================== */
-
-blockquote p {
-   hanging-punctuation: first;
+strong {
+   font-weight: 700;
 }
-
-/* Emphasis
-   ========================================================================== */
 
 em {
    font-style: italic;
 }
 
-/* Lists
-   ========================================================================== */
-
-ol,
-ul {
-   margin-top: 1rem;
+h2 {
+   margin-bottom: var(--space-3xs);
+   font-family: var(--font-family-headers);
+   font-size: var(--step-0);
+   font-weight: 700;
 }
 
-ol {
-   list-style-type: decimal;
+p,
+blockquote,
+figure {
+   margin-bottom: var(--space-s);
 }
 
-ul {
-   list-style-type: disc;
-}
-
-ol li,
-ul li {
-   margin-left: 1rem;
-}
-
-ol::marker {
-   content: "Step " counter(list-item) ": ";
- }
-   
-/* Links
-   ========================================================================== */
-
-a {
-   text-underline-offset: 2px;
-}
-
-a:link,
-a:visited {
-   text-decoration: none;
-   color: var(--color-link);
-}
-
-a:hover,
-a:active {
-   text-decoration: underline;
-   color: var(--color-link-hover);
-}
-
-/* Decorations
-   ========================================================================== */
-
-hr {
-   border: solid 1px var(--color-textdecoration);
-   width: 100px;
-}
-
-/* Usually used with a <span> */
-.text-decoration {
-   color: var(--color-textdecoration);
-}
-
-/* This is the striped block that appears behind some headers */
-.blockbg {
-   display: inline-block;
-   position: relative;
-   z-index: 1;
-}
-
-.blockbg::after {
-   content: ' ';
-   z-index: -1;
-   display: block;
-   position: absolute;
-   height: .4em;
-   width: 100%;
-   top: 0.75em;
-   left: 0.125em;
-   bottom: 1px;
-   background-color: var(--color-titles-stripe);
+blockquote {
+   border-left: solid var(--space-3xs) var(--color-accent-200);
+   padding-left: var(--space-3xs);
 }
 
 /* ==========================================================================
@@ -494,43 +300,35 @@ hr {
    ========================================================================== */
 
 #nav-banner {
-   display: flex;
-   flex-flow: column nowrap;
-   align-items: center;
+   /* Display & Box Model */
    width: 100%;
-}
-
-#nav-banner-container {
-   /*position: -webkit-sticky;
-   position: sticky;
-   top: 0;*/
-   width: 100%;
-   max-width: var(--nav-maxwidth);
+   margin: var(--space-3xs) 0;
+   /* Interior Display */
    display: flex;
-   justify-content: space-between;
    flex-flow: row nowrap;
-   padding: 1rem;
-   font-size: 16px;
-   /*background-image: linear-gradient(hsla(0, 0%, 100%,1), hsla(0,0%,100%,0));*/
-   background: linear-gradient(180deg, var(--color-body-bg) 58.85%, rgba(255, 255, 255, 0) 100%);
+   justify-content: space-between;
+   align-items: center;
+   gap: var(--grid-gutter);
+   /* Other */
    font-family: var(--font-family-nav);
+   font-size: var(--step--2);
 }
 
 #nav-banner-logotype {
    font-family: var(--font-family-logotype);
+   font-size: var(--step-0);
    font-weight: bold;
-   font-size: 24px;
 }
 
 #nav-banner-logotype a {
-   text-decoration: none !important;
    color: var(--color-bannernav-logotype);
+   text-decoration: none !important;
 }
 
 #nav-banner-list {
    display: flex;
    flex-flow: row nowrap;
-   gap: 1rem;
+   gap: var(--space-s);
 }
 
 /* Link Behavior
@@ -553,27 +351,6 @@ hr {
    text-decoration: none;
 }
 
-/* Accessibility Button
-   ========================================================================== */
-
-.nav-banner-accessibilitybutton {
-   margin: 0;
-   padding: 0;
-   background-color: transparent;
-   border: none;
-   cursor: pointer;
-   @media screen and (-ms-high-contrast: active) {
-      border: 2px solid currentcolor;
-   }
-   display: inline-flex;
-   font-family: var(--font-family-nav);
-   color: var(--color-button-text);
-}
-
-.nav-banner-accessibilitybutton svg {
-   fill: var(--color-bannernav-link);
-}
-
 /* Animated Links
    ========================================================================== */
 
@@ -583,27 +360,30 @@ hr {
  * 
  */
 
- .link-animate {
+.link-animate {
    position: relative; /* Makes the pseudo-element work */
    text-decoration: none;
 }
 
 .link-animate::after {
+   /* Content */
    content: '';
+   /* Positioning & Box Model*/
    position: absolute;
    width: 100%;
-   transform: scaleX(0);
    height: 2px;
-   bottom: 0;
+   bottom: -8px;
    left: 0;
+   /* Other */
    background-color: var(--color-bannernav-link-underline);
-   transform-origin: center;
+   transform: scaleX(0);
+   transform-origin: right;
    transition: transform 0.25s ease-out;
 }
 
 .link-animate:hover::after {
    transform: scaleX(1);
-   transform-origin: center;
+   transform-origin: left;
 }
 
 .link-animate-selected {
@@ -611,74 +391,34 @@ hr {
 }
 
 .link-animate-selected::after {
-   transform: scaleX(1);
    background-color: var(--color-bannernav-link-underline-active);
+   transform: scaleX(1);
 }
 
-/* ==========================================================================
-   COMPONENT: Text-focused section
+/* Accessibility Button
    ========================================================================== */
 
-.section-text h2 {
-   font-size: 1.4rem;
-}
-
-/* ==========================================================================
-   COMPONENT: <section> with a quote
-   ========================================================================== */
-
-.section-quote {
-   border-left: solid 1rem var(--color-textdecoration);
-   padding-left: 1rem;
-}
-
-/* ==========================================================================
-   COMPONENT: Interest List, featured on the "About" page
-   ========================================================================== */
-
-/* Interests
-   ========================================================================== */
-
-.section-about-interests > div {
-   display: flex;
-   flex-flow: row wrap;
-   justify-content: space-between;
-   row-gap: .8rem;
-   column-gap: .5rem;
-}
-
-.section-about-interests article {
-   flex: 0 1 auto;
-}
-
-@media screen and (min-width: 600px) {
-   .section-about-interests article {
-      flex: 0 1 30%;
+.nav-banner-accessibilitybutton {
+   /* Display */
+   display: inline-flex;
+   /* Other */
+   background-color: transparent;
+   color: var(--color-button-text);
+   font-family: var(--font-family-nav);
+   cursor: pointer;
+   /* Positioning & Box Model */
+   margin: 0;
+   padding: 0;
+   border: none;
+   @media screen and (-ms-high-contrast: active) {
+      border: 2px solid currentcolor;
    }
 }
 
-.section-about-interests > div > article > h2 {
-   font-size: .9rem;
-   font-family: var(--font-family-body);
-   text-decoration: underline;
-   text-underline-offset: 2px;
-   line-height: 1.4rem;
+.nav-banner-accessibilitybutton svg {
+   fill: var(--color-bannernav-link);
 }
 
-.section-about-interests > div > article > p {
-   font-size: .8rem;
-   line-height: 1rem;
-}
-
-/* ==========================================================================
-   COMPONENT: Button List
-   ========================================================================== */
-
-.section-buttons {
-   display: flex;
-   flex-flow: column wrap;
-   gap: 1rem;
-}
 
 /* ==========================================================================
    COMPONENT: Buttons
@@ -687,268 +427,206 @@ hr {
 /* General Attributes
    ========================================================================== */
 
-button {
-   padding: 16px;
-   font-size: 16px;
-   border-radius: 50px;
+a.markdown-btn {
+   /* For some reason, fit-content isn't working... */
+   width: fit-content;
+   display: inline-block;
+   width: auto;
+   padding: var(--space-2xs);
+   font-size: var(--step--1);
+   border-radius: var(--space-l);
+   text-decoration: none;
    transition: all 100ms ease-out;
 }
 
-button:hover {
+a.markdown-btn:hover {
    cursor: pointer;
 }
 
 /* Primary CTA
    ========================================================================== */
 
-button.button-primary {
+a.markdown-btn-primary {
    color: var(--color-button-text);
    border: solid 1px var(--color-button-border);
    background-color: var(--color-button-bg);
 }
 
-button.button-primary:hover {
+a.markdown-btn-primary:hover {
    color: var(--color-button-hover-text);
    border: solid 1px var(--color-button-hover-border);
    background-color: var(--color-button-hover-bg);
 }
 
 /* ==========================================================================
-   COMPONENT: Case Study List (featured on homepage)
+   LAYOUT: Index
    ========================================================================== */
 
-/* Container Link
-   ========================================================================== */
-
-.casestudy-container-link {
-   text-decoration: none !important;
-   color: initial;
-}
-
-/* Case Study List (Mobile)
-   ========================================================================== */
-
-/* Flex list */
-.casestudy-list {
+.page-home {
    display: flex;
    flex-flow: column nowrap;
-   gap: 32px;
-   margin-bottom: 10rem;
 }
 
-/* Individual containers for the case study */
-.casestudy-list-entry {
+/* Header
+   ========================================================================== */
+
+.page-home > header {
+   width: 100%;
+   margin-top: var(--space-2xl);
+   display: flex;
+   flex-flow: column;
+   align-items: flex-start;
+   gap: var(--space-2xs);
+}
+
+   .page-home > header h1 {
+      font-size: var(--step-5);
+      font-family: var(--font-family-headers);
+   }
+
+   .page-home > header ul {
+      display: flex;
+      flex-flow: row wrap;
+      gap: var(--space-3xs);
+      font-size: var(--step-2);
+   }
+
+   .page-home > header li {
+      display: inline-flex;
+   }
+
+   .page-home > header li::after {
+      content: '//';
+      margin-left: var(--space-3xs);
+      color: var(--color-textdecoration);
+   }
+
+   .page-home > header li:last-of-type::after {
+      content: '';
+   }
+
+   .page-home > header a.markdown-btn {
+      margin-top: var(--space-3xs);
+   }
+
+/* Sections
+   ========================================================================== */
+
+.page-home > section {
+   margin-top: var(--space-3xl);
+}
+
+/* ==========================================================================
+   LAYOUT: Single ("Prose")
+   ========================================================================== */
+
+/* Container
+   ========================================================================== */
+
+.page-prose {
    display: flex;
    flex-flow: column nowrap;
-   transition: all 200ms ease-out;
-   gap: 1rem;
-   cursor: pointer;
+   gap: var(--grid-gutter);
 }
 
-.casestudy-list-entry:hover {
-   scale: 1.01;
+@media screen and (min-width: 800px) {
+   .page-prose {
+      display: grid;
+      gap: var(--grid-gutter);
+      grid-template-columns: repeat(var(--grid-columns), 1fr);
+   }
 }
 
-/* Two, high-level containers */
-.casestudy-list-entry-image {
-   display: block;
-   aspect-ratio: 28/9;
-   background-color: var(--color-tag-bg);
-   border-radius: 4px;
-   flex: 0 1 auto;
+/* Header
+   ========================================================================== */
+
+.page-prose > header {
+   margin-top: var(--space-xl);
 }
 
-
-/* Text elements within .casestudy-content */
-.casestudy-list-entry h2 {
-   font-size: 28px;
-   color: var(--color-body-text);
-   line-height: 1.8rem;
+@media screen and (min-width: 800px) {
+   .page-prose > header {
+      margin-top: var(--space-xl);
+      grid-column: 2/11;
+   }
 }
 
-.casestudy-list-entry p {
-   color: var(--color-body-text);
+   .garden-meta-wrapper {
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+      gap: var(--space-3xs);
+      gap: var(--space-s);
+      margin-bottom: var(--space-s);
+      font-size: var(--step--1);
+      color: var(--color-neutral-700);
+      text-transform: capitalize;
+   }
+
+   .garden-meta-category-wrapper {
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+      gap: var(--space-3xs);
+   }
+
+   .page-prose > header h1 {
+      font-family: var(--font-family-headers);
+      font-size: var(--step-3);
+      font-weight: bold;
+      color: var(--color-accent-800);
+   }
+
+   .garden-deck {
+      display: inline-block;
+      font-size: var(--step-1);
+      color: var(--color-accent-700);
+      margin-top: var(--space-2xs);
+   }
+
+
+/* Text Shape
+   ========================================================================== */
+
+.page-prose > section,
+.page-prose > article {
+   margin-bottom: var(--space-s);
 }
 
-/* Tag cloud within content */
-.casestudy-list-entry ul {
-   list-style-type: none;
-   display: flex;
-   flex-flow: row wrap;
-   gap: 8px;
-   margin: 8px 0 16px 0;
+@media screen and (min-width: 600px) {
+   .page-prose > section,
+   .page-prose > article {
+      grid-column: 2/9;
+   }
 }
 
-.casestudy-list-entry li {
-   margin: 0;
-   padding: 8px;
-   font-size: 16px;
-   font-weight: bold;
-   background-color: var(--color-tag-bg);
-   border-radius: 4px;
-   color: var(--color-tag-text);
+@media screen and (min-width: 900px) {
+   .page-prose > section,
+   .page-prose > article {
+      grid-column: 2/9;
+   }
 }
 
-/* Case Study List (Responsive Desktop)
+/* Timeline Element for the "Now" Page
    ========================================================================== */
 
 @media screen and (min-width: 600px) {
-   .casestudy-list-entry {
-      flex-flow: row wrap;
+
+   .section-timeline-element {
+      border-left: 1px dashed var(--color-neutral-300);
+      padding-left: var(--space-s);
    }
 
-   .casestudy-list-entry-image {
+   .section-timeline-element::before {
+      content: "";
+      width: var(--space-2xs);
+      height: var(--space-2xs);
+      border: 2px solid var(--color-neutral-300);
+      background-color: var(--color-body-bg);
       display: block;
-      aspect-ratio: 4/3;
-      background-color: var(--color-tag-bg);
-      border-radius: 4px;
-      flex: 0 1 30%;
+      margin-left: calc(-1 * var(--space-s) - (var(--space-2xs)/2));
+      position: relative;
+      top: 0rem;
+      border-radius: 50%;
    }
-
-   .casestudy-list-entry-content {
-      flex: 0 1 60%;
-   }
-}
-
-/* ==========================================================================
-   COMPONENT: Digital Garden List
-   ========================================================================== */
-
-/* Digital Garden List
-   ========================================================================== */
-
-.digital-garden-index {
-   column-count: 2;
-}
-
-.digital-garden-index ul {
-}
-
-/* ==========================================================================
-   COMPONENT: Article List
-   ========================================================================== */
-
-/* Article List Container
-   ========================================================================== */
-
-.article-list {
-   display: flex;
-   flex-flow: column nowrap;
-   gap: 64px;
-   margin-bottom: 10rem;
-}
-
-.article-list-header {
-   margin-bottom: 48px;
-}
-
-/* Entries
-   ========================================================================== */
-
-.article-container-link {
-   text-decoration: none !important;
-   color: initial;
-   transition: all 200ms ease-out;
-   cursor: pointer;
-}
-
-.article-container-link:hover {
-   scale: 1.01;
-}
-
-.article-list-entry {
-   
-}
-
-.article-list-entry h2 {
-   color: var(--color-titles-article-text);
-}
-
-.article-list-deck {
-   color: var(--color-article-deck);
-}
-
-.article-list-metadata {
-   color: var(--color-article-metadata);
-   font-size: 16px;
-   padding-bottom: .3rem;
-}
-
-/* ==========================================================================
-   CLASSES: Article
-   ========================================================================== */
-
-.article-title {
-   color: var(--color-titles-article-text);
-}
-
-.article-metadata {
-   font-size: 16px;
-   color: var(--color-article-metadata);
-   padding-bottom: .3rem;
-}
-
-/* Text
-   ========================================================================== */
-
-/*
-.main-article > section > p:first-child:first-letter {
-   color: var(--color-titles-article-text);
-   float: left;
-   line-height: 1.6rem;
-   font-family: var(--font-family-headers);
-   font-size: 60px;
-   padding-top: 1rem;
-   padding-right: 6px;
-   padding-left: 4px;
-   padding-bottom: 6px;
-}*/
-
-/* ==========================================================================
-   COMPONENT: Footnotes (section generated by Hugo)
-   ========================================================================== */
-
-section.footnotes hr {
-
-}
-
-section.footnotes sup, sub {
-    vertical-align: baseline;
-    position: relative;
-    top: -0.4em;
-}
-
-section.footnotes sub {
-    top: 0.4em;
-}
-
-/* ==========================================================================
-   CLASSES: Article Footer (with reply, navigation back to article list)
-   ========================================================================== */
-
-.article-footer {
-   margin: 6rem 0 4rem 0;
-}
-
-.article-footer ul {
-   list-style-type: none;
-   display: flex;
-   flex-flow: row;
-   justify-content: center;
-   font-size: 16px;
-}
-
-.article-footer li {
-   margin: 0;
-}
-
-.article-footer li::after {
-   content: '//';
-   color: var(--color-textdecoration);
-   margin-left: .5rem;
-   margin-right: .5rem;
-}
-
-.article-footer li:last-of-type:after {
-   content: '';
 }

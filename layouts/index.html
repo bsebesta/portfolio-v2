@@ -2,18 +2,26 @@
 
 <main class="page-home">
 
-<header>
-    <h1>Bryan Sebesta</h1>
-    <p>Experience designer <span class="text-decoration">//</span> Systems thinker <span class="text-decoration">//</span> Craftsman of pixels, words, and code.</p>
-    {{ partial "buttons/primary.html" (dict "link" "/docs/resume_bryansebesta.pdf" "text" "Resumé") }}
-</header>
-
-<section class="casestudy-list">
-
     <header>
-        <h2 class="blockbg">Case Studies</h2>
+        <h1><!-- &#128075; -->Bryan Sebesta</h1>
+        <!-- <h1><strong>Bryan</strong> is a multidisciplinary experience designer -->
+        <ul>
+            <li>Experience designer</li>
+            <li>Systems thinker</li>
+            <li>Craftsman of words, pixels, and code</li>
+        </ul>
+        <!-- {{ partial "buttons/primary.html" (dict "link" "/docs/resume_bryansebesta.pdf" "text" "Resumé") }} -->
     </header>
 
+</main>
+
+<!--
+<section>
+
+    <h2>Featured Projects</h2>
+    <p>Stories about work I'm proud of</p>
+
+    <div>
     {{ range where .Site.RegularPages.ByWeight "Section" "case-studies" }}
     <a href="{{ .Permalink }}" class="casestudy-container-link">
         <article class="casestudy-list-entry">
@@ -30,9 +38,9 @@
         </article>
     </a>
     {{ end }}
+    </div>
 
 </section>
-
-</main>
+-->
 
 {{- end -}}

@@ -1,15 +1,26 @@
 {{- define "main" -}}
 
-<main class="page-digitalgarden-single">
+<main class="page-prose">
 
-<header>
-<h1 class="blockbg">{{ .Title }}</h1>
-</header>
-
-<section>
-{{ .Content }}
-</section>
-
-</main>
+    <header>
+        <div class="garden-meta-wrapper">
+            <div class="garden-meta-category-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#414447" viewBox="0 0 256 256"><path d="M228,128a12,12,0,0,1-12,12H69l51.52,51.51a12,12,0,0,1-17,17l-72-72a12,12,0,0,1,0-17l72-72a12,12,0,0,1,17,17L69,116H216A12,12,0,0,1,228,128Z"></path></svg>
+                <span>{{ .Params.category }}</span>
+            </div>
+            <span>Sapling</span>
+        </div>
+        <h1>{{ .Title }}</h1>
+        {{ with .Params.deck }}<span class="garden-deck">{{ . }}</span>{{ end }}
+        <div class="garden-meta-date-wrapper">
+            
+        </div>
+    </header>
+    
+    <article>
+    {{ .Content }}
+    </article>
+    
+    </main>
 
 {{- end -}}

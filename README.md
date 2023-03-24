@@ -20,3 +20,6 @@ When I add a new section, I usually
     * The header is wider than the body.
 * I have other page classes:
     * `.page-home`
+
+
+## Inspiration

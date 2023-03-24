@@ -1,15 +1,21 @@
 {{- define "main" -}}
 
 <main>
+    <article class="page-prose">
 
-<header>
-<h1>{{ .Title }}</h1>
-</header>
+    <header>
+        <h1>{{ .Title }}</h1>
+        {{ with .Params.deck }}<span class="garden-deck">{{ . }}</span>{{ end }}
+        <div class="garden-meta-date-wrapper">
+            
+        </div>
+    </header>
+    
+    <section>
+    {{ .Content }}
+    </section>
 
-<section>
-{{ .Content }}
-</section>
-
+    </article>
 </main>
 
 {{- end -}}

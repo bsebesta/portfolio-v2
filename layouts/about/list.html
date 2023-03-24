@@ -1,87 +1,28 @@
 {{- define "main" -}}
 
-<main class="page-general">
+<main class="page-prose">
 
 <header>
-    <h1 class="blockbg">{{ .Title }}</h1>
+    <h1>{{ .Title }}</h1>
 </header>
 
-<section class="section-text">
-    <p>My love for design began with LEGOs. I grew up building ships, castles, space shuttles, forts, and whatever else I could manage. I loved seeing how these interlocking systems came apart and together. </p>
-    <p>That same love for design carried over into another discipline I discovered at an early. At age 11, I taught myself to code, and by age 14, I was running the largest LEGO Bionicle reference site. All this pushed me forward in technology: by age 18, I was “captain of the varsity web team” at my high school, leading developing on our High Schools’ website and teaching incoming Freshmen and Sophomores how to use HTML, CSS, and Javascript.</p>
-    <p>Over my lifetime, the materials I've designed with have changed: from LEGOs, to code, to visual UI and conversational UI. But throughout it all, I have carried with me a love of <em>the promise of design—to build something that meets a need for one, or many, human beings.</em></p>
+{{ range .RegularPages.ByWeight }}
+<section>
+    {{ with .Title }}<h2>{{ . }}</h2>{{ end }}
+    {{ .Content }}
 </section>
+{{ end }}
 
-<section class="section-buttons">
-    {{ partial "buttons/primary.html" (dict "link" "#" "text" "Read Article: What is UX?") }}
-    {{ partial "buttons/primary.html" (dict "link" "#" "text" "Read Article: What is a User?") }}
-    {{ partial "buttons/primary.html" (dict "link" "#" "text" "Read Article: What Makes Good Design Good") }}
-</section>
-
-<section class="section-text">
-    <p>I'm a big believer in drawing inspiration from the past. The great designer Charles Eames often advised "innovate as a last resort", concerned that to innovate too much, too fast would cause us to lose the wisdom of the development up to that point.</p>
-</section>
-
-<figure class="section-quote">
-    <blockquote>Design is intelligence made visible.</blockquote>
-</figure>
-
-<section class="section-text">
-    <p>Design is many things. It's "the rendering of intent." It's "intelligence made visible." It's "a plan for arranging elements to accomplish a particular purpose."</p>
-    <p>I also believe in understanding the ethical implications of design. As Melvin Kranzberg once wrote, "Technology is neither good nor bad; nor is it neutral." All technology changes how we experience space, time, community; how we relate to the world. We need to design with people in mind, but then, we also need to expand our idea of people—including the deaf and blind, the differently abled, children and the elderly. We need to make a world that is more humane.</p>
-</section>
-
-<section class="section-buttons">
-    {{ partial "buttons/primary.html" (dict "link" "#" "text" "Read Article: On Moral Technology") }}
-    {{ partial "buttons/primary.html" (dict "link" "#" "text" "Read Article: Rebuilding our Technological Imaginations") }}
-    {{ partial "buttons/primary.html" (dict "link" "#" "text" "Read Article: Design as World Repair") }}
-</section>
-
-<section class="section-text">
-    <h2>Strengths</h2>
-    <p>According to StrengthsFinder, my top 5 strengths are:</p>
-    <ol>
-        <li>Intellection</li>
-        <li>Input</li>
-        <li>Restorative</li>
-        <li>Context</li>
-        <li>Connectedness</li>
-    </ol>
-    <p>Other strengths:</p>
-    <ul>
-        <li>Systems Thinking</li>
-        <li>Public Speaking</li>
-        <li>Empathy</li>
-    </ul>
-</section>
-
-<section class="section-text section-about-interests">
+<!-- DON'T DELETE THIS! Finally figured out how to selectively range through a nested subfolder... -->
+<section>
     <h2>My Interests</h2>
-    <div>
-    <article>
-        <h2>Reading</h2>
-        <p>In the past decade, I’ve read or referenced 425 books. Some of my recent favorites include <a href="#" target="_blank">Cloud Atlas</a>, <a href="#" target="_blank">Emotional Intelligence</a>, and <a href="#" target="_blank">The Ruthless Elimination of Hurry</a>.</p>
-    </article>
-    <article>
-        <h2>Short-form Writing</h2>
-        <p><a href="https://www.bryansebesta.net/" target="_blank">I keep a microblog</a> where I share photographs, life updates, random blog posts, and other things unrelated to professional life.</p>
-    </article>
-    <article>
-        <h2>Watching</h2>
-        <p>Lately, I’ve been trying to get more into film appreciation. Some recent watches include <a href="#" target="_blank">The Mission (1986)</a>, <a href="#" target="_blank">Stagecoach (1939)</a>, and <a href="#" target="_blank">Puss in Boots: The Last Wish (2022)</a>.</p>
-    </article>
-    <article>
-        <h2>Listening</h2>
-        <p>I’m not a huge music guy, but I’ve recently started to collect CDs, vinyls and really listen. Some albums I love include <a href="#" target="_blank">How Long Do You Think It’s Going to Last (2022)</a>, <a href="#" target="_blank">EveryPsalm (2022)</a>, and <a href="#" target="_blank">Cleopatra (2017)</a>.</p>
-    </article>
-    <article>
-        <h2>Hiking & Walking</h2>
-        <p>Having spent much of the past decade in Utah and New York City, I’m a big fan of both natural hikes and urban walks.</p>
-    </article>
-    <article>
-        <h2>Digital Gardens</h2>
-        <p>I’m a big fan of effective note-taking. I've written 1405 evergreen notes in <a href="https://obsidian.md/" target="_blank">Obsidian</a> on topics like design, faith, culture, and ethics, and I'm working to move some of that to my online portfolio.</p>
-    </article>
+    <div class="collection-interests">
+        {{ range (site.GetPage "about/interests").Pages }}
+        <article>
+            <h2>{{ .Title }}</h2>
+            <p>{{ .Content }}</p>
+        </article>
+        {{ end }}
     </div>
 </section>
 
