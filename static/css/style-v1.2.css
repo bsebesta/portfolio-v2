@@ -17,6 +17,10 @@
    --color-accent-700: #296094;
    --color-accent-800: #114D84;
    --color-accent-900: #1B2843;
+   /* Accent color palette (dark mode variations) */
+   --color-accent-400-dark: #A0CBF3;
+   --color-accent-800-dark: #3A5772;
+   --color-accent-900-dark: #1B2843;
    /* Neutral color palette */
    --color-neutral-100: #F5F7FA; /* "White" */
    --color-neutral-200: #DADDE0;
@@ -69,6 +73,98 @@ body {
    --color-tag-bg: var(--color-accent-200);
    --color-textdecoration: var(--color-accent-200);
 }
+
+/* Light theme (duplicate of above, reset from toggle) */
+@media (prefers-color-scheme: dark) {
+   body.light-theme {
+      --color-body-bg: var(--color-accent-000);
+      --color-body-text: var(--color-neutral-900);
+      --color-link: var(--color-accent-700);
+      --color-link-hover: var(--color-accent-900);
+      --color-bannernav-logotype: var(--color-neutral-900);
+      --color-bannernav-link: var(--color-accent-800);
+      --color-bannernav-link-hover: var(--color-neutral-900);
+      --color-bannernav-link-active: var(--color-neutral-900);
+      --color-bannernav-link-underline: var(--color-accent-300);
+      --color-bannernav-link-underline-active: var(--color-accent-800);
+      --color-button-text: var(--color-accent-000);
+      --color-button-border: var(--color-accent-800);
+      --color-button-bg: var(--color-accent-800);
+      --color-button-hover-text: var(--color-accent-800);
+      --color-button-hover-border: var(--color-accent-800);
+      --color-button-hover-bg: var(--color-accent-000);
+      --color-titles-text: var(--color-neutral-900);
+      --color-titles-stripe: var(--color-accent-200);
+      --color-titles-article-text: var(--color-accent-800);
+      --color-article-metadata: var(--color-neutral-500);
+      --color-article-deck: var(--color-neutral-600);
+      --color-tag-text: var(--color-accent-800);
+      --color-tag-bg: var(--color-accent-200);
+      --color-textdecoration: var(--color-accent-200);
+   }
+}
+
+/* Dark Theme
+   ========================================================================== */
+
+/* Dark theme (happens for dark color scheme) */
+@media (prefers-color-scheme: dark) {
+   body { 
+      --color-body-bg: var(--color-accent-900-dark);
+      --color-body-text: var(--color-neutral-100);
+      --color-link: var(--color-accent-400-dark);
+      --color-link-hover: var(--color-accent-400-dark);
+      --color-bannernav-logotype: var(--color-accent-300);
+      --color-bannernav-link: var(--color-accent-300);
+      --color-bannernav-link-hover: var(--color-accent-100);
+      --color-bannernav-link-active: var(--color-accent-100);
+      --color-bannernav-link-underline: var(--color-accent-400-dark);
+      --color-bannernav-link-underline-active: var(--color-accent-100);
+      --color-button-text: var(--color-accent-900-dark);
+      --color-button-border: var(--color-accent-100);
+      --color-button-bg: var(--color-accent-100);
+      --color-button-hover-text: var(--color-accent-400-dark);
+      --color-button-hover-border: var(--color-accent-400-dark);
+      --color-button-hover-bg: var(--color-accent-900-dark);
+      --color-titles-text: var(--color-neutral-100);
+      --color-titles-stripe: var(--color-accent-800-dark);
+      --color-titles-article-text: var(--color-accent-200);
+      --color-article-metadata: var(--color-neutral-300);
+      --color-article-deck: var(--color-neutral-200);
+      --color-tag-text: var(--color-neutral-400);
+      --color-tag-bg: var(--color-accent-800-dark);
+      --color-textdecoration: var(--color-accent-800);
+   }
+}
+
+/* Dark theme (available for toggle during normal settings) */
+body.dark-theme {
+   --color-body-bg: var(--color-accent-900-dark);
+   --color-body-text: var(--color-neutral-100);
+   --color-link: var(--color-accent-400-dark);
+   --color-link-hover: var(--color-accent-400-dark);
+   --color-bannernav-logotype: var(--color-accent-300);
+   --color-bannernav-link: var(--color-accent-300);
+   --color-bannernav-link-hover: var(--color-accent-100);
+   --color-bannernav-link-active: var(--color-accent-100);
+   --color-bannernav-link-underline: var(--color-accent-400-dark);
+   --color-bannernav-link-underline-active: var(--color-accent-100);
+   --color-button-text: var(--color-accent-900-dark);
+   --color-button-border: var(--color-accent-100);
+   --color-button-bg: var(--color-accent-100);
+   --color-button-hover-text: var(--color-accent-400-dark);
+   --color-button-hover-border: var(--color-accent-400-dark);
+   --color-button-hover-bg: var(--color-accent-900-dark);
+   --color-titles-text: var(--color-neutral-100);
+   --color-titles-stripe: var(--color-accent-800-dark);
+   --color-titles-article-text: var(--color-accent-200);
+   --color-article-metadata: var(--color-neutral-300);
+   --color-article-deck: var(--color-neutral-200);
+   --color-tag-text: var(--color-neutral-400);
+   --color-tag-bg: var(--color-accent-800-dark);
+   --color-textdecoration: var(--color-accent-800);
+}
+
 
 /* Type
    ========================================================================== */
@@ -147,7 +243,6 @@ body {
       --grid-columns: 12;
 
       /* My original widths and calculations... */
-      --measure: 60ch;
       --nav-maxwidth: 60rem;
       --page-maxwidth: 45rem;
       --page-maxwidth-singlecolum: 32rem;
@@ -157,181 +252,11 @@ body {
    LAYOUTS
    ========================================================================== */
 
-/* Body properties
-   ========================================================================== */
-
-body {
-   text-rendering: optimizeSpeed;
-   margin-bottom: var(--space-3xl);
-   background-color: var(--color-body-bg);
-   color: var(--color-body-text);
-}
-
-/* EVERY LAYOUT: Stack
-   ========================================================================== */
-
- .stack {
-   display: flex;
-   flex-direction: column;
-   justify-content: flex-start;
-}
-
-.stack * {
-   margin-block: 0;
-} 
-
-.stack * + * {
-   margin-block-start: var(--space, var(--space-s));
-}
-
-.stack-exception,
-.stack-exception + * {
-  margin-block: 0;
-  margin-block-start: 0;
-}
-
-/* EVERY LAYOUT: Center
-   ========================================================================== */
-
-.center {
-   box-sizing: content-box;
-   margin-inline: auto;
-   max-inline-size: var(--measure);
+   body {
+      text-rendering: optimizeSpeed;
+      background-color: var(--color-body-bg);
+      color: var(--color-body-text);
    }
-
-/* EVERY LAYOUT: Cluster
-   ========================================================================== */
-
-.cluster {
-   display: flex;
-   flex-wrap: wrap;
-   gap: var(--space-s, 1rem);
-   justify-content: flex-start;
-   align-items: center;
- }
-
- /* EVERY LAYOUT: Grid
-   ========================================================================== */
-
-   .grid {
-      display: grid;
-      grid-gap: var(--grid-gutter);
-    }
-
-    .grid > * {
-      margin-block: 0;
-      margin-block-start: 0;
-    }
-    
-    @supports (width: min(400px, 100%)) {
-      .grid {
-        grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
-      }
-    }
-
-/* EVERY LAYOUT: Multicolumn List
-   ========================================================================== */
-
-.multicolumn-list ol, ul {
-   columns: 2;
-   column-gap: 1rem;
-}
-   
-.multicolumn-list li {
-   column-span: all;
-}
-   
-.multicolumn-list li:nth-last-child(n+5), 
-.multicolumn-list li:nth-last-child(n+5) ~ * {
-   column-span: none;
-}
-
-/* EVERY LAYOUT: Multicolumn Grid
-   ========================================================================== */
-
-.multicolumn-grid {
-   columns: 2;
-   column-gap: 1rem;
-}
-   
-.multicolumn-grid > * {
-   column-span: all;
-   width: 100%;
-}
-
-.multicolumn-grid > *:nth-last-child(n+6), 
-.multicolumn-grid > *:nth-last-child(n+6) ~ * {
-   column-span: none;
-}
-      
-/* EVERY LAYOUT: Switcher
-   ========================================================================== */
-
-   /*
-   .switcher {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      --threshold: 30rem;
-    }
-    
-    .switcher > * {
-      flex-grow: 1;
-      flex-basis: calc((var(--threshold) - 100%) * 999);
-    }
-    */
-
-    .switcher {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      /*gap: var(--space-s);*/
-    }
-    
-    .switcher > * {
-      flex-grow: 1;
-      flex-basis: calc((30rem - 100%) * 999);
-    }
-    
-    
-    .switcher > :nth-last-child(n+ 3),
-    .switcher > :nth-last-child(n+ 3) ~ * {
-      flex-basis: 100%;
-    } 
-
- /* EVERY LAYOUT: Frame
-   ========================================================================== */
-
- .frame {
-   --n: 16;
-   --d: 9;
-   aspect-ratio: var(--n) / var(--d);
-   overflow: hidden;
-   display: flex;
-   justify-content: center;
-   align-items: center;
- }
- 
- .frame > img,
- .frame > video {
-   inline-size: 100%;
-   block-size: 100%;
-   object-fit: cover;
- }
-
- /* EVERY LAYOUT: Frame
-   ========================================================================== */
-
- .box {
-   padding: var(--space-s);
-   border: 0 solid;
-   outline: var(--border-thin) solid transparent;
-   outline-offset: calc(var(--border-thin) * -1);
- }
- 
- .box * {
-   color: inherit;
- }
 
 /* ==========================================================================
    TEXT ELEMENTS
@@ -384,7 +309,7 @@ blockquote {
 /* Containers
    ========================================================================== */
 
-.nav-banner {
+#nav-banner {
    /* Display & Box Model */
    width: 100%;
    max-width: var(--grid-max-width);
@@ -402,15 +327,21 @@ blockquote {
    font-size: var(--step--2);
 }
 
-.nav-banner-logotype {
+#nav-banner-logotype {
    font-family: var(--font-family-logotype);
    font-size: var(--step-0);
    font-weight: bold;
 }
 
-.nav-banner-logotype a {
+#nav-banner-logotype a {
    color: var(--color-bannernav-logotype);
    text-decoration: none !important;
+}
+
+#nav-banner-list {
+   display: flex;
+   flex-flow: row nowrap;
+   gap: var(--space-s);
 }
 
 /* Link Behavior
@@ -422,13 +353,13 @@ blockquote {
  * 
  */
 
-.nav-banner-list a:link,
-.nav-banner-list a:visited {
+#nav-banner-list a:link,
+#nav-banner-list a:visited {
    color: var(--color-bannernav-link);
 }
 
-.nav-banner-list a:hover,
-.nav-banner-list a:active {
+#nav-banner-list a:hover,
+#nav-banner-list a:active {
    color: var(--color-bannernav-link-hover);
    text-decoration: none;
 }
@@ -506,6 +437,40 @@ blockquote {
    COMPONENT: Buttons
    ========================================================================== */
 
+/* General Attributes
+   ========================================================================== */
+
+a.markdown-btn {
+   /* For some reason, fit-content isn't working... */
+   width: fit-content;
+   display: inline-block;
+   width: auto;
+   padding: var(--space-2xs);
+   font-size: var(--step--1);
+   border-radius: var(--space-l);
+   text-decoration: none;
+   transition: all 100ms ease-out;
+}
+
+a.markdown-btn:hover {
+   cursor: pointer;
+}
+
+/* Primary CTA
+   ========================================================================== */
+
+a.markdown-btn-primary {
+   color: var(--color-button-text);
+   border: solid 1px var(--color-button-border);
+   background-color: var(--color-button-bg);
+}
+
+a.markdown-btn-primary:hover {
+   color: var(--color-button-hover-text);
+   border: solid 1px var(--color-button-hover-border);
+   background-color: var(--color-button-hover-bg);
+}
+
 /* ==========================================================================
    LAYOUT: Now
    ========================================================================== */
@@ -539,7 +504,7 @@ blockquote {
    ========================================================================== */
 
    /* I can use this class on any page, whether flex or grid, mainly on elements directly nested under "body" (i.e. nav, main, etc) */
-   .page-home {
+   .grid-utopia {
       /* Width & Display */
       max-width: var(--grid-max-width);
       padding-inline: var(--grid-gutter);
@@ -551,21 +516,75 @@ blockquote {
    }
 
    /* Mobile */
-   .page-home__hero { grid-column: 1 / 13; }
-   .page-home__work { grid-column: 1 / 13; }
-   .page-home__notes { grid-column: 1 / 13; }
+   .page-home > header { grid-column: 1 / 13; }
+   .page-home-workgallery { grid-column: 1 / 13; }
+   .page-home-section-garden { grid-column: 1 / 13; }
 
    /* Desktop */
    @media screen and (min-width: 700px) {
-      .page-home__hero { grid-column: 2 / 12; }
-      .page-home__work  { grid-column: 2 / 12; }
-      .page-home__notes { grid-column: 2 / 12; }
+      .page-home > header { grid-column: 2 / 12; }
+      .page-home-workgallery { grid-column: 2 / 12; }
+      .page-home-section-garden { grid-column: 2 / 12; }
    }
 
-   /* Home page hero
+   /* Work Gallery
       ========================================================================== */
 
-   .page-home__hero {
+   .page-home-workgallery {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      row-gap: var(--space-s);
+   }
+
+   /* Selecting just the header */
+   .page-home-workgallery > header {
+      flex: 0 1 100%;
+   }
+
+      .page-home-workgallery > header h2 {
+         font-size: var(--step-0);
+         font-weight: bold;
+         font-family: var(--font-family-body);
+      }
+
+   /* Selecting all cards within a div that are not the header */
+   .page-home-workgallery > *:not(header) {
+      flex: 0 1 100%;
+      display: block;
+      text-decoration: none;
+      transition: all .2s ease-out;
+   }
+
+   /* Change column size on desktop */
+   @media screen and (min-width: 650px) {
+      .page-home-workgallery > *:not(header) {
+         flex: 0 1 calc(50% - var(--space-xs));
+      }
+   }
+
+      .page-home-workgallery > *:not(header):hover {
+         transform: scale(1.01);
+      }
+
+   .page-home-workgallery > *:not(header) div {
+         aspect-ratio: 16 / 9;
+         width: 100%;
+         border-radius: 4px;
+         background-size: cover;
+         background-repeat: no-repeat;
+         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+         margin-bottom: var(--space-2xs);
+      }
+
+   .page-home-workgallery > *:not(header) p {
+         font-size: var(--step--1);
+      }
+
+   /* Header
+      ========================================================================== */
+   
+   .page-home > header {
       width: 100%;
       margin-top: var(--space-2xl);
       margin-bottom: var(--space-xl);
@@ -575,75 +594,35 @@ blockquote {
       gap: var(--space-2xs);
    }
    
-      .page-home__hero h1 {
+      .page-home > header h1 {
          font-size: var(--step-5);
          font-family: var(--font-family-headers);
       }
    
-      .page-home__hero ul {
+      .page-home > header ul {
          display: flex;
          flex-flow: row wrap;
          gap: var(--space-3xs);
          font-size: var(--step-2);
       }
    
-      .page-home__hero li {
+      .page-home > header li {
          display: inline-flex;
       }
    
-      .page-home__hero li::after {
+      .page-home > header li::after {
          content: '//';
          margin-left: var(--space-3xs);
          color: var(--color-textdecoration);
       }
    
-      .page-home__hero li:last-of-type::after {
+      .page-home > header li:last-of-type::after {
          content: '';
       }
-
-   /* Page section headers
-      ========================================================================== */
-
-   .page-home__section > header {
-      --space: var(--space-3xs);
-   }
-
-   .page-home__section > header h2 {
-      font-size: var(--step-0);
-      font-weight: bold;
-      font-family: var(--font-family-body);
-   }
-
-   /* Galleries
-      ========================================================================== */
-
-   .linkcard {
-      --space: var(--space-3xs);
-      display: inline-block;
-      text-decoration: none;
-      transition: transform .3s ease-in;
-      cursor: pointer;
-   }
-
-   .linkcard__header {
-      font-size: var(--step--1);
-   }
-
-   .linkcard__description {
-      font-size: var(--step--2);
-   }
-
-   .linkcard:hover {
-      transform: scale(1.01);
-   }
-
-   .linkcard__thumbnail {
-      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-      background-size: cover;
-   }
-
-   /* Header
-      ========================================================================== */
+   
+      .page-home > header a.markdown-btn {
+         margin-top: var(--space-3xs);
+      }
 
 
 /* ==========================================================================
@@ -659,6 +638,19 @@ blockquote {
  * 
  */
 
+.stack {
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+}
+
+.stack * {
+   margin-block: 0;
+} 
+
+.stack * + * {
+   margin-block-start: var(--space, 1.5rem);
+}
 
 /* Container
    ========================================================================== */

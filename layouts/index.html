@@ -1,73 +1,50 @@
 {{- define "main" -}}
 
-<main class="grid-standard page-home">
+<main class="page-home">
 
-    <header>
-        <h1><!-- &#128075; -->Bryan Sebesta</h1>
-        <!-- <h1><strong>Bryan</strong> is a multidisciplinary experience designer -->
+    <header class="page-home__hero">
+        <h1>Bryan Sebesta</h1>
         <ul>
             <li>Experience designer</li>
             <li>Systems thinker</li>
             <li>Craftsman of words, pixels, and code</li>
         </ul>
-        <!-- {{ partial "buttons/primary.html" (dict "link" "/docs/resume_bryansebesta.pdf" "text" "Resumé") }} -->
     </header>
 
-    <section class="page-home-section-work">
+    <section class="page-home__work page-home__section stack">
         <header>
             <h2>Work</h2>
             <p>Stories from my adventures in design</p>
         </header>
-        <a href="#" class="workgallery-vah workgallery-item"><article>
-            <div>&nbsp;</div>
-            <h2>VA Health</h2>
-            <p>Multimodal voice application</p>
-        </article></a>
-        <a href="#" class="workgallery-wynn workgallery-item"><article>
-            <div>&nbsp;</div>
-            <h2>Wynn</h2>
-            <p>Conversational UI concierge</p>
-        </article></a>
-        <a href="#" class="workgallery-nike workgallery-item"><article>
-            <div>&nbsp;</div>
-            <h2>Nike Adapt BB</h2>
-            <p>Voice ordering experience</p>
-        </article></a>
-        <a href="#" class="workgallery-headspace workgallery-item"><article>
-            <div>&nbsp;</div>
-            <h2>Headspace</h2>
-            <p>Meditations in a voice UI</p>
-        </article></a>
+        <div class="grid">
+            {{ range where .Site.RegularPages.ByWeight "Section" "projects" }}
+            {{ if eq .Params.fpgallery.galleryShow true }}
+            <a href="{{ .Permalink }}" class="linkcard"><article>
+                <div class="linkcard__thumbnail frame" style="background-image: url('/img/{{ .Params.fpgallery.galleryThumbnail }}')">&nbsp;</div>
+                <h2 class="linkcard__header">{{ .Params.fpgallery.galleryTitle }}</h2>
+                <p class="linkcard__description">{{ .Params.fpgallery.galleryDesc }}</p>
+            </article></a>
+            {{ end }}
+            {{ end }}
+        </div>
+    </section>
+
+    <section class="page-home__notes page-home__section stack">
+        <header>
+            <h2>Notes</h2>
+            <p>Developing ideas that I'm exploring</p>
+        </header>
+        <div class="grid">
+                {{ range where .Site.RegularPages.ByDate "Section" "notes" }}
+                <a href="{{ .Permalink }}" class="linkcard"><article>
+                    <h2 class="linkcard__header">{{ .Title }}</h2>
+                    <p class="linkcard__description">{{ .Params.Deck }}</p>
+                </article></a>
+                {{ end }}
+            </ul>
+        </div>
     </section>
 
 </main>
-
-<!--
-<section>
-
-    <h2>Featured Projects</h2>
-    <p>Stories about work I'm proud of</p>
-
-    <div>
-    {{ range where .Site.RegularPages.ByWeight "Section" "case-studies" }}
-    <a href="{{ .Permalink }}" class="casestudy-container-link">
-        <article class="casestudy-list-entry">
-            <div class="casestudy-list-entry-image"></div>
-            <div class="casestudy-list-entry-content">
-                <h2>{{ .Title }}</h2>
-                <ul class="tags">
-                    {{ range .Params.tags  }}
-                    <li>{{ . }}</li>
-                    {{ end }}
-                </ul>
-                <p>{{ .Params.description }}</p>
-            </div>
-        </article>
-    </a>
-    {{ end }}
-    </div>
-
-</section>
--->
 
 {{- end -}}

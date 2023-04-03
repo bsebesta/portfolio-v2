@@ -1,21 +1,17 @@
 {{- define "main" -}}
 
 <main>
-    <article class="page-prose">
+<article class="stack center">
 
     <header>
+        {{ with .Params.category }}<p class="category">{{ . }}</p>{{ end }}
         <h1>{{ .Title }}</h1>
-        {{ with .Params.deck }}<span class="garden-deck">{{ . }}</span>{{ end }}
-        <div class="garden-meta-date-wrapper">
-            
-        </div>
+        {{ with .Params.deck }}<p class="deck">{{ . }}</p>{{ end }}
     </header>
     
-    <section>
     {{ .Content }}
-    </section>
-
-    </article>
+        
+</article>
 </main>
 
 {{- end -}}

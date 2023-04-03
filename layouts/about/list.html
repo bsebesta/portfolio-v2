@@ -1,23 +1,23 @@
 {{- define "main" -}}
 
-<main class="page-prose">
+<main>
+<article class="stack center">
 
-<header>
-    <h1>{{ .Title }}</h1>
-</header>
+    <header>
+        <h1>{{ .Title }}</h1>
+    </header>
 
-<!-- range where .Site.RegularPages "Section" "about" -->
-{{ $aboutSections := site.GetPage "/about/sections" }}
-{{ with $aboutSections }}
-    {{ range .Pages.ByWeight }}
-    <section>
-        {{ with .Title }}<h2>{{ . }}</h2>{{ end }}
-        {{ .Content }}
-    </section>
+    {{ .Content }}
+
+    <!-- range where .Site.RegularPages "Section" "about" -->
+    {{ $aboutSections := site.GetPage "/about/sections" }}
+    {{ with $aboutSections }}
+        {{ range .Pages.ByWeight }}
+            {{ with .Title }}<h2>{{ . }}</h2>{{ end }}
+            {{ .Content }}
+        {{ end }}
     {{ end }}
-{{ end }}
 
-<section>
     <h2>My Interests</h2>
     <div class="collection-interests">
         
@@ -31,8 +31,8 @@
             {{ end }}
         {{ end }}
     </div>
-</section>
 
+</article>
 </main>
 
 {{- end -}}

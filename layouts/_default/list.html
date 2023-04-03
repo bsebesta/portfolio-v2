@@ -1,23 +1,21 @@
 {{- define "main" -}}
 
 <main>
+<article class="stack center">
 
-<header>
-    <h1 class="blockbg">{{ .Title }}</h1>
-</header>
+    <header>
+        <h1>{{ .Title }}</h1>
+    </header>
 
-<section>
-{{ .Content }}
-</section>
+    {{ .Content }}
 
-<section>
-<ul>
-    {{ range .Pages }}
-    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
-    {{ end }}
-</ul>
-</section>
+    <ul>
+        {{ range .Pages }}
+        <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+        {{ end }}
+    </ul>
 
+</article>
 </main>
 
 {{- end -}}
