@@ -258,18 +258,6 @@ body.dark-theme {
       color: var(--color-body-text);
    }
 
-   /* I can use this class on any page, whether flex or grid, mainly on elements directly nested under "body" (i.e. nav, main, etc) */
-   .u-container {
-      max-width: var(--grid-max-width);
-      padding-inline: var(--grid-gutter);
-      margin-inline: auto;
-   }
-
-   .u-grid {
-      display: grid;
-      gap: var(--grid-gutter);
-   }
-
 /* ==========================================================================
    TEXT ELEMENTS
    ========================================================================== */
@@ -324,7 +312,10 @@ blockquote {
 #nav-banner {
    /* Display & Box Model */
    width: 100%;
-   margin: var(--space-3xs) 0;
+   max-width: var(--grid-max-width);
+   padding-inline: var(--grid-gutter);
+   padding-top: 8px;
+   margin-inline: auto;
    /* Interior Display */
    display: flex;
    flex-flow: row nowrap;
@@ -481,64 +472,6 @@ a.markdown-btn-primary:hover {
 }
 
 /* ==========================================================================
-   LAYOUT: Index
-   ========================================================================== */
-
-.page-home {
-   display: flex;
-   flex-flow: column nowrap;
-}
-
-/* Header
-   ========================================================================== */
-
-.page-home > header {
-   width: 100%;
-   margin-top: var(--space-2xl);
-   display: flex;
-   flex-flow: column;
-   align-items: flex-start;
-   gap: var(--space-2xs);
-}
-
-   .page-home > header h1 {
-      font-size: var(--step-5);
-      font-family: var(--font-family-headers);
-   }
-
-   .page-home > header ul {
-      display: flex;
-      flex-flow: row wrap;
-      gap: var(--space-3xs);
-      font-size: var(--step-2);
-   }
-
-   .page-home > header li {
-      display: inline-flex;
-   }
-
-   .page-home > header li::after {
-      content: '//';
-      margin-left: var(--space-3xs);
-      color: var(--color-textdecoration);
-   }
-
-   .page-home > header li:last-of-type::after {
-      content: '';
-   }
-
-   .page-home > header a.markdown-btn {
-      margin-top: var(--space-3xs);
-   }
-
-/* Sections
-   ========================================================================== */
-
-.page-home > section {
-   margin-top: var(--space-3xl);
-}
-
-/* ==========================================================================
    LAYOUT: Single ("Prose")
    ========================================================================== */
 
@@ -652,3 +585,205 @@ a.markdown-btn-primary:hover {
       border-radius: 50%;
    }
 }
+
+
+/* ==========================================================================
+   LAYOUT: Index
+   ========================================================================== */
+
+   /* I can use this class on any page, whether flex or grid, mainly on elements directly nested under "body" (i.e. nav, main, etc) */
+   .grid-standard {
+      /* Width & Display */
+      max-width: var(--grid-max-width);
+      padding-inline: var(--grid-gutter);
+      margin-inline: auto;
+      /* Internal Grid */
+      display: grid;
+      gap: var(--grid-gutter);
+      grid-template-columns: repeat(var(--grid-columns),1fr);
+   }
+
+   /* Mobile */
+   .page-home > header { grid-column: 1 / 13; }
+   .page-home-section-work { grid-column: 1 / 13; }
+
+   /* Desktop */
+   @media screen and (min-width: 700px) {
+      .page-home > header { grid-column: 2 / 12; }
+      .page-home-section-work { grid-column: 2 / 12; }
+   }
+
+   /* Work Gallery
+      ========================================================================== */
+
+   .page-home-section-work {
+      /* Margin & Padding */
+      margin-bottom: var(--space-3xl);
+      /* Grid */
+      display: grid;
+      column-gap: var(--grid-gutter);
+      row-gap: var(--space-s);
+      grid-template-columns: 10;
+   }
+
+   .page-home-section-work > header {
+      grid-column: 1 / 11;
+      grid-row: 1/2;
+   }
+
+      .page-home-section-work > header h2 {
+         font-size: var(--step-0);
+         font-weight: bold;
+         font-family: var(--font-family-body);
+      }
+
+   .workgallery-item {
+      display: block;
+      text-decoration: none;
+      transition: all .2s ease-out;
+   }
+
+      .workgallery-item:hover {
+         transform: scale(1.01);
+      }
+
+   .workgallery-item > article {
+   }
+
+      .workgallery-item div {
+         aspect-ratio: 16 / 9;
+         width: 100%;
+         border-radius: 4px;
+         background-size: cover;
+         background-repeat: no-repeat;
+         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+         margin-bottom: var(--space-2xs);
+      }
+
+      .workgallery-item p {
+         font-size: var(--step--1);
+      }
+
+      /*
+      .workgallery-item h2::after {
+         content: '';
+         position: absolute;
+         top: -30;
+         left: -30;
+         transition: all 1s;
+         filter: invert(14%) sepia(72%) saturate(2511%) hue-rotate(194deg) brightness(91%) contrast(98%);
+      }
+
+      .workgallery-item h2:hover::after {
+         content: url('/svg/arrow-right-bold.svg');
+         filter: invert(14%) sepia(72%) saturate(2511%) hue-rotate(194deg) brightness(91%) contrast(98%);
+      }
+      */
+
+   .workgallery-vah {
+      /* Display */
+      grid-column: 1/11;
+      grid-row: 2/3;
+   }
+
+      .workgallery-vah div {
+         background-image: url('/img/casestudy-thumb-vah.png');
+      }
+
+   .workgallery-wynn {
+      /* Display */
+      grid-column: 1/11;
+      grid-row: 3/4;
+   }
+
+      .workgallery-wynn div {
+         background-image: url('/img/casestudy-thumb-wynn.png');
+      }
+
+   .workgallery-nike {
+      /* Display */
+      grid-column: 1/11;
+      grid-row: 4/5;
+   }
+
+      .workgallery-nike div {
+         background-image: url('/img/casestudy-thumb-nike.png');
+      }
+
+   .workgallery-headspace {
+      /* Display */
+      grid-column: 1/11;
+      grid-row: 5/6;
+   }
+
+   @media screen and (min-width: 700px) {
+      .workgallery-vah {
+         /* Display */
+         grid-column: 1/6;
+         grid-row: 2/3;
+      }
+      .workgallery-wynn {
+         /* Display */
+         grid-column: 6/11;
+         grid-row: 2/3;
+      }
+      .workgallery-nike {
+         /* Display */
+         grid-column: 1/6;
+         grid-row: 3/4;
+      }
+      .workgallery-headspace {
+         grid-column: 6/11;
+         grid-row: 3/4;
+      }
+   }
+
+      .workgallery-headspace div {
+         background-image: url('/img/casestudy-thumb-headspace.png');
+      }
+
+
+   /* Header
+      ========================================================================== */
+   
+   .page-home > header {
+      width: 100%;
+      margin-top: var(--space-2xl);
+      margin-bottom: var(--space-xl);
+      display: flex;
+      flex-flow: column;
+      align-items: flex-start;
+      gap: var(--space-2xs);
+   }
+   
+      .page-home > header h1 {
+         font-size: var(--step-5);
+         font-family: var(--font-family-headers);
+      }
+   
+      .page-home > header ul {
+         display: flex;
+         flex-flow: row wrap;
+         gap: var(--space-3xs);
+         font-size: var(--step-2);
+      }
+   
+      .page-home > header li {
+         display: inline-flex;
+      }
+   
+      .page-home > header li::after {
+         content: '//';
+         margin-left: var(--space-3xs);
+         color: var(--color-textdecoration);
+      }
+   
+      .page-home > header li:last-of-type::after {
+         content: '';
+      }
+   
+      .page-home > header a.markdown-btn {
+         margin-top: var(--space-3xs);
+      }
+   
+   
