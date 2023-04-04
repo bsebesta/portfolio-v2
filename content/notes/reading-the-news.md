@@ -1,7 +1,7 @@
 ---
 title: Reading the News
 deck: How I go about discerning facts and narrative in an age of information superabundance and AI-deception
-date: 2023-03-22
+date: 2023-04-04
 category: notes
 growthStage: Budding
 epistemicStatus: Very much an ongoing project is thinking well about what news I consume and why I consume it
@@ -11,10 +11,11 @@ tags:
 - Truth
 ---
 
-In today's world, information is more accessible than ever before. The news surrounds us, from social media to television broadcasts and newspapers. As members of The Church of Jesus Christ of Latter-Day Saints (LDS), engaging with the news is an essential part of being informed citizens and contributing to society. However, it's important to approach news consumption with faith, discernment, and a theology that aligns with our spiritual beliefs. This article will outline a possible Latter-Day Saint theology of reading the news and provide guidance on how to navigate the information landscape.[^1]
+In today's world, information is more accessible than ever before. The news surrounds us, from social media to television broadcasts and newspapers. As members of [The Church of Jesus Christ of Latter-Day Saints (LDS)](#), engaging with the news is an essential part of being informed citizens and contributing to society. However, it's important to approach news consumption with faith, discernment, and a theology that aligns with our spiritual beliefs. This article will outline a possible Latter-Day Saint theology of reading the news and provide guidance on how to navigate the information landscape.[^1]
 
 {{< figure
     src="/img/placeholder-graph.webp"
+    class="wide"
     title="Placeholder Graph" >}}
 
 ## Seek Truth and Knowledge

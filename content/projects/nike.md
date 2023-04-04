@@ -3,7 +3,7 @@ title: Nike Adapt BB
 description: W...
 weight: 4
 fpgallery:
-    galleryShow: true
+    galleryShow: false
     galleryTitle: Nike Adapt BB
     galleryDesc: Voice ordering experience
     galleryThumbnail: casestudy-thumb-nike.png

@@ -1,44 +1,44 @@
 {{- define "main" -}}
 
-<main class="page-home">
+<main class="u-container u-grid homepage">
 
-    <header class="page-home__hero measure-unlimited">
+    <header class="homepage__header">
         <h1>Bryan Sebesta</h1>
-        <ul>
+        <ul class="cluster">
             <li>Experience designer</li>
             <li>Systems thinker</li>
             <li>Craftsman of words, pixels, and code</li>
         </ul>
     </header>
 
-    <section class="page-home__work page-home__section">
-        <header>
+    <section class="homepage__casestudies stack-small">
+        <header class="">
             <h2>Work</h2>
             <p>Stories from my adventures in design</p>
         </header>
         <div class="grid">
             {{ range where .Site.RegularPages.ByWeight "Section" "projects" }}
             {{ if eq .Params.fpgallery.galleryShow true }}
-            <a href="{{ .Permalink }}" class="linkcard"><article>
-                <div class="linkcard__thumbnail frame" style="background-image: url('/img/{{ .Params.fpgallery.galleryThumbnail }}')">&nbsp;</div>
-                <h2 class="linkcard__header">{{ .Params.fpgallery.galleryTitle }}</h2>
-                <p class="linkcard__description">{{ .Params.fpgallery.galleryDesc }}</p>
+            <a href="{{ .Permalink }}" class="card"><article>
+                <div class="frame" style="background-image: url('/img/{{ .Params.fpgallery.galleryThumbnail }}')">&nbsp;</div>
+                <h2>{{ .Params.fpgallery.galleryTitle }}</h2>
+                <p>{{ .Params.fpgallery.galleryDesc }}</p>
             </article></a>
             {{ end }}
             {{ end }}
         </div>
     </section>
 
-    <section class="page-home__notes page-home__section">
+    <section class="homepage__notes stack-small">
         <header>
             <h2>Notes</h2>
             <p>Developing ideas that I'm exploring</p>
         </header>
         <div class="grid">
-                {{ range where .Site.RegularPages.ByDate "Section" "notes" }}
-                <a href="{{ .Permalink }}" class="linkcard"><article>
-                    <h2 class="linkcard__header">{{ .Title }}</h2>
-                    <p class="linkcard__description">{{ .Params.Deck }}</p>
+                {{ range where .Site.RegularPages.ByDate.Reverse "Section" "notes" }}
+                <a href="{{ .Permalink }}" class="box-small card"><article>
+                    <h2>{{ .Title }}</h2>
+                    <p>{{ .Params.Deck }}</p>
                 </article></a>
                 {{ end }}
             </ul>

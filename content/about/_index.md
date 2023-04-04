@@ -17,6 +17,11 @@ I'm a big believer in drawing inspiration from the past. The great designer Char
 > Chitty chitty chat chat
 
 Design is many things. It's "the rendering of intent." It's "intelligence made visible." It's "a plan for arranging elements to accomplish a particular purpose."
+
+{{< figure
+    src="/img/placeholder-graph.webp"
+    class="wider"
+    title="Placeholder Graph" >}}
     
 I also believe in understanding the ethical implications of design. As Melvin Kranzberg once wrote, "Technology is neither good nor bad; nor is it neutral." All technology changes how we experience space, time, community; how we relate to the world. We need to design with people in mind, but then, we also need to expand our idea of people—including the deaf and blind, the differently abled, children and the elderly. We need to make a world that is more humane.
 

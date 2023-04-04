@@ -1,0 +1,24 @@
+{{- define "main" -}}
+
+<main>
+<article class="center-layout">
+
+    <header class="header_garden wider stack-small">
+        <p class="header_garden__breadcrumb">{{ with .Params.category }}<a href="/notes/">{{ . }}</a>{{ end }} {{ with .Params.growthStage }}{{ . }}{{ end }}</p>
+        <h1 class="header_garden__title">{{ .Title }}</h1>
+        {{ with .Params.deck }}<p class="header_garden__deck">{{ . }}</p>{{ end }}
+        {{ with .Date }} <p class="header_garden__origin">
+            <strong>Planted</strong> {{ .Format "January 2006" }}
+        </p>{{ end }}
+    </header>
+    
+    {{ with .Params.assumedAudience }}
+    <aside class="callout__assumedAudience"><strong>Assumed Audience</strong> {{ . }}</aside>
+    {{ end }}
+
+    {{ .Content }}
+        
+</article>
+</main>
+
+{{- end -}}

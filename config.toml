@@ -32,10 +32,10 @@ title = 'Bryan Sebesta'
     name = "Portfolio"
     url = "/"
     weight = 1
-  [[menu.nav]]
-    name = "Digital Garden"
-    url = "/garden/"
-    weight = 2
+  #[[menu.nav]]
+  #  name = "Digital Garden"
+  #  url = "/garden/"
+  #  weight = 2
   [[menu.nav]]
     name = "Now"
     url = "/now/"

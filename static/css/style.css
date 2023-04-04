@@ -27,7 +27,6 @@
       --color-neutral-700: #414447;
       --color-neutral-800: #2E3133;
       --color-neutral-900: #1C1D1F; /* "Black" */
-   
       /* Specific implementations */
       --color-body-bg: var(--color-accent-000);
       --color-body-text: var(--color-neutral-900);
@@ -54,11 +53,25 @@
       --color-tag-bg: var(--color-accent-200);
       --color-textdecoration: var(--color-accent-200);
    }
-   
-   /* Type
+
+   /* Shadows
       ========================================================================== */
    
-   /* @link https://utopia.fyi/type/calculator?c=320,18,1.2,1240,22,1.333,6,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+   :root {
+      --box-shadow-sm: 0.2px 0.2px 0.8px -10px rgba(40,10,0,0.014), 0.4px 0.4px 2px -10px rgba(40,10,0,0.02), 0.8px 0.8px 3.8px -10px rgba(40,10,0,0.025), 1.3px 1.3px 6.7px -10px rgba(40,10,0,0.03), 2.5px 2.5px 12.5px -10px rgba(40,10,0,0.036), 6px 6px 30px -10px rgba(40,10,0,0.05);
+      --box-shadow-lg: 1px 0.9px 2.3px -3px rgba(30,10,10,0.04), 2.4px 2.2px 5.5px -3px rgba(30,10,10,0.05), 4.5px 4.1px 10.4px -3px rgba(30,10,10,0.06), 8px 7.4px 18.5px -3px rgba(30,10,10,0.07), 15px 13.8px 34.7px -3px rgba(30,10,10,0.08), 36px 33px 83px -3px rgba(30,10,10,0.2);
+      --box-shadow-md: 0.2px 0.4px 0.8px -10px rgba(0,0,0,0.03), 0.4px 0.9px 2px -10px rgba(0,0,0,0.03), 0.8px 1.8px 3.8px -10px rgba(0,0,0,0.038), 1.3px 3.1px 6.7px -10px rgba(0,0,0,0.045), 2.5px 5.8px 12.5px -10px rgba(0,0,0,0.06), 6px 14px 30px -10px rgba(0,0,0,0.08);
+   }
+
+   /* Type, Space, Grid, Measure
+      ========================================================================== */
+   
+   /**
+    * Much of what is below is generated from the Utopia design system. See these links for reference:
+    * @link https://utopia.fyi/type/calculator?c=320,18,1.2,1240,22,1.333,6,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 
+    * @link https://utopia.fyi/space/calculator?c=320,18,1.2,1240,22,1.333,6,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 
+    * @link https://utopia.fyi/grid/calculator?c=330,18,1.2,1364,22,1.333,6,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 
+    */
    
    :root {
       /* Font families */
@@ -66,41 +79,16 @@
       --font-family-headers: "Merriweather", serif;
       --font-family-nav: "Noto Sans", sans-serif;
       --font-family-logotype: "Merriweather", serif;
-   
-      /* Step -2: 12.50px → 12.38px */
+      /* Modular type scale */
       --step--2: clamp(0.77rem, calc(0.78rem + -0.01vw), 0.78rem);
-   
-      /* Step -1: 15.00px → 16.50px */
       --step--1: clamp(0.94rem, calc(0.90rem + 0.16vw), 1.03rem);
-   
-      /* Step 0: 18.00px → 22.00px */
       --step-0: clamp(1.13rem, calc(1.04rem + 0.43vw), 1.38rem);
-   
-      /* Step 1: 21.60px → 29.33px */
       --step-1: clamp(1.35rem, calc(1.18rem + 0.84vw), 1.83rem);
-   
-      /* Step 2: 25.92px → 39.09px */
       --step-2: clamp(1.62rem, calc(1.33rem + 1.43vw), 2.44rem);
-   
-      /* Step 3: 31.10px → 52.11px */
       --step-3: clamp(1.94rem, calc(1.49rem + 2.28vw), 3.26rem);
-   
-      /* Step 4: 37.32px → 69.46px */
       --step-4: clamp(2.33rem, calc(1.63rem + 3.49vw), 4.34rem);
-   
-      /* Step 5: 44.79px → 92.59px */
       --step-5: clamp(2.80rem, calc(1.76rem + 5.20vw), 5.79rem);
-   
-      /* Step 6: 53.75px → 123.43px */
       --step-6: clamp(3.36rem, calc(1.84rem + 7.57vw), 7.71rem);
-   }
-      
-   /* Space & Grid
-      ========================================================================== */
-   
-   /* @link https://utopia.fyi/space/calculator?c=320,18,1.2,1240,22,1.333,6,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
-   
-   :root {
       /* Fluid spaces (in "T-shirt sizes") */
       --space-3xs: clamp(0.31rem, calc(0.29rem + 0.11vw), 0.38rem);
       --space-2xs: clamp(0.56rem, calc(0.52rem + 0.22vw), 0.69rem);
@@ -111,7 +99,6 @@
       --space-xl: clamp(3.38rem, calc(3.11rem + 1.30vw), 4.13rem);
       --space-2xl: clamp(4.50rem, calc(4.15rem + 1.74vw), 5.50rem);
       --space-3xl: clamp(6.75rem, calc(6.23rem + 2.61vw), 8.25rem);
-      
       /* One-up pairs */
       --space-3xs-2xs: clamp(0.31rem, calc(0.18rem + 0.65vw), 0.69rem);
       --space-2xs-xs: clamp(0.56rem, calc(0.39rem + 0.87vw), 1.06rem);
@@ -121,82 +108,41 @@
       --space-l-xl: clamp(2.25rem, calc(1.60rem + 3.26vw), 4.13rem);
       --space-xl-2xl: clamp(3.38rem, calc(2.64rem + 3.70vw), 5.50rem);
       --space-2xl-3xl: clamp(4.50rem, calc(3.20rem + 6.52vw), 8.25rem);
-      
-      /* Custom pairs */
-      --space-s-l: clamp(1.13rem, calc(0.56rem + 2.83vw), 2.75rem);
-   
-      /* Grid */
-      /* @link https://utopia.fyi/grid/calculator?c=330,18,1.2,1364,22,1.333,6,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
-      --grid-max-width: 85.25rem;
-      --grid-gutter: var(--space-s-l, clamp(1.13rem, calc(0.61rem + 2.51vw), 2.75rem));
-      --grid-columns: 12;
+      /* Measure */
+      --measure: 40rem; /* ~60ch */
+      --measure-wide: 44rem; /* ~80ch */
+      --measure-wider: 50rem;
+      --measure-widest: 85.25rem;
+      /* Utopia Grid */
+      --u-grid-max-width: var(--measure-widest);
+      --u-grid-gutter: var(--space-s-l, clamp(1.13rem, calc(0.63rem + 2.49vw), 2.75rem));
+      --u-grid-columns: 12;
    }
-   
-   /* Space & Grid
-      ========================================================================== */
-   
-   /* Unfortunately, the 'ch' unit causes large headers to spill over into the
-      margins, so we have to use the rem value instead to keep things consistent. */
 
-   :root {
-      /*--measure: 60ch;*/
-      --measure: 35rem;
-      /*--measure-wide: 80ch;*/
-      --measure-wide: 38rem;
-      --measure-widest: 50rem;
-   }
-   
 /* ==========================================================================
    UNIVERSAL: Inherited Properties
    ========================================================================== */
-   
-   /* Critical font information
-      ========================================================================== */
-   
-   :root {
-      font-family: var(--font-family-body);
-      font-size: var(--step-0);
-      line-height: 1.5;
-   }
 
    /* Body properties
       ========================================================================== */
 
    body {
-      /* Display */
-      margin-bottom: var(--space-3xl);
-      padding: 0 var(--space-s);
-      /* Color */
+      text-rendering: optimizeSpeed;
+      font: var(--step-0)/1.5 var(--font-family-body);
       background-color: var(--color-body-bg);
       color: var(--color-body-text);
-      /* Other */
-      text-rendering: optimizeSpeed;
    }
    
    /* Measure
       ========================================================================== */
    
-   * {
-      max-inline-size: var(--measure);
-   }
-   
-   html,
-   body,
-   div,
-   header,
-   nav,
-   section,
-   article,
-   main,
-   footer {
-      max-inline-size: none;
-   }
-   
    /* Main
       ========================================================================== */
-   
+
    main {
-      margin-top: var(--space-xl);
+      padding-inline: var(--space-s);
+      margin-block-start: var(--space-l);
+      margin-block-end: var(--space-2xl);
    }
    
    /* Block-level Elements and Vertical Rhythm
@@ -205,106 +151,125 @@
    h1,
    h2,
    h3 {
-     font-family: var(--font-family-headers);
-     font-weight: 800;
-     line-height: 1.1;
-     max-inline-size: var(--measure);
-     text-wrap: balance;
+      font-family: var(--font-family-headers);
+      display: block;
+      margin: 0;
+      padding: 0;
+      line-height: 1;
    }
 
-   h1 {
-      font-size: var(--step-4);
-      color: var(--color-accent-800);
-   }
-   
-   h2 {
-      font-size: var(--step-3);
-      color: var(--color-accent-700);
-   }
-   
-   h3 {
-      font-size: var(--step-2);
-      color: var(--color-accent-600);
-   }
+   h1 { font-size: var(--step-4); }
+   h2 { font-size: var(--step-3); }
+   h3 { font-size: var(--step-2); }
 
-   :is(h1, h2, h3, blockquote) {
-      --space: 1.5em;
-   }
-      
-   :is(h1, h2, h3) + * {
-      --space: 0.5em;
-   }
-   
-   main ul,
-   main ol {
-     padding-inline-start: 1em;
-     list-style-type: disc;
-   }
-   
-   main li,
-   main li {
-      margin: 0 !important;
-   }
-   
-   blockquote {
-      padding-inline-start: 1em;
-      border-inline-start: 0.3em solid;
-      font-style: italic;
-   }
-
-      .figure__caption {
-         font-size: var(--step--2);
-      }
-   
    /* Inline Styles
-   ========================================================================== */
-   
+      ========================================================================== */
+
    a {
-      color: var(--color-accent-700);
-      text-underline-offset: 0.3ex;
+      color: var(--color-accent-800);
+      text-underline-offset: .2ex;
    }
-   
+
    strong {
-      font-weight: 700;
+      font-weight: bold;
    }
-   
+
    em {
       font-style: italic;
    }
    
-   small, sub, sup { font-size: var(--step--2); }
-   sub             { vertical-align: sub }
-   sup             { vertical-align: super }
+   small,
+   sub,
+   sup {
+      font-size: var(--step--2);
+   }
+   
+   sub { vertical-align: sub }
+   sup { vertical-align: super }
+
    sub a,
    sup a {
       text-decoration: none;
+   }
+
+   figure img,
+   figure video {
+      max-inline-size: 100%;
+   }
+
+   figcaption {
+      font-size: var(--step--1);
+      font-style: italic;
+      color: var(--color-neutral-700);
    }
 
 /* ==========================================================================
    LAYOUT PRIMITIVES / Composition Layer
    ========================================================================== */
 
+/* Utopia-style grid
+   ========================================================================== */
+
+   .u-container {
+      max-width: var(--u-grid-max-width);
+      margin-inline: auto;
+   }
+    
+   .u-grid {
+      display: grid;
+      grid-template-columns: repeat(var(--u-grid-columns),1fr);
+      gap: var(--u-grid-gutter);
+   }
+
    /* Stack
       ========================================================================== */
 
+   /* Standard Stack, with a separation 1.5x the font-size */
    .stack {
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
    }
    
-   .stack > * {
-      margin-block: 0;
-   } 
-   
-   .stack > * + * {
-      margin-block-start: var(--space, var(--space-s));
+      .stack > * {
+         margin-block: 0;
+      } 
+      
+      .stack > * + * {
+         margin-block-start: var(--space, var(--space-m));
+      }
+
+   /* Small stack, with a separation ~.5x the font-size */
+   .stack-small {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
    }
    
-   .stack-small > * + * {
-     margin-block-end: 0.5rem;
+      .stack-small > * {
+         margin-block: 0;
+      } 
+      
+      .stack-small > * + * {
+         margin-block-start: var(--space, var(--space-3xs));
+      }
+
+   /* Large stack, with a separation 3x the font-size */
+   .stack-large {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
    }
    
+      .stack-large > * {
+         margin-block: 0;
+      } 
+      
+      .stack-large > * + * {
+         margin-block-start: var(--space, var(--space-xl));
+      }
+   
+   /* A utility class for creating an exception for a stacked child */
    .stack-exception,
    .stack-exception + * {
      margin-block: 0;
@@ -320,25 +285,21 @@
       max-inline-size: var(--measure);
    }
 
-   /* Center (Test version)
-      ========================================================================== */
-      
-   /**
-   * Note: This is a custom "primitive" that allows me to center the content,
-   * but have certain items expand slightly or to the full-width of the container.
-   * I have some utility classes to indicate what should expand, and by how much.
-   * 
-   */
+   /*
+    * This center layout is a primitive I made to center everything, but allow 
+    */
 
-   .center-flexible {
-      box-sizing: content-box;
-      margin-inline: auto;
+   .center-layout {
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+      gap: var(--space, var(--space-m));
    }
-   
-   .center-flexible > * {
-      width: 100%;
-      margin-inline: auto;
-   }
+
+      .center-layout > * {
+         inline-size: 100%;
+         max-inline-size: var(--measure);
+      }
 
    /* Cluster
       ========================================================================== */
@@ -346,27 +307,23 @@
    .cluster {
       display: flex;
       flex-wrap: wrap;
-      gap: var(--space-s, 1rem);
+      gap: var(--space, var(--space-s));
       justify-content: flex-start;
       align-items: center;
    }
    
    /* Grid
       ========================================================================== */
-
+   
    .grid {
       display: grid;
-      grid-gap: var(--grid-gutter);
-      }
-
-   .grid > * {
-      margin-block: 0;
-      margin-block-start: 0;
+      grid-gap: var(--space-s);
+      align-items: start; /* Might change back to stretch; need to test */
    }
       
-   @supports (width: min(400px, 100%)) {
+   @supports (width: min(20rem, 100%)) {
       .grid {
-         grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
+         grid-template-columns: repeat(auto-fit, minmax(min(18rem, 100%), 1fr));
       }
    }
    
@@ -438,98 +395,283 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      background-size: contain;
    }
     
-   .frame > img,
-   .frame > video {
-      inline-size: 100%;
-      block-size: 100%;
-      object-fit: cover;
-   }
+      .frame > img,
+      .frame > video {
+         inline-size: 100%;
+         block-size: 100%;
+         object-fit: cover;
+      }
    
    /* Box
       ========================================================================== */
    
    .box {
-      padding: var(--space-s);
+      padding: var(--space-m);
       border: 0 solid;
-      outline: var(--border-thin) solid transparent;
-      outline-offset: calc(var(--border-thin) * -1);
    }
 
-   .box * {
-      color: inherit;
+      .box * {
+         color: inherit;
+      }
+
+   .box-small {
+      padding: var(--space-3xs);
+      border: 0 solid;
    }
 
 /* ==========================================================================
-   UTILITIES & COMPONENTS
+   TEMPLATE: Home Page
    ========================================================================== */
 
-/* Containers
+   /* Layout
+      ========================================================================== */
+
+   .homepage {
+      grid-template-areas:
+         "header header header header header header header header header header header header"
+         "work work work work work work work work work work work work"
+         "notes notes notes notes notes notes notes notes notes notes notes notes";
+   }
+
+   .homepage__header { grid-area: header; margin-block-end: var(--space-xl); }
+   .homepage__casestudies { grid-area: work; margin-block-end: var(--space-l); }
+   .homepage__notes { grid-area: notes; margin-block-end: var(--space-l); }
+
+   /* As the screen expands to 960px, the grid has the MOST freedom, so we give everything more space */
+   @media screen and (min-width: 900px) {
+      .homepage {
+         grid-template-areas:
+            ". . header header header header header header header header . ."
+            ". work work work work work work work work work work ."
+            ". notes notes notes notes notes notes notes notes notes notes .";
+      }
+   }
+
+   /* Header
+      ========================================================================== */
+
+   .homepage__header {
+      margin-block-start: var(--space-l);
+   }
+
+   .homepage__header h1 {
+      color: var(--color-accent-800);
+      font-family: var(--font-family-headers);
+      font-size: var(--step-5);
+      font-weight: 700;
+   }
+
+   .homepage__header ul {
+      --space: var(--space-3xs);
+      font-size: var(--step-2);
+      line-height: var(--space-l);
+   }
+
+      .homepage__header li::after {
+         content: '//';
+         margin-inline-start: var(--space-3xs);
+         color: var(--color-textdecoration);
+      }
+
+      .homepage__header li:last-of-type::after {
+         content: '';
+      }
+
+   /* Sections
+      ========================================================================== */
+   
+   .homepage__casestudies > header,
+   .homepage__notes > header {
+      
+   }
+
+   .homepage__casestudies > header > h2,
+   .homepage__notes > header > h2 {
+      font-size: var(--step-0);
+      font-weight: 700;
+      font-family: var(--font-family-body);
+      color: var(--color-accent-700);
+      border-bottom: solid 1px var(--color-textdecoration);
+      margin-block-end: var(--space-3xs);
+   }
+   
+
+/* ==========================================================================
+   COMPONENTS
    ========================================================================== */
 
-   .nav-banner {
-      /* Display & Box Model */
-      width: 100%;
-      max-width: var(--grid-max-width);
-      margin-top: var(--space-3xs);
+   /* Banner Navigation
+      ========================================================================== */
+
+   .banner {
+      /* Positioning & Box-Model */
+      inline-size: auto;
+      max-inline-size: var(--measure-widest);
+      margin-block: var(--space-3xs);
+      margin-inline: var(--space-s);
       /* Interior Display */
       display: flex;
       flex-flow: row nowrap;
       justify-content: space-between;
       align-items: center;
-      gap: var(--grid-gutter);
-      /* Other */
-      font-family: var(--font-family-nav);
-      font-size: var(--step--2);
    }
    
-   .nav-banner-logotype {
+   .banner__logotype {
       font-family: var(--font-family-logotype);
-      font-size: var(--step-0);
       font-weight: bold;
    }
    
-   .nav-banner-logotype a {
-      color: var(--color-bannernav-logotype);
-      text-decoration: none !important;
+      .banner__logotype a {
+         color: var(--color-bannernav-logotype);
+         text-decoration: none !important;
+      }
+
+   .banner__links {
+      font-family: var(--font-family-nav);
+      font-size: var(--step--1);
    }
    
-   /* Link Behavior
+      .banner__links a:link,
+      .banner__links a:visited {
+         color: var(--color-bannernav-link);
+      }
+   
+      .banner__links a:hover,
+      .banner__links a:active {
+         color: var(--color-bannernav-link-hover);
+         text-decoration: none;
+      }
+
+   /* Card
+      ========================================================================== */
+
+   .card {
+      border: solid 1px var(--color-accent-100);
+      border-radius: var(--space-2xs);
+      cursor: pointer;
+      overflow: hidden;
+      box-shadow: var(--box-shadow-sm);
+      transition: all .3s ease-in;
+   }
+
+   .card:hover {
+      transform: scale(1.01);
+      transform-origin: center;
+      box-shadow: var(--box-shadow-md);
+   }
+
+   .card,
+   .card a {
+      text-decoration: none; 
+   }
+
+   .card h2 {
+      font-size: var(--step-0);
+      margin-inline: var(--space-3xs);
+      margin-block-start: var(--space-3xs);
+   }
+
+   .card p {
+      font-size: var(--step--1);
+      margin-inline: var(--space-3xs);
+      margin-block-end: var(--space-3xs);
+   }
+
+   /* Header (Tall, single/short title)
       ========================================================================== */
    
-   /**
-    * CSS hover animation inspired by Nate Baldwin. Working implementation drawn
-    * from https://www.30secondsofcode.org/css/s/hover-underline-animation.
-    * 
-    */
-   
-   .nav-banner-list a:link,
-   .nav-banner-list a:visited {
-      color: var(--color-bannernav-link);
+   .header__tall {
+      font-family: var(--font-family-headers);
+      font-size: var(--step-6);
+      font-weight: 700;
+      text-align: center;
    }
-   
-   .nav-banner-list a:hover,
-   .nav-banner-list a:active {
-      color: var(--color-bannernav-link-hover);
+
+   /* Header (Garden)
+      ========================================================================== */
+
+   .header_garden {
+      border-bottom: solid 1px var(--color-textdecoration);
+      padding-block-end: var(--space-l);
+   }
+
+   .header_garden__title {
+      font-family: var(--font-family-headers);
+      font-size: var(--step-4);
+      font-weight: 700;
+   }
+
+   .header_garden__breadcrumb {
+      font-size: var(--step--1);
+   }
+
+   .header_garden__breadcrumb a {
       text-decoration: none;
+      font-weight: bold;
+      text-transform: capitalize;
+    }
+
+   .header_garden__deck {
+      font-size: var(--step-1);
+      color: var(--color-accent-700);
+      line-height: 1.2;;
+   }
+
+   .header_garden__origin {
+      font-size: var(--step--1);
+   }
+
+   /* Assumed Audience Callout
+      ========================================================================== */
+
+   .callout__assumedAudience {
+      font-size: var(--step--1);
+      color: var(--color-neutral-900);
+      background-color: var(--color-accent-200);
+      padding: var(--space-2xs);
+      max-inline-size: var(--measure);
    }
    
+      .callout__assumedAudience strong {
+         color: var(--color-accent-700);
+      }  
+   
+      .callout__assumedAudience strong::after {
+         content: ': ';
+      }
+
+/* ==========================================================================
+   UTILITIES & HELPERS
+   ========================================================================== */
+
+/* These are key utilities for the .center-layout class, allowing me to make
+   certain items larger or smaller, based on my needs.
+   ========================================================================== */
+
+   .wide {
+      max-inline-size: var(--measure-wide) !important;
+   }
+
+   .wider {
+      max-inline-size: var(--measure-wider) !important;
+   }
+
+   .widest {
+      max-inline-size: var(--measure-widest) !important;
+   }
+
    /* Animated Links
       ========================================================================== */
    
-   /**
-    * CSS hover animation inspired by Nate Baldwin. Working implementation drawn
-    * from https://www.30secondsofcode.org/css/s/hover-underline-animation.
-    * 
-    */
-   
-   .link-animate {
+   .animate-link {
       position: relative; /* Makes the pseudo-element work */
       text-decoration: none;
    }
    
-   .link-animate::after {
+   .animate-link::after {
       /* Content */
       content: '';
       /* Positioning & Box Model*/
@@ -545,397 +687,27 @@
       transition: transform 0.25s ease-out;
    }
    
-   .link-animate:hover::after {
+   .animate-link:hover::after {
       transform: scaleX(1);
       transform-origin: left;
    }
    
-   .link-animate-selected {
+   .animate-link-selected {
       color: var(--color-bannernav-link-active) !important;
    }
    
-   .link-animate-selected::after {
+   .animate-link-selected::after {
       background-color: var(--color-bannernav-link-underline-active);
       transform: scaleX(1);
    }
-   
-   /* Accessibility Button
+
+   /* Footnotes
       ========================================================================== */
-   
-   .nav-banner-accessibilitybutton {
-      /* Display */
-      display: inline-flex;
-      /* Other */
-      background-color: transparent;
-      color: var(--color-button-text);
-      font-family: var(--font-family-nav);
-      cursor: pointer;
-      /* Positioning & Box Model */
-      margin: 0;
-      padding: 0;
-      border: none;
-      @media screen and (-ms-high-contrast: active) {
-         border: 2px solid currentcolor;
-      }
-   }
-   
-   .nav-banner-accessibilitybutton svg {
-      fill: var(--color-bannernav-link);
-   }
-   
-   
-/* ==========================================================================
-   UTILITY: Width Control
-   ========================================================================== */
 
-   .measure-standard {
-      max-inline-size: var(--measure-standard);
-      max-width: var(--measure-standard);
-   }
-
-      .measure-standard > * {
-         max-width: var(--measure-standard);
-         max-inline-size: var(--measure-standard);
-      }
-
-   .measure-wide {
-      max-inline-size: var(--measure-wide);
-      max-width: var(--measure-wide);
-   }
-
-      .measure-wide > * {
-         max-width: var(--measure-wide);
-         max-inline-size: var(--measure-wide);
-      }
-
-   .measure-unlimited {
-      max-width: initial;
-      max-inline-size: initial;
-   }
-
-      .measure-unlimited * {
-         max-width: initial;
-         max-inline-size: initial;
-      }
-
-   /* ==========================================================================
-      LAYOUT: Now
-      ========================================================================== */
-   
-   /* Timeline Element for the "Now" Page
-      ========================================================================== */
-   
-   @media screen and (min-width: 600px) {
-   
-      .section-timeline-element {
-         border-left: 1px dashed var(--color-neutral-300);
-         padding-left: var(--space-s);
-      }
-   
-      .section-timeline-element::before {
-         content: "";
-         width: var(--space-2xs);
-         height: var(--space-2xs);
-         border: 2px solid var(--color-neutral-300);
-         background-color: var(--color-body-bg);
-         display: block;
-         margin-left: calc(-1 * var(--space-s) - (var(--space-2xs)/2));
-         position: relative;
-         top: 0rem;
-         border-radius: 50%;
-      }
-   }
-   
-   /* ==========================================================================
-      LAYOUT: Index
-      ========================================================================== */
-   
-      /* I can use this class on any page, whether flex or grid, mainly on elements directly nested under "body" (i.e. nav, main, etc) */
-      .page-home {
-         /* Width & Display */
-         max-width: var(--grid-max-width);
-         margin-inline: auto;
-         /* Internal Grid */
-         display: grid;
-         gap: var(--grid-gutter);
-         grid-template-columns: repeat(var(--grid-columns),1fr);
-      }
-   
-      /* Mobile */
-      .page-home__hero { grid-column: 1 / 13; }
-      .page-home__work { grid-column: 1 / 13; }
-      .page-home__notes { grid-column: 1 / 13; }
-   
-      /* Desktop */
-      @media screen and (min-width: 700px) {
-         .page-home__hero { grid-column: 2 / 12; }
-         .page-home__work  { grid-column: 2 / 12; }
-         .page-home__notes { grid-column: 2 / 12; }
-      }
-   
-      /* Home page hero
-         ========================================================================== */
-   
-      .page-home__hero {
-         width: 100%;
-         margin-bottom: var(--space-xl);
-         display: flex;
-         flex-flow: column;
-         align-items: flex-start;
-         gap: var(--space-3xs);
-      }
-      
-         .page-home__hero h1 {
-            font-size: var(--step-5);
-            font-family: var(--font-family-headers);
-         }
-      
-         .page-home__hero ul {
-            line-height: var(--space-m);
-            display: flex;
-            flex-flow: row wrap;
-            gap: var(--space-3xs);
-            font-size: var(--step-2);
-            padding-inline-start: 0;
-         }
-      
-         .page-home__hero li {
-            display: inline-flex;
-         }
-      
-         .page-home__hero li::after {
-            content: '//';
-            margin-left: var(--space-3xs);
-            color: var(--color-textdecoration);
-         }
-      
-         .page-home__hero li:last-of-type::after {
-            content: '';
-         }
-   
-      /* Page section headers
-         ========================================================================== */
-   
-      .page-home__section > header {
-         --space: var(--space-3xs);
-         margin-bottom: var(--space-xs);
-      }
-   
-         .page-home__section > header h2 {
-            font-size: var(--step-0);
-            font-weight: bold;
-            font-family: var(--font-family-body);
-         }
-   
-      /* Galleries
-         ========================================================================== */
-   
-      .linkcard {
-         --space: var(--space-1xs);
-         display: inline-block;
-         text-decoration: none;
-         transition: transform .3s ease-in;
-         cursor: pointer;
-      }
-   
-      .linkcard__header {
-         font-size: var(--step--1);
-      }
-   
-      .linkcard__description {
-         font-size: var(--step--2);
-      }
-   
-      .linkcard:hover {
-         transform: scale(1.01);
-      }
-   
-      .linkcard__thumbnail {
-         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-         background-size: cover;
-         margin-bottom: var(--space-3xs);
-      }
-   
-      /* Header
-         ========================================================================== */
-   
-   
-   /* ==========================================================================
-      LAYOUT: Single ("Prose")
-      ========================================================================== */
-   
-   /**
-    * The semantic HTML that begins a page could look like a lot of things:
-    * - <main><article>
-    * - <main>
-    * So, to keep things simple, and to give myself the flexibility to apply the
-    * "flow" to any page, I am going to use the .flow class to target things.
-    * 
-    */
-   
-   
-      
-      /* Header
-         ========================================================================== */
-      
-      .page-prose > header {
-         margin-top: var(--space-xl);
-      }
-      
-      @media screen and (min-width: 800px) {
-         .page-prose > header {
-            margin-top: var(--space-xl);
-            grid-column: 2/11;
-         }
-      }
-      
-         .garden-meta-wrapper {
-            display: flex;
-            flex-flow: row wrap;
-            align-items: center;
-            gap: var(--space-3xs);
-            gap: var(--space-s);
-            margin-bottom: var(--space-s);
-            font-size: var(--step--1);
-            color: var(--color-neutral-700);
-            text-transform: capitalize;
-         }
-      
-         .garden-meta-category-wrapper {
-            display: flex;
-            flex-flow: row wrap;
-            align-items: center;
-            gap: var(--space-3xs);
-         }
-      
-         .page-prose > header h1 {
-            font-family: var(--font-family-headers);
-            font-size: var(--step-3);
-            font-weight: bold;
-            color: var(--color-accent-800);
-         }
-      
-         .garden-deck {
-            display: inline-block;
-            font-size: var(--step-1);
-            color: var(--color-accent-700);
-            margin-top: var(--space-2xs);
-         }
-      
-      
-      /* Text Shape
-         ========================================================================== */
-      
-      .page-prose > section,
-      .page-prose > article {
-         margin-bottom: var(--space-s);
-      }
-      
-      @media screen and (min-width: 600px) {
-         .page-prose > section,
-         .page-prose > article {
-            grid-column: 2/9;
-         }
-      }
-      
-      @media screen and (min-width: 900px) {
-         .page-prose > section,
-         .page-prose > article {
-            grid-column: 2/9;
-         }
-      }
-   
-   /* Note Single
-      ========================================================================== */
-   
-   .note__header {
-      max-inline-size: var(--measure-wide);
-      padding-bottom: var(--space-xl);
-      border-bottom: solid 1px var(--color-textdecoration);
-   }
-   
-   .note__breadcrumb {
-      text-transform: capitalize;
-   }
-   
-      .note__breadcrumb a {
-         text-decoration: none;
-         font-weight: 700;
-         transition: all 0.5s;
-         display: inline-block;
-         position: relative;
-      }
-   
-      .note__breadcrumb a:before {
-         content: '«';
-         position: absolute;
-         opacity: 0;
-         top: -1px;
-         left: 4px;
-         transition: 0.5s;
-       }
-   
-       .note__breadcrumb a:hover{
-         padding-left: 1rem;
-       }
-       
-       .note__breadcrumb a:hover:before {
-         opacity: 1;
-       }
-   
-   .note__title {
-      margin: 0;
-      margin-bottom: var(--space-3xs);
-      margin-top: var(--space-3xs);
-      padding: 0;
-   }
-   
-   .note__deck {
-      font-size: var(--step-1);
-      color: var(--color-accent-700);
-      margin: 0 0 1rem;
-      padding: 0;
-      text-wrap: balance;
-   }
-   
-   .note__origin {
+   .footnotes {
       font-size: var(--step--1);
    }
-   
-      .note__origin strong {
-         color: var(--color-accent-700);
-      }
-   
-   .callout__assumedAudience {
-      font-size: var(--step--2);
-      color: var(--color-neutral-900);
-      background-color: var(--color-accent-200);
-      padding: var(--space-2xs);
-      max-inline-size: var(--measure);
-   }
-   
-      .callout__assumedAudience strong {
-         color: var(--color-accent-700);
-      }  
-   
-      .callout__assumedAudience strong::after {
-         content: ': ';
-      }
-   
-   .footnotes {
-      /* Center primitive applied */
-      box-sizing: content-box;
-      margin-inline: auto;
-      max-inline-size: var(--measure);
-      /* Other details */
-      font-size: var(--step--2);
-      /* 
-      color: var(--color-neutral-900);
-      background-color: var(--color-accent-200);
-      padding: var(--space-xs);
-      */
-   }
-   
+
    .footnotes hr {
       display: inline-block;
       border: 0;
@@ -945,7 +717,6 @@
    
       .footnotes hr::before {
          content: 'Footnotes';
-         font-size: var(--step--1);
          font-weight: bold;
          color: var(--color-accent-800);
       }
@@ -959,6 +730,6 @@
          color: var(--color-accent-700);
       }
    
-      .footnote-backref {
-         text-decoration: none;
-      }   
+   .footnote-backref {
+      text-decoration: none;
+   }

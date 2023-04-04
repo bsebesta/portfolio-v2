@@ -1,5 +1,5 @@
 ---
-title: Accessibility Theory
+title: Example 2
 date: 2021-06-11
 lastmod: 2022-05-23
 category: notes
