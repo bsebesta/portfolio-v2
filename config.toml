@@ -24,7 +24,7 @@ title = 'Bryan Sebesta'
   books = '/:title/'
   essays = '/:title/'
   patterns = '/:title/'
-  projects = '/:title/'
+  projects = '/case-studies/:title/'
   skills = '/:title/'
 
 [menu]

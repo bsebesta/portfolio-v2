@@ -1,0 +1,6 @@
+{{ $src := .Get "src" }}
+{{ $src := .Get "src" }}
+<figure class="figure measure-wide">
+    <img src="{{ $src }}"{{ with .Get "title" }} alt="{{ . }}"{{ end }} class="figure__image" />
+    {{ with .Get "title" }}<figcaption class="figure__caption">{{ . }}</figcaption>{{ end }}
+</figure>

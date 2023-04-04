@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ .Site.Title }}{{ with .Params.title }} - {{ . }}{{ end }}</title>
-  <link rel="stylesheet" href="/css/reset.css">
   <link rel="stylesheet" href="/css/fonts.css">
+  <link rel="stylesheet" href="/css/reset.css">
   <link rel="stylesheet" href="/css/style.css">
   {{- with $.Params.head -}}{{ $.Params.head | safeHTML }}{{- end }}
   <meta name="description" content="{{ .Site.Params.description }}">
