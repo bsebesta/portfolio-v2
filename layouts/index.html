@@ -38,7 +38,7 @@
                 {{ range where .Site.RegularPages.ByDate.Reverse "Section" "notes" }}
                 <a href="{{ .Permalink }}" class="box-small card"><article>
                     <h2>{{ .Title }}</h2>
-                    <p>{{ .Params.Deck }}</p>
+                    <p>{{ .Date.Format "January 2, 2006" }}</p>
                 </article></a>
                 {{ end }}
             </ul>
