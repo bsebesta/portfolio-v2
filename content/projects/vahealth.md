@@ -10,7 +10,7 @@ space:
 fpgallery:
     galleryShow: true
     galleryTitle: VA Health
-    galleryDesc: Multimodal voice application
+    galleryDesc: Re-imagining parts of the healthcare experience for US veterans
     galleryThumbnail: casestudy-thumb-vah.png
     galleryClass: workgallery-vah
 role:

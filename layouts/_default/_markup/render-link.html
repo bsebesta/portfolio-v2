@@ -1,4 +1,5 @@
 <a href="{{ .Destination | safeURL }}"{{ with .Title}} title="{{ . }}"{{ end }}{{ if strings.HasPrefix .Destination "http" }} target="_blank"{{ end }}>{{ .Text | markdownify }}</a><!--
+    
     This is the code that controls the "target" attribute for links in Goldmark.
     If a link has "http" as the prefix, it will open in a new tab.
     If it's an internal link, it will open in the same tab.
@@ -8,4 +9,5 @@
 
     One note: I had to change `.Text | safeURL` to `.Text | markdownify` to keep
     it from changing inline quotes to HTML name codes.
+    
 -->

@@ -1,22 +1,17 @@
 {{- define "main" -}}
 
 <main>
-<article class="stack center">
+<article class="stack-large">
 
-    <header class="note__header measure-wide">
-        <p class="note__breadcrumb">{{ with .Params.category }}<a href="/notes/">{{ . }}</a>{{ end }} {{ with .Params.growthStage }}{{ . }}{{ end }}</p>
-        <h1 class="note__title">{{ .Title }}</h1>
-        {{ with .Params.deck }}<p class="note__deck">{{ . }}</p>{{ end }}
-        {{ with .Date }} <p class="note__origin">
-            <strong>Planted</strong> {{ .Format "January 2006" }}
-        </p>{{ end }}
-    </header>
+    {{ partial "headers/garden.html" . }}
     
-    {{ with .Params.assumedAudience }}
-    <aside class="callout__assumedAudience"><strong>Assumed Audience</strong> {{ . }}</aside>
-    {{ end }}
+    <section class="center-intrinsic prose">
 
-    {{ .Content }}
+        {{ partial "prose/assumedAudience.html" . }}
+
+        {{ .Content }}
+
+    </section>
         
 </article>
 </main>

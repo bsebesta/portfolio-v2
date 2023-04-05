@@ -1,36 +1,38 @@
 {{- define "main" -}}
 
 <main>
-<article class="center-layout">
+<article class="stack">
+    
+    {{ partial "headers/simple.html" . }}
 
-    <header class="header__tall">
-        <h1>{{ .Title }}</h1>
-    </header>
+    <section class="center-intrinsic prose">
 
-    {{ .Content }}
+        {{ .Content }}
 
-    <!-- range where .Site.RegularPages "Section" "about" -->
-    {{ $aboutSections := site.GetPage "/about/sections" }}
-    {{ with $aboutSections }}
-        {{ range .Pages.ByWeight }}
-            {{ with .Title }}<h2>{{ . }}</h2>{{ end }}
-            {{ .Content }}
-        {{ end }}
-    {{ end }}
-
-    <h2>My Interests</h2>
-    <div class="collection-interests">
-        
-        {{ $aboutInterests := site.GetPage "/about/interests" }}
-        {{ with $aboutInterests }}
+        <!-- range where .Site.RegularPages "Section" "about" -->
+        {{ $aboutSections := site.GetPage "/about/sections" }}
+        {{ with $aboutSections }}
             {{ range .Pages.ByWeight }}
-            <article>
-                <h2>{{ .Title }}</h2>
-                <p>{{ .Content }}</p>
-            </article>
+                {{ with .Title }}<h2>{{ . }}</h2>{{ end }}
+                {{ .Content }}
             {{ end }}
         {{ end }}
-    </div>
+
+        <h2>My Interests</h2>
+        <div class="grid wider">
+            
+            {{ $aboutInterests := site.GetPage "/about/interests" }}
+            {{ with $aboutInterests }}
+                {{ range .Pages.ByWeight }}
+                <article class="interests__card card">
+                    <h2>{{ .Title }}</h2>
+                    <p>{{ .Content }}</p>
+                </article>
+                {{ end }}
+            {{ end }}
+        </div>
+
+    </section>
 
 </article>
 </main>

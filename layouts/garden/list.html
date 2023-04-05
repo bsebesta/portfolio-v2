@@ -1,28 +1,30 @@
 {{- define "main" -}}
 
 <main>
-<article class="stack center">
-
-    <header>
-        <h1>{{ .Title }}</h1>
-    </header>
-
-    {{ with .Content }}
-        {{ . }}
-    {{ end }}
+<article class="stack">
     
-    <ul>
-        {{ range .Pages }}
-        {{ $date := .Date.Format "02.01.2006" }}
-        {{ $lastmod := .Lastmod.Format "02.01.2006" }}
-        <li>
-            <strong><a href="{{ .Permalink }}">{{ .Title }}</a></strong>
-            <br><em>Planted</em> {{ .Lastmod.Format "02.01.2006" }}
-            {{ if ne $lastmod $date }}<br><em>Last tended</em> {{ .Lastmod.Format "02.01.2006" }}{{ end }}
-            <br><em>Topics</em>{{ range .Params.tags }} <span class="text-decoration">//</span> {{ . }}{{end}}
-        </li>
+    {{ partial "headers/simple.html" . }}
+
+    <section class="center-intrinsic prose">
+
+        {{ with .Content }}
+            {{ . }}
         {{ end }}
-    </ul>
+    
+        <ul>
+            {{ range .Pages }}
+            {{ $date := .Date.Format "02.01.2006" }}
+            {{ $lastmod := .Lastmod.Format "02.01.2006" }}
+            <li>
+                <strong><a href="{{ .Permalink }}">{{ .Title }}</a></strong>
+                <br><em>Planted</em> {{ .Lastmod.Format "02.01.2006" }}
+                {{ if ne $lastmod $date }}<br><em>Last tended</em> {{ .Lastmod.Format "02.01.2006" }}{{ end }}
+                <br><em>Topics</em>{{ range .Params.tags }} <span class="text-decoration">//</span> {{ . }}{{end}}
+            </li>
+            {{ end }}
+        </ul>
+
+    </section>
 
 </article>
 </main>

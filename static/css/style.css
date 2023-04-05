@@ -74,11 +74,6 @@
     */
    
    :root {
-      /* Font families */
-      --font-family-body: "Noto Sans", sans-serif;
-      --font-family-headers: "Merriweather", serif;
-      --font-family-nav: "Noto Sans", sans-serif;
-      --font-family-logotype: "Merriweather", serif;
       /* Modular type scale */
       --step--2: clamp(0.77rem, calc(0.78rem + -0.01vw), 0.78rem);
       --step--1: clamp(0.94rem, calc(0.90rem + 0.16vw), 1.03rem);
@@ -108,8 +103,15 @@
       --space-l-xl: clamp(2.25rem, calc(1.60rem + 3.26vw), 4.13rem);
       --space-xl-2xl: clamp(3.38rem, calc(2.64rem + 3.70vw), 5.50rem);
       --space-2xl-3xl: clamp(4.50rem, calc(3.20rem + 6.52vw), 8.25rem);
+      /* Custom pairs */
+      --space-s-l: clamp(1.13rem, calc(0.56rem + 2.83vw), 2.75rem);
+      /* Font families */
+      --font-family-body: "Noto Sans", sans-serif;
+      --font-family-headers: "Merriweather", serif;
+      --font-family-nav: "Noto Sans", sans-serif;
+      --font-family-logotype: "Merriweather", serif;
       /* Measure */
-      --measure: 40rem; /* ~60ch */
+      --measure: 42rem; /* ~60ch */
       --measure-wide: 44rem; /* ~80ch */
       --measure-wider: 50rem;
       --measure-widest: 85.25rem;
@@ -117,91 +119,143 @@
       --u-grid-max-width: var(--measure-widest);
       --u-grid-gutter: var(--space-s-l, clamp(1.13rem, calc(0.63rem + 2.49vw), 2.75rem));
       --u-grid-columns: 12;
+      /* Line heights */
+      --line-height-body: 1.5;
+      --line-height-headers: 1.1;
+      --line-height-deck: 1.2;
    }
 
 /* ==========================================================================
    UNIVERSAL: Inherited Properties
    ========================================================================== */
 
-   /* Body properties
+   /* Key blocks
       ========================================================================== */
 
-   body {
-      text-rendering: optimizeSpeed;
-      font: var(--step-0)/1.5 var(--font-family-body);
-      background-color: var(--color-body-bg);
-      color: var(--color-body-text);
-   }
-   
-   /* Measure
-      ========================================================================== */
-   
-   /* Main
-      ========================================================================== */
+      body {
+         text-rendering: optimizeSpeed;
+         font: var(--step-0)/var(--line-height-body) var(--font-family-body);
+         background-color: var(--color-body-bg);
+         color: var(--color-body-text);
+      }
 
-   main {
-      padding-inline: var(--space-s);
-      margin-block-start: var(--space-l);
-      margin-block-end: var(--space-2xl);
-   }
+      main {
+         padding-inline: var(--space-s);
+         margin-block-start: var(--space-2xl);
+         margin-block-end: var(--space-3xl);
+      }
    
    /* Block-level Elements and Vertical Rhythm
       ========================================================================== */
    
-   h1,
-   h2,
-   h3 {
-      font-family: var(--font-family-headers);
-      display: block;
-      margin: 0;
-      padding: 0;
-      line-height: 1;
-   }
+      h1,
+      h2,
+      h3 {
+         display: block;
+         margin: 0;
+         padding: 0;
+         font-family: var(--font-family-headers);
+         line-height: var(--line-height-headers);
+         font-weight: 700;
+         text-wrap: balance;
+      }
 
-   h1 { font-size: var(--step-4); }
-   h2 { font-size: var(--step-3); }
-   h3 { font-size: var(--step-2); }
+      h1 { font-size: var(--step-4); }
+      h2 { font-size: var(--step-3); }
+      h3 { font-size: var(--step-2); }
 
    /* Inline Styles
       ========================================================================== */
 
-   a {
-      color: var(--color-accent-800);
-      text-underline-offset: .2ex;
-   }
+      a {
+         color: var(--color-accent-800);
+         text-underline-offset: .2ex;
+      }
 
-   strong {
-      font-weight: bold;
-   }
+      strong {
+         font-weight: bold;
+      }
 
-   em {
-      font-style: italic;
-   }
-   
-   small,
-   sub,
-   sup {
-      font-size: var(--step--2);
-   }
-   
-   sub { vertical-align: sub }
-   sup { vertical-align: super }
+      em {
+         font-style: italic;
+      }
+      
+      small,
+      sub,
+      sup {
+         font-size: var(--step--2);
+      }
+      
+      sub { vertical-align: sub }
+      sup { vertical-align: super }
 
-   sub a,
-   sup a {
-      text-decoration: none;
-   }
+      sub a,
+      sup a {
+         text-decoration: none;
+      }
 
-   figure img,
-   figure video {
-      max-inline-size: 100%;
-   }
+      blockquote {
+         padding-inline-start: var(--space-s);
+         border-inline-start: var(--space-xs) solid var(--color-accent-200);
+         color: var(--color-neutral-700);
+         font-size: var(--step-0);
+         font-style: italic;
+      }
 
-   figcaption {
-      font-size: var(--step--1);
-      font-style: italic;
-      color: var(--color-neutral-700);
-   }
+      figure img,
+      figure video {
+         inline-size: 100%;
+      }
+
+      figcaption {
+         margin-block-start: var(--space-3xs);
+         text-align: center;
+         font-size: var(--step--1);
+         font-style: italic;
+         color: var(--color-neutral-700);
+      }
+
+/* ==========================================================================
+   PROSE UTILITY
+   This is a utility that I'm putting here, in-between the inherited
+   (above) and the layout primitives (below).
+   ========================================================================== */
+
+      /* These two properties provide the standard vertical rhythm */
+      .prose {
+         --space: var(--space-s);
+      }
+
+      .prose > * + * {
+         margin-block-start: var(--space, 1em);
+      }
+
+      /* This is the space that comes just before headers */
+      .prose > *:is(h1, h2, h3) {
+         --space: var(--space-m-l);
+      }
+      
+      /* This is the space just after headers */
+      .prose :is(h2 + *, h3 + *, h4 + *) {
+         --space: var(--space-2xs);
+      }
+
+      .prose ul,
+      .prose ol {
+         padding-left: var(--space-m-l);
+      }
+
+         .prose ul { list-style-type: disc; }
+         .prose ol { list-style-type: decimal; }
+
+      /* Rules around the thematic break element */
+      .prose > hr { --space: var(--space-xl); }
+      .prose hr + * { --space: var(--space-xl); }
+
+         .prose hr {
+            width: 40%;
+            border: solid 1px var(--color-textdecoration);
+         }
 
 /* ==========================================================================
    LAYOUT PRIMITIVES / Composition Layer
@@ -218,86 +272,92 @@
    .u-grid {
       display: grid;
       grid-template-columns: repeat(var(--u-grid-columns),1fr);
-      gap: var(--u-grid-gutter);
+      column-gap: var(--u-grid-gutter);
    }
 
-   /* Stack
+   /* Stack, used predominantly for non-text stacking
       ========================================================================== */
 
-   /* Standard Stack, with a separation 1.5x the font-size */
-   .stack {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-   }
-   
-      .stack > * {
-         margin-block: 0;
-      } 
-      
-      .stack > * + * {
-         margin-block-start: var(--space, var(--space-m));
+      /* Standard Stack, with a separation 1.5x the font-size */
+      .stack,
+      .stack-small,
+      .stack-large,
+      .stack-larger,
+      .stack-largest {
+         display: flex;
+         flex-direction: column;
+         justify-content: flex-start;
+         align-content: stretch;
       }
-
-   /* Small stack, with a separation ~.5x the font-size */
-   .stack-small {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-   }
-   
-      .stack-small > * {
-         margin-block: 0;
-      } 
       
-      .stack-small > * + * {
-         margin-block-start: var(--space, var(--space-3xs));
-      }
-
-   /* Large stack, with a separation 3x the font-size */
-   .stack-large {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-   }
-   
-      .stack-large > * {
-         margin-block: 0;
-      } 
+         .stack,
+         .stack-small,
+         .stack-large,
+         .stack-larger,
+         .stack-largest > * {
+            margin-block: 0;
+         }
+         
+         /*
+          * I've removed the "customer property fallback", since it was conflicting when 
+          * a part of the stack was the prose element (where the --space element meant for
+          * content INSIDE the .prose element would reach up and affect the margin
+          * in the stack itself. May want to go back and rework that at some point.
+          */
+          
+         .stack-smallest > * + * { margin-block-start: var(--space-3xs); }
+         .stack-smaller > * + * { margin-block-start: var(--space-xs); }
+         .stack-small > * + * { margin-block-start: var(--space-s); }
+         .stack > * + * { margin-block-start: var(--space-m); }
+         .stack-large > * + * { margin-block-start: var(--space-xl); }
+         .stack-larger > * + * { margin-block-start: var(--space-2xl); }
+         .stack-largest > * + * { margin-block-start: var(--space-3xl); }
       
-      .stack-large > * + * {
-         margin-block-start: var(--space, var(--space-xl));
+      /* A utility class for creating an exception for a stacked child */
+      .stack-exception,
+      .stack-exception + * {
+         margin-block: 0;
+         margin-block-start: 0;
       }
-   
-   /* A utility class for creating an exception for a stacked child */
-   .stack-exception,
-   .stack-exception + * {
-     margin-block: 0;
-     margin-block-start: 0;
-   }
    
    /* Center
       ========================================================================== */
 
-   .center {
-      box-sizing: content-box;
-      margin-inline: auto;
-      max-inline-size: var(--measure);
-   }
+      /*
+       * Center has a bit of overlap in "duties" with stack,
+       * in that both create a flexbox. The main difference is that
+       * stack adds margins in vertical rhythm, and center only
+       * operates to center children elements.
+       */
+       
+      .center {
+         box-sizing: content-box;
+         margin-inline: auto;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+       }
 
-   /*
-    * This center layout is a primitive I made to center everything, but allow 
-    */
+      /* 
+       * Designed to center children, not the container itself
+       * This give me flexibility in changing the size of the children
+       */
+      .center-intrinsic > * {
+         box-sizing: border-box;
+         margin-inline: auto;
+         max-inline-size: var(--measure);
+      }
 
-   .center-layout {
-      display: flex;
-      flex-flow: column nowrap;
-      align-items: center;
-      gap: var(--space, var(--space-m));
-   }
-
-      .center-layout > * {
-         inline-size: 100%;
+      /*
+       * This is the "original" center layout, which I only use
+       * for pages that don't need any resizing of the children.
+       * Right now, that means the "Now" page. And truth be told,
+       * the main reason I'm using it there is because the other
+       * centering sections cause issues with the "timeline" border.
+       */
+      .center-sections {
+         box-sizing: content-box;
+         margin-inline: auto;
          max-inline-size: var(--measure);
       }
 
@@ -318,7 +378,7 @@
    .grid {
       display: grid;
       grid-gap: var(--space-s);
-      align-items: start; /* Might change back to stretch; need to test */
+      align-items: stretch; /* Might change back to stretch; need to test */
    }
       
    @supports (width: min(20rem, 100%)) {
@@ -395,7 +455,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background-size: contain;
+      background-size: cover;
    }
     
       .frame > img,
@@ -430,15 +490,13 @@
       ========================================================================== */
 
    .homepage {
+      /* Modifications to the 'u-grid' class */
+      row-gap: var(--space-2xl);
       grid-template-areas:
          "header header header header header header header header header header header header"
          "work work work work work work work work work work work work"
          "notes notes notes notes notes notes notes notes notes notes notes notes";
    }
-
-   .homepage__header { grid-area: header; margin-block-end: var(--space-xl); }
-   .homepage__casestudies { grid-area: work; margin-block-end: var(--space-l); }
-   .homepage__notes { grid-area: notes; margin-block-end: var(--space-l); }
 
    /* As the screen expands to 960px, the grid has the MOST freedom, so we give everything more space */
    @media screen and (min-width: 900px) {
@@ -454,54 +512,83 @@
       ========================================================================== */
 
    .homepage__header {
-      margin-block-start: var(--space-l);
+      grid-area: header;
    }
 
-   .homepage__header h1 {
+   .homepage__header_title {
       color: var(--color-accent-800);
       font-family: var(--font-family-headers);
       font-size: var(--step-5);
       font-weight: 700;
+      margin-block-end: var(--space-3xs);
    }
 
-   .homepage__header ul {
+   .homepage__header_lede ul {
       --space: var(--space-3xs);
       font-size: var(--step-2);
-      line-height: var(--space-l);
+      line-height: var(--space-m-l);
    }
 
-      .homepage__header li::after {
+      .homepage__header_lede li::after {
          content: '//';
          margin-inline-start: var(--space-3xs);
          color: var(--color-textdecoration);
       }
 
-      .homepage__header li:last-of-type::after {
+      .homepage__header_lede li:last-of-type::after {
          content: '';
       }
 
    /* Sections
       ========================================================================== */
    
+   .homepage__casestudies { grid-area: work; }
+   .homepage__notes { grid-area: notes; }
+
    .homepage__casestudies > header,
    .homepage__notes > header {
-      
+   
    }
 
    .homepage__casestudies > header > h2,
    .homepage__notes > header > h2 {
-      font-size: var(--step-0);
+      font-size: var(--step-1);
       font-weight: 700;
-      font-family: var(--font-family-body);
+      font-family: var(--font-family-headers);
       color: var(--color-accent-700);
-      border-bottom: solid 1px var(--color-textdecoration);
       margin-block-end: var(--space-3xs);
+   }
+
+   .homepage__casestudies > header > p,
+   .homepage__notes > header > p {
+      color: var(--color-neutral-600);
    }
    
 
 /* ==========================================================================
    COMPONENTS
    ========================================================================== */
+
+   @media screen and (min-width: 600px) {
+   
+      .now__update {
+         border-left: 1px dashed var(--color-neutral-300);
+         padding-left: var(--space-s);
+      }
+   
+      .now__update::before {
+         content: "";
+         width: var(--space-2xs);
+         height: var(--space-2xs);
+         border: 2px solid var(--color-neutral-300);
+         background-color: var(--color-body-bg);
+         display: block;
+         margin-left: calc(-1 * var(--space-s) - (var(--space-2xs)/2));
+         position: relative;
+         top: 0rem;
+         border-radius: 50%;
+      }
+   }
 
    /* Banner Navigation
       ========================================================================== */
@@ -510,8 +597,9 @@
       /* Positioning & Box-Model */
       inline-size: auto;
       max-inline-size: var(--measure-widest);
-      margin-block: var(--space-3xs);
-      margin-inline: var(--space-s);
+      margin-inline: auto;
+      padding-inline: var(--space-s);
+      padding-block-start: var(--space-3xs);
       /* Interior Display */
       display: flex;
       flex-flow: row nowrap;
@@ -580,17 +668,14 @@
       margin-block-end: var(--space-3xs);
    }
 
-   /* Header (Tall, single/short title)
+   /* Simple Header
       ========================================================================== */
    
-   .header__tall {
-      font-family: var(--font-family-headers);
-      font-size: var(--step-6);
-      font-weight: 700;
+   .header__simple {
       text-align: center;
    }
 
-   /* Header (Garden)
+   /* Garden Header
       ========================================================================== */
 
    .header_garden {
@@ -599,25 +684,47 @@
    }
 
    .header_garden__title {
+      --space: 0;
       font-family: var(--font-family-headers);
       font-size: var(--step-4);
       font-weight: 700;
    }
 
-   .header_garden__breadcrumb {
+   .breadcrumb {
       font-size: var(--step--1);
    }
 
-   .header_garden__breadcrumb a {
+   .breadcrumb a {
       text-decoration: none;
       font-weight: bold;
       text-transform: capitalize;
-    }
+      transition: all 0.5s;
+      display: inline-block;
+      position: relative;
+   }
 
-   .header_garden__deck {
+      .breadcrumb a:before {
+         content: '«';
+         position: absolute;
+         opacity: 0;
+         top: -1px;
+         left: 4px;
+         transition: 0.5s;
+      }
+
+      .breadcrumb a:hover{
+         padding-left: 1rem;
+      }
+      
+      .breadcrumb a:hover:before {
+         opacity: 1;
+      }
+
+   .deck {
+      margin-block-start: 0;
       font-size: var(--step-1);
       color: var(--color-accent-700);
-      line-height: 1.2;;
+      line-height: var(--line-height-deck);
    }
 
    .header_garden__origin {
@@ -628,12 +735,15 @@
       ========================================================================== */
 
    .callout__assumedAudience {
-      font-size: var(--step--1);
       color: var(--color-neutral-900);
       background-color: var(--color-accent-200);
       padding: var(--space-2xs);
       max-inline-size: var(--measure);
    }
+
+      .callout__assumedAudience * {
+         font-size: var(--step--1);
+      }
    
       .callout__assumedAudience strong {
          color: var(--color-accent-700);
@@ -678,7 +788,7 @@
       position: absolute;
       width: 100%;
       height: 2px;
-      bottom: -8px;
+      bottom: calc(-1 * var(--space-3xs));
       left: 0;
       /* Other */
       background-color: var(--color-bannernav-link-underline);
@@ -723,7 +833,7 @@
    
    .footnotes ol {
       list-style-type: decimal;
-      margin-top: 0;
+      padding-inline-start: var(--space-s);
    }
    
       .footnotes li::marker {

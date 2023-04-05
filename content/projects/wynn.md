@@ -5,7 +5,7 @@ weight: 3
 fpgallery:
     galleryShow: true
     galleryTitle: Wynn
-    galleryDesc: Conversational UI concierge
+    galleryDesc: Creating an in-room virtual concierge for Wynn Resorts
     galleryThumbnail: casestudy-thumb-wynn.png
     galleryClass: workgallery-wynn
 tags:

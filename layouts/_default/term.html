@@ -1,26 +1,28 @@
 {{- define "main" -}}
 
 <main>
-<article class="stack center">
+<article class="stack">
+    
+    {{ partial "headers/simple.html" . }}
 
-    <header>
-        <h1>{{ .Title }}</h1>
-    </header>
+    <section class="center-intrinsic prose">
 
-    {{ .Content }}
+        {{ .Content }}
 
-    <ul>
-        {{ range .Pages }}
-        <li>
-            {{ if isset .Params "title" }}
-                <a href="{{ .Permalink }}">{{ .Title }}</a><br>
-                {{ .Date.Format "Jan 2, 2006" }}<br>
-            {{ else }}
-                <a href="{{ .Permalink }}">{{ .Date.Format "Jan 2, 2006" }}</a><br>
+        <ul>
+            {{ range .Pages }}
+            <li>
+                {{ if isset .Params "title" }}
+                    <a href="{{ .Permalink }}">{{ .Title }}</a><br>
+                    {{ .Date.Format "Jan 2, 2006" }}<br>
+                {{ else }}
+                    <a href="{{ .Permalink }}">{{ .Date.Format "Jan 2, 2006" }}</a><br>
+                {{ end }}
+            </li>
             {{ end }}
-        </li>
-        {{ end }}
-    </ul>
+        </ul>
+
+    </section>
 
 </article>
 </main>

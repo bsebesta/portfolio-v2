@@ -1,22 +1,18 @@
 {{- define "main" -}}
 
 <main>
-<article class="stack center">
-
-    <header>
-        <h1>{{ .Title }}</h1>
-        {{ with .Params.deck }}<p class="deck">{{ . }}</p>{{ end }}
-        <p class="metadata">&nbsp;</p>
-    </header>
+<article class="center-sections stack">
+            
+    {{ partial "headers/simple.html" . }}
 
     {{ with .Content }}
-    <section>
+    <section class="center-intrinsic prose">
         {{ . }}
     </section>
     {{ end }}
     
     {{ range where .Site.RegularPages.ByDate.Reverse "Section" "now" }}
-    <article class="section-timeline-element">
+    <article class="prose now__update">
         <h2>{{ .Title }}</h2>
         {{ .Content }}
     </article>

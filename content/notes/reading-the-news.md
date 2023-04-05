@@ -15,11 +15,17 @@ In today's world, information is more accessible than ever before. The news surr
 
 {{< figure
     src="/img/placeholder-graph.webp"
-    class="wide"
+    class="wider"
     title="Placeholder Graph" >}}
 
 ## Seek Truth and Knowledge
-As Latter-Day Saints, we are encouraged to seek truth and knowledge in all aspects of life. In Doctrine and Covenants 88:118, we are instructed to "seek ye diligently and teach one another words of wisdom; yea, seek ye out of the best books words of wisdom; seek learning, even by study and also by faith." Reading the news is one way to pursue knowledge and become more informed about the world around us. However, it is essential to use discernment when evaluating the credibility of news sources and the accuracy of the information presented.
+As Latter-Day Saints, we are encouraged to seek truth and knowledge in all aspects of life. In Doctrine and Covenants 88:118, we are instructed to "seek ye diligently and teach one another words of wisdom; yea, seek ye out of the best books words of wisdom; seek learning, even by study and also by faith."
+
+> Martin Luther believed that human beings are formed by the words we hear and the words to which we respond—and that we are rightly determined by recognizing ourselves as created by God, addressed and sustained by his good Word.  
+> 
+> But lots of words are competing for our attention: social media posts, political debates, advertisements, and news, to name a few. During the COVID-19 pandemic the influence of social media and news loom large. But while social media can keep us connected and news can keep us informed, they can arrest our attention in unhelpful ways and feed the chaos and confusion we feel.
+
+Reading the news is one way to pursue knowledge and become more informed about the world around us. However, it is essential to use discernment when evaluating the credibility of news sources and the accuracy of the information presented.
 
 ## Use the Holy Ghost as a Guide
 In our pursuit of truth, we can rely on the guidance of the Holy Ghost. As we read the news, we should seek the Spirit's assistance in discerning truth from error and identifying information that is consistent with our beliefs and values. By inviting the Holy Ghost into our news consumption, we can be more confident in our understanding of the world and our ability to make informed decisions.
