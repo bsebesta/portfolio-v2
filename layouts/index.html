@@ -10,10 +10,11 @@
             <li>Craftsman of words, pixels, and code</li>
         </ul></div>
     </header>
-
-    <section class="homepage__casestudies stack-smaller">
-        <header>
+    
+    <section class="homepage__work stack-smaller">
+        <header class="homepage__sectionheader_large">
             <h2>Work</h2>
+            <span>/</span>
             <p>Stories from my adventures in design</p>
         </header>
         <div class="grid">
@@ -29,20 +30,62 @@
         </div>
     </section>
 
-    <section class="homepage__notes stack-smaller">
-        <header>
-            <h2>Notes</h2>
-            <p>Developing ideas that I'm exploring</p>
+    <section class="homepage__garden u-grid">
+        <header class="homepage__sectionheader_large">
+            <h2>Garden</h2>
+            <span>/</span>
+            <p>Notes, essays, explorations, book reviews—all of them a work in progress.</p>
         </header>
-        <div class="grid">
-                {{ range where .Site.RegularPages.ByDate.Reverse "Section" "notes" }}
-                <a href="{{ .Permalink }}" class="box-small card"><article>
-                    <h2>{{ .Title }}</h2>
-                    <p>{{ .Date.Format "January 2, 2006" }}</p>
-                </article></a>
+
+        <section class="homepage__notes stack-small">
+            <header class="homepage__sectionheader_small">
+                <h2>Notes & Essays</h2>
+                <p>Notes are loosely held and exploratory, while essays make an argument</p>
+            </header>
+            <div class="stack-smallest">
+                {{ range first 10 (where .Site.RegularPages.ByDate.Reverse "Section" "notes") }}
+                <article class="homepage__notescard">
+                    <a href="{{ .Permalink }}"><h2>{{ .Title }}</h2></a>
+                </article>
                 {{ end }}
+            </div>
+        </section>
+
+        <section class="homepage__skills stack-small">
+            <header class="homepage__sectionheader_small">
+                <h2>Explorations in Process</h2>
+                <p>Explorations in various aspects of UX and UI design, mini-case studies capturing snapshots of my process and approach</p>
+            </header>
+            <div class="grid-small">
+                {{ range first 10 (where .Site.RegularPages.ByDate.Reverse "Section" "skills") }}
+                <article class="homepage__skillscard stack-smallest">
+                    <div class="">&nbsp;</div>
+                    <a href="{{ .Permalink }}"><h2>{{ .Title }}</h2></a>
+                </article>
+                {{ end }}
+        </section>
+
+        <section class="homepage__books stack-small">
+            <header class="homepage__sectionheader_small">
+                <h2>A Working Library</h2>
+                <p>Notes from the world of books—on technology, design, and the humanities.</p>
+            </header>
+            <div></div>
+        </section>
+        <!-- <section class="homepage__notes">
+
+
+        </section>
+        <div class="grid">
+            {{ range where .Site.RegularPages.ByDate.Reverse "Section" "notes" }}
+            <a href="{{ .Permalink }}" class="box-small card"><article>
+                <h2>{{ .Title }}</h2>
+                <p>{{ .Date.Format "January 2, 2006" }}</p>
+            </article></a>
+            {{ end }}
             </ul>
         </div>
+     -->
     </section>
 
 </main>

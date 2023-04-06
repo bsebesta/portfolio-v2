@@ -57,11 +57,20 @@
    /* Shadows
       ========================================================================== */
    
-   :root {
-      --box-shadow-sm: 0.2px 0.2px 0.8px -10px rgba(40,10,0,0.014), 0.4px 0.4px 2px -10px rgba(40,10,0,0.02), 0.8px 0.8px 3.8px -10px rgba(40,10,0,0.025), 1.3px 1.3px 6.7px -10px rgba(40,10,0,0.03), 2.5px 2.5px 12.5px -10px rgba(40,10,0,0.036), 6px 6px 30px -10px rgba(40,10,0,0.05);
-      --box-shadow-lg: 1px 0.9px 2.3px -3px rgba(30,10,10,0.04), 2.4px 2.2px 5.5px -3px rgba(30,10,10,0.05), 4.5px 4.1px 10.4px -3px rgba(30,10,10,0.06), 8px 7.4px 18.5px -3px rgba(30,10,10,0.07), 15px 13.8px 34.7px -3px rgba(30,10,10,0.08), 36px 33px 83px -3px rgba(30,10,10,0.2);
-      --box-shadow-md: 0.2px 0.4px 0.8px -10px rgba(0,0,0,0.03), 0.4px 0.9px 2px -10px rgba(0,0,0,0.03), 0.8px 1.8px 3.8px -10px rgba(0,0,0,0.038), 1.3px 3.1px 6.7px -10px rgba(0,0,0,0.045), 2.5px 5.8px 12.5px -10px rgba(0,0,0,0.06), 6px 14px 30px -10px rgba(0,0,0,0.08);
-   }
+      :root {
+         --box-shadow-sm: 0.2px 0.2px 0.8px -10px rgba(40,10,0,0.014), 0.4px 0.4px 2px -10px rgba(40,10,0,0.02), 0.8px 0.8px 3.8px -10px rgba(40,10,0,0.025), 1.3px 1.3px 6.7px -10px rgba(40,10,0,0.03), 2.5px 2.5px 12.5px -10px rgba(40,10,0,0.036), 6px 6px 30px -10px rgba(40,10,0,0.05);
+         --box-shadow-lg: 1px 0.9px 2.3px -3px rgba(30,10,10,0.04), 2.4px 2.2px 5.5px -3px rgba(30,10,10,0.05), 4.5px 4.1px 10.4px -3px rgba(30,10,10,0.06), 8px 7.4px 18.5px -3px rgba(30,10,10,0.07), 15px 13.8px 34.7px -3px rgba(30,10,10,0.08), 36px 33px 83px -3px rgba(30,10,10,0.2);
+         --box-shadow-md: 0.2px 0.4px 0.8px -10px rgba(0,0,0,0.03), 0.4px 0.9px 2px -10px rgba(0,0,0,0.03), 0.8px 1.8px 3.8px -10px rgba(0,0,0,0.038), 1.3px 3.1px 6.7px -10px rgba(0,0,0,0.045), 2.5px 5.8px 12.5px -10px rgba(0,0,0,0.06), 6px 14px 30px -10px rgba(0,0,0,0.08);
+      }
+
+   /* Transitions
+      ========================================================================== */
+   
+      :root {
+         --transition-animate-link: transform 0.25s ease-out;
+         --transition-card-hover: all .3s ease-in;
+         --transition-breadcrumb-hover: all 0.5s;
+      }
 
    /* Type, Space, Grid, Measure
       ========================================================================== */
@@ -140,7 +149,7 @@
       }
 
       main {
-         padding-inline: var(--space-s);
+         padding-inline: var(--space-s-m);
          margin-block-start: var(--space-2xl);
          margin-block-end: var(--space-3xl);
       }
@@ -280,6 +289,8 @@
 
       /* Standard Stack, with a separation 1.5x the font-size */
       .stack,
+      .stack-smallest,
+      .stack-smaller,
       .stack-small,
       .stack-large,
       .stack-larger,
@@ -291,6 +302,8 @@
       }
       
          .stack,
+         .stack-smallest,
+         .stack-smaller,
          .stack-small,
          .stack-large,
          .stack-larger,
@@ -375,17 +388,29 @@
    /* Grid
       ========================================================================== */
    
-   .grid {
-      display: grid;
-      grid-gap: var(--space-s);
-      align-items: stretch; /* Might change back to stretch; need to test */
-   }
-      
-   @supports (width: min(20rem, 100%)) {
       .grid {
-         grid-template-columns: repeat(auto-fit, minmax(min(18rem, 100%), 1fr));
+         display: grid;
+         grid-gap: var(--space-s);
+         align-items: stretch; /* Might change back to stretch; need to test */
       }
-   }
+         
+      @supports (width: min(18rem, 100%)) {
+         .grid {
+            grid-template-columns: repeat(auto-fit, minmax(min(18rem, 100%), 1fr));
+         }
+      }
+
+      .grid-small {
+         display: grid;
+         grid-gap: var(--space-s);
+         align-items: stretch; /* Might change back to stretch; need to test */
+      }
+         
+      @supports (width: min(11rem, 100%)) {
+         .grid-small {
+            grid-template-columns: repeat(auto-fit, minmax(min(11rem, 100%), 1fr));
+         }
+      }
    
    /* Multicolumn List (Custom)
       ========================================================================== */
@@ -495,25 +520,25 @@
       grid-template-areas:
          "header header header header header header header header header header header header"
          "work work work work work work work work work work work work"
-         "notes notes notes notes notes notes notes notes notes notes notes notes";
+         "garden garden garden garden garden garden garden garden garden garden garden garden";
    }
 
    /* As the screen expands to 960px, the grid has the MOST freedom, so we give everything more space */
    @media screen and (min-width: 900px) {
       .homepage {
          grid-template-areas:
-            ". . header header header header header header header header . ."
-            ". work work work work work work work work work work ."
-            ". notes notes notes notes notes notes notes notes notes notes .";
+            ". header header header header header header header header header header ."
+            "work work work work work work work work work work work work"
+            "garden garden garden garden garden garden garden garden garden garden garden garden";
       }
    }
 
+   .homepage__header { grid-area: header; }
+   .homepage__work { grid-area: work; }
+   .homepage__garden { grid-area: garden; }
+
    /* Header
       ========================================================================== */
-
-   .homepage__header {
-      grid-area: header;
-   }
 
    .homepage__header_title {
       color: var(--color-accent-800);
@@ -539,31 +564,156 @@
          content: '';
       }
 
-   /* Sections
+   /* Large & Small Section Headers
       ========================================================================== */
-   
-   .homepage__casestudies { grid-area: work; }
-   .homepage__notes { grid-area: notes; }
 
-   .homepage__casestudies > header,
-   .homepage__notes > header {
-   
+   /* Large section headers */
+   .homepage__sectionheader_large {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      gap: var(--space-m);
    }
 
-   .homepage__casestudies > header > h2,
-   .homepage__notes > header > h2 {
-      font-size: var(--step-1);
-      font-weight: 700;
-      font-family: var(--font-family-headers);
-      color: var(--color-accent-700);
-      margin-block-end: var(--space-3xs);
+      .homepage__sectionheader_large h2 {
+         font-size: var(--step-3);
+         color: var(--color-accent-700);
+      }
+
+      .homepage__sectionheader_large span {
+         font-size: var(--step-0);
+         color: var(--color-textdecoration);
+      }
+
+      .homepage__sectionheader_large p {
+         font-size: var(--step-0);
+         line-height: var(--line-height-deck);
+         color: var(--color-neutral-700);
+      }
+
+   /* Small section headers */
+   .homepage__sectionheader_small h2 {
+      font-size: var(--step-0);
+      font-family: var(--font-family-body);
+      color: var(--color-accent-600);
    }
 
-   .homepage__casestudies > header > p,
-   .homepage__notes > header > p {
+      .homepage__sectionheader_small h2::after {
+         content: '/';
+         font-size: var(--step--1);
+         color: var(--color-textdecoration);
+         margin-inline-start: var(--space-2xs);
+      }
+
+   .homepage__sectionheader_small p {
+      font-size: var(--step--1);
+      line-height: var(--line-height-deck);
       color: var(--color-neutral-600);
    }
+
+   /* Garden subgrid
+      ========================================================================== */
+
+      .homepage__garden {
+         row-gap: var(--space-m);
+         grid-template-areas:
+            "gheader gheader gheader gheader gheader gheader gheader gheader gheader gheader gheader gheader"
+            "notes notes notes notes notes notes notes notes notes notes notes notes"
+            "skills skills skills skills skills skills skills skills skills skills skills skills"
+            "books books books books books books books books books books books books";
+         } 
+
+      @media screen and (min-width: 800px) {
+         .homepage__garden {
+            grid-template-areas:
+               "gheader gheader gheader gheader gheader gheader gheader gheader gheader gheader gheader gheader"
+               "notes notes notes notes notes skills skills skills skills skills skills skills"
+               "books books books books books books books books books books books books";
+            }
+      }
+
+      .homepage__garden > .homepage__sectionheader_large { grid-area: gheader; }
+      .homepage__notes { grid-area: notes; }
+      .homepage__skills { grid-area: skills; }
+      .homepage__books { grid-area: books; }
+
+   /* Notes and Notes Cards
+      ========================================================================== */
+
+      .homepage__notescard {
+         padding-block: var(--space-xs);
+         border-bottom: solid 1px var(--color-textdecoration);
+         transition: var(--transition-card-hover);
+         cursor: pointer;
+      }
    
+         .homepage__notescard:hover {
+            transform: scale(1.01);
+            transform-origin: center;
+            border-bottom: solid 1px var(--color-accent-300);
+         }
+
+         .homepage__notescard a {
+            text-decoration: none;
+            color: var(--color-neutral-800);
+         }
+
+            .homepage__notescard a:hover {
+               color: var(--color-neutral-900);
+            }
+
+         .homepage__notescard h2 {
+            font-family: var(--font-family-body);
+            font-size: var(--step-0);
+            font-weight: 500;
+         }
+
+   /* Skills section
+      ========================================================================== */
+
+      .homepage__skills {
+         /*background-color: blue;*/
+      }
+
+      .homepage__skillscard {
+         transition: var(--transition-card-hover);
+         cursor: pointer;
+      }
+
+         .homepage__skillscard:hover {
+            transform: scale(1.01);
+            transform-origin: center;
+         }
+
+         .homepage__skillscard div {
+            min-height: var(--space-l);
+            width: 100%;
+            aspect-ratio: 1/1;
+            background-color: var(--color-accent-300);
+            border-radius: var(--space-3xs);
+         }
+
+         .homepage__skillscard a {
+            text-decoration: none;
+            color: var(--color-neutral-800);
+         }
+
+            .homepage__skillscard a:hover {
+               color: var(--color-neutral-900);
+            }
+
+         .homepage__skillscard h2 {
+            font-family: var(--font-family-body);
+            font-size: var(--step--1);
+            font-weight: 500;
+         }
+
+   /* Books section
+      ========================================================================== */
+
+      .homepage__books {
+         /*background-color: green;*/
+      }
 
 /* ==========================================================================
    COMPONENTS
@@ -598,7 +748,7 @@
       inline-size: auto;
       max-inline-size: var(--measure-widest);
       margin-inline: auto;
-      padding-inline: var(--space-s);
+      padding-inline: var(--space-s-m);
       padding-block-start: var(--space-3xs);
       /* Interior Display */
       display: flex;
@@ -642,7 +792,7 @@
       cursor: pointer;
       overflow: hidden;
       box-shadow: var(--box-shadow-sm);
-      transition: all .3s ease-in;
+      transition: var(--transition-card-hover);
    }
 
    .card:hover {
@@ -699,7 +849,7 @@
       text-decoration: none;
       font-weight: bold;
       text-transform: capitalize;
-      transition: all 0.5s;
+      transition: var(--transition-breadcrumb-hover);
       display: inline-block;
       position: relative;
    }
@@ -710,7 +860,7 @@
          opacity: 0;
          top: -1px;
          left: 4px;
-         transition: 0.5s;
+         transition: var(--transition-breadcrumb-hover);
       }
 
       .breadcrumb a:hover{
@@ -795,7 +945,7 @@
       background-color: var(--color-bannernav-link-underline);
       transform: scaleX(0);
       transform-origin: right;
-      transition: transform 0.25s ease-out;
+      transition: var(--transition-animate-link);
    }
    
    .animate-link:hover::after {
