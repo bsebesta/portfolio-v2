@@ -1,4 +1,5 @@
 ---
+type: vah
 slug: vahealth
 title: Building a safe voice UI for veterans’ prescription management on Alexa
 description: This is the story of how I helped lead the Veterans’ Affairs office into a more inclusive future
@@ -28,14 +29,6 @@ tags:
 - Content Strategy
 ---
 
-The United States is home to around 16.5 million veterans. The US Department of Veterans’ Affairs manages a healthcare system for these veterans, running a budget of $68 billion with 9 million enrolled veterans.
-
-## Results
-* Improved Speed...
-* 
-* 
-
-## The Full Story
 How do you innovate products for veteran customers in a large government agency with lots of skeptical stakeholders?
 
 RAIN was an agency specializing on multimodal design that makes use of conversational AI. We were approached by the VA about helping to lead innovation, but this was a big, government group with a lot of stakeholders; and many were skeptical of whether conversational AI could add anything. Our first task, of course, was to understand and advocate for the veteran users—but a close second task was getting stakeholder buy-in, and quickly.
