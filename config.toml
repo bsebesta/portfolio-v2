@@ -3,7 +3,9 @@ languageCode = 'en-us'
 title = 'Bryan Sebesta'
 
 [params]
+  urlBookCovers = 'https://bsebesta-portfolio.s3.us-west-004.backblazeb2.com/media/books/'
   microblogUrl = 'https://micro.bryansebesta.net'
+  author = 'Bryan Sebesta'
 
 [taxonomies]
   category = 'categories'
@@ -20,12 +22,11 @@ title = 'Bryan Sebesta'
     # Terryl Givens, Fiona Givens, Rumi, etc
 
 [permalinks]
-  notes = '/:title/'
-  books = '/:title/'
-  essays = '/:title/'
-  patterns = '/:title/'
-  projects = '/case-studies/:title/'
-  skills = '/:title/'
+  notes = '/writing/:title/'
+  books = '/reading/:title/'
+  patterns = '/observing/:title/'
+  projects = '/making/:title/'
+  skills = '/practicing/:title/'
 
 [menu]
   [[menu.nav]]

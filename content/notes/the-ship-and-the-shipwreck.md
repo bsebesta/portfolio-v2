@@ -1,8 +1,8 @@
 ---
-title: Who Invents the Ship, Invents the Shipwreck
+title: Invent the Ship, Invent the Shipwreck
 deck: 
 date: 2023-04-06
-category: notes
+category: note
 growthStage: budding
 epistemicStatus: 
 assumedAudience: 

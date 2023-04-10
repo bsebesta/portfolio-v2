@@ -1,0 +1,9 @@
+{{ if (isset . 0)  }}  
+    {{ $list := . }}
+    {{ $len := (len $list) }}
+    {{ range $index, $element := $list }}
+    <a href="{{ "/authors/" | relLangURL }}{{- . | urlize -}}">{{- . -}}</a>{{if ne (add $index 1) $len }},{{ end }}
+    {{ end }}
+{{ else }}
+    <a href="{{ "/authors/" | relLangURL }}{{- . | urlize -}}">{{- . -}}</a>
+{{ end }}

@@ -2,7 +2,7 @@
 title: Rebuilding our Technological Imaginations
 deck: 
 date: 2023-04-06
-category: notes
+category: essay
 growthStage: budding
 epistemicStatus: 
 assumedAudience: 

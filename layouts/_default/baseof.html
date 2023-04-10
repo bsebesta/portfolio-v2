@@ -17,7 +17,15 @@
 
 {{ block "main" . }}{{ end }}
 
-{{ block "footer" . }}{{ end }}
+{{ block "footer" . }}
+<footer class="global-footer">
+  <!-- <p>&copy; {{ dateFormat "2006" now }} {{ .Site.Params.author }}</p>-->
+  <p>
+    Made with my laptop, code, and some <abbr title="Tender Lovin' Care">TLC</abbr><br>
+    <a href="{{ relref . "colophon" }}">Colophon</a> | <a href="{{ relref . "acknowledgements" }}">Acknowledgements</a>
+  </p>
+</footer>
+{{ end }}
 
 {{ with $.Params.foot }}{{ $.Params.foot | safeHTML }}{{ end }}
 

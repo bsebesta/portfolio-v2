@@ -7,9 +7,10 @@
 
    :root {
       /* Accent color palette */
-      --color-accent-000: #FAFBFC;
-      --color-accent-100: #F0F6FC;
-      --color-accent-200: #DEE6EE;
+      --color-accent-000: hsl(210, 25%, 98%);
+      --color-accent-100: hsl(210, 67%, 96%);
+      --color-accent-150: hsl(210, 63%, 94%);
+      --color-accent-200: hsl(210, 32%, 90%);
       --color-accent-300: #A9C1D9;
       --color-accent-400: #85A8CC;
       --color-accent-500: #3F709E;
@@ -69,6 +70,7 @@
       :root {
          --transition-animate-link: transform 0.25s ease-out;
          --transition-card-hover: all .3s ease-in;
+         --transition-button: all 0.25s ease-out;
          --transition-breadcrumb-hover: all 0.5s;
       }
 
@@ -150,8 +152,8 @@
 
       main {
          padding-inline: var(--space-s-m);
-         margin-block-start: var(--space-2xl);
-         margin-block-end: var(--space-3xl);
+         margin-block-start: calc(var(--space-xl-2xl)*1.5);
+         margin-block-end: calc(var(--space-3xl)*3);
       }
    
    /* Block-level Elements and Vertical Rhythm
@@ -169,9 +171,9 @@
          text-wrap: balance;
       }
 
-      h1 { font-size: var(--step-4); }
-      h2 { font-size: var(--step-3); }
-      h3 { font-size: var(--step-2); }
+      h1 { font-size: var(--step-3); }
+      h2 { font-size: var(--step-2); }
+      h3 { font-size: var(--step-1); }
 
    /* Inline Styles
       ========================================================================== */
@@ -187,6 +189,20 @@
 
       em {
          font-style: italic;
+      }
+
+      mark {
+         background-color: hsl(43, 99%, 85%);
+      }
+
+      code {
+         background-color: var(--color-accent-200);
+         font-family: monospace;
+         padding-inline: var(--space-3xs);
+      }
+
+      abbr {
+         text-decoration: none;
       }
       
       small,
@@ -224,6 +240,12 @@
          color: var(--color-neutral-700);
       }
 
+      /*
+      *::selection {
+         background-color: var(--color-accent-200);  
+      }
+      */
+
 /* ==========================================================================
    PROSE UTILITY
    This is a utility that I'm putting here, in-between the inherited
@@ -256,6 +278,7 @@
 
          .prose ul { list-style-type: disc; }
          .prose ol { list-style-type: decimal; }
+         .prose li::marker { color: var(--color-neutral-300); }
 
       /* Rules around the thematic break element */
       .prose > hr { --space: var(--space-xl); }
@@ -290,6 +313,7 @@
       /* Standard Stack, with a separation 1.5x the font-size */
       .stack,
       .stack-smallest,
+      .stack-smaller2,
       .stack-smaller,
       .stack-small,
       .stack-large,
@@ -301,12 +325,13 @@
          align-content: stretch;
       }
       
-         .stack,
-         .stack-smallest,
-         .stack-smaller,
-         .stack-small,
-         .stack-large,
-         .stack-larger,
+         .stack > *,
+         .stack-smallest > *,
+         .stack-smaller2 > *,
+         .stack-smaller > *,
+         .stack-small > *,
+         .stack-large > *,
+         .stack-larger > *,
          .stack-largest > * {
             margin-block: 0;
          }
@@ -319,6 +344,7 @@
           */
           
          .stack-smallest > * + * { margin-block-start: var(--space-3xs); }
+         .stack-smaller2 > * + * { margin-block-start: var(--space-2xs); }
          .stack-smaller > * + * { margin-block-start: var(--space-xs); }
          .stack-small > * + * { margin-block-start: var(--space-s); }
          .stack > * + * { margin-block-start: var(--space-m); }
@@ -516,7 +542,7 @@
 
    .homepage {
       /* Modifications to the 'u-grid' class */
-      row-gap: var(--space-2xl);
+      row-gap: var(--space-2xl-3xl);
       grid-template-areas:
          "header header header header header header header header header header header header"
          "work work work work work work work work work work work work"
@@ -524,10 +550,10 @@
    }
 
    /* As the screen expands to 960px, the grid has the MOST freedom, so we give everything more space */
-   @media screen and (min-width: 900px) {
+   @media screen and (min-width: 950px) {
       .homepage {
          grid-template-areas:
-            ". header header header header header header header header header header ."
+            ". . header header header header header header header header . ."
             "work work work work work work work work work work work work"
             "garden garden garden garden garden garden garden garden garden garden garden garden";
       }
@@ -545,7 +571,6 @@
       font-family: var(--font-family-headers);
       font-size: var(--step-5);
       font-weight: 700;
-      margin-block-end: var(--space-3xs);
    }
 
    .homepage__header_lede ul {
@@ -564,6 +589,56 @@
          content: '';
       }
 
+         /* Placeholder for cursor changes */
+         .homepage__header_lede_words {}
+         .homepage__header_lede_pixels {}
+         .homepage__header_lede_code {}
+
+      .homepage__header_details {
+         display: flex;
+         flex-flow: row nowrap;
+         justify-content: space-between;
+         width: var(--measure);
+      }
+
+         .homepage__header_details_cta {
+
+         }
+         
+         .homepage__header_details_text {
+            display: none;
+            color: var(--color-neutral-500);
+            font-size: var(--step--1);
+         }
+      
+         .link-cta-primary,
+         .link-cta-secondary {
+            display: inline-block;
+            padding: var(--space-2xs);
+            font-size: var(--step--1);
+            border-radius: var(--space-3xs);
+            text-decoration: none;
+            transition: var(--transition-button);
+         }
+
+         .link-cta-primary {
+            background-color: var(--color-accent-600);
+            color: var(--color-neutral-100);
+         }
+
+            .link-cta-primary:hover {
+               background-color: var(--color-accent-800);
+            }
+
+         .link-cta-secondary {
+            color: var(--color-accent-500);
+            background-color: var(--color-accent-100);
+         }
+
+            .link-cta-secondary:hover {
+               background-color: var(--color-accent-200);
+            }
+
    /* Large & Small Section Headers
       ========================================================================== */
 
@@ -573,6 +648,13 @@
       flex-flow: row nowrap;
       align-items: center;
       gap: var(--space-m);
+      /* These two properties give it a slight separation */
+      /*padding-block-end: var(--space-3xs);
+      border-bottom: solid 1px var(--color-accent-100);*/
+      /* These three properties give it a blockier look */
+      background-color: var(--color-accent-100);
+      border-radius: var(--space-2xs);
+      padding: var(--space-s);
    }
 
       .homepage__sectionheader_large h2 {
@@ -592,6 +674,33 @@
       }
 
    /* Small section headers */
+   a.homepage__sectionheader_small_link {
+      text-decoration: none;
+   }
+
+   a.homepage__sectionheader_small_link {
+      transition: var(--transition-breadcrumb-hover);
+      display: inline-block;
+      position: relative;
+   }
+
+      a.homepage__sectionheader_small_link:after {
+         content: '»';
+         position: absolute;
+         opacity: 0;
+         top: -1px;
+         right: 0rem;
+         transition: var(--transition-breadcrumb-hover);
+      }
+
+      a.homepage__sectionheader_small_link:hover {
+         padding-right: 0;
+      }
+      
+      a.homepage__sectionheader_small_link:hover:after {
+         opacity: 1;
+      }
+   
    .homepage__sectionheader_small h2 {
       font-size: var(--step-0);
       font-family: var(--font-family-body);
@@ -611,28 +720,60 @@
       color: var(--color-neutral-600);
    }
 
+
+   /* Project gallery cards
+      ========================================================================== */
+
+      .homepage__projectcard {
+         border-radius: var(--space-2xs);
+         cursor: pointer;
+         text-decoration: none; 
+         overflow: hidden;
+         transition: var(--transition-card-hover);
+      }
+   
+         .homepage__projectcard:hover {
+            transform: scale(1.01);
+            transform-origin: center;
+         }
+
+      .homepage__projectcard_thumbnail {
+         box-shadow: var(--box-shadow-sm);
+         transition: var(--transition-card-hover);
+      }
+
+      .homepage__projectcard:hover .homepage__projectcard_thumbnail {
+            box-shadow: var(--box-shadow-md);
+         }
+   
+      .homepage__projectcard h2 {
+         font-size: var(--step-0);
+      }
+   
+      .homepage__projectcard p {
+         font-size: var(--step--1);
+         color: var(--color-article-metadata);
+      }
+
    /* Garden subgrid
       ========================================================================== */
 
-      .homepage__garden {
-         row-gap: var(--space-m);
+      .homepage__garden_grid {
+         row-gap: var(--space-l-xl);
          grid-template-areas:
-            "gheader gheader gheader gheader gheader gheader gheader gheader gheader gheader gheader gheader"
             "notes notes notes notes notes notes notes notes notes notes notes notes"
             "skills skills skills skills skills skills skills skills skills skills skills skills"
             "books books books books books books books books books books books books";
          } 
 
       @media screen and (min-width: 800px) {
-         .homepage__garden {
+         .homepage__garden_grid {
             grid-template-areas:
-               "gheader gheader gheader gheader gheader gheader gheader gheader gheader gheader gheader gheader"
                "notes notes notes notes notes skills skills skills skills skills skills skills"
                "books books books books books books books books books books books books";
             }
       }
 
-      .homepage__garden > .homepage__sectionheader_large { grid-area: gheader; }
       .homepage__notes { grid-area: notes; }
       .homepage__skills { grid-area: skills; }
       .homepage__books { grid-area: books; }
@@ -641,11 +782,15 @@
       ========================================================================== */
 
       .homepage__notescard {
-         padding-block: var(--space-xs);
+         padding-block-end: var(--space-xs);
          border-bottom: solid 1px var(--color-textdecoration);
          transition: var(--transition-card-hover);
          cursor: pointer;
       }
+
+         .homepage__notescard:nth-child(1) {
+            padding-block-start: 0;
+         }
    
          .homepage__notescard:hover {
             transform: scale(1.01);
@@ -653,19 +798,29 @@
             border-bottom: solid 1px var(--color-accent-300);
          }
 
-         .homepage__notescard a {
-            text-decoration: none;
-            color: var(--color-neutral-800);
-         }
+      .homepage__notescard_metadata {
+         color: var(--color-neutral-300);
+         font-size: var(--step--1);
+         font-weight: bold;
+         font-variant: small-caps;
+         margin: 0;
+         padding: 0;
+         transition: var(--transition-card-hover);
+      }
 
-            .homepage__notescard a:hover {
-               color: var(--color-neutral-900);
-            }
+      .homepage__notescard a {
+         text-decoration: none;
+         color: var(--color-neutral-800);
+      }
 
-         .homepage__notescard h2 {
-            font-family: var(--font-family-body);
-            font-size: var(--step-0);
-            font-weight: 500;
+      .homepage__notescard h2 {
+         font-family: var(--font-family-body);
+         font-size: var(--step-0);
+         font-weight: 500;
+      }
+
+         .homepage__notescard:hover > .homepage__notescard_metadata {
+            color: var(--color-neutral-400);
          }
 
    /* Skills section
@@ -685,35 +840,204 @@
             transform-origin: center;
          }
 
-         .homepage__skillscard div {
-            min-height: var(--space-l);
-            width: 100%;
-            aspect-ratio: 1/1;
-            background-color: var(--color-accent-300);
-            border-radius: var(--space-3xs);
+      .homepage__skillscard_frame {
+         transition: var(--transition-card-hover);
+         min-height: var(--space-l);
+         box-shadow: var(--box-shadow-sm);
+         width: 100%;
+         aspect-ratio: 1/1;
+         background-color: var(--color-accent-100);
+         border-radius: var(--space-3xs);
+      }
+
+      .homepage__skillscard:hover .homepage__skillscard_frame {
+         transform: scale(1.01);
+         transform-origin: center;
+         box-shadow: var(--box-shadow-md);
+      }
+
+      .homepage__skillscard a {
+         text-decoration: none;
+         color: var(--color-neutral-800);
+      }
+
+         .homepage__skillscard a:hover {
+            color: var(--color-neutral-900);
          }
 
-         .homepage__skillscard a {
-            text-decoration: none;
-            color: var(--color-neutral-800);
+      .homepage__skillscard h2 {
+         font-family: var(--font-family-body);
+         font-size: var(--step--1);
+         font-weight: 500;
+      }
+
+      /* Shifts the number of skills from 8 to 6 on mobile */
+      .homepage__skillscard:nth-child(n+7) {
+         display: none;
+      }
+
+      @media screen and (min-width: 1066px) {
+         .homepage__skillscard:nth-child(n+7) {
+            display: initial;
          }
-
-            .homepage__skillscard a:hover {
-               color: var(--color-neutral-900);
-            }
-
-         .homepage__skillscard h2 {
-            font-family: var(--font-family-body);
-            font-size: var(--step--1);
-            font-weight: 500;
-         }
-
+      }
+   
    /* Books section
       ========================================================================== */
 
       .homepage__books {
          /*background-color: green;*/
       }
+
+      /* Book cards */
+      .homepage__bookscard {
+         transition: var(--transition-card-hover);
+         cursor: pointer;
+      }
+
+         .homepage__bookscard:hover {
+            transform: scale(1.01);
+            transform-origin: center;
+         }
+
+         .homepage__bookscard_cover {
+            min-height: var(--space-l);
+            width: 100%;
+            aspect-ratio: 1/1.5;
+            background-color: var(--color-accent-300);
+            border-radius: var(--space-3xs);
+            background-size: cover;
+            box-shadow: var(--box-shadow-sm);
+            transition: var(--transition-card-hover);
+         }
+
+         .homepage__bookscard:hover .homepage__bookscard_cover {
+            transform: scale(1.01);
+            transform-origin: center;
+            box-shadow: var(--box-shadow-md);
+         }
+
+         .homepage__bookscard a {
+            text-decoration: none;
+            color: var(--color-neutral-800);
+         }
+
+            .homepage__bookscard a:hover {
+               color: var(--color-neutral-900);
+            }
+
+         .homepage__bookscard h2 {
+            font-family: var(--font-family-body);
+            font-size: var(--step--1);
+            font-weight: 700;
+            color: var(--color-neutral-800);
+         }
+
+         .homepage__bookscard p {
+            display: none;
+            font-size: var(--step--1);
+            color: var(--color-neutral-400);
+         }
+
+      /* Alters the number of cards visible depending on screen size */
+      /*
+      .homepage__bookscard:nth-child(n+5) {
+         display: none;
+      }
+
+      @media screen and (min-width: 800px) {
+         .homepage__bookscard:nth-child(n+3) {
+            display: initial;
+         }
+      }
+      */
+
+/* ==========================================================================
+   About
+   ========================================================================== */
+
+   .about__context {
+      display: flex;
+      flex-flow: row nowrap;
+      gap: var(--u-grid-gutter);
+      margin-block-start: var(--space-m) !important;
+   }
+
+      .about__context_picture {
+         display: none;
+         flex-grow: 1 0 1;
+         min-width: 35vw;
+         background-color: var(--color-accent-100);
+         background-image: url('https://www.bryansebesta.com/wp-content/uploads/2023/01/Sebesta-9816F-1.jpeg');
+         background-size: cover;
+         background-position: center;
+      }
+
+      .about__context_text h2 {
+         color: var(--color-accent-800);
+      }
+
+   .about__history {
+      display: flex;
+      flex-flow: row nowrap;
+      gap: var(--u-grid-gutter);
+   }
+
+      .about__history_picture {
+         display: none;
+         flex-grow: 1 0 1;
+         min-width: 35vw;
+         background-color: var(--color-accent-100);
+         background-image: url('https://bsebesta-portfolio.s3.us-west-004.backblazeb2.com/about/childhood2.jpeg');
+         background-size: cover;
+         background-position: center;
+         
+      }
+
+      .about__history_text h2 {
+         color: var(--color-accent-800);
+      }
+
+   @media screen and (min-width: 750px) { 
+      .about__history_picture,
+      .about__context_picture {
+         display: initial;
+      }
+   }
+
+   .about__recommendations h2 {
+      color: var(--color-accent-800);
+   }
+
+   figure.about__recommendationcard {
+      transition: var(--transition-card-hover);
+   }
+
+      figure.about__recommendationcard:hover {
+         transform: scale(1.01);
+         transform-origin: center;
+      }
+
+   figure.about__recommendationcard blockquote {
+      font-size: var(--step--1);
+      background-color: var(--color-accent-100);
+      border: solid 1px var(--color-accent-100);
+      padding: var(--space-s);
+   }
+
+   figure.about__recommendationcard figcaption {
+      font-size: var(--step--2);
+      text-align: left;
+      font-style: initial;
+      color: var(--color-neutral-400);
+
+   }
+
+   figure.about__recommendationcard figcaption strong {
+      display: block;
+      color: var(--color-neutral-500);
+      font-size: var(--step--1);
+   }
 
 /* ==========================================================================
    COMPONENTS
@@ -783,42 +1107,6 @@
          text-decoration: none;
       }
 
-   /* Card
-      ========================================================================== */
-
-   .card {
-      border: solid 1px var(--color-accent-100);
-      border-radius: var(--space-2xs);
-      cursor: pointer;
-      overflow: hidden;
-      box-shadow: var(--box-shadow-sm);
-      transition: var(--transition-card-hover);
-   }
-
-   .card:hover {
-      transform: scale(1.01);
-      transform-origin: center;
-      box-shadow: var(--box-shadow-md);
-   }
-
-   .card,
-   .card a {
-      text-decoration: none; 
-   }
-
-   .card h2 {
-      font-size: var(--step-0);
-      margin-inline: var(--space-3xs);
-      margin-block-start: var(--space-3xs);
-   }
-
-   .card p {
-      font-size: var(--step--1);
-      margin-inline: var(--space-3xs);
-      margin-block-end: var(--space-3xs);
-      color: var(--color-article-metadata);
-   }
-
    /* Simple Header
       ========================================================================== */
    
@@ -826,10 +1114,41 @@
       text-align: center;
    }
 
+
+   /* About Header
+      ========================================================================== */
+
+      .header_about {
+         width: 100%;
+         border-bottom: solid 1px var(--color-textdecoration);
+         padding-block-end: var(--space-s);
+      }
+   
+      .header_about__title {
+         --space: 0;
+         font-family: var(--font-family-headers);
+         font-size: var(--step-5);
+         font-weight: 700;
+      }
+   
+      .header_about__pseudocategory
+       {
+         color: var(--color-accent-700);
+         font-size: var(--step-0);
+         text-decoration: none;
+         font-weight: bold;
+         text-transform: capitalize;
+      }
+   
+      .header_about__origin {
+         font-size: var(--step--1);
+      }
+
    /* Garden Header
       ========================================================================== */
 
    .header_garden {
+      width: 100%;
       border-bottom: solid 1px var(--color-textdecoration);
       padding-block-end: var(--space-l);
    }
@@ -887,21 +1206,35 @@
 
    .callout__assumedAudience {
       color: var(--color-neutral-900);
-      background-color: var(--color-accent-200);
+      background-color: var(--color-accent-100);
+      border: solid 1px var(--color-accent-150);
       padding: var(--space-2xs);
       max-inline-size: var(--measure);
+      display: flex;
+      flex-flow: column nowrap;
+   }
+
+   @media screen and (min-width: 600px) {
+      .callout__assumedAudience {
+         flex-flow: row nowrap;
+      }
    }
 
       .callout__assumedAudience * {
          font-size: var(--step--1);
       }
+
+      .callout__assumedAudience p:nth-of-type(1) {
+         width: 30ch;
+      }
    
       .callout__assumedAudience strong {
          color: var(--color-accent-700);
+         display: block;
       }  
    
       .callout__assumedAudience strong::after {
-         content: ': ';
+         content: '';
       }
 
 /* ==========================================================================
@@ -994,3 +1327,56 @@
    .footnote-backref {
       text-decoration: none;
    }
+
+   /* Global Footer
+      ========================================================================== */
+
+   .global-footer {
+      /* Positioning & Box-Model */
+      inline-size: auto;
+      max-inline-size: var(--measure-widest);
+      margin-inline: auto;
+      padding-inline: var(--space-m);
+      padding-block-end: var(--space-s);
+      font-size: var(--step--1);
+   }
+
+   .global-footer,
+   .global-footer a {
+      color: var(--color-neutral-500);
+   }
+
+   /* Books (list.html)
+      ========================================================================== */
+
+      ul.bookslist {
+         list-style-type: none;
+         padding-inline-start: 0;
+      }
+
+      ul.bookslist li {
+         padding-block: var(--space-3xs);
+         border-bottom: solid 1px var(--color-textdecoration);
+         /*transition: var(--transition-card-hover);*/
+      }
+      /*
+         .bookslist__item li:hover {
+            transform: scale(1.5);
+            transform-origin: center;
+         }
+      */
+
+      .bookslist__item a {
+         text-decoration: none;
+      }
+
+      .bookslist__item_title {
+         text-decoration: none;
+         font-size: var(--step-1);
+         font-family: var(--font-family-headers);
+      }
+
+      .bookslist__item_authors {
+         color: var(--color-neutral-500);
+      }
+   

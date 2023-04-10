@@ -1,9 +1,0 @@
-{{- if eq (len .) 1 -}}
-    {{- range . -}}
-        <a href="{{ "/authors/" | relLangURL }}{{- . | urlize -}}">{{- . -}}</a>
-    {{- end -}}
-{{- else if gt (len .) 1 -}}
-    {{- range $i, $e := . -}}
-        {{- if $i }}, {{ end -}}<a href="{{ "/authors/" | relLangURL }}{{- $e | urlize -}}/">{{ $e }}</a>
-    {{- end -}}
-{{- end -}}

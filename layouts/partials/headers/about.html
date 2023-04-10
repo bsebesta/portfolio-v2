@@ -1,0 +1,5 @@
+<header class="header_garden widest">
+    {{ with .Params.category }}<p class="breadcrumb">{{ . }}</p>{{ end }}
+    <h1 class="header_garden__title">{{ .Title }}</h1>
+    {{ with .Params.deck }}<p class="deck">{{ . }}</p>{{ end }}
+</header>

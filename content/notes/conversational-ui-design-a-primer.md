@@ -2,10 +2,17 @@
 title: "Conversational UI Design: A Primer"
 deck: 
 date: 2023-04-06
-category: notes
+category: note
 growthStage: budding
 epistemicStatus: 
 assumedAudience: 
 tags: 
 ---
 
+What makes conversational design distinct from GUI design?
+
+* Words, not pixels
+* Sentences, not artboards
+* Time, not space
+
+Affordances are hidden. Memory is the interface. 

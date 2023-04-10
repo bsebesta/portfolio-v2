@@ -1,0 +1,9 @@
+{{ if (isset . 0)  }}
+    {{ $list := . }}
+    {{ $len := (len $list) }}
+    {{ range $index, $element := $list }}
+        {{ . }}{{if ne (add $index 1) $len }},{{ end }}
+    {{ end }}
+{{ else }}
+    {{ . }}
+{{ end }}

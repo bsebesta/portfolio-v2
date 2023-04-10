@@ -9,4 +9,4 @@ cascade:
     render: false # Keeps individual pages from rendering as pages
 ---
 
-A brief look at what I'm up to.
+[A now page](https://nownownow.com/about): a brief look at what I'm up to, updated on a monthly or seasonal cadence.
