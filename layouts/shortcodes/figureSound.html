@@ -1,0 +1,8 @@
+<figure class="audioPlayerWrapper{{ with .Get "class" }} {{ . }}{{ end }}">
+    <div class="{{ .Get "id" }}">
+        <audio>
+            <source src="{{ .Get "src" }}" type="audio/mpeg">
+        </audio>
+    </div>
+    {{ with .Get "title" }}<figcaption>{{ . }}</figcaption>{{ end }}
+</figure>

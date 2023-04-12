@@ -6,7 +6,7 @@ category: essay
 growthStage: budding
 epistemicStatus: 
 assumedAudience: 
-tags: 
+weight: 6
 ---
 
 Here's food for thought for all designers, UX or otherwise:
@@ -19,6 +19,8 @@ I like this quote, if only for the elegant validation of "eclectic generalists" 
 
 > A jack of all trades is a master of none, but oftentimes better than a master of one
 
+---
+
 And that brings me to what I've been thinking about: the letters T, I, and π. (Forgive the category error.)
 
 -   An I-shaped person is a specialist. They're good at one thing, and they do that one thing well. But they lack breadth. This might apply to a designer who is frustrated because they don't understand the constraints of a developer, or a businessman who lacks any knowledge of the liberal arts. They're the "master of one."
@@ -26,6 +28,8 @@ And that brings me to what I've been thinking about: the letters T, I, and π. 
 -   A Pi-shaped person is someone with _at least two specialties_. This is the designer who can code, or the coder who can design. This is also the Information Technology specialist who can easily be promoted, because he also understands the business side and can manage people. This is the unicorn, the term for the rare player: the [guy who can play great offense _and_ defense in basketball](https://ftw.usatoday.com/2017/12/kristaps-porzingis-kevin-durant-unicorn), or (as mentioned just now) the guy who can do strategy, design, code, and QA. It's the person who can not just wear many hats, but make it _look good_.
 
 Specialty is important. We need a strong technical background. But so is holism, the ability to think deeply and broadly; to approach a problem from many angles. This in itself is [critical to critical thinking](http://louisville.edu/ideastoaction/about/criticalthinking/framework). I frequently find that my best insights come from making a connection between politics and biology, or design and astronomy, or simply between UX and instructional design, or voice interface and graphical interface design. These multidisciplinary efforts yield new insights.
+
+---
 
 I don't have any advice on how to become a t- or pi-shaped person, except perhaps "read a lot" and "talk to a lot of people about interesting things." I tend to mentally ricochet across many subjects, coming back to each often enough that over time, I develop expertise. It's not, I grant you, the most efficient method. But for me, it's tremendously effective, in large measure because it's tremendously _enjoyable_. More systematic approaches–tackling one area and working on it for weeks or months or even years–before moving are also recommended, and this discipline of attention and thought can be tremendously important.
 

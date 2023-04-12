@@ -20,5 +20,5 @@ shelves:
 skills:
 - product
 portfolioFeature: true
-weight: 6
+weight: 5
 ---

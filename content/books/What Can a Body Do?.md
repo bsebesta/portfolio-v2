@@ -16,5 +16,5 @@ favorite: true
 shelves:
 - non-fiction
 portfolioFeature: true
-weight: 11
+weight: 7
 ---

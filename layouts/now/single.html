@@ -1,0 +1,32 @@
+{{- define "main" -}}
+
+<main>
+<article class="center-sections stack page-margin">
+            
+    <header class="header_about widest">
+        <p class="header_about__pseudocategory"></p>
+        <h1 class="header_about__title">{{ .Title }}</h1>
+        {{ with .Params.deck }}<p class="deck">A sporadically updated log of what I'm up to</p>{{ end }}
+    </header>
+
+    <div class="stack-large">
+
+        <section class="center-intrinsic prose">
+            A now page is a sporadically updated page that describes "what I'm doing now," updated on a monthly or seasonal basis. It also helps me stay accountable to my goals. (<a href="https://nownownow.com/about" target="_blank">Learn more about now pages</a>.)
+        </section>
+
+        {{ $sections := .Page.Resources.Match "*.md" }}
+        {{ range $sections }}
+        <article class="prose now__update">
+            <h2>{{ .Title }}</h2>
+            {{- with .Params.deck }}<p class="deck">{{ . }}</p>{{ end -}}
+            {{ .Content }}
+        </article>
+        {{ end }}
+
+    </div>
+
+</article>
+</main>
+
+{{- end -}}

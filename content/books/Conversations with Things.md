@@ -20,5 +20,5 @@ shelves:
 skills:
 - vui-design
 portfolioFeature: true
-weight: 5
+weight: 6
 ---

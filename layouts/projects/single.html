@@ -1,0 +1,183 @@
+{{- define "main" -}}
+
+<main>
+<article class="stack-large">
+    
+    <!-- Header -->
+    <header class="header_casestudy wider page-margin gsap__animate">
+        <p class="header_casestudy__breadcrumb"><a href="/projects/">Case Studies</a></p>
+        <h1 class="header_casestudy__title">{{ .Title }}</h1>
+        <p class="deck">{{ .Params.description }}</p>
+    </header>
+
+    <!-- Above-the-Scroll Preview
+    <section class="fullbleed-bg center gsap__animate">
+        <div class="widest stack-small page-margin">
+
+            <figure>
+                <img src="https://bsebesta-portfolio.s3.us-west-004.backblazeb2.com/case-studies/va-health/vah_hero1.png">
+            </figure>
+
+            <figure class="audioPlayerWrapper page-margin">
+                <div class="vah_auralwireframe_1">
+                    <audio>
+                        <source src="https://bsebesta-portfolio.s3.us-west-004.backblazeb2.com/case-studies/va-health/VAH_AuralWiframes_PrescriptionFlowFull.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+                <figcaption>
+                    <strong>Aural Wireframe:</strong> The primary prescription flow
+                </figcaption>
+            </figure>
+
+        </div>
+    </section>
+-->
+
+    <!-- The Full Story -->
+    <section class="center-intrinsic page-margin gsap__animate">
+
+        {{ with .Resources.GetMatch "intro.md" }}
+            <h2 class="casestudy__minorheader">{{ .Title }}</h2>
+            <div class="prose casestudy__intro">
+                {{ .Content | safeHTML }}
+            </div>
+        {{ end }}
+
+    </section>
+
+    <!-- Summary Grid -->
+    <section class="casestudy__summary center-intrinsic page-margin gsap__animate">
+
+        <div class="grid">
+                
+            <div class="stack-small">
+                
+                <div>
+                    <h2 class="casestudy__minorheader">Client</h2>
+                    <p>{{ .Params.intro.client }}</p>
+                </div>
+
+                <div>
+                    <h2 class="casestudy__minorheader">Company</h2>
+                    <p>{{ .Params.intro.company }}</p>
+                </div>
+
+                <div>
+                    <h2 class="casestudy__minorheader">Platform</h2>
+                    <p>{{ .Params.intro.platform }}</p>
+                </div>
+                
+            </div>
+
+            <div>
+                <h2 class="casestudy__minorheader">My Responsibilities</h2>
+                <ul>
+                    {{ range .Params.intro.roles }}
+                    <li>{{ . }}</li>
+                    {{ end }}
+                </ul>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Results -->
+    <section class="page-margin fullbleed-bg casestudy__results page-margin gsap__animate">
+
+        <div class="stack-small wide">
+
+            {{ with .Resources.GetMatch "results.md" }}
+                <h2 class="casestudy__minorheader">{{ .Title }}</h2>
+                {{ .Content }}
+            {{ end }}
+
+        </div>
+
+    </section>
+
+    <section class="center-intrinsic prose page-margin gsap__animate">
+
+        {{ with .Resources.GetMatch "story.md" }}
+            {{ .Content }}
+        {{ end }}
+
+    </section>
+
+    <!--
+    <section class="center-intrinsic prose page-margin">
+
+        <h2>Understanding the Problem</h2>
+        <p>Together with our PM and engineer, we:</p>
+        <ul>
+            <li>drew on pre-existing research that the VA had around customer segmentation</li>
+            <li>talked to stakeholders and subject matter experts, including pharmacists, doctors, and veterans themselves</li>
+            <li>audited the existing ecosystem of digital apps within the healthcare space, including the IVR (automated voice system), which was the closest analogue to conversational UI they had</li>
+        </ul>
+        <p></p>
+
+    </section>
+
+    <section class="fullbleed-bg center">
+        <div class="widest stack-small page-margin">
+
+            <figure class="widest">
+                <img src="https://bsebesta-portfolio.s3.us-west-004.backblazeb2.com/case-studies/va-health/journey-map-1.png">
+                <figcaption>My original analysis of the current IVR (automated phone system) flow</figcaption>
+            </figure>
+
+        </div>
+    </section>
+
+    <section class="center-intrinsic prose page-margin">
+
+        <p>Along the way, I was leading education, helping stakeholders understand how conversational AI works. I drew out stakeholder concerns, especially around how the safety of veterans. And drawing on our competitive audits and understanding of users, I suggested a feature set for the MVP and a roadmap that would satisfy concerns.</p>
+
+        <figure class="widest">
+            <img src="https://bsebesta-portfolio.s3.us-west-004.backblazeb2.com/case-studies/va-health/vah_scenarios1.png">
+        </figure>
+
+        <figure class="widest">
+            <img src="https://bsebesta-portfolio.s3.us-west-004.backblazeb2.com/case-studies/va-health/vah_scenarios2.png">
+        </figure>
+
+        <p>Along the way, we were designing in the open. In the early stages, this meant helping everyone “visualize” a sonic experience, using aural wireframes, flow diagrams, storyboards, and scripts. As the project developed, we also incorporated voice-first prototypes and began sketching out the visual that display on smart speakers.</p>
+
+        <figure class="widest">
+            <video src="https://bsebesta-portfolio.s3.us-west-004.backblazeb2.com/case-studies/va-health/vahealth-prototypevideo.mp4" controls>
+        </figure>
+
+    </section>-->
+        
+</article>
+</main>
+
+{{- end -}}
+
+{{- define "footer" -}}
+<script src="/scripts/audio-player.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+	GreenAudioPlayer.init({
+	  selector: '.vah_auralwireframe_1',
+	  stopOthersOnPlay: true,
+	  enableKeystrokes: true
+	});
+	GreenAudioPlayer.init({
+	  selector: '.vah-wireframe-3',
+	  stopOthersOnPlay: true,
+	  enableKeystrokes: true
+	});
+  });
+</script>
+
+<!--
+<script>
+    gsap.to(".gsap__animate", {
+        scrollTrigger: ".gsap__animate", // start the animation when ".box" enters the viewport (once)
+        start: "top center",
+        top: 50
+    });
+</script>
+-->
+{{- end -}}

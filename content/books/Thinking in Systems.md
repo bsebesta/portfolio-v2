@@ -17,5 +17,5 @@ shelves:
 skills:
 - systems-thinking
 portfolioFeature: true
-weight: 7
+weight: 11
 ---

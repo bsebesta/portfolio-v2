@@ -25,7 +25,7 @@ title = 'Bryan Sebesta'
   notes = '/writing/:title/'
   books = '/reading/:title/'
   patterns = '/observing/:title/'
-  projects = '/making/:title/'
+  projects = '/making/:slug/'
   skills = '/practicing/:title/'
 
 [menu]

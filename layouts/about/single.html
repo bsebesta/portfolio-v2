@@ -1,0 +1,100 @@
+{{- define "main" -}}
+
+<main>
+<article class="stack-large center-intrinsic page-margin">
+    
+    <header class="header_about widest">
+
+        {{ with .Params.pseudoCategory }}<p class="header_about__pseudocategory">{{ . }}</p>{{ end }}
+        <h1 class="header_about__title">{{ .Title }}</h1>
+        {{ with .Params.deck }}<p class="deck">{{ . }}</p>{{ end }}
+
+    </header>
+
+    <section class="about__context widest">
+
+        <div class="about__context_picture">&nbsp;</div>
+
+        <div class="about__context_text prose">
+            {{ with .Resources.GetMatch "context.md" }}
+                <h2>{{ .Title }}</h2>
+                {{ .Content }}
+            {{ end }}
+        </div>
+
+    </section>
+
+    <section class="about__history widest">
+            
+        <div class="about__history_text prose">
+            {{ with .Resources.GetMatch "history.md" }}
+                <h2>{{ .Title }}</h2>
+                {{ .Content }}
+            {{ end }}
+        </div>
+
+        <div class="about__history_picture">&nbsp;</div>
+
+    </section>
+
+    <section class="about__recommendations widest stack">
+
+        <header class="stack-smallest">
+            {{ with .Resources.GetMatch "recommendations.md" }}
+                <h2>{{ .Title }}</h2>
+                {{ .Content }}
+            {{ end }}
+        </header>
+
+        <div class="grid">
+
+            {{ $sections := .Page.Resources.Match "recommendations/*.md" }}
+            {{ range $sections }}
+            <figure class="about__recommendationcard">
+
+                <blockquote>
+                    {{ .Content }}
+                </blockquote>
+                
+                <figcaption>
+                    <strong>{{ .Params.person }}</strong>
+                    {{ .Params.personTitle }}
+                </figcaption>
+
+            </figure>
+            {{ end }}
+
+        </div>
+
+    </section>
+
+    <section class="about__keynotes widest stack">
+
+        <header class="stack-smallest">
+
+            {{ with .Resources.GetMatch "keynotes.md" }}
+                <h2>{{ .Title }}</h2>
+                {{ .Content }}
+            {{ end }}
+
+        </header>
+
+        <div class="grid">
+
+            {{ range where .Site.RegularPages.ByWeight "Section" "notes" }}
+            {{ if eq .Params.favorite true }}
+            <a href="{{ .Permalink }}" class="about__keynotecard"><article>
+                <h2>{{ .Title }}</h2>
+                {{ with .Params.deck }}<p>{{ . }}</p>{{ end }}
+            </article></a>
+            {{ end }}
+            {{ end }}
+            
+        </div>
+
+    </section>
+
+</article>
+</main>
+
+{{- end -}}

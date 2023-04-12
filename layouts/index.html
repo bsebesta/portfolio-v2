@@ -1,14 +1,15 @@
 {{- define "main" -}}
 
-<main class="u-container u-grid homepage">
+<main class="u-container u-grid homepage page-margin">
 
+    <!-- Hero Text-->
     <header class="homepage__header stack">
         <div class="stack-smallest">
-            <h1 class="homepage__header_title">Bryan Sebesta</h1>
+            <h1 class="homepage__header_title">{{ .Params.ledeTitle }}</h1>
             <div class="homepage__header_lede"><ul class="cluster">
-                <li>Experience designer</li>
-                <li>Systems thinker</li>
-                <li>Craftsman of <span class="homepage__header_lede_words">words</span>, <span class="homepage__header_lede_pixels">pixels</span>, and <span class="homepage__header_lede_code">code</span></li>
+                {{ range .Params.ledeLines }}
+                <li>{{ . }}</li>
+                {{ end }}
             </ul></div>
         </div>
         <div class="homepage__header_details">
@@ -25,13 +26,14 @@
         </div>
     </header>
     
+    <!-- Work -->
     <section class="homepage__work stack">
         <header class="homepage__sectionheader_large">
             <h2>Work</h2>
             <span>/</span>
             <p>Stories and case studies from my adventures in UX</p>
         </header>
-        <div class="grid">
+        <div class="grid-large">
             {{ range where .Site.RegularPages.ByWeight "Section" "projects" }}
             {{ if eq .Params.fpgallery.galleryShow true }}
             <a href="{{ .Permalink }}" class="homepage__projectcard"><article class="stack-smaller2">
@@ -46,22 +48,27 @@
         </div>
     </section>
 
+    <!-- Digital Garden -->
     <section class="homepage__garden stack">
+
+        <!-- Digital Garden / Header -->
         <header class="homepage__sectionheader_large">
             <h2>Garden</h2>
             <span>/</span>
             <p>My digital garden includes my collection of imperfect and ever-evolving notes, essays, and snapshots of learning</p>
         </header>
 
+        <!-- Digital Garden / Grid -->
         <div class="homepage__garden_grid u-grid">
 
+            <!-- Notes & Essays -->
             <section class="homepage__notes stack-small">
                 <header class="homepage__sectionheader_small stack-smallest">
                     <h2>Notes & Essays</h2>
-                    <p>Notes can be short and exploratory, while essays make an argument</p>
+                    <p>Notes are short and exploratory; essays make an argument</p>
                 </header>
                 <div class="stack-smallest">
-                    {{ range first 10 (where .Site.RegularPages.ByDate.Reverse "Section" "notes") }}
+                    {{ range first 8 (where .Site.RegularPages.ByWeight "Section" "notes") }}
                     <article class="homepage__notescard">
                         <span class="homepage__notescard_metadata">{{ .Params.category }}</span>
                         <a href="{{ .Permalink }}"><h2>{{ .Title }}</h2></a>
@@ -70,13 +77,14 @@
                 </div>
             </section>
 
+            <!-- Craftmanship -->
             <section class="homepage__skills stack-small">
                 <header class="homepage__sectionheader_small stack-smallest">
                     <h2>Experiments in Craftmanship</h2>
-                    <p>Crafting designs with the garage door up: short profiles of learning, mainly focused on visual UI design for web and mobile</p>
+                    <p>Garage-door up experiments with tools, methods, patterns, and craft</p>
                 </header>
                 <div class="grid-small">
-                    {{ range first 9 (where .Site.RegularPages.ByDate.Reverse "Section" "skills") }}
+                    {{ range first 9 (where .Site.RegularPages.ByWeight "Section" "skills") }}
                     <article class="homepage__skillscard stack-smallest">
                         <div class="homepage__skillscard_frame">&nbsp;</div>
                         <a href="{{ .Permalink }}"><h2>{{ .Title }}</h2></a>
@@ -84,16 +92,17 @@
                     {{ end }}
             </section>
 
+            <!-- Books -->
             <section class="homepage__books stack-small">
                 <header class="homepage__sectionheader_small stack-smallest">
                     <!-- <div style="margin: 0"><a href="/books/" class="homepage__sectionheader_small_link">--><h2>A Working Library</h2><!-- </a></div> -->
-                    <p>Notes from the world of books—on technology, design, and the humanities</p>
+                    <p>Snapshots of my reading life—focused on technology, design, work, and culture</p>
                 </header>
                 <div class="grid-small">
                     <!-- Right now, only book pages have "portfolioFeature." If that changes, I'll need to redo the "first 5" section to make this work properly. -->
-                    {{ range first 12 (where .Site.RegularPages.ByWeight ".Params.portfolioFeature" true) }}
+                    {{ range first 8 (where .Site.RegularPages.ByWeight ".Params.portfolioFeature" true) }}
                     {{ if eq .Section "books" }}
-                    <article class="homepage__bookscard stack-smaller">
+                    <article class="homepage__bookscard stack-smaller" onclick="window.location.href='{{ .Permalink }}';">
                         <div class="homepage__bookscard_cover" style="background-image: url('{{ .Site.Params.urlBookCovers }}{{ .Params.cover }}')">&nbsp;</div>
                         <div>
                             <a href="{{ .Permalink }}"><h2>{{ .Title }}</h2></a>
