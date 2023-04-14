@@ -2,7 +2,27 @@
 title: Story
 ---
 
-{{< centerHeader >}}Initial Discovery{{< /centerHeader >}}
+<!--
+{{< caseStudyCTA class="wide" >}}
+## Want the whole story?
+Below are highlights from the process, but if you want the whole story, reach out to me [via email](mailto:hello@bryansebesta.com) or [LinkedIn](https://www.linkedin.com/in/bryansebesta).
+{{< /caseStudyCTA >}}
+
+---
+-->
+
+{{< smallHeader >}}Process{{< /smallHeader >}}
+{{< prominentText >}}This project's initial complexity emerged from organizational and technical challenges{{< /prominentText >}}
+
+d
+
+{{< figureImage 
+    src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/va-health/vahealth_process.png" 
+    class="wider" >}}
+
+The challenges were mostly the nature of the organization (a bureaucracy with a lot of red tape), the variety of stakeholders with conflicting priorities (patient safety, privacy, feature prioritization, etc), information architecture hurdles, and technical innovation (no sandbox or APIs we could test initially).
+
+---
 
 {{< smallHeader >}}Problem{{< /smallHeader >}}
 {{< prominentText >}}The VA wanted us to explore an accessible, voice-first interface for veterans refilling prescriptions{{< /prominentText >}}
@@ -175,3 +195,10 @@ Because the product never shipped, we never had access to statistically signific
 * **Convincing skeptical stakeholders.** We managed to convince some very skeptical stakeholders that a natural-language, conversational interface—if executed well—would be valued by veterans, especially those with disabilities (e.g. low vision). The topline research reports and quotes from our interviews visibly excited these stakeholders, and excitement shouldn’t be discounted. Nor should the power of user research to be the most potent persuasion tool in product design. That research was what tipped the stakeholders toward buy-in.
   
 * **Paving the way for an integrated conversational AI product strategy.** A consumer-facing Alexa voice application was never the endgame. This was always envisioned to pave the way to integrate voice inputs into the mobile app. In this modality, voice could work as a powerful input, and voice paired with visuals could work well as a powerful output. Although the Amazon Alexa chanel never worked out, conversations were being had about pivoting our work in this direction.
+
+---
+
+{{< caseStudyCTA >}}
+## Want the whole story?
+Whether you're a hiring manager or recruiter wanting more details, or a fellow designer wanting to discuss the fine craft of design with a friend, feel free to [reach out](mailto:hello@bryansebesta.com).
+{{< /caseStudyCTA >}}

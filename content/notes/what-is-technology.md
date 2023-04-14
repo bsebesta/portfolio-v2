@@ -1,6 +1,6 @@
 ---
 title: What is Technology?
-deck: Defining a tricky word
+deck: A working definition
 date: 2023-04-06
 category: essay
 growthStage: budding
@@ -11,9 +11,9 @@ favorite: true
 weight: 5
 ---
 
-Technology is how we cope with the physical world. It is "the active human interface with the human world." Every culture, therefore, has technology. It is how we get and keep food, how we clothe ourselves, what power sources we use, what we build with and what we build, our medicine, etc.
+Technology is what we use to cope with the physical world. It is "the active human interface with the human world." Every culture, therefore, has technology. It is how we get and keep food, how we clothe ourselves, what power sources we use, what we build and what we build _with_, our medicine, etc.
 
-> Its technology is how a society copes with physical reality: how people get and keep and cook food, how they clothe themselves, what their power sources are (animal? human? water? wind? electricity? other?) what they build with and what they build, their medicine—and so on and on… Technology is the active human interface with the material world.
+> ...technology is how a society copes with physical reality: how people get and keep and cook food, how they clothe themselves, what their power sources are (animal? human? water? wind? electricity? other?) what they build with and what they build, their medicine—and so on and on… Technology is the active human interface with the material world.
 
 In this sense, it is not limited (as Ursula K. Le Guin's rant aptly shows) to "the enormously complex and specialised technologies of the past few decades, supported by massive exploitation of natural and human resource." She goes on:
 

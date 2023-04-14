@@ -37,7 +37,7 @@
             {{ range where .Site.RegularPages.ByWeight "Section" "projects" }}
             {{ if eq .Params.fpgallery.galleryShow true }}
             <a href="{{ .Permalink }}" class="homepage__projectcard"><article class="stack-smaller2">
-                <div class="homepage__projectcard_thumbnail frame" style="background-image: url('/img/{{ .Params.fpgallery.galleryThumbnail }}')">&nbsp;</div>
+                <div class="homepage__projectcard_thumbnail frame" style="background-image: url('{{ .Params.fpgallery.galleryThumbnail }}')">&nbsp;</div>
                 <div>
                     <h2>{{ .Params.fpgallery.galleryTitle }}</h2>
                     <p>{{ .Params.fpgallery.galleryDesc }}</p>
@@ -80,8 +80,8 @@
             <!-- Craftmanship -->
             <section class="homepage__skills stack-small">
                 <header class="homepage__sectionheader_small stack-smallest">
-                    <h2>Experiments in Craftmanship</h2>
-                    <p>Garage-door up experiments with tools, methods, patterns, and craft</p>
+                    <h2>Visual Craft</h2>
+                    <p>Garage-door up experiments with visual UI-oriented tools, methods, patterns, and craft</p>
                 </header>
                 <div class="grid-small">
                     {{ range first 9 (where .Site.RegularPages.ByWeight "Section" "skills") }}

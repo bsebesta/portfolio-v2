@@ -1,5 +1,5 @@
 <header class="header_garden wider">
-    <p class="breadcrumb">{{ with .Params.category }}<a href="/notes/">{{ . }}</a>{{ end }}<!-- {{ with .Params.growthStage }}{{ . }}{{ end }} --></p>
+    <p class="breadcrumb">{{ with .Params.category }}<a href="/notes/">{{ . }}</a>{{ end }}{{ with .Params.growthStage }} <span class="header_garden__decoration">/</span> <span class="header_garden__growthstage">{{ . }}</span> {{ end }}</p>
     <h1 class="header_garden__title">{{ .Title }}</h1>
     {{ with .Params.deck }}<p class="deck">{{ . }}</p>{{ end }}
     <!-- {{ with .Date }} <p class="header_garden__origin">
