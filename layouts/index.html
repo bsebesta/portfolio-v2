@@ -29,9 +29,9 @@
     <!-- Work -->
     <section class="homepage__work stack">
         <header class="homepage__sectionheader_large">
-            <h2>Work</h2>
+            <h2>Case Studies</h2>
             <span>/</span>
-            <p>Stories and case studies from my adventures in UX</p>
+            <p>Stories from my adventures in UX</p>
         </header>
         <div class="grid-large">
             {{ range where .Site.RegularPages.ByWeight "Section" "projects" }}
@@ -68,7 +68,7 @@
                     <p>Notes are short and exploratory; essays make an argument</p>
                 </header>
                 <div class="stack-smallest">
-                    {{ range first 8 (where .Site.RegularPages.ByWeight "Section" "notes") }}
+                    {{ range first 4 (where .Site.RegularPages.ByWeight "Section" "notes") }}
                     <article class="homepage__notescard">
                         <span class="homepage__notescard_metadata">{{ .Params.category }}</span>
                         <a href="{{ .Permalink }}"><h2>{{ .Title }}</h2></a>
@@ -84,7 +84,7 @@
                     <p>Garage-door up experiments with visual UI-oriented tools, methods, patterns, and craft</p>
                 </header>
                 <div class="grid-small">
-                    {{ range first 9 (where .Site.RegularPages.ByWeight "Section" "skills") }}
+                    {{ range first 3 (where .Site.RegularPages.ByWeight "Section" "skills") }}
                     <article class="homepage__skillscard stack-smallest">
                         <div class="homepage__skillscard_frame">&nbsp;</div>
                         <a href="{{ .Permalink }}"><h2>{{ .Title }}</h2></a>

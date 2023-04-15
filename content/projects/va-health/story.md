@@ -14,7 +14,7 @@ Below are highlights from the process, but if you want the whole story, reach ou
 {{< smallHeader >}}Process{{< /smallHeader >}}
 {{< prominentText >}}This project's initial complexity emerged from organizational and technical challenges{{< /prominentText >}}
 
-d
+...?
 
 {{< figureImage 
     src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/va-health/vahealth_process.png" 

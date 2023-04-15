@@ -33,6 +33,7 @@
       --color-body-text: var(--color-neutral-900);
       --color-link: var(--color-accent-700);
       --color-link-hover: var(--color-accent-900);
+      --color-bannernav-bg: var(--color-accent-000);
       --color-bannernav-logotype: var(--color-neutral-900);
       --color-bannernav-link: var(--color-accent-800);
       --color-bannernav-link-hover: var(--color-neutral-900);
@@ -127,8 +128,8 @@
       /* Page Margins */
       --page-margin: var(--space-s-m);
       /* Measure */
-      --measure: 42rem; /* ~60ch */
-      --measure-wide: 46rem; /* ~80ch */
+      --measure: 44rem; /* ~60ch */
+      --measure-wide: 48rem; /* ~80ch */
       --measure-wider: 58rem;
       --measure-widest: 85.25rem;
       --measure-banner: 89.25rem;
@@ -267,7 +268,7 @@
       }
 
       /* This is the space that comes just before headers */
-      .prose > *:is(h1, h2, h3, figure) {
+      .prose > *:is(h1, h2, h3, figure,div) {
          --space: var(--space-m-l);
       }
       
@@ -276,7 +277,7 @@
          --space: var(--space-2xs);
       }
 
-      .prose :is(figure + *) {
+      .prose :is(figure + *,div + *) {
          --space: var(--space-m-l);
       }
 
@@ -1152,6 +1153,8 @@
       flex-flow: row nowrap;
       justify-content: space-between;
       align-items: center;
+      /* Background */
+      background-color: var(--color-bannernav-bg);
    }
    
    .banner__logotype {
@@ -1922,4 +1925,24 @@
             border-radius: var(--space-3xs-2xs);
             padding-block-start: var(--space-3xs);
             text-align: center;
+         }
+
+   /* Case Study "Learn More" CTA
+      ========================================================================== */
+      .casestudy__statcard {
+         background-color: var(--color-accent-100);
+         border-radius: var(--space-3xs-2xs);
+         padding: var(--space-s);
+      }
+
+         .casestudy__statcard h2 {
+            font-size: var(--step-3);
+            color: var(--color-accent-700);
+         }
+
+         .casestudy__statcard p {
+            border-radius: var(--space-3xs-2xs);
+            padding-block-start: var(--space-3xs);
+            color: var(--color-accent-600);
+            font-size: var(--step--1);
          }

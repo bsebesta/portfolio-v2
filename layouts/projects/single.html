@@ -65,15 +65,22 @@
 
         </div>
 
+        {{if .Params.layoutDetails.previewPartialPath }}
+            {{ partial .Params.layoutDetails.previewPartialPath . }}
+        {{ end }}
+
     </section>
 
-    {{if .Params.layoutDetails.previewPartialPath }}
-    {{ partial .Params.layoutDetails.previewPartialPath . }}
+    {{if .Params.layoutDetails.resultsPartialPath }}
+        {{ partial .Params.layoutDetails.resultsPartialPath . }}
     {{ end }}
 
-    {{if .Params.layoutDetails.resultsPartialPath }}
-    {{ partial .Params.layoutDetails.resultsPartialPath . }}
-    {{ end }}
+    <section class="center-intrinsic prose page-margin gsap__animate">
+        <!-- <h2 class="casestudy__minorheader">My Responsibilities</h2> -->
+        {{ with .Resources.GetMatch "results.md" }}
+            {{ .Content }}
+        {{ end }}
+    </section>
 
     <section class="center-intrinsic prose page-margin gsap__animate">
 

@@ -14,7 +14,9 @@ layoutDetails:
     headerImage: thumbnail_wynn_hero.png
     #previewPartialPath: "projects/wynn/preview.html"
     #resultsPartialPath: "projects/wynn/results.html"
-    #audioFileClasses:
+    audioFileClasses:
+    - wynn-wireframe-1
+    - wynn-wireframe-2
 fpgallery:
     galleryShow: true
     galleryTitle: Wynn
