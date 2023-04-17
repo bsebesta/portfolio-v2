@@ -1,5 +1,5 @@
 {{ $src := .Get "src" }}
-<figure{{ with .Get "class" }} class="{{ . }}"{{ end }}>
+<figure{{ with .Get "class" }} class="{{ . }}"{{ end }}{{ with .Get "style" }} style="{{ . }}"{{ end }}>
     <video controls src="{{ $src }}"></video>
     {{ with .Get "title" }}<figcaption class="figure__caption">{{ . }}</figcaption>{{ end }}
 </figure>

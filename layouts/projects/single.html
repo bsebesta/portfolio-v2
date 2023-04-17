@@ -75,27 +75,25 @@
         {{ partial .Params.layoutDetails.resultsPartialPath . }}
     {{ end }}
 
+    {{ with .Resources.GetMatch "results.md" }}
     <section class="center-intrinsic prose page-margin gsap__animate">
         <!-- <h2 class="casestudy__minorheader">My Responsibilities</h2> -->
-        {{ with .Resources.GetMatch "results.md" }}
-            {{ .Content }}
-        {{ end }}
+        {{ .Content }}
     </section>
+    {{ end }}
 
+    {{ with .Resources.GetMatch "story.md" }}
     <section class="center-intrinsic prose page-margin gsap__animate">
-
-        {{ with .Resources.GetMatch "story.md" }}
-            {{ .Content }}
-        {{ end }}
-
+        {{ .Content }}
     </section>
+    {{ end }}
         
 </article>
 </main>
 
 {{- end -}}
 
-{{- define "footer" -}}
+{{- define "scripts" -}}
 {{ with .Params.layoutDetails.audioFileClasses }}
 <script src="/scripts/audio-player.js"></script>
 <script>

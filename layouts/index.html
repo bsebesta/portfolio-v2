@@ -33,7 +33,7 @@
             <span>/</span>
             <p>Stories from my adventures in UX</p>
         </header>
-        <div class="grid-large">
+        <div class="grid">
             {{ range where .Site.RegularPages.ByWeight "Section" "projects" }}
             {{ if eq .Params.fpgallery.galleryShow true }}
             <a href="{{ .Permalink }}" class="homepage__projectcard"><article class="stack-smaller2">

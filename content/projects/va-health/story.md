@@ -119,7 +119,7 @@ Parallel to this activity, I also drew up detailed plans of how the VUI would wo
 
 All of the culminated in an ability to create a working app. Below is the design, featuring accompanying visuals I helped design (within the constraints of Amazon Alexa’s visual design system).
 
-{{< wrappers/grid class="wider grid" >}}
+{{< wrappers/grid class="wider" >}}
   {{< figureImage src="https://www.bryansebesta.com/wp-content/uploads/2023/01/echoshow8-gen3-black-diagonal3-1.png" >}}
   {{< figureImage src="https://www.bryansebesta.com/wp-content/uploads/2023/01/echoshow8-gen3-black-straight2.png" >}}
 {{< /wrappers/grid >}}

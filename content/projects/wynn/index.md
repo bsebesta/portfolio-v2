@@ -23,7 +23,7 @@ fpgallery:
     galleryDesc: Creating an in-room virtual concierge for Wynn Resorts
     galleryThumbnail: https://bsebesta-portfolio.s3.us-west-004.backblazeb2.com/case-studies/thumbnail_wynn_1.png
     galleryClass: workgallery-wynn
-weight: 2
+weight: 3
 head: |
   <style>
     :root {

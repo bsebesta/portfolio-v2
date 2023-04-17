@@ -9,6 +9,8 @@ assumedAudience:
 tags: 
 ---
 
+<!-- See "Powers of 10" in my Evergreen Notes -->
+
 My friend and former colleague at RAIN, [Will Hall](https://www.willhall.co/), has a saying he loves to use: "Powers of Ten!" We'd be stuck on a deck or design challenge, and he'd step back and whispher that phrase to himself: "Powers of Ten."
 
 That phrase is referencing...
