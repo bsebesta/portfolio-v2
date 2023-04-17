@@ -116,10 +116,18 @@ class="wider" >}}
     title="Giving feedback and changing settings" 
     style="max-width: 420px" >}}
 
+And, I should note, from here I was just beginning to _systematize_ the visual design, and port things over into high-fidelity in preparation for the inevitable usability testing.
+
+{{< figureImage 
+src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/human-touch/humantouch_visualdesignbeginnings.png" 
+class="wider" >}}
+
+But...
+
 ---
 
-{{< smallHeader >}}Takeaways{{< /smallHeader >}}
-{{< prominentText >}}Due to priorities at Human Touch, the project stopped before we could test our assumptions{{< /prominentText >}}
+{{< smallHeader >}}The Project's Conclusion{{< /smallHeader >}}
+{{< prominentText >}}Due to priorities at Human Touch, the project stopped before we could rigorously test our assumptions{{< /prominentText >}}
 
 One of the realities of agency life is _lots of contingency_. Due to the hardware around the chair taking longer than expected to deliver, the project was paused—and then I left. This left us with lots of research, some initial designs, and lots of untested assumptions.
 
