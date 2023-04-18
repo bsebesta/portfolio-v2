@@ -9,7 +9,6 @@ Below are highlights from the process, but if you want the whole story, reach ou
 {{< /caseStudyCTA >}}
 
 ---
--->
 
 {{< smallHeader >}}Process{{< /smallHeader >}}
 {{< prominentText >}}This project's initial complexity emerged from organizational and technical challenges{{< /prominentText >}}
@@ -22,7 +21,7 @@ Below are highlights from the process, but if you want the whole story, reach ou
 
 The challenges were mostly the nature of the organization (a bureaucracy with a lot of red tape), the variety of stakeholders with conflicting priorities (patient safety, privacy, feature prioritization, etc), information architecture hurdles, and technical innovation (no sandbox or APIs we could test initially).
 
----
+-->
 
 {{< smallHeader >}}Problem{{< /smallHeader >}}
 {{< prominentText >}}The VA wanted us to explore an accessible, voice-first interface for veterans refilling prescriptions{{< /prominentText >}}
@@ -39,13 +38,21 @@ Understanding our users without direct access to them{{< /prominentText >}}
 
 The VA is a large, bureaucratic, government agency. For this reason (and an overabundance of caution about veteran safety), we could not access real veterans, or real veteran data, until late in the game—after we’d built quite a lot, and after we’ve met a variety of hurdles and approvals.
 
-Much of my role, therefore, was doing the best within these constraints—relying on stakeholder interviews, subject matter experts, previous personas developed by the VA, and audits of the existing web / mobile ecosystem. From these, I started to draw out some hypotheses.
+Much of my role, therefore, was doing the best within these constraints—relying on stakeholder interviews, subject matter experts, previous personas developed by the VA, and audits of the existing web / mobile ecosystem.
 
 {{< figureImage 
     src="https://www.bryansebesta.com/wp-content/uploads/2023/01/vah-discovery-artifacts.png" 
     class="widest" >}}
 
-{{< centerHeader >}}Design & Research{{< /centerHeader >}}
+One of the key "existing" services was the IVR, or interactive voice response. I drew out a journey map of the existing service, which led to the creation of 
+
+{{< figureImage 
+    src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/va-health/vahealth_journeymap_1.png" 
+    class="wider" >}}
+
+{{< figureImage 
+    src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/va-health/vahealth_journeymap_2.png" 
+    class="wider" >}}
 
 {{< smallHeader >}}Defining the Scope{{< /smallHeader >}}
 {{< prominentText >}}Focusing in on basic prescription refills—as well as listing prescriptions and tracking shipments{{< /prominentText >}}
@@ -73,8 +80,8 @@ Frankly, we hypothesized that few veterans would want to be tethered to their pr
 But early thinking about the API indicated we might have to do this, so I drew up storyboards to help our team align on the context.
 
 {{< figureImage 
-    src="https://www.bryansebesta.com/wp-content/uploads/2023/01/vah_storyboarding.png" 
-    class="widest" >}}
+    src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/va-health/vahealth_storyboards.png" 
+    class="wider" >}}
 
 As conversations progressed, we realized the API was more potent than we’d thought—we would be able to list our prescriptions. So we moved to persuade stakeholders by showing different versions and feature sets we could move forward with.
 
