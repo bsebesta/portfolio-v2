@@ -2,27 +2,6 @@
 title: Story
 ---
 
-<!--
-{{< caseStudyCTA class="wide" >}}
-## Want the whole story?
-Below are highlights from the process, but if you want the whole story, reach out to me [via email](mailto:hello@bryansebesta.com) or [LinkedIn](https://www.linkedin.com/in/bryansebesta).
-{{< /caseStudyCTA >}}
-
----
-
-{{< smallHeader >}}Process{{< /smallHeader >}}
-{{< prominentText >}}This project's initial complexity emerged from organizational and technical challenges{{< /prominentText >}}
-
-...?
-
-{{< figureImage 
-    src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/va-health/vahealth_process.png" 
-    class="wider" >}}
-
-The challenges were mostly the nature of the organization (a bureaucracy with a lot of red tape), the variety of stakeholders with conflicting priorities (patient safety, privacy, feature prioritization, etc), information architecture hurdles, and technical innovation (no sandbox or APIs we could test initially).
-
--->
-
 {{< smallHeader >}}Problem{{< /smallHeader >}}
 {{< prominentText >}}The VA wanted us to explore an accessible, voice-first interface for veterans refilling prescriptions{{< /prominentText >}}
 
@@ -41,10 +20,18 @@ The VA is a large, bureaucratic, government agency. For this reason (and an over
 Much of my role, therefore, was doing the best within these constraints—relying on stakeholder interviews, subject matter experts, previous personas developed by the VA, and audits of the existing web / mobile ecosystem.
 
 {{< figureImage 
-    src="https://www.bryansebesta.com/wp-content/uploads/2023/01/vah-discovery-artifacts.png" 
-    class="widest" >}}
+    src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/va-health/vahealth_discovery_1.png" 
+    class="wider" >}}
 
-One of the key "existing" services was the IVR, or interactive voice response. I drew out a journey map of the existing service, which led to the creation of 
+{{< figureImage 
+    src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/va-health/vahealth_discovery_2.png" 
+    class="wider" >}}
+
+{{< figureImage 
+    src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/va-health/vahealth_discovery_3.png" 
+    class="wider" >}}
+
+One of the key "existing" services was the IVR, or interactive voice response. I drew out a journey map of the existing service, comparing it with the new envisioned journey on voice interfaces.
 
 {{< figureImage 
     src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/va-health/vahealth_journeymap_1.png" 
@@ -66,16 +53,14 @@ We now had four things we had to keep in mind.
 
 From this, we decided to focus on a small list of features for the MVP. Along with the basic mechanic of refilling eligible prescriptions, we also wanted to allow veterans to list all their prescriptions (whether they could refill them or not) and track shipments.
 
-With these features decided on, we now needed to turn to the fifth thing to consider: stakeholder concerns.
-
 ---
 
 {{< smallHeader >}}Communicating Design{{< /smallHeader >}}
 {{< prominentText >}}Persuading client stakeholders regarding patient safety and best practices with voice interface design{{< /prominentText >}}
 
-Early on, some stakeholders had the idea that veterans would request refills one-at-a-time, speaking aloud the prescription number of the pill bottle they wanted to refill.
+Within the organization, we had several stakeholders who were extremely skeptical of the overall project. Would veterans care about this? Would this be safe for veterans to use? Would Amazon have access to sensitive healthcare data? Could other hack into the system and abuse it? Along with these concerns, many stakeholders had strong opinions on how feature-rich the device should be, opinions that frequently went against best practices for voice-first interface design.
 
-Frankly, we hypothesized that few veterans would want to be tethered to their prescription bottle. After all, how is the voice app making a leap in accessibility if veterans have to read tiny print on a bottle to use the application?
+For example, early on, some stakeholders had the idea that veterans would request refills one-at-a-time, speaking aloud the prescription number of the pill bottle they wanted to refill. We hypothesized that few veterans would want to be tethered to their prescription bottle. After all, how is the voice app making a leap in accessibility if veterans have to read tiny print on a bottle to use the application?
 
 But early thinking about the API indicated we might have to do this, so I drew up storyboards to help our team align on the context.
 
@@ -86,15 +71,23 @@ But early thinking about the API indicated we might have to do this, so I drew u
 As conversations progressed, we realized the API was more potent than we’d thought—we would be able to list our prescriptions. So we moved to persuade stakeholders by showing different versions and feature sets we could move forward with.
 
 {{< figureImage 
-    src="https://www.bryansebesta.com/wp-content/uploads/2023/01/vah_scenarioevolution.png" 
+    src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/va-health/vahealth_flowtradeoffs_1.png" 
     class="wider" >}}
 
-We were excited to move forward, but several client stakeholders were still very concerned around patient safety. Some stakeholders wanted the voice application to have all the features of the mobile or web interfaces. One key stakeholder in particular was very difficult, until we realized that they didn’t see how the “MVP” could meet patient safety standards.
+{{< figureImage 
+    src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/va-health/vahealth_flowtradeoffs_2.png" 
+    class="wider" >}}
 
-So with my PM, I helped establish a roadmap schedule, assuring all involved that for our purposes, “MVP” meant the simplest version of the app we could test with. We wouldn’t release the larger voice app until we had all features built. Though some elements of this plan felt unnecessary to us internally, it reassured stakeholders—allowing us to move forward.
+We were excited to move forward, but several client stakeholders were still very concerned around patient safety. Some stakeholders drew a line between patient safety and feature parity, convinced that the voice application had to have _all_ the features of the mobile or web interfaces. We went back-and-forth, until we realized this—that they didn’t see how a feature-light “MVP” could meet patient safety standards.
+
+Our team's PM and I worked together to establish a roadmap schedule, assuring all involved that for our purposes, “MVP” meant the simplest version of the app we could _test_ with—we wouldn’t release the larger voice app until we had all features built. Though some elements of this plan felt unnecessary to us internally, it reassured stakeholders, allowing us to move forward.
 
 {{< figureImage 
-    src="https://www.bryansebesta.com/wp-content/uploads/2023/01/vah_designstakeholders_2.png" 
+    src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/va-health/vahealth_flowtradeoffs_4.png" 
+    class="wider" >}}
+
+{{< figureImage 
+    src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/va-health/vahealth_flowtradeoffs_3.png" 
     class="wider" >}}
 
 ---
@@ -102,13 +95,21 @@ So with my PM, I helped establish a roadmap schedule, assuring all involved that
 {{< smallHeader >}}Information Architecture / Content Strategy{{< /smallHeader >}}
 {{< prominentText >}}Preparing to prototypew with scriptwriting, aural wireframes, and outlining a language model{{< /prominentText >}}
 
-We had finally gotten sufficient buy-in on our designs to move forward with testing. To test, however, we had to have a fairly robust prototype. To prepare, I outlined a voice and tone for the product, and wrote copy for standard and edge use cases. In total, this resulted in a 50-page document outlining all copy and wording that would be used in the voice application.
+We had finally gotten sufficient buy-in on our designs to move forward with testing. To test, however, we had to have a fairly robust prototype. To prepare, I outlined a voice and tone for the product, and wrote copy for all standard and edge use cases. In total, this resulted in a 50-page document outlining all copy and wording that would be used in the voice application.
 
 {{< figureImage 
-    src="https://www.bryansebesta.com/wp-content/uploads/2023/01/vah_scripts.png" 
+    src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/va-health/vahealth_scripts_1.png" 
     class="wider" >}}
 
-Each of these scripts paired with an “aural” (or audio) wireframe. Unlike visual wireframes, which can be represented statically in space, voice interfaces are experienced temporally, in time. So while a script was helpful, it was not a “full representation” of what the experience would be like.
+{{< figureImage 
+    src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/va-health/vahealth_scripts_2.png" 
+    class="wider" >}}
+
+{{< figureImage 
+    src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/va-health/vahealth_scripts_3.png" 
+    class="wider" >}}
+
+Each of these scripts paired with an “aural” (or audio) wireframe. Unlike visual wireframes, which can be represented statically in space, voice interfaces are experienced temporally, in time. So while a script is helpful, it is not a “full representation” of what the experience would be like. Hence, we composed aural wireframes for key flows.
 
 {{< figureSound
     src="https://bsebesta-portfolio.s3.us-west-004.backblazeb2.com/case-studies/va-health/VAH_AuralWiframes_PrescriptionFlowFull.mp3"
@@ -116,24 +117,67 @@ Each of these scripts paired with an “aural” (or audio) wireframe. Unlike vi
     id="vah-wireframe-3"
     class="wide-standard" >}}
 
-Working from these scripts was a major exercise in designing the information architecture of the skill. We identified 52 intents—52 things a veteran might want from this skill—and matching utterances. For every intent, like asking for dosage instructions, there were many ways a veteran might express that. “How am I supposed to take this?” “How do I take this?” and “What are the dosage instructions?”
-
-Parallel to this activity, I also drew up detailed plans of how the VUI would work for engineers to work from. Internally, we referred to these as “State Machine Diagrams.” Several of them took the form of multimodal swimlanes.
+Working from these scripts was a major exercise in designing the information architecture of the skill. We identified 52 intents—52 things a veteran might want from this skill—and matching utterances. For every intent, like asking for dosage instructions, there were many ways a veteran might express that. “How am I supposed to take this?” “How do I take this?” and “What are the dosage instructions?” We wrote intents and utterances for each of the questions we could anticipate.
 
 {{< figureImage 
-    src="https://www.bryansebesta.com/wp-content/uploads/2023/01/vah_smd_nlu-2.png" 
+    src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/va-health/vahealth_vui_3.png" 
     class="wider" >}}
 
-All of the culminated in an ability to create a working app. Below is the design, featuring accompanying visuals I helped design (within the constraints of Amazon Alexa’s visual design system).
+Parallel to this activity, I also drew up detailed plans of how the voice UI would work for engineers to work from. Internally, we referred to these as “State Machine Diagrams.” Several of them took the form of multimodal swimlanes. Each of these blueprints acted as a key handoff document, outlining states, edge cases, and where every response fit into the big picture of the design.
 
-{{< wrappers/grid class="wider" >}}
-  {{< figureImage src="https://www.bryansebesta.com/wp-content/uploads/2023/01/echoshow8-gen3-black-diagonal3-1.png" >}}
-  {{< figureImage src="https://www.bryansebesta.com/wp-content/uploads/2023/01/echoshow8-gen3-black-straight2.png" >}}
-{{< /wrappers/grid >}}
+{{< figureImage 
+    src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/va-health/vahealth_vui_1.png" 
+    class="wider" >}}
+
+{{< figureImage 
+    src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/va-health/vahealth_vui_2.png" 
+    class="wider" >}}
+
+---
+
+{{< smallHeader >}}Designing Visuals with Voice{{< /smallHeader >}}
+{{< prominentText >}}Outlining design principles for how visuals and voice would interact{{< /prominentText >}}
+
+Among those who own smart speakers, 25% owned at least one device with a screen or display ([as of 2021](https://voicebot.ai/2021/04/19/u-s-smart-display-user-base-grew-by-more-than-50-in-2020/)). As such, we had to consider how the interactions would change when a visual display, and the opportunities for affordances that came with it, would change the prompts.
+
+The first thing I did was establish some simple baseline principles of how visuals and voice would interact.
+
+{{< figureImage 
+    src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/va-health/vahealth_visualdesign_0.png" 
+    class="wider" >}}
+
+The constraints around visual design for Alexa smart displays are quite strong. At the time of design, there were only a few potential dimensions for screens, and Amazon had invented its own display language, [APL (Alexa Presentation Language)](https://developer.amazon.com/en-US/alexa/alexa-haus/intro-to-apl), instead of using HTML and CSS. Within these constraints, I made a very lightweight design system drawing within Figma, outlining what each of the screens would show.
+
+{{< figureImage 
+    src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/va-health/vahealth_visualdesign_1.png" 
+    title="Responsive screen design" 
+    class="wider" >}}
+
+{{< figureImage 
+    src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/va-health/vahealth_visualdesign_2.png" 
+    title="Basic components and states" 
+    class="wider" >}}
+
+{{< figureImage 
+    src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/va-health/vahealth_visualdesign_3.png" 
+    title="Color and text styles"
+    class="wider" >}}
+
+With these screens in place, I was able to add in key details about how the visual display would work alongside the voice prompts. I captured these details in multimodal swimlanes, outlining how voice inputs, system logic, visual output, and voice outputs would work together.
+
+{{< figureImage 
+    src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/va-health/vahealth_visualdesign_5.png"  
+    class="wider" >}}
+
+Finally, it all came together in a working prototype with screen support.
+
+{{< figureImage 
+    src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/va-health/vahealth_visualdesign_4.png"  
+    class="wider" >}}
 
 {{< figureVideo
     src="https://bsebesta-portfolio.s3.us-west-004.backblazeb2.com/case-studies/va-health/vahealth-prototypevideo.mp4"
-    title="Prototyped interaction, ahead of moderated usability testing"
+    title="Prototyped interaction on an Alexa device with a screen"
     class="wider" >}}
 
 ---
@@ -141,18 +185,15 @@ All of the culminated in an ability to create a working app. Below is the design
 {{< smallHeader >}}Moderated / Unmoderated Usability Testing{{< /smallHeader >}}
 {{< prominentText >}}Learning how veterans refill prescriptions through moderated usability testing{{< /prominentText >}}
 
-Finally, we came to testing. The focus was on moderated usability testing we would conduct at a VA facility in Virginia. We would have 8 participants, most of whom had some kind of disability (low vision being the most common). Eight participants wasn’t enough to give us statistically significant results, but it would help us catch major errors and de-risk the major flows.
+We were finally ready to test. The focus was on moderated usability testing we would conduct at a VA facility in Virginia. We would have 8 participants, most of whom had some kind of disability (low vision being the most common). Eight participants wasn’t enough to give us statistically significant results, but it would [help us catch major errors and de-risk the major flows](https://www.nngroup.com/articles/why-you-only-need-to-test-with-5-users/).
 
-{{< wrappers/grid class="wider" >}}
-  {{< figureImage src="https://www.bryansebesta.com/wp-content/uploads/2023/01/VAH_2022-04-29_UserTesting_picture4.png" >}}
-  {{< figureImage src="https://www.bryansebesta.com/wp-content/uploads/2023/01/VAH_2022-04-29_UserTesting_picture2.png" >}}
-  {{< figureImage src="https://www.bryansebesta.com/wp-content/uploads/2023/01/VAH_2022-04-29_UserTesting_picture1.png" >}}
-  {{< figureImage src="https://www.bryansebesta.com/wp-content/uploads/2023/01/VAH_2022-04-29_UserTesting_picture3.png" >}}
-{{< /wrappers/grid >}}
+{{< figureImage 
+    src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/va-health/vahealth_testing_2.png" 
+    class="wider" >}}
 
 I led the design of the test and recruitment. I helped select screening criteria, send out pre-testing emails, and prepare test objectives and a field guide. And I conducted the interviews.
 
-{{< calloutBox title="Testing Objectives" >}}
+{{< calloutBox title="Some Testing Objectives" >}}
 {{< rawhtml >}}
 1. (Scenarios 1.1) Are the instructions for account linking clear? Can a veteran walk through this and enter their right credentials?
 2. (Scenarios 1.2-1.5) Can a veteran understand Alexa's PIN flow?
@@ -161,21 +202,23 @@ I led the design of the test and recruitment. I helped select screening criteria
 {{< /rawhtml >}}
 {{< /calloutBox >}}
 
-{{< figureImage src="https://www.bryansebesta.com/wp-content/uploads/2023/01/vah_fieldguidetesting.png" class="callout__small wide" >}}
+{{< figureImage 
+    src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/va-health/vahealth_testing_1.png" 
+    class="wider" >}}
 
-Testing went really well. Overall feedback was really positive, validating several of our hypotheses. Three stand-out quotes we shared later in a topline report with stakeholders:
+Testing went really well. Overall feedback was really positive, validating several of our hypotheses. Of course, we also had several of our assumptions challenged. Most of our revisions had to do with clarity of language (i.e. such as the difference between "request prescriptions" and "check prescriptions," which were two different features in our flow). We also learned that we needed to surface some details proactively, such as the number of refills remaining. (In our effort to be brief, we had excised this detail.) In all, I compiled our insight into a four-page topline research report.
 
-{{< wrappers/grid class="wider" >}}
-    {{< calloutBox title="Quote" >}}“Wow, how easy that would be! How easy is that! mean, if it works like that... God, yeah, please.”{{< /calloutBox >}}
-    {{< calloutBox title="Quote" >}}“1000 super easy... I do MyHealtheVet [the web/mobile interface] right now, where I do my prescriptions on the app. [But] I have a hard time seeing the screen. If I could talk to it, I'd talk to it, because I love to talk.”{{< /calloutBox >}}
-    {{< calloutBox title="Quote" >}}“That would be handy... in the sense that right now, I have to pull everything up on my computer. With this, I could be in any room of my house and pull it up. could be in my kitchen and be like, 'Ooh, am I going to run out of this?' and pull it up on my kitchen [Alexa], before I walk 3 rooms over and forget that I have to reorder my prescription. So yeah, having just that alone, because I take pills in different rooms depending on what time of the day it is, would be really handy.”{{< /calloutBox >}}
-{{< /wrappers/grid >}}
+{{< figureImage 
+    src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/va-health/vahealth_testing_3.png" 
+    class="wider" >}}
 
-In spite of the delayed usability testing, which is not ideal in any project, these results suggested that our early discovery efforts—drawing on personas, subject matter experts, stakeholder interviews, and audits of the existing ecosystem—were done well. The results visibly excited our team and our client, even the most skeptical.
+All signs suggested that our early discovery efforts—drawing on personas, subject matter experts, stakeholder interviews, and audits of the existing ecosystem—were done well. The results visibly excited our team and our client, even the most skeptical members of the team.
 
-I also prepared a testing guide for unmoderated usability testing we were planning to do ahead of a soft launch.
+The only thing remaining for our MVP to start a soft-launch was QA testing. I prepared a testing guide for our QA team to use.
 
-{{< figureImage src="https://www.bryansebesta.com/wp-content/uploads/2023/01/vah_uatfieldguide.png" class="callout__small wide" >}}
+{{< figureImage 
+    src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/va-health/vahealth_testing_4.png" 
+    class="wider" >}}
 
 ---
 
@@ -188,16 +231,22 @@ Unfortunately, we faced a swift disappointment at the projects end. Just as UAT 
 
 In the wake of these layoffs, we learned that [Amazon had dropped support for HIPPA compliant skills](https://voicebot.ai/2022/12/06/amazon-to-end-support-next-week-for-third-party-healthcare-alexa-skills-with-hippa-requirements/). (HIPPA laws are a series of regularly standard that outline the lawful disclosure of protected health information in the United States.) Without this support, the project, as we had envisioned it, was terminated. There was no way to launch a consumer-facing voice application for Alexa that dealt with medically-sensitive information.
 
+So how do you measure success on a long project like this—that never shipped? Because the product never shipped, we never had access to statistically significant data—like conversion rates, total prescriptions refilled over this channel, total time spent on the product, and qualitative reviews. As a self-respecting UX designer, I keenly felt the loss of this kind of data.
 
-{{< centerHeader >}}Takeaways{{< /centerHeader >}}
+But based on the original charge, we had some early pointers that both accessibility and time-on-task had improved.
 
-{{< smallHeader >}}How did it all end?{{< /smallHeader >}}
-{{< prominentText >}}
-Amazon pulls the plug on consumer-facing medical voice apps just as we prepare for a soft launch{{< /prominentText >}}
+{{< statCard >}}
+## 400%
+Improvement in task-on-time compared to the IVR flow; time to refill could be as short as 30 seconds
+{{< /statCard >}}
 
-So how do you measure success on a long project like this—that never shipped?
+{{< wrappers/grid class="wider" >}}
+    {{< calloutBox title="Quote" >}}“Wow, how easy that would be! How easy is that! mean, if it works like that... God, yeah, please.”{{< /calloutBox >}}
+    {{< calloutBox title="Quote" >}}“1000 super easy... I do MyHealtheVet [the web/mobile interface] right now, where I do my prescriptions on the app. [But] I have a hard time seeing the screen. If I could talk to it, I'd talk to it, because I love to talk.”{{< /calloutBox >}}
+    {{< calloutBox title="Quote" >}}“That would be handy... in the sense that right now, I have to pull everything up on my computer. With this, I could be in any room of my house and pull it up. could be in my kitchen and be like, 'Ooh, am I going to run out of this?' and pull it up on my kitchen [Alexa], before I walk 3 rooms over and forget that I have to reorder my prescription. So yeah, having just that alone, because I take pills in different rooms depending on what time of the day it is, would be really handy.”{{< /calloutBox >}}
+{{< /wrappers/grid >}}
 
-Because the product never shipped, we never had access to statistically significant data—like conversion rates, total prescriptions refilled over this channel, total time spent on the product, and qualitative reviews. But it was not entirely unsuccessful. Two key business outcomes included:
+And we had some success within the organizational environment, as well.
 
 * **Convincing skeptical stakeholders.** We managed to convince some very skeptical stakeholders that a natural-language, conversational interface—if executed well—would be valued by veterans, especially those with disabilities (e.g. low vision). The topline research reports and quotes from our interviews visibly excited these stakeholders, and excitement shouldn’t be discounted. Nor should the power of user research to be the most potent persuasion tool in product design. That research was what tipped the stakeholders toward buy-in.
   
