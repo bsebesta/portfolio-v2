@@ -19,7 +19,7 @@ From there, we went through a variety of stakeholder interviews, talking to crit
 
 A key hypothesis we hit upon was realizing that **we needed to simplify choice** for everyone
 
-{{< calloutBox title="Hypothesis" >}}Choice should be radically simplified, as most customers only use a few routines from the available 38 _and_ a voice interface is not ideal for browsing.{{< /calloutBox >}}
+{{< calloutBox title="Hypothesis" class="wide" >}}Choice should be radically simplified, as most customers only use a few routines from the available 38 _and_ a voice interface is not ideal for browsing.{{< /calloutBox >}}
 
 As you'll see below, this hypothesis, while simple, led us to rethink the entire experience of selecting a massage.
 
