@@ -14,11 +14,10 @@
         </div>
         <div class="homepage__header_details">
             <div class="homepage__header_details_cta cluster">
-                <a href="https://www.bryansebesta.com/wp-content/uploads/2023/02/Resume_BryanSebesta_2023.pdf" class="link-cta-primary">Resumé</a>
+                <a href="https://portfolio-v2.s3.us-west-004.backblazeb2.com/resume/Resume_BryanSebesta_2023.pdf" class="link-cta-primary">Resumé</a>
                 <!-- <a href="{{ relref . "what-is-ux" }}" class="link-cta-secondary"><strong>Read:</strong> What is UX?</a> -->
                 <a href="https://www.linkedin.com/in/bryansebesta/" class="link-cta-secondary">LinkedIn</a>
-                <a href="mailto:hello@bryansebesta.com" class="link-cta-secondary">Email Me</a>
-                
+                <a href="mailto:hello@bryansebesta.com" class="link-cta-secondary">Email</a>
             </div>
             <div class="homepage__header_details_text">
                 <p>Previously at RAIN.Agency</p>
@@ -100,7 +99,7 @@
                 </header>
                 <div class="grid-small">
                     <!-- Right now, only book pages have "portfolioFeature." If that changes, I'll need to redo the "first 5" section to make this work properly. -->
-                    {{ range first 8 (where .Site.RegularPages.ByWeight ".Params.portfolioFeature" true) }}
+                    {{ range first 12 (where .Site.RegularPages.ByWeight ".Params.portfolioFeature" true) }}
                     {{ if eq .Section "books" }}
                     <article class="homepage__bookscard stack-smaller" onclick="window.location.href='{{ .Permalink }}';">
                         <div class="homepage__bookscard_cover" style="background-image: url('{{ .Site.Params.urlBookCovers }}{{ .Params.cover }}')">&nbsp;</div>
