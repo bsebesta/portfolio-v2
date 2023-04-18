@@ -2,15 +2,18 @@
 slug: "headspace-voice-app"
 title: Creating a Voice-First Channel for Guided Meditations
 description: Building a voice UI for Headspace's massive library of guided meditations on both Amazon Alexa and Google Assistant
+images:
+- https://portfolio-v2.s3.us-west-004.backblazeb2.com/seo/headspace-facebook.png
 intro:
     client: Headspace
     company: RAIN
     sector: Mental Health
-    platform: Voice UI on Amazon Alexa & Google Assistant Smart Speakers
+    platform: Multimodal voice UI for Amazon Alexa & Google Assistant
     roles:
-    - Something
-    - Something
-    - Something
+    - Information Architecture
+    - Content Strategy
+    - Voice UI / NLU Design
+    - Visual UI Design
 assetPath: 'https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/headspace/'
 layoutDetails:
     headerImage: thumbnail-headspace-hero.png
@@ -64,4 +67,4 @@ head: |
 
 A designer I follow, Pablo Sanchez, has said that the “ultimate challenge for the current generation of interaction designers is to create a cohesive ecosystem of devices, webconnected objects and cloud services.”
 
-Our collaboration with Headspace was a great opportunity to confront this challenge head-on. Given that meditation aims to rid the mind of distractions, and given that Headspace’s massive library of guided meditations were (mostly) a purely audible experience, we were tasked to find ways to make it easy to jump in and start meditating for anyone with a Google or Amazon smart speaker.
+Our collaboration with [Headspace](https://www.headspace.com/) was a great opportunity to confront this challenge head-on. Given that meditation aims to rid the mind of distractions, and given that Headspace’s massive library of guided meditations were (mostly) a purely audible experience, we were tasked to find ways to make it easy to jump in and start meditating for anyone with a Google or Amazon smart speaker.

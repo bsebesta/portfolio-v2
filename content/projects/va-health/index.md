@@ -2,6 +2,8 @@
 slug: "va-health-rx-management"
 title: Rethinking Prescription Management for US Veterans
 description: Creating a multimodal, voice-first interface for improved service speed and accessibility
+images:
+- https://portfolio-v2.s3.us-west-004.backblazeb2.com/seo/vahealth-facebook.png
 intro:
     client: US Department of Veterans Affairs
     company: RAIN

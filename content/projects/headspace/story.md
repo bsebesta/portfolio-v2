@@ -2,18 +2,17 @@
 title: Story
 ---
 
-<!-- {{< centerHeader >}}Initial Discovery{{< /centerHeader >}} -->
-
 {{< smallHeader >}}Initial Discovery{{< /smallHeader >}}
 {{< prominentText >}}Surveying the Hurdles to Integrating with Headspace's Ecosystem{{< /prominentText >}}
 
 To begin with, I took a look at their app and website, looking to understand the ecosystem that I would be building the conversational experience within.
 
-<!-- Screenshot of 3 app screens -->
+{{< figureImage 
+    src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/headspace/headspace_appscreenshots.png" >}}
 
 In doing this survey, I realized some critical things.
 
-First, Headspace has a variety of users that I would need to plan for when designing our conversational experience. One of the most important was the difference between free users and paying users, because the selection of meditations is so different for each. I realized that I would need to design with three groups in mind:
+**First**, Headspace has a variety of users that I would need to plan for when designing our conversational experience. One of the most important was the difference between free users and paying users, because the selection of meditations is so different for each. I realized that I would need to design with three groups in mind:
 
 1. Users who hadn’t connected to any account, free or paid
 2. Users who had connected to a free account
@@ -21,26 +20,42 @@ First, Headspace has a variety of users that I would need to plan for when desig
 
 My challenge here would be two-fold: determining what we should say to each user, and encouraging users to advance from no account, to a free account, and then to a paid account.
 
-Second, there is a lot of browsing—which is a challenge on voice. Headspace has a variety of meditation “packs,” most of which are themed toward some need: learning the basics of meditation, or topics like focus, patience, pregnancy, or anxiety. On the website and app, which are graphical interfaces, this variety is manageable. There is a robust flow for browsing hundreds of meditations, organized by topic, length, or mood. But for voice, browsing poses a problem: conversational interfaces are [not the best interface for exploring large lists](https://www.nngroup.com/articles/voice-interfaces-assessing-the-potential/). Would users want to use Headspace to browse this very large library? I made an assumption here, that they would not. (And Headspace was not planning to make their entire library available on voice anyway, a decision out of my hands.) I hypothesized that on voice, users would want to pick up where they left off on the app or website, or﻿ that we might make simple, personalized suggestions about a pack and ask if they wanted to try it.
+**Second**, there is a lot of browsing—which is a challenge on voice. Headspace has a variety of meditation “packs,” most of which are themed toward some need: learning the basics of meditation, or topics like focus, patience, pregnancy, or anxiety. On the website and app, which are graphical interfaces, this variety is manageable. There is a robust flow for browsing hundreds of meditations, organized by topic, length, or mood.
 
-My challenge ﻿here would be to find the best way to help users continue in their pack, or find a new pack quickly.
+But for voice, browsing poses a problem: conversational interfaces are [not the best interface for exploring large lists](https://www.nngroup.com/articles/voice-interfaces-assessing-the-potential/). Would users want to use Headspace to browse this very large library? I made an assumption here, that they would not. (And Headspace was not planning to make their entire library available on voice anyway, a decision out of my hands.)
 
-{{< centerHeader >}}Prompt Design{{< /centerHeader >}}
+I hypothesized that on voice, users would want to pick up where they left off on the app or website, or that we might make simple, personalized suggestions about a pack and ask if they wanted to try it.
+
+My challenge here would be to find the best way to help users continue in their pack, or find a new pack quickly.
+
+---
 
 {{< smallHeader >}}Initial Designs{{< /smallHeader >}}
 {{< prominentText >}}Building out initial designs{{< /prominentText >}}
 
 With these initial plans made, I began writing out user stories and use cases. First, I tried to think through–how would users invoke, or “open,” this experience? And what features would there be?
 
-<!-- Features -->
-<!-- Branding -->
+{{< figureImage 
+    src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/headspace/headspace_stories_1.png"
+    class="wider" >}}
 
-And of course, these use cases changed as I went along. For the better. Here, you can see that I moved up to 48 use cases, reorganized to make more sense to me and to my imaginary client.
+As mentioned above, there were three kinds of users: the "unauthenticated", using the app without logging in ("U" in the diagrams below); the authenticated with a free account (AF); and the authenticated with a paid account (AS).
+
+{{< figureImage 
+    src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/headspace/headspace_flows_1.png"
+    class="wider" >}}
+
+{{< figureImage 
+    src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/headspace/headspace_flows_2.png"
+    class="wider" >}}
+
+{{< figureImage 
+    src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/headspace/headspace_flows_3.png"
+    class="wider" >}}
 
 From this, I had a firm understand of the ecosystem; the challenges I would face; the features I would need; and the assumptions I was making. I was ready to start scripting, and testing those scripts with real people.
 
-<!-- Scenarios -->
-<!-- Scripts -->
+---
 
 {{< smallHeader >}}Designing TTS Prompts{{< /smallHeader >}}
 {{< prominentText >}}The first challenge was finding ways to be brief, especially with so much to say up front{{< /prominentText >}}
@@ -62,6 +77,8 @@ I felt much better about this. But two problems emerged here, one from my own re
 > Welcome to Headspace. Meditation has been shown to help people stress less, focus more and be happier. Headspace is meditation made simple. And by creating an account, you can get access to even more meditations. (Short Pause) You can create a new account, connect an existing account, or start meditating now. What would you like to do?
 
 This tested far better. Another improvement here was that I was able to make the choice more definitive. Instead of asking “Would you like this or this?” I asked “You can do x, y, and z. Which would you like?” This helps users better understand the question, and it did make a difference.
+
+---
 
 {{< smallHeader >}}Designing TTS Prompts{{< /smallHeader >}}
 {{< prominentText >}}The second big challenge was to think about how to provide affordances—guidance on how the conversation would go{{< /prominentText >}}
@@ -91,25 +108,55 @@ If the user asked for another meditation:
 
 > Sure thing! Today's meditation is called "We are nature." You can try today's meditation, our guided sleep exercise, or soothing sleep sounds. Which would you like?
 
-That sounded really good and natural.
+---
 
-{{< smallHeader >}}Information Architecture{{< /smallHeader >}}
-{{< prominentText >}}Flows and Scripts{{< /prominentText >}}
+{{< smallHeader >}}Considering Multimodality{{< /smallHeader >}}
+{{< prominentText >}}How do we display affordances when visual affordances are available?{{< /prominentText >}}
 
-With some of these design decisions made, things really began to click. The prompts that I'd designed thus far began to suggest some very natural flows.
+With some of the voice-first decisions in place, I was ready to start considering visuals. A sizable minority of smart speakers had displays, and Google Assistant was also available as a chat interface. Both smart displays and chat interfaces needed to be considered.
 
-{{< wrappers/grid class="widest" >}}
+{{< figureImage 
+    src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/headspace/headspace_visualdesign_1.png"
+    title="Headspace's website on desktop and mobile are on the left; to the right are my original designs for the smart display visuals"
+    class="wider" >}}
 
-    {{< figureImage 
-        src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/headspace/headspace_flow_1.png" >}}
+{{< figureImage 
+    src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/headspace/headspace_visualdesign_2.png"
+    class="wider" >}}
 
-    {{< figureImage 
-        src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/headspace/headspace_flow_2.png" >}}
+{{< figureImage 
+    src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/headspace/headspace_visualdesign_3.png"
+    class="wider" >}}
 
-    {{< figureImage 
-        src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/headspace/headspace_flow_3.png" >}}
+{{< figureImage 
+    src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/headspace/headspace_visualdesign_7.png"
+    class="wider" >}}
 
-{{< /wrappers/grid >}}
+Here are two alternative options we considered for the post-meditation screen.
+
+{{< figureImage 
+    src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/headspace/headspace_visualdesign_4.png"
+    class="wider" >}}
+
+{{< figureImage 
+    src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/headspace/headspace_visualdesign_5.png"
+    class="wider" >}}
+
+{{< figureImage 
+    src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/headspace/headspace_visualdesign_6.png"
+    class="wider" >}}
+
+As we iterated, adding new features, we also played with other menu visuals.
+
+{{< figureImage 
+    src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/headspace/headspace_visualdesign_8.png"
+    class="wider" >}}
+
+We also made the voice application available on Google Assistant's chat interface.
+
+{{< figureImage 
+    src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/headspace/headspace_chatbot_1.png"
+    class="wider" >}}
 
 ---
 
@@ -123,18 +170,36 @@ To test, I wanted to ask users intelligent questions. I wasn’t trying to explo
 
 But to do that, we needed to build a working prototype. Working closely with our developer, I constructed a State Machine Diagram–a diagrammatic map of the conversation's logic, organized around utterances (what was said) and intents (what was meant).
 
-In the slideshow below, you can see some examples of flows from the State Machine Diagram
+{{< figureImage 
+    src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/headspace/headspace_vui_1.png"
+    class="wider" >}}
 
-<!-- State Machine Diagram -->
+{{< figureImage 
+    src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/headspace/headspace_vui_2.png"
+    class="wider" >}}
 
-In addition, Rommel and I created the interaction model—a network of intents, utterances, and parameters that make the interface work. I also collaborated with Shaun Little, who lead the Quality Assurance testing once the skill and action was complete. Together, we brought the design to life.
+In addition, Rommel and I created the NLU or interaction model—a network of dozens of intents, hundreds of utterances, and hundreds of TTS responses.
+
+{{< figureImage 
+    src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/headspace/headspace_vui_3.png"
+    class="wider" >}}
+
+{{< figureImage 
+    src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/headspace/headspace_vui_4.png"
+    class="wider" >}}
+
+---
 
 {{< smallHeader >}}Results{{< /smallHeader >}}
-{{< prominentText >}}Takeaways{{< /prominentText >}}
+{{< prominentText >}}What did we learn? And how did the voice application grow and evolve?{{< /prominentText >}}
 
-We launched the first iteration of the Headspace voice experience in January, 2018. Since then (as of December 2020), the Headspace skill and action have had over 12 million sessions.
+{{< figureImage 
+    src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/headspace/headspace_alexaskillstore.png"
+    class="wide" >}}
 
-{{< wrappers/grid class="grid-large wider" >}}
+We launched the first iteration of the Headspace voice experience in January, 2018, and iterated on it five times, adding or modifying features each time. Since the launch (as of December 2020), the Headspace skill and action have had over 12 million sessions.
+
+{{< wrappers/grid class="grid-large wide" >}}
 
 {{< statCard >}}
 ## 1.7m
@@ -162,7 +227,7 @@ From the experience, and seeing the skill and action out in the wild, we learned
 
 * **Headspace makes a great conversational interface.** The idea of being able to play a meditation without using a phone or screen-device was, it turned out, appealing to a lot of people. One Amazon reviewer said they didn't want to use Headspace when they went to bed, because it meant they needed their phone near them; this changed that. Other reviewers talked similarly about how this helps them in their "digital detox."
 * **People accepted the limits on discovery.** People adjusted well the idea that only certain meditations were available, even as we continued to expand the flow to allow additional meditations.
-* **Test, test, test.** When the exprience launched, there was an after each meditation that free users would hear, encouraging the user to subscribe. This was a poor experience: it would wake users up and ruin the "mood" that each meditation created—and we removed it quickly. Sadly, many of the bad reviews from those early days are still prominently featured on the skill and action's pages, a problem neither Google or or Amazon have acted to fix. I wish we had caught this in testing, and if I could do it over, I would have worked in more research around the actual experience of listening﻿ to the meditation; I spent most of the time focused on selecting﻿ a meditation.
+* **Test, test, test.** When the exprience launched, there was a short advert after each meditation free users would hear, encouraging the user to subscribe. People _hated_ this: it would wake users up and ruin the "mood" that each meditation created—and we removed it quickly. Sadly, many of the bad reviews from those early days are still prominently featured on the skill and action's pages, a problem neither Google or or Amazon have acted to fix. I wish we had caught this in testing, and if I could do it over, I would have worked in more research around the actual experience of listening to the meditation; I spent most of the time focused on selecting a meditation.
 
 ---
 

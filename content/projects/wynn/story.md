@@ -2,7 +2,7 @@
 title: Story
 ---
 
-{{< centerHeader >}}Initial Discovery{{< /centerHeader >}}
+<!-- {{< centerHeader >}}Initial Discovery{{< /centerHeader >}} -->
 
 {{< smallHeader >}}Problem{{< /smallHeader >}}
 {{< prominentText >}}How do we reduce concierge call volume so that desk staff could focus on more important matters?{{< /prominentText >}}
@@ -10,6 +10,8 @@ title: Story
 For this project, the primary business goal was reducing concierge call volume so they could focus on front-desk matters that really needed them.
 
 For the user, the benefit is reducing friction for basic tasks like room control, ordering amenities, and making restaurant reservations.
+
+---
 
 {{< smallHeader >}}Research{{< /smallHeader >}}
 {{< prominentText >}}Beginning to understand users with proto-personas{{< /prominentText >}}
@@ -35,14 +37,19 @@ The main distinctions between these customer segments:
 
 Drawing from these four proto-personas, and in discussion with Wynn, I acted as product manager in drawing up core user stories that would guide our initial efforts.
 
-{{< centerHeader >}}Design{{< /centerHeader >}}
+<!-- {{< centerHeader >}}Design{{< /centerHeader >}} -->
+
+---
 
 {{< smallHeader >}}Rapid Prototyping and Scripting{{< /smallHeader >}}
-{{< prominentText >}}Rapid prototyping of key user storiess{{< /prominentText >}}
+{{< prominentText >}}Rapid prototyping of key user stories{{< /prominentText >}}
 
-Before I script (and constantly throughtout the process), I talk everything I write out loud. This is important for at least two reasons: it helps me keep the tone conversational, and it reminds me that what I write will be heard, not read. It's the aural/audio equivalent of a napkin sketch.
+Before I script (and constantly throughtout the process), I talk everything I write out loud. This is important for at least two reasons:
 
-Here's a recording of my first "talk-to-myself" process for the restaurant reservation flow﻿, side-by-side with a later version that incorporates TTS.
+1. It helps me keep the tone conversational
+2. It reminds me that what I write will be heard, not read. It's the aural/audio equivalent of a napkin sketch.
+
+Here's a recording of my first "talk-to-myself" process for the restaurant reservation flow, a high-priority flow.
 
 
  {{< figureSound
@@ -51,7 +58,29 @@ Here's a recording of my first "talk-to-myself" process for the restaurant reser
     id="wynn-wireframe-1"
     class="wide-standard" >}}
 
+{{< figureImage 
+    src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/wynn/wynn_scripts_1.png" 
+    class="wider" >}}
+
 Though awkward and filled with too much of my own personality, it served as a starting point. I put it down on paper, and worked through several iterations, with the scripts evolving in a parallel fashion. I tested these informally, in stand-ups or with family and friends, to refine the overall flow.
+
+{{< figureImage 
+    src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/wynn/wynn_scripts_2.png" 
+    class="wider" >}}
+
+{{< figureImage 
+    src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/wynn/wynn_scripts_3.png" 
+    class="wider" >}}
+
+{{< figureImage 
+    src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/wynn/wynn_scripts_4.png" 
+    class="wider" >}}
+
+This culminated in a final iteration.
+
+{{< figureImage 
+    src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/wynn/wynn_scripts_5.png" 
+    class="wider" >}}
 
 {{< figureSound
     src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/wynn/wynn_recording_2_iteration5.mp3"
@@ -59,22 +88,16 @@ Though awkward and filled with too much of my own personality, it served as a st
     id="wynn-wireframe-2"
     class="wide-standard" >}}
 
+<!--
 {{< figureVideo
     src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/wynn/wynn_videoprototype.mp4"
     title="Prototyped interaction, ahead of moderated usability testing"
     class="wider" >}}
+-->
 
 Hearing the final version, I had some reservations (pun intended). Although on paper, it had seemed like a good idea to split the "day" and "time" questions, it sounded awkward. And we had designed this for the persona who knew what they wanted ("The Familiar") , instead of for the more likely personas: people who did not necessarily know what restaurant they would like ("The Adventurer" and "The Parent").
 
 Still, through the process we had aligned on the Wynn team's business objectives, as well as important voice and tone considerations. I felt good about launching into some usability testing.
-
-{{< wrappers/grid class="wider" >}}
-  {{< figureImage src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/wynn/wynn_script1_iteration1.png" >}}
-  {{< figureImage src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/wynn/wynn_script1_iteration2.png" >}}
-  {{< figureImage src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/wynn/wynn_script1_iteration3.png" >}}
-  {{< figureImage src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/wynn/wynn_script1_iteration4.png" >}}
-  {{< figureImage src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/wynn/wynn_script1_iteration5.png" >}}
-{{< /wrappers/grid >}}
 
 ---
 
@@ -104,32 +127,27 @@ TTS Responses
 
 {{< /wrappers/grid >}}
 
+
+{{< figureImage 
+    src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/wynn/wynn_vui_1.png" 
+    class="wider" >}}
+
+{{< figureImage 
+    src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/wynn/wynn_vui_2.png" 
+    class="wider" >}}
+
+{{< figureImage 
+    src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/wynn/wynn_vui_3.png" 
+    class="wider" >}}
+
 ---
 
-{{< wrapper class="wider stack" >}}
-
-    {{< wrappers/grid class="grid-small" >}}
-        {{< figureImage src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/wynn/wynn_designgrid_1.png" >}}
-        {{< figureImage src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/wynn/wynn_designgrid_2.png" >}}
-        {{< figureImage src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/wynn/wynn_designgrid_3.png" >}}
-    {{< /wrappers/grid >}}
-
-  {{< figureImage src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/wynn/wynn_designgrid_4.png" >}}
-  
-{{< /wrapper >}}
-
-{{< centerHeader >}}Takeaways{{< /centerHeader >}}
-
-{{< smallHeader >}}Retrospective{{< /smallHeader >}}
+{{< smallHeader >}}Launch{{< /smallHeader >}}
 {{< prominentText >}}Assessing the impact{{< /prominentText >}}
 
-Again, because of time and budget constraints—and after launch, the COVID pandemic—we did not have the ability to test this prototype with real users in a real context until a fairly robust prototype had been developed. Wynn launched a trial period in a few rooms, and after some positive feedback, it rolled out to all rooms. And from there, it appeared to be a big success.
+Wynn launched a trial period in a few rooms, and after some positive feedback, it rolled out to all rooms. And from there, it appeared to be a big success. Some of the key stats from the project:
 
-> "[Has the Wynn skill been successful?] Are you kidding me? Alexa is answering more than 12,000 inquiries a month just about our hours of operations for our 18 bars and restaurants, spas, and workout facilities. Even if you split that number in half, that's the equivalent of a full-time employee."
-> 
-> -Wynn Resorts VP of Operations
-
-{{< wrappers/grid class="grid-large wider" >}}
+{{< wrappers/grid class="grid-large wide" >}}
 
 {{< statCard >}}
 ## 85.6%
@@ -153,18 +171,17 @@ questions just about the hours of operations of bars, restaurants, and workout f
 
 {{< /wrappers/grid >}}
 
-Although our team never got access to the metrics around concierge volume, we had reasonable grounds for considering the voice application a success, at least as a pilot. In the first two months, it handled 16.8k utterances. Across 4900 rooms in 60 days' time, that's 280 utterances a day.
+Although our team never got access to the metrics around concierge volume, we had reasonable grounds for considering the voice application a success, at least as a pilot. In the first two months, it handled 16.8k utterances. Across 4900 rooms in 60 days' time, that's 280 utterances a day. Said one executive:
+
+> "[Has the Wynn skill been successful?] Are you kidding me? Alexa is answering more than 12,000 inquiries a month just about our hours of operations for our 18 bars and restaurants, spas, and workout facilities. Even if you split that number in half, that's the equivalent of a full-time employee."
+> 
+> -Wynn Resorts VP of Operations
 
 The hestitation is that we never learned whether that was evenly distributed across rooms or that number was due to a few "power-users." And of course, at only 280 utterances a day, that means a significant number of devices were never interacted with on a per-day basis, though we also never learned the booking rate of these rooms during this two-month experiment.
 
-Still, at least to management and the users polled, it appeared a success. Amazon published their own case study for this, advertising its success in hopes to appeal to other hotels. It seemed to have worked—Marriott Hotels adopted a similar pilot strategy, adding Amazon Alexa devices into hotels shortly after Wynn did.
+Still, at least to management and the users polled, it appeared a success. [Amazon published their own case study for this](https://developer.amazon.com/en-US/alexa/alexa-for-hospitality/wynncase), advertising its success in hopes to appeal to other hotels. It seemed to have worked—[Marriott Hotels adopted a similar pilot strategy](https://www.hotelmanagement.net/tech/alexa-for-hospitality-marriott-adds-amazon-to-guest-experience-0), adding Amazon Alexa devices into hotels shortly after Wynn did.
 
----
-
-{{< smallHeader >}}Retrospective{{< /smallHeader >}}
-{{< prominentText >}}Assessing the impact (2022 Retrospective){{< /prominentText >}}
-
-Although we did do some post-launch iterations on the restaurant reservations flow, the Wynn project was a largely one-and-done agency job. What would I have done differently? And what might I have attempted had we been able to iterate on the product?
+In retrospection, what would I have done differently? And what might I have attempted had we been able to iterate on the product?
 
 * **Establishing a clearer analytics strategy.** I would love to have helped Wynn think through, from the very beginning, about specific conversion KPIs. (Analytics for conversational AI platforms were still relatively new, and tracking conversions was still not an easy thing.) How many restaurant reservations were placed? Where in the conversational did people abort? How many utterances were said that had no matching intent we'd anticipated? In addition, we never got direct access to the metrics around whether actual concierge volume actually went down. Did Alexa displace calls to concierge? If so, why? If not, why not? In addition to these questions, we never figured out how to integrate Wynn's own metrics with the voice metrics. For example, it would have been great to know the percentage of hotel rooms with an Alexa device in it booked on any given day, so we could look at usage numbers in light of total possible users for each day.
 

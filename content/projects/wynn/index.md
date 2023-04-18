@@ -2,13 +2,19 @@
 slug: "wynn-voice-concierge"
 title: Reducing Concierge Call Volume at Wynn Resorts
 description: We put a “voice concierge” into 5,000+ rooms at Wynn Resorts, leading to reduced call volume to employees.
+images:
+- https://portfolio-v2.s3.us-west-004.backblazeb2.com/seo/wynn-facebook.png
 intro:
     client: Wynn
     company: RAIN
     sector: Hospitality
     platform: Voice UI on Amazon Alexa
     roles:
-    - I led the overall design for the voice concierge UI. I contributed to prototyping, scripting, information architecture, content strategy, and product definition.
+    - Research
+    - 
+    - Information Architecture
+    - Content Strategy
+    - VUI Design
 assetPath: 'https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/wynn/'
 layoutDetails:
     headerImage: thumbnail_wynn_hero.png
@@ -61,4 +67,4 @@ head: |
 
 My team collaborated on a voice "concierge" to put an Alexa devices in 5,600 rooms and suites at the Wynn Resort in Las Vegas. I led the UX and UI design of the conversational interface. 
 
-In the first few months after launch, the voice service handled over 12,000 utterances inquiring about operating hours and 5,000 utterances asking about on-property bars and restaurants—and with a 83% satisfaction rate from customers.
+In the first few months after launch, the voice service handled over 12,000 utterances inquiring about operating hours and 5,000 utterances asking about on-property bars and restaurants—and with an 83% satisfaction rate from customers.

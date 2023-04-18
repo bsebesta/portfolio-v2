@@ -2,7 +2,7 @@
 title: Results
 ---
 
-{{< wrappers/grid class="grid-large wider stack-exception" >}}
+{{< wrappers/grid class="grid-large wide stack-exception" >}}
 
 {{< statCard >}}
 ## 1.7m

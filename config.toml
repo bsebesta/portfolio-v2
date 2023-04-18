@@ -1,12 +1,18 @@
-baseURL = 'https://bsebesta.netlify.app/'
 languageCode = 'en-us'
 title = 'Bryan Sebesta'
+baseURL = 'https://bsebesta.netlify.app/'
 
 [params]
+  # URLs, used in various layouts
+  baseURLnoSlash = 'https://bsebesta.netlify.app'
   assetsUrl = 'https://portfolio-v2.s3.us-west-004.backblazeb2.com'
   urlBookCovers = 'https://bsebesta-portfolio.s3.us-west-004.backblazeb2.com/media/books/'
   microblogUrl = 'https://micro.bryansebesta.net'
+  # Open Graph Details
   author = 'Bryan Sebesta'
+  title = 'Portfolio of Bryan Sebesta'
+  description = 'A digital garden and UX design portfolio, from Bryan Sebesta'
+  images = ['https://portfolio-v2.s3.us-west-004.backblazeb2.com/seo/homepage-facebook.png']
 
 [taxonomies]
   category = 'categories'

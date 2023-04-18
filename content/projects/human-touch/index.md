@@ -2,6 +2,8 @@
 slug: "human-touch-ios-app"
 title: A Virtual Therapist for Luxury Massage Chairs
 description: Designing concepts around a Virtual Therapist voice UI for massage selection and chair controls
+images:
+- https://portfolio-v2.s3.us-west-004.backblazeb2.com/seo/humantouch-facebook.png
 intro:
     client: Human Touch
     company: RAIN
