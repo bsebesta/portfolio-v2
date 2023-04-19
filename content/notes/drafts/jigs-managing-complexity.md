@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "Using Jigs to Cultivate Creativity"
 deck: Jigs are what help us design, and (often) what we design
 date: 2023-04-06

@@ -1,5 +1,6 @@
 ---
-title: "Systems Thinking for Designers: A Primer"
+draft: true
+title: Temporal Bandwidth
 deck: 
 date: 2023-04-06
 category: note

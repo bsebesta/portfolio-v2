@@ -1150,7 +1150,7 @@
       margin-inline: auto;
       margin-block-end: var(--space-2xs);
       padding-inline: var(--page-margin);
-      padding-block-start: var(--space-3xs);
+      padding-block-start: var(--space-2xs);
       /* Interior Display */
       display: flex;
       flex-flow: row nowrap;

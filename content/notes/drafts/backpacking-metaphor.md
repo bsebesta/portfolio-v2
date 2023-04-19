@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "The Backpacking Metaphor and UX Research"
 deck: People use words, and those words contain worlds
 date: 2023-04-06

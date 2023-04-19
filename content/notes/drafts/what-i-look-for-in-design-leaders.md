@@ -1,4 +1,5 @@
 ---
+draft: true
 title: What I Look for in Design Leadership
 deck: Design leaders are strategists, operators, and coaches
 date: 2023-04-06
