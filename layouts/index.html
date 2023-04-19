@@ -51,9 +51,9 @@
             <p>A record of my learning in UI design for web and mobile<!-- see <a href="">100 Days of Learning UI Design</a>--></p>
         </header>
         <div class="grid-small">
-            {{ range first 9 (where .Site.RegularPages.ByWeight "Section" "skills") }}
+            {{ range first 9 (where .Site.RegularPages.ByDate "Section" "uidesigns") }}
             <article class="homepage__skillscard stack-smallest">
-                <div class="homepage__skillscard_frame">&nbsp;</div>
+                <div class="homepage__skillscard_frame"{{ with .Params.thumbnail }} style="background-image: url('https://portfolio-v2.s3.us-west-004.backblazeb2.com/uidesigns/{{ . }}')"{{ end }}>&nbsp;</div>
                 <a href="{{ .Permalink }}"><h2>{{ .Title }}</h2></a>
             </article>
             {{ end }}

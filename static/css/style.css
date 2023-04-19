@@ -923,6 +923,8 @@
          aspect-ratio: 1/1;
          background-color: var(--color-accent-100);
          border-radius: var(--space-3xs);
+         background-size: cover;
+         background-position: center;
       }
 
       .homepage__skillscard:hover .homepage__skillscard_frame {
