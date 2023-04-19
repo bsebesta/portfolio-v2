@@ -136,9 +136,13 @@ One of the realities of agency life is _lots of contingency_. Due to the hardwar
 3. Would users actually use the Virtual Therapist? Or would they select a massage using other means?
 4. Is the voice and tone we selected (only implied by the time our project paused) a good fit for consumers of massage chairs? Did we strike a good balance between an "expert therapist" and the voice of a chair?
 
+<!--
+
 ---
 
 {{< caseStudyCTA class="wide" >}}
 ## Want the whole story?
 These were highlights from the process, but if you want the whole story, reach out to me [via email](mailto:hello@bryansebesta.com) or [LinkedIn](https://www.linkedin.com/in/bryansebesta).
 {{< /caseStudyCTA >}}
+
+-->

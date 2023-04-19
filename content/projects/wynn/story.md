@@ -193,9 +193,13 @@ Still, at least to management and the users polled, it appeared a success. [Amaz
 
 * **Researching multi-lingual and cross-cultural performance.** In the course of researching personas, I realized that a sizable percentage of guests at Wynn Resort were visiting from other countries or cultures. By one estimate, 20% of the nearly 42 million visitors to Vegas in 2018 were international tourists. I wasn't able to test with international visitors, and that means several guests were probably frustrated that either their language or their accent was a barrier to use. -->
 
+<!--
+
 ---
 
 {{< caseStudyCTA >}}
 ## Want the whole story?
 Whether you're a hiring manager or recruiter wanting more details, or a fellow designer wanting to discuss the fine craft of design with a friend, feel free to [reach out](mailto:hello@bryansebesta.com).
 {{< /caseStudyCTA >}}
+
+-->

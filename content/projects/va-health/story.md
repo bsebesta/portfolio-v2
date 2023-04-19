@@ -262,9 +262,13 @@ And we had some success within the organizational environment, as well.
   
 * **Paving the way for an integrated conversational AI product strategy.** A consumer-facing Alexa voice application was never the endgame. This was always envisioned to pave the way to integrate voice inputs into the mobile app. In this modality, voice could work as a powerful input, and voice paired with visuals could work well as a powerful output. Although the Amazon Alexa chanel never worked out, conversations were being had about pivoting our work in this direction.
 
+<!--
+
 ---
 
 {{< caseStudyCTA >}}
 ## Want the whole story?
 Whether you're a hiring manager or recruiter wanting more details, or a fellow designer wanting to discuss the fine craft of design with a friend, feel free to [reach out](mailto:hello@bryansebesta.com).
 {{< /caseStudyCTA >}}
+
+-->

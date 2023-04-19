@@ -646,18 +646,6 @@
             .link-cta-secondary:hover {
                background-color: var(--color-accent-200);
             }
-      
-      a.iconwrapper {
-         display: block;
-         font-size: 0;
-         transition: var(--transition-card-hover);
-      }
-
-         a.iconwrapper:hover {
-            transform: scale(1.02);
-            transform-origin: center;
-            box-shadow: var(--box-shadow-md);
-         }
 
       a.iconwrapper__button {
          padding: var(--space-2xs);
@@ -698,14 +686,14 @@
    }
 
       .homepage__sectionheader_large h2 {
-         flex: auto 1 1;
+         flex: 0 1 auto;
          font-size: var(--step-3);
          color: var(--color-accent-800);
       }
 
       @media screen and (min-width: 800px) {
          .homepage__sectionheader_large h2 {
-            flex: auto 1 0;
+            flex: 0 1 auto;
             font-size: var(--step-3);
             color: var(--color-accent-800);
          }
@@ -1928,8 +1916,30 @@
          font-size: var(--step--1);
       }
 
+   /* Case Study Stat Cards
+      ========================================================================== */
+      .casestudy__statcard {
+         background-color: var(--color-accent-100);
+         border-radius: var(--space-3xs-2xs);
+         padding: var(--space-s);
+      }
+
+         .casestudy__statcard h2 {
+            font-size: var(--step-3);
+            color: var(--color-accent-700);
+         }
+
+         .casestudy__statcard p {
+            border-radius: var(--space-3xs-2xs);
+            padding-block-start: var(--space-3xs);
+            color: var(--color-accent-600);
+            font-size: var(--step--1);
+         }
+
+
    /* Case Study "Learn More" CTA
       ========================================================================== */
+
       .casestudy__contactcard {
          border-radius: var(--space-3xs-2xs);
          padding: var(--space-m);
@@ -1949,22 +1959,55 @@
             text-align: center;
          }
 
-   /* Case Study "Learn More" CTA
-      ========================================================================== */
-      .casestudy__statcard {
-         background-color: var(--color-accent-100);
-         border-radius: var(--space-3xs-2xs);
-         padding: var(--space-s);
+      .casestudy__footer {
+         padding: var(--space-m);
+         display: flex;
+         flex-flow: column nowrap;
+         align-items: center;
+         border: solid 1px var(--color-accent-200);
       }
 
-         .casestudy__statcard h2 {
-            font-size: var(--step-3);
+         .casestudy__footer h2 {
             color: var(--color-accent-700);
          }
 
-         .casestudy__statcard p {
-            border-radius: var(--space-3xs-2xs);
-            padding-block-start: var(--space-3xs);
-            color: var(--color-accent-600);
-            font-size: var(--step--1);
+         .casestudy__footer ul {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: center;
+            gap: var(--space-s);
+            list-style-type: none;
+         }
+
+         .casestudy__footer_buttonwrapper {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+            align-items: center;
+            gap: var(--space-s);
+         }
+
+            .casestudy__footer_buttonwrapper svg {
+               fill: var(--color-accent-700);
+            }
+
+      a.iconwrapper__button {
+         padding: var(--space-2xs);
+         gap: var(--space-3xs);
+         font-size: var(--step--1);
+         text-decoration: none;
+         transition: var(--transition-button);
+         display: flex;
+         flex-flow: row nowrap;
+         align-items: center;
+         background-color: var(--color-accent-100);
+         transition: var(--transition-card-hover);
+         box-shadow: var(--box-shadow-sm);
+      }
+
+         a.iconwrapper__button:hover {
+            transform: scale(1.02);
+            transform-origin: center;
+            box-shadow: var(--box-shadow-md);
          }

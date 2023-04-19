@@ -233,9 +233,13 @@ From the experience, and seeing the skill and action out in the wild, we learned
 * **People accepted the limits on discovery.** People adjusted well the idea that only certain meditations were available, even as we continued to expand the flow to allow additional meditations.
 * **Test, test, test.** When the exprience launched, there was a short advert after each meditation free users would hear, encouraging the user to subscribe. People _hated_ this: it would wake users up and ruin the "mood" that each meditation created—and we removed it quickly. Sadly, many of the bad reviews from those early days are still prominently featured on the skill and action's pages, a problem neither Google or or Amazon have acted to fix. I wish we had caught this in testing, and if I could do it over, I would have worked in more research around the actual experience of listening to the meditation; I spent most of the time focused on selecting a meditation.
 
+<!--
+
 ---
 
 {{< caseStudyCTA >}}
 ## Want the whole story?
 Whether you're a hiring manager or recruiter wanting more details, or a fellow designer wanting to discuss the fine craft of design with a friend, feel free to [reach out](mailto:hello@bryansebesta.com).
 {{< /caseStudyCTA >}}
+
+-->

@@ -37,7 +37,7 @@ head: |
       --color-accent-400: hsl(23, 90%, 61%);
       --color-accent-300: hsl(23, 88%, 66%);
       --color-accent-200: hsl(23, 87%, 76%);
-      --color-accent-100: hsl(23, 85%, 87%);
+      --color-accent-100: hsl(23, 77%, 92%);
       --color-accent-000: hsl(23, 33%, 99%);
       /*--color-accent-000: hsl(60, 25%, 98%);
       --color-accent-100: hsl(60, 67%, 96%);
