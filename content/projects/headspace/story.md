@@ -172,20 +172,24 @@ But to do that, we needed to build a working prototype. Working closely with our
 
 {{< figureImage 
     src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/headspace/headspace_vui_1.png"
+    title="A small part of our 'State Machine Diagram', a key handoff document indicating system logic and TTS responses" 
     class="wider" >}}
 
 {{< figureImage 
     src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/headspace/headspace_vui_2.png"
+    title="A wider shot of how the State Machine Diagram evolved. Each yellow circle represents an intent, and each colored bubble represents a TTS response" 
     class="wider" >}}
 
 In addition, Rommel and I created the NLU or interaction model—a network of dozens of intents, hundreds of utterances, and hundreds of TTS responses.
 
 {{< figureImage 
     src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/headspace/headspace_vui_3.png"
+    title="A list of words and phrases that can be used to express each intent" 
     class="wider" >}}
 
 {{< figureImage 
     src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/headspace/headspace_vui_4.png"
+    title="The spreadsheet outlining each TTS response used in the voice app" 
     class="wider" >}}
 
 ---

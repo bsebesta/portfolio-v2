@@ -10,8 +10,10 @@ intro:
     sector: Mental Health
     platform: Multimodal voice UI for Amazon Alexa & Google Assistant
     roles:
+    - Product Strategy
     - Information Architecture
     - Content Strategy
+    - Script and copywriting
     - Voice UI / NLU Design
     - Visual UI Design
 assetPath: 'https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/headspace/'
@@ -65,6 +67,6 @@ head: |
   </style>
 ---
 
-A designer I follow, Pablo Sanchez, has said that the “ultimate challenge for the current generation of interaction designers is to create a cohesive ecosystem of devices, webconnected objects and cloud services.”
+{{< prominentText >}}Headspace asked us to build a voice channel for Alexa and Google Assistant, allowing customers to access hundreds of guided meditations without touching their phones.{{< /prominentText >}}
 
-Our collaboration with [Headspace](https://www.headspace.com/) was a great opportunity to confront this challenge head-on. Given that meditation aims to rid the mind of distractions, and given that Headspace’s massive library of guided meditations were (mostly) a purely audible experience, we were tasked to find ways to make it easy to jump in and start meditating for anyone with a Google or Amazon smart speaker.
+We were tasked to find ways to make it easy to jump in and start meditating for anyone with a Google or Amazon smart speaker.

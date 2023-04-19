@@ -68,6 +68,8 @@ head: |
   </style>
 ---
 
-[Human Touch](https://www.humantouch.com/) makes luxury massage chairs for consumers, each of which can be controlled by a mobile app. They approached RAIN, thinking that incorporating voice into their mobile UI for a specific line of chairs (the Super Novo X), framed as a Virtual Therapist, would be a smart move from a UX perspective. I helped form product strategy, and took the lead going into information architecture, content strategy, VUI design, visual designs, and prototyping.
+{{< prominentText >}}Human Touch approached RAIN about integrating a "Virtual Therapist" into the mobile app, allowing customers to select and control massages conversationally.{{< /prominentText >}}
 
-Due to the contingencies of agency projects, this Virtual Therapist never reached fruition. As such, it's hard to measure success. But I include it here as a case study because it was one of my few _mobile-centered_ projects for a real-world client. And the designs included here had the effect of getting stakeholders to rethink the entire onboarding process for their customers, and not _only_ the voice-related screens.
+I helped form product strategy, and took the lead going into information architecture, content strategy, VUI design, visual designs, and prototyping.
+
+The project never launched. But I include it here as a case study because it was one of my few _mobile-centered_ projects for a real-world client, and the results had the effect of getting stakeholders to rethink the entire mobile onboarding process.

@@ -2,12 +2,12 @@
 title: Story
 ---
 
-{{< smallHeader >}}Problem{{< /smallHeader >}}
-{{< prominentText >}}The VA wanted us to explore an accessible, voice-first interface for veterans refilling prescriptions{{< /prominentText >}}
+{{< smallHeader >}}Hypothesis{{< /smallHeader >}}
+{{< prominentText >}}A natural language interface would improve accessibiliy and time-on-task for all users, freeing up pharmacists for more complex tasks{{< /prominentText >}}
 
-The US Department of Veterans Affairs provides prescriptions and prescription management to veterans across the nation. At the outset of the project, veterans could manage their prescriptions through web, mobile, and IVR touchpoints. But the IVR system was cumbersome, and the VA wanted to update their service to allow veterans to order prescriptions using a more natural conversational interface on smart speakers, specifically with Amazon Alexa.
+At the outset of the project, veterans could manage their prescriptions through web, mobile, and IVR (interactive voice response) touchpoints.
 
-{{< calloutBox title="Hypothesis" >}}A natural language interface, available on consumer smart speakers, and executed well, would appeal to veterans young and old, abled and disabled. It could also free up pharmacists for more complex tasks.{{< /calloutBox >}}
+But the web / mobile experiences suffered from accessibility issues for low-vision users, and the IVR system was cumbersome. So the VA wanted to update their service to allow veterans to order prescriptions using a more natural conversational interface on smart speakers, specifically with Amazon Alexa.
 
 ---
 
@@ -15,27 +15,37 @@ The US Department of Veterans Affairs provides prescriptions and prescription ma
 {{< prominentText >}}
 Understanding our users without direct access to them{{< /prominentText >}}
 
-The VA is a large, bureaucratic, government agency. For this reason (and an overabundance of caution about veteran safety), we could not access real veterans, or real veteran data, until late in the game—after we’d built quite a lot, and after we’ve met a variety of hurdles and approvals.
+The VA is a large, bureaucratic, government agency. For this reason (and an overabundance of caution about veteran safety), we could not access real veterans with real prescription data until late in the game.
 
-Much of my role, therefore, was doing the best within these constraints—relying on stakeholder interviews, subject matter experts, previous personas developed by the VA, and audits of the existing web / mobile ecosystem.
+Much of my role, therefore, was doing the best within these constraints. Discovery relied on:
+
+1. Stakeholder interviews
+2. SME Interviews
+3. Previous research done by the VA, including personas
+4. Audits of the existing web / mobile ecosystem
 
 {{< figureImage 
     src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/va-health/vahealth_discovery_1.png" 
+    title="Parts of a web/mobile feature and content audit"
     class="wider" >}}
 
 {{< figureImage 
     src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/va-health/vahealth_discovery_2.png" 
+    title="Personas developed by the VA, alongside a sampling of inferences I drew out"
     class="wider" >}}
 
 {{< figureImage 
     src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/va-health/vahealth_discovery_3.png" 
+    title="A sample of hypotheses and assumptions I began to sketch out"
     class="wider" >}}
 
-One of the key "existing" services was the IVR, or interactive voice response. I drew out a journey map of the existing service, comparing it with the new envisioned journey on voice interfaces.
+One of the key "existing" services was the IVR—the interactive voice response system that veterans could access by phone. I drew out a journey map of the existing service, highlighting six key pain points.
 
 {{< figureImage 
     src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/va-health/vahealth_journeymap_1.png" 
     class="wider" >}}
+
+And after drawing this out, began to envision a new flow, outlining how a nex experience could address each of these pain points.
 
 {{< figureImage 
     src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/va-health/vahealth_journeymap_2.png" 

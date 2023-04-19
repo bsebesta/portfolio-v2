@@ -5,10 +5,10 @@ description: We put a “voice concierge” into 5,000+ rooms at Wynn Resorts, l
 images:
 - https://portfolio-v2.s3.us-west-004.backblazeb2.com/seo/headspace-facebook.png
 intro:
-    client: Wynn
+    client: Wynn Resorts in Las Vegas
     company: RAIN
     sector: Hospitality
-    platform: Voice UI on Amazon Alexa
+    platform: Voice UI for Amazon
     roles:
     - Research
     - Information Architecture
@@ -64,6 +64,6 @@ head: |
   </style>
 ---
 
-My team collaborated on a voice "concierge" to put an Alexa devices in 5,600 rooms and suites at the Wynn Resort in Las Vegas. I led the UX and UI design of the conversational interface. 
+{{< prominentText >}}Wynn Resorts asked RAIN to design an in-room virtual assisant that could handle common requests and questions, freeing up concierges and hotel staff for other tasks.{{< /prominentText >}}
 
-In the first few months after launch, the voice service handled over 12,000 utterances inquiring about operating hours and 5,000 utterances asking about on-property bars and restaurants—and with an 83% satisfaction rate from customers.
+My team collaborated on a voice "concierge" to put an Alexa devices in 5,600 rooms and suites at the Wynn Resort in Las Vegas. I led the UX and UI design of the conversational interface. 

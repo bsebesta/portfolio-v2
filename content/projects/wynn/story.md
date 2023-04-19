@@ -127,17 +127,19 @@ TTS Responses
 
 {{< /wrappers/grid >}}
 
-
 {{< figureImage 
     src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/wynn/wynn_vui_1.png" 
+    title="The beginning of a scripts document I wrote, outlining 80+ scripts / flows" 
     class="wider" >}}
 
 {{< figureImage 
     src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/wynn/wynn_vui_2.png" 
+    title="Part of our 'State Machine Diagram', a critical handoff document. Each grey circle represents an intent (something someone can say), and each blue box represents response." 
     class="wider" >}}
 
 {{< figureImage 
     src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/wynn/wynn_vui_3.png" 
+    title="Part of a spreadsheet I wrote, outlining the different things somone can say to express each intent." 
     class="wider" >}}
 
 ---
@@ -181,7 +183,7 @@ The hestitation is that we never learned whether that was evenly distributed acr
 
 Still, at least to management and the users polled, it appeared a success. [Amazon published their own case study for this](https://developer.amazon.com/en-US/alexa/alexa-for-hospitality/wynncase), advertising its success in hopes to appeal to other hotels. It seemed to have worked—[Marriott Hotels adopted a similar pilot strategy](https://www.hotelmanagement.net/tech/alexa-for-hospitality-marriott-adds-amazon-to-guest-experience-0), adding Amazon Alexa devices into hotels shortly after Wynn did.
 
-In retrospection, what would I have done differently? And what might I have attempted had we been able to iterate on the product?
+<!-- In retrospection, what would I have done differently? And what might I have attempted had we been able to iterate on the product?
 
 * **Establishing a clearer analytics strategy.** I would love to have helped Wynn think through, from the very beginning, about specific conversion KPIs. (Analytics for conversational AI platforms were still relatively new, and tracking conversions was still not an easy thing.) How many restaurant reservations were placed? Where in the conversational did people abort? How many utterances were said that had no matching intent we'd anticipated? In addition, we never got direct access to the metrics around whether actual concierge volume actually went down. Did Alexa displace calls to concierge? If so, why? If not, why not? In addition to these questions, we never figured out how to integrate Wynn's own metrics with the voice metrics. For example, it would have been great to know the percentage of hotel rooms with an Alexa device in it booked on any given day, so we could look at usage numbers in light of total possible users for each day.
 
@@ -189,7 +191,7 @@ In retrospection, what would I have done differently? And what might I have atte
 
 * **Working more closely with Wynn's internal team.** As an agency, we were very peripheral to Wynn's internal product and IT team that would be implementing this. It was this lack of close relationship that hurt our ability to conduct on-site or remote testing with real guests, or get direct access to key metrics. On later projects, I learned the importance of establishing contact with the right teams and people to secure access to real people in real time throughout the project.
 
-* **Researching multi-lingual and cross-cultural performance.** In the course of researching personas, I realized that a sizable percentage of guests at Wynn Resort were visiting from other countries or cultures. By one estimate, 20% of the nearly 42 million visitors to Vegas in 2018 were international tourists. I wasn't able to test with international visitors, and that means several guests were probably frustrated that either their language or their accent was a barrier to use.
+* **Researching multi-lingual and cross-cultural performance.** In the course of researching personas, I realized that a sizable percentage of guests at Wynn Resort were visiting from other countries or cultures. By one estimate, 20% of the nearly 42 million visitors to Vegas in 2018 were international tourists. I wasn't able to test with international visitors, and that means several guests were probably frustrated that either their language or their accent was a barrier to use. -->
 
 ---
 

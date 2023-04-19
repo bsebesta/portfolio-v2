@@ -610,34 +610,17 @@
       font-weight: 700;
    }
 
-   .homepage__header_lede ul {
-      --space: var(--space-3xs);
-      font-size: var(--step-2);
-      line-height: var(--space-m-l);
+   .homepage__header_lede {
+      font-size: var(--step-0);
    }
 
-      .homepage__header_lede li::after {
-         content: '//';
-         margin-inline-start: var(--space-3xs);
-         color: var(--color-textdecoration);
-      }
-
-      .homepage__header_lede li:last-of-type::after {
-         content: '';
-      }
-
-         /* Placeholder for cursor changes */
-         .homepage__header_lede_words {}
-         .homepage__header_lede_pixels {}
-         .homepage__header_lede_code {}
-
-      .homepage__header_details {
-         display: flex;
-         flex-flow: row wrap;
-         justify-content: flex-start;
-         align-items: center;
-         gap: var(--space-s);
-      }
+   .homepage__header_details {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-start;
+      align-items: center;
+      gap: var(--space-s);
+   }
       
          .link-cta-primary,
          .link-cta-secondary {
@@ -1842,7 +1825,7 @@
          text-transform: uppercase;
       }
       .casestudy__fullheader_title {
-         font-size: var(--step-3);
+         font-size: var(--step-4);
       }
       .casestudy__fullheader_deck {
          font-size: var(--step-0);
@@ -1854,11 +1837,13 @@
    .casestudy__intro {
       font-size: var(--step-0);
       line-height: var(--line-height-deck);
+      width: 100%;
    }
 
    .casestudy__summary {
       font-size: var(--step-0);
       line-height: var(--line-height-deck);
+      width: 100%;
    }
 
       
@@ -1867,6 +1852,11 @@
       ========================================================================== */
       
       .casestudy__results {
+      }
+
+      .casestudy__results_header {
+         font-size: var(--step-2);
+         color: var(--color-accent-800);
       }
 
       .casestudy__results ol {

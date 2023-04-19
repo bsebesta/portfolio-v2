@@ -8,7 +8,7 @@ intro:
     client: US Department of Veterans Affairs
     company: RAIN
     sector: Healthcare
-    platform: Multimodal voice UI on Amazon Alexa
+    platform: Voice / visual UI on Alexa Smart Speakers
     roles:
     - Product strategy
     - User experience design
@@ -50,6 +50,6 @@ head: |
   </style>
 ---
 
-The United States is home to around 16.5 million veterans. The US Department of Veterans’ Affairs (VA) manages a healthcare system for these veterans, running a budget of $68 billion with 9 million enrolled veterans, served by a digital web and mobile experience.
+{{< prominentText >}}The VA wanted us to explore an accessible, voice-first interface for veterans refilling prescriptions.{{< /prominentText >}}
 
-Working with the VA, I led UX / UI design on an Amazon Alexa voice app allowing US veterans to order their prescriptions in a safe, secure, and user-friendly experience. Though the product did not ship (for reasons beyond our control), veterans we tested with loved it. Said one, “I don’t see how you could make it any easier.”
+Working with the VA, I led UX / UI design on an Amazon Alexa voice app allowing US veterans to order their prescriptions in a safe, secure, and user-friendly experience on their smart speakers.
