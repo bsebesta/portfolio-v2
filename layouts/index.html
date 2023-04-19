@@ -5,32 +5,28 @@
     <!-- Hero Text-->
     <header class="homepage__header stack">
         <div class="stack-smallest">
-            <h1 class="homepage__header_title">{{ .Params.ledeTitle }}</h1>
-            <div class="homepage__header_lede"><ul class="cluster">
-                {{ range .Params.ledeLines }}
-                <li>{{ . }}</li>
-                {{ end }}
-            </ul></div>
+            <h1 class="homepage__header_title">Hi, I'm Bryan.</h1>
+            <div class="homepage__header_lede prose">
+                <p>I've spent the last five years working as a Senior UX / Conversational UI designer for <a href="https://rain.agency/" target="_blank">RAIN Agency</a>, leading design for 20+ clients like Headspace, Amazon, Autotrader, Nike, and Nestlé.
+                <p>I'm currently looking for opportunities to design for web and mobile SaaS products.</p>
+            </div>
         </div>
         <div class="homepage__header_details">
-            <div class="homepage__header_details_cta cluster">
-                <a href="https://portfolio-v2.s3.us-west-004.backblazeb2.com/resume/Resume_BryanSebesta_2023.pdf" class="link-cta-primary">Resumé</a>
-                <!-- <a href="{{ relref . "what-is-ux" }}" class="link-cta-secondary"><strong>Read:</strong> What is UX?</a> -->
-                <a href="https://www.linkedin.com/in/bryansebesta/" class="link-cta-secondary">LinkedIn</a>
-                <a href="mailto:hello@bryansebesta.com" class="link-cta-secondary">Email</a>
-            </div>
-            <div class="homepage__header_details_text">
-                <p>Previously at RAIN.Agency</p>
-            </div>
+            <!--<a href="https://portfolio-v2.s3.us-west-004.backblazeb2.com/resume/Resume_BryanSebesta_2023.pdf" class="link-cta-primary">Resumé</a>
+            <a href="https://www.linkedin.com/in/bryansebesta/" class="link-cta-secondary">LinkedIn</a>
+            <a href="mailto:hello@bryansebesta.com" class="link-cta-secondary">Email</a> -->
+            <a href="https://portfolio-v2.s3.us-west-004.backblazeb2.com/resume/Resume_BryanSebesta_2023.pdf" target="_blank" class="iconwrapper__button"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#3f709f" viewBox="0 0 256 256"><path d="M211.48,35.32l-130.25-23A20,20,0,0,0,58.05,28.54l-29.75,169a20,20,0,0,0,16.22,23.16l130.25,23h0a20.1,20.1,0,0,0,3.52.31A20,20,0,0,0,198,227.46l29.75-169A20,20,0,0,0,211.48,35.32ZM175,219.36,52.63,197.75,81,36.64,203.37,58.25ZM91.9,67a12,12,0,0,1,13.9-9.73L173,69.14A12,12,0,0,1,171,93a12.59,12.59,0,0,1-2.1-.18L101.63,80.9A12,12,0,0,1,91.9,67ZM85,106.39a12,12,0,0,1,13.91-9.73l67.22,11.88A12,12,0,0,1,164,132.35a12.5,12.5,0,0,1-2.1-.18L94.69,120.29A12,12,0,0,1,85,106.39ZM78,145.78a12,12,0,0,1,13.9-9.73L125.54,142a12,12,0,0,1-2.07,23.82,11.63,11.63,0,0,1-2.1-.19l-33.61-5.93A12,12,0,0,1,78,145.78Z"></path></svg> Resumé</a>
+            <a href="https://www.linkedin.com/in/bryansebesta" target="_blank" class="iconwrapper__button"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#3F709F" viewBox="0 0 256 256"><path d="M216,20H40A20,20,0,0,0,20,40V216a20,20,0,0,0,20,20H216a20,20,0,0,0,20-20V40A20,20,0,0,0,216,20Zm-4,192H44V44H212ZM112,176V124a12,12,0,0,1,21.43-7.41A40,40,0,0,1,192,152v24a12,12,0,0,1-24,0V152a16,16,0,0,0-32,0v24a12,12,0,0,1-24,0ZM96,124v52a12,12,0,0,1-24,0V124a12,12,0,0,1,24,0ZM68,80A16,16,0,1,1,84,96,16,16,0,0,1,68,80Z"></path></svg> LinkedIn</a>
+            <a href="mailto:hello@bryansebesta.com" target="_blank" class="iconwrapper__button"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#3f709f" viewBox="0 0 256 256"><path d="M224,44H32A12,12,0,0,0,20,56V192a20,20,0,0,0,20,20H216a20,20,0,0,0,20-20V56A12,12,0,0,0,224,44ZM193.15,68,128,127.72,62.85,68ZM44,188V83.28l75.89,69.57a12,12,0,0,0,16.22,0L212,83.28V188Z"></path></svg>hello@bryansebesta.com</a>
         </div>
     </header>
     
     <!-- Work -->
-    <section class="homepage__work stack">
+    <section class="homepage__work stack-medium">
         <header class="homepage__sectionheader_large">
             <h2>Case Studies</h2>
             <span>/</span>
-            <p>Stories from my adventures in UX</p>
+            <p>Stories showcasing my approach to UX and product design</p>
         </header>
         <div class="grid">
             {{ range where .Site.RegularPages.ByWeight "Section" "projects" }}
@@ -47,8 +43,25 @@
         </div>
     </section>
 
+    <!-- Work -->
+    <section class="homepage__visualuidesigns stack-medium">
+        <header class="homepage__sectionheader_large">
+            <h2>Visual Design</h2>
+            <span>/</span>
+            <p>Developing my abilities in visual UI design—see <a href="">100 Days of Learning UI Design</a></p>
+        </header>
+        <div class="grid-small">
+            {{ range first 9 (where .Site.RegularPages.ByWeight "Section" "skills") }}
+            <article class="homepage__skillscard stack-smallest">
+                <div class="homepage__skillscard_frame">&nbsp;</div>
+                <a href="{{ .Permalink }}"><h2>{{ .Title }}</h2></a>
+            </article>
+            {{ end }}
+        </div>
+    </section>
+
     <!-- Digital Garden -->
-    <section class="homepage__garden stack">
+    <section class="homepage__garden stack-medium">
 
         <!-- Digital Garden / Header -->
         <header class="homepage__sectionheader_large">
@@ -61,7 +74,7 @@
         <div class="homepage__garden_grid u-grid">
 
             <!-- Notes & Essays -->
-            <section class="homepage__notes stack-small">
+            <section class="homepage__notes stack-smaller">
                 <header class="homepage__sectionheader_small stack-smallest">
                     <h2>Notes & Essays</h2>
                     <p>Notes are short and exploratory; essays make an argument</p>
@@ -76,23 +89,8 @@
                 </div>
             </section>
 
-            <!-- Craftmanship -->
-            <section class="homepage__skills stack-small">
-                <header class="homepage__sectionheader_small stack-smallest">
-                    <h2>Visual Craft</h2>
-                    <p>Garage-door up experiments with visual UI-oriented tools, methods, patterns, and craft</p>
-                </header>
-                <div class="grid-small">
-                    {{ range first 3 (where .Site.RegularPages.ByWeight "Section" "skills") }}
-                    <article class="homepage__skillscard stack-smallest">
-                        <div class="homepage__skillscard_frame">&nbsp;</div>
-                        <a href="{{ .Permalink }}"><h2>{{ .Title }}</h2></a>
-                    </article>
-                    {{ end }}
-            </section>
-
             <!-- Books -->
-            <section class="homepage__books stack-small">
+            <section class="homepage__books stack">
                 <header class="homepage__sectionheader_small stack-smallest">
                     <!-- <div style="margin: 0"><a href="/books/" class="homepage__sectionheader_small_link">--><h2>A Working Library</h2><!-- </a></div> -->
                     <p>Snapshots of my reading life—focused on technology, design, work, and culture</p>

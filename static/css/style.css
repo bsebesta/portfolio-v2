@@ -337,6 +337,7 @@
       .stack-smaller2,
       .stack-smaller,
       .stack-small,
+      .stack-medium,
       .stack-large,
       .stack-larger,
       .stack-largest {
@@ -351,6 +352,7 @@
          .stack-smaller2 > *,
          .stack-smaller > *,
          .stack-small > *,
+         .stack-medium > *,
          .stack-large > *,
          .stack-larger > *,
          .stack-largest > * {
@@ -369,6 +371,7 @@
          .stack-smaller > * + * { margin-block-start: var(--space-xs); }
          .stack-small > * + * { margin-block-start: var(--space-s); }
          .stack > * + * { margin-block-start: var(--space-m); }
+         .stack-medium > * + * { margin-block-start: var(--space-l); }
          .stack-large > * + * { margin-block-start: var(--space-xl); }
          .stack-larger > * + * { margin-block-start: var(--space-2xl); }
          .stack-largest > * + * { margin-block-start: var(--space-3xl); }
@@ -577,6 +580,7 @@
       grid-template-areas:
          "header header header header header header header header header header header header"
          "work work work work work work work work work work work work"
+         "visualui visualui visualui visualui visualui visualui visualui visualui visualui visualui visualui visualui"
          "garden garden garden garden garden garden garden garden garden garden garden garden";
    }
 
@@ -584,14 +588,16 @@
    @media screen and (min-width: 950px) {
       .homepage {
          grid-template-areas:
-            ". . header header header header header header header header . ."
+            ". header header header header header header header header header header ."
             "work work work work work work work work work work work work"
+            "visualui visualui visualui visualui visualui visualui visualui visualui visualui visualui visualui visualui"
             "garden garden garden garden garden garden garden garden garden garden garden garden";
       }
    }
 
    .homepage__header { grid-area: header; }
    .homepage__work { grid-area: work; }
+   .homepage__visualuidesigns { grid-area: visualui; }
    .homepage__garden { grid-area: garden; }
 
    /* Header
@@ -627,34 +633,23 @@
 
       .homepage__header_details {
          display: flex;
-         flex-flow: row nowrap;
-         justify-content: space-between;
-         width: var(--measure);
+         flex-flow: row wrap;
+         justify-content: flex-start;
+         align-items: center;
+         gap: var(--space-s);
       }
-
-         .homepage__header_details_cta {
-
-         }
-         
-         .homepage__header_details_text {
-            display: none;
-            color: var(--color-neutral-500);
-            font-size: var(--step--1);
-         }
       
          .link-cta-primary,
          .link-cta-secondary {
             display: inline-block;
             padding: var(--space-2xs);
             font-size: var(--step--1);
-            border-radius: var(--space-3xs);
             text-decoration: none;
             transition: var(--transition-button);
          }
 
          .link-cta-primary {
-            background-color: var(--color-accent-600);
-            color: var(--color-neutral-100);
+            background-color: var(--color-accent-100);
          }
 
             .link-cta-primary:hover {
@@ -663,12 +658,43 @@
 
          .link-cta-secondary {
             color: var(--color-accent-500);
-            background-color: var(--color-accent-100);
          }
 
             .link-cta-secondary:hover {
                background-color: var(--color-accent-200);
             }
+      
+      a.iconwrapper {
+         display: block;
+         font-size: 0;
+         transition: var(--transition-card-hover);
+      }
+
+         a.iconwrapper:hover {
+            transform: scale(1.02);
+            transform-origin: center;
+            box-shadow: var(--box-shadow-md);
+         }
+
+      a.iconwrapper__button {
+         padding: var(--space-2xs);
+         gap: var(--space-3xs);
+         font-size: var(--step--1);
+         text-decoration: none;
+         transition: var(--transition-button);
+         display: flex;
+         flex-flow: row nowrap;
+         align-items: center;
+         background-color: var(--color-accent-100);
+         transition: var(--transition-card-hover);
+         box-shadow: var(--box-shadow-sm);
+      }
+
+         a.iconwrapper__button:hover {
+            transform: scale(1.02);
+            transform-origin: center;
+            box-shadow: var(--box-shadow-md);
+         }
 
    /* Large & Small Section Headers
       ========================================================================== */
@@ -689,8 +715,17 @@
    }
 
       .homepage__sectionheader_large h2 {
+         flex: auto 1 1;
          font-size: var(--step-3);
          color: var(--color-accent-800);
+      }
+
+      @media screen and (min-width: 800px) {
+         .homepage__sectionheader_large h2 {
+            flex: auto 1 0;
+            font-size: var(--step-3);
+            color: var(--color-accent-800);
+         }
       }
 
       .homepage__sectionheader_large span {
@@ -794,34 +829,31 @@
          row-gap: var(--space-l-xl);
          grid-template-areas:
             "notes notes notes notes notes notes notes notes notes notes notes notes"
-            "skills skills skills skills skills skills skills skills skills skills skills skills"
             "books books books books books books books books books books books books";
          } 
 
       @media screen and (min-width: 800px) {
          .homepage__garden_grid {
             grid-template-areas:
-               "notes notes notes notes notes skills skills skills skills skills skills skills"
-               "books books books books books books books books books books books books";
+               "notes notes notes notes notes books books books books books books books"
             }
       }
 
       .homepage__notes { grid-area: notes; }
-      .homepage__skills { grid-area: skills; }
       .homepage__books { grid-area: books; }
 
    /* Notes and Notes Cards
       ========================================================================== */
 
       .homepage__notescard {
-         padding-block-end: var(--space-xs);
+         padding-block-end: var(--space-s);
          border-bottom: solid 1px var(--color-textdecoration);
          transition: var(--transition-card-hover);
          cursor: pointer;
       }
 
          .homepage__notescard:nth-child(1) {
-            padding-block-start: 0;
+            padding-block-start: -10px !important;
          }
    
          .homepage__notescard:hover {
