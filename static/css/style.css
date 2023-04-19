@@ -757,6 +757,46 @@
       color: var(--color-neutral-600);
    }
 
+   /* Project gallery grid
+      ========================================================================== */
+
+   .homepage__work_casestudygrid {
+      display: grid;
+      grid-template-columns: repeat(var(--u-grid-columns),1fr);
+      grid-template-areas:
+         "vah vah vah vah vah vah vah vah vah vah vah vah"
+         "ht ht ht ht ht ht ht ht ht ht ht ht"
+         "wynn wynn wynn wynn wynn wynn wynn wynn wynn wynn wynn wynn"
+         "hs hs hs hs hs hs hs hs hs hs hs hs";
+      gap: var(--u-grid-gutter);
+   }
+
+   .workgallery-vah { grid-area: vah; }
+   .workgallery-humantouch { grid-area: ht; }
+   .workgallery-wynn { grid-area: wynn; }
+   .workgallery-headspace { grid-area: hs; }
+
+   @media screen and (min-width: 650px) {
+      .homepage__work_casestudygrid {
+         display: grid;
+         grid-template-columns: repeat(var(--u-grid-columns),1fr);
+         grid-template-areas:
+            "vah vah vah vah vah vah ht ht ht ht ht ht"
+            "wynn wynn wynn wynn wynn wynn hs hs hs hs hs hs";
+         gap: var(--u-grid-gutter);
+      }
+   }
+
+   @media screen and (min-width: 1100px) {
+      .homepage__work_casestudygrid {
+         display: grid;
+         grid-template-columns: repeat(var(--u-grid-columns),1fr);
+         grid-template-areas:
+            "vah vah vah ht ht ht wynn wynn wynn hs hs hs";
+         gap: var(--u-grid-gutter);
+      }
+   }
+   
 
    /* Project gallery cards
       ========================================================================== */
@@ -1352,7 +1392,6 @@
    .widest {
       max-inline-size: var(--measure-widest) !important;
    }
-
 
 /* General-purpose utility for adding a full-bleed
    background color to a section
@@ -1991,23 +2030,3 @@
             .casestudy__footer_buttonwrapper svg {
                fill: var(--color-accent-700);
             }
-
-      a.iconwrapper__button {
-         padding: var(--space-2xs);
-         gap: var(--space-3xs);
-         font-size: var(--step--1);
-         text-decoration: none;
-         transition: var(--transition-button);
-         display: flex;
-         flex-flow: row nowrap;
-         align-items: center;
-         background-color: var(--color-accent-100);
-         transition: var(--transition-card-hover);
-         box-shadow: var(--box-shadow-sm);
-      }
-
-         a.iconwrapper__button:hover {
-            transform: scale(1.02);
-            transform-origin: center;
-            box-shadow: var(--box-shadow-md);
-         }

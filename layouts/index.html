@@ -28,10 +28,10 @@
             <span>/</span>
             <p>Stories showcasing my approach to UX and product design</p>
         </header>
-        <div class="grid">
+        <div class="homepage__work_casestudygrid">
             {{ range where .Site.RegularPages.ByWeight "Section" "projects" }}
             {{ if eq .Params.fpgallery.galleryShow true }}
-            <a href="{{ .Permalink }}" class="homepage__projectcard"><article class="stack-smaller2">
+            <a href="{{ .Permalink }}" class="homepage__projectcard {{ .Params.fpgallery.galleryClass }}"><article class="stack-smaller2">
                 <div class="homepage__projectcard_thumbnail frame" style="background-image: url('{{ .Params.fpgallery.galleryThumbnail }}')">&nbsp;</div>
                 <div>
                     <h2>{{ .Params.fpgallery.galleryTitle }}</h2>

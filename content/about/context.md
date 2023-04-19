@@ -10,6 +10,6 @@ I do my best work when I'm championing human-centered products that meet a real 
 
 My strengths include problem solving, UX strategy, managing or reducing complexity, and research. I especially love being out in the field, talking to real people and having my own assumptions challenged.
 
-I'm passionate about [ethical technology]({{< relref "technology-is-moral" >}}), [accessibility]({{< relref "accessibility" >}}), and mentoring other designers. In my spare time, you might find me reading, hiking in the Great Outdoors, discussing philosophy with friends, or chasing my kid around the backyard.
+I'm passionate about ethical technology, accessibility, and mentoring other designers. In my spare time, you might find me reading, hiking in the Great Outdoors, discussing philosophy with friends, or chasing my kid around the backyard.
 
 I'm currently looking for new opportunities, wherever they take me. Feel free to drop a line [over email](mailto:hello@bryansebesta.com) or [on LinkedIn](https://www.linkedin.com/in/bryansebesta).

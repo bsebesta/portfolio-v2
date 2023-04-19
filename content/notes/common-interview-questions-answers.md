@@ -36,7 +36,7 @@ I also love the people work, like field research or mentorship or coaching. I st
 ## What's my greatest weakness?
 Spring allergies, probably.
 
-But my _other_ greatest weakness? As mentioned above, I'm natively an ideas guy, not a "details person." Getting past the big ideas and conversations to actually *doing* polished high-fidelity screens, to detailed quantitative analysis, or to final drafts can be difficult for me. But I've found tricks, reframes, and [jigs]({{< relref "jigs-managing-complexity.md" >}}) that help me get into it. And it's so much easier if the big picture stuff's in place and there's a regular cadence of showing things with users.
+But my _other_ greatest weakness? As mentioned above, I'm natively an ideas guy, not a "details person." Getting past the big ideas and conversations to actually *doing* polished high-fidelity screens, to detailed quantitative analysis, or to final drafts can be difficult for me. But I've found tricks and reframes that help me get into it. And it's so much easier if the big picture stuff's in place and there's a regular cadence of showing things with users.
 
 If there's one part of the technical work I DO enjoy, it's coding. I can get lost in code for hours, and I wonder if I should have been a developer. But design is still worthwhile to me. I don't aspire to be merely an academic, or a technician. Instead, I want to be a craftsman-philosopher: building the right things, in the right way, with a product that's both good-looking and functional.
 

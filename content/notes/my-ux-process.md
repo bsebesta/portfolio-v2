@@ -58,6 +58,6 @@ Outlining some recurring practices that might facilitate such continous work, Ya
 
 This describes both a praxis and a culture that can work in a fast-moving, complex, and uncertain world.
 
-Now, I think it's useful to have a rough process to follow. The process itself is a [jig]({{< relref "jigs-managing-complexity.md" >}}), a tool for managing the daunting complexity of building design.
+Now, I think it's useful to have a rough process to follow. The process itself is a jig, a tool for managing the daunting complexity of building design.
 
 But we can't treat the process as a hard-and-fast rule. Rather, **we ought to treat the process as a toolbox**—each part designd to perform certain things.
