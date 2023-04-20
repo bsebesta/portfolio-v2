@@ -1,0 +1,21 @@
+{{- define "main" -}}
+
+<main>
+<article class="center stack page-margin">
+
+    {{ partial "headers/garden.html" . }}
+    
+    <section class="center-intrinsic prose">
+
+        <figure class="wide">
+            <img src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/uidesigns/{{ with .Params.images }}{{ index . 0 }}{{ end }}">
+        </figure>
+
+        {{ .Content }}
+
+    </section>
+        
+</article>
+</main>
+
+{{- end -}}
