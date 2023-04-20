@@ -448,7 +448,7 @@
       .grid-small,
       .grid-large {
          display: grid;
-         grid-gap: var(--space-s);
+         grid-gap: var(--u-grid-gutter);
          align-items: stretch; /* Might change back to stretch; need to test */
       }
          
