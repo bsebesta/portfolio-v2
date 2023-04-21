@@ -908,6 +908,8 @@
       .homepage__skillscard {
          transition: var(--transition-card-hover);
          cursor: pointer;
+         text-decoration: none;
+         overflow: hidden;
       }
 
          .homepage__skillscard:hover {
@@ -916,7 +918,6 @@
          }
 
       .homepage__skillscard_frame {
-         transition: var(--transition-card-hover);
          min-height: var(--space-l);
          box-shadow: var(--box-shadow-sm);
          width: 100%;
@@ -928,24 +929,14 @@
       }
 
       .homepage__skillscard:hover .homepage__skillscard_frame {
-         transform: scale(1.01);
-         transform-origin: center;
          box-shadow: var(--box-shadow-md);
+         transition: var(--transition-card-hover);
       }
-
-      .homepage__skillscard a {
-         text-decoration: none;
-         color: var(--color-neutral-800);
-      }
-
-         .homepage__skillscard a:hover {
-            color: var(--color-neutral-900);
-         }
 
       .homepage__skillscard h2 {
-         font-family: var(--font-family-body);
-         font-size: var(--step--1);
-         font-weight: 500;
+         font-size: var(--step-0);
+         color: var(--color-accent-700);
+         font-weight: 700;
       }
 
       /* Shifts the number of skills from 8 to 6 on mobile */

@@ -31,13 +31,15 @@
         <div class="homepage__work_casestudygrid">
             {{ range where .Site.RegularPages.ByWeight "Section" "projects" }}
             {{ if eq .Params.fpgallery.galleryShow true }}
-            <a href="{{ .Permalink }}" class="homepage__projectcard {{ .Params.fpgallery.galleryClass }}"><article class="stack-smaller2">
+            <a href="{{ .Permalink }}" class="homepage__projectcard {{ .Params.fpgallery.galleryClass }}">
+            <article class="stack-smaller2">
                 <div class="homepage__projectcard_thumbnail frame" style="background-image: url('{{ .Params.fpgallery.galleryThumbnail }}')">&nbsp;</div>
                 <div>
                     <h2>{{ .Params.fpgallery.galleryTitle }}</h2>
                     <p>{{ .Params.fpgallery.galleryDesc }}</p>
                 </div>
-            </article></a>
+            </article>
+            </a>
             {{ end }}
             {{ end }}
         </div>
@@ -52,10 +54,12 @@
         </header>
         <div class="grid-small">
             {{ range first 9 (where .Site.RegularPages.ByDate "Section" "uidesigns") }}
-            <article class="homepage__skillscard stack-smallest">
+            <a href="{{ .Permalink }}" class="homepage__skillscard">
+            <article class="stack-smallest">
                 <div class="homepage__skillscard_frame"{{ with .Params.thumbnail }} style="background-image: url('https://portfolio-v2.s3.us-west-004.backblazeb2.com/uidesigns/{{ . }}')"{{ end }}>&nbsp;</div>
-                <a href="{{ .Permalink }}"><h2>{{ .Title }}</h2></a>
+                <h2>{{ .Title }}</h2>
             </article>
+            </a>
             {{ end }}
         </div>
     </section>
