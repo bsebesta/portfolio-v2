@@ -1,0 +1,29 @@
+{{- define "main" -}}
+
+<main>
+<article class="stack page-margin">
+    
+    {{ partial "headers/simple.html" . }}
+
+    <section class="center-intrinsic prose">
+
+        {{ .Content }}
+
+        <div class="grid-small wider">
+            <!-- Right now, only book pages have "portfolioFeature." If that changes, I'll need to redo the "first 5" section to make this work properly. -->
+            {{ range .Pages }}
+            <a href="{{ .Permalink }}" class="homepage__skillscard">
+                <article class="stack-smallest">
+                    <div class="homepage__skillscard_frame"{{ with .Params.thumbnail }} style="background-image: url('https://portfolio-v2.s3.us-west-004.backblazeb2.com/uidesigns/{{ . }}')"{{ end }}>&nbsp;</div>
+                    <h2>{{ .Title }}</h2>
+                </article>
+                </a>
+            {{ end }}
+        </div>
+
+    </section>
+
+</article>
+</main>
+
+{{- end -}}
