@@ -15,9 +15,8 @@ Drawing from [this screenshot on SaasInterface](https://app.saasinterface.com/sh
 * However, the forum itself (everything below the grey-background header) uses a _different_ icon set; perhaps for legacy reasons, but annoying and inconsistent.
 * Similarly, the tab system in the Forum is distinctly different than the formally documented [Tabs](https://polaris.shopify.com/components/navigation/tabs) systems in Polaris. It looks fine, but this forum is definitely working in its own system.
 * And one more inconsistency: the color of the two primary buttons ("Log In" and "Ask a Question") are slightly different from the top and the bottom. It looks fine, but again, working on its own system.
+* A few components were made to speed up this copywork (see below). Notably, the tab system in the Forum is distinctly different than the formally documented [Tabs](https://polaris.shopify.com/components/navigation/tabs) systems in Polaris.
 
 {{< figureUIdesign 
     src="20230421_Copywork_ShopifyForum_Components.webp" 
     title="The post component" >}}
-
-* A few components were made to speed up this copywork (see above). Notably, the tab system in the Forum is distinctly different than the formally documented [Tabs](https://polaris.shopify.com/components/navigation/tabs) systems in Polaris.
