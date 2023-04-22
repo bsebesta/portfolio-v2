@@ -1,6 +1,6 @@
 ---
 date: 2023-04-21
-title: Shopify Forum
+title: Shopify Forum (Web)
 thumbnail: 20230421_Copywork_ShopifyForum_Thumbnail.webp
 images:
 - 20230421_Copywork_ShopifyForum.webp

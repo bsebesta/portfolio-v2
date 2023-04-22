@@ -1,6 +1,6 @@
 ---
 date: 2023-04-19
-title: AllTrails Homepage
+title: AllTrails Homepage (iOS)
 thumbnail: 20230420_Copywork_Alltrails_thumbnail.webp
 images:
 - 20230420_Copywork_Alltrails.webp
