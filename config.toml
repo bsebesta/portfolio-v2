@@ -1,6 +1,6 @@
 languageCode = 'en-us'
 title = 'Bryan Sebesta'
-baseURL = 'https://bsebesta.netlify.app/'
+baseURL = 'https://bryansebesta.com/'
 
 [params]
   # URLs, used in various layouts

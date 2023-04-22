@@ -20,6 +20,9 @@ I wanted to do an Android screen, so I picked three screens imitating NextDoor (
 
 * Speaking of type: the line-height and kearning needed to be manually adjusted for each font size to match the screenshot. I always see type specified as "size" / "line-height," but I rarely see kearning adjustments specified? Need to look into this.
 * The icon set was not something I could find. Some of them matched my go-to, Phosphor Icons, really nicely. But some of them had no corollary anywhere I could find, such as the "For Sale" icon with its little drawstring (quite nice, actually).
+<!-- * Clip Content note -->
+<!-- Colors -->
+<!-- Spacing -->
 
 {{< figureUIdesign 
     src="20230422_Copywork_NextDoor_prototype.gif" 
