@@ -1,6 +1,6 @@
 languageCode = 'en-us'
 title = 'Bryan Sebesta'
-baseURL = 'https://bryansebesta.com/'
+baseURL = 'https://www.bryansebesta.com/'
 
 [params]
   # URLs, used in various layouts
