@@ -3,7 +3,7 @@ slug: "wynn-voice-concierge"
 title: Reducing Concierge Call Volume at Wynn Resorts
 description: We put a “voice concierge” into 5,000+ rooms at Wynn Resorts, leading to reduced call volume to employees.
 images:
-- https://portfolio-v2.s3.us-west-004.backblazeb2.com/seo/headspace-facebook.png
+- https://portfolio-v2.s3.us-west-004.backblazeb2.com/seo/wynn-facebook.png
 intro:
     client: Wynn Resorts in Las Vegas
     company: RAIN
