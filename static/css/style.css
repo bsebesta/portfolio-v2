@@ -940,7 +940,7 @@
       }
 
       /* Shifts the number of skills from 8 to 6 on mobile */
-      .homepage__skillscard:nth-child(n+7) {
+      /*.homepage__skillscard:nth-child(n+7) {
          display: none;
       }
 
@@ -948,6 +948,14 @@
          .homepage__skillscard:nth-child(n+7) {
             display: initial;
          }
+      }*/
+
+      .homepage__skillscard_tags span {
+         background-color: var(--color-accent-100);
+         padding-block: var(--space-3xs);
+         padding-inline: var(--space-2xs);
+         font-size: var(--step--2);
+         border-radius: 100px;
       }
    
    /* Books section
