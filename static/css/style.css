@@ -1044,7 +1044,7 @@
          flex-grow: 1 0 1;
          min-width: 35vw;
          background-color: var(--color-accent-100);
-         background-image: url('https://www.bryansebesta.com/wp-content/uploads/2023/01/Sebesta-9816F-1.jpeg');
+         background-image: url('https://portfolio-v2.s3.us-west-004.backblazeb2.com/about/about_context1.jpeg');
          background-size: cover;
          background-position: center;
       }
@@ -1064,7 +1064,7 @@
          flex-grow: 1 0 1;
          min-width: 35vw;
          background-color: var(--color-accent-100);
-         background-image: url('https://bsebesta-portfolio.s3.us-west-004.backblazeb2.com/about/childhood2.jpeg');
+         background-image: url('https://portfolio-v2.s3.us-west-004.backblazeb2.com/about/about_history1.jpeg');
          background-size: cover;
          background-position: center;
          
