@@ -1321,6 +1321,14 @@
       font-size: var(--step--1);
    }
 
+   .header__nextprev {
+      font-size: var(--step--1);
+      margin-block-start: var(--space-2xs);
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+   }
+
    /* Assumed Audience Callout
       ========================================================================== */
 

@@ -7,12 +7,13 @@ images:
 category: UI Designs
 tags:
 - copywork
+- prototype
 ---
 
 I wanted to do an Android screen, so I picked three screens imitating NextDoor ([1](https://mobbin.com/screens/1c73f803-7c9e-4d3b-b08d-5c2ba1395171),[2](https://mobbin.com/screens/b5f45ac2-a082-4542-8a89-5176623d1cb4),[3](https://mobbin.com/screens/1df034ab-675e-456a-9dab-475535635692)).
 
 * Beyond the status and navigation bars, NextDoor didn't really draw on any Android or Material 3 patterns. Still, it got me exploring a Material Design kit in Figma, and becoming somewhat more familiar with the names there.
-* Font sizes are bit wonky: 12, 14, 16, 22. The card font sizes were actually _in-between_ the font sizes everywhere else: 11 and 13. It made me wonder if the card text sizes were actually 12 and 14, but shrunk down automatically somehow. 
+* Font sizes are bit wonky: 12, 14, 16, 22. The card font sizes were actually _in-between_ the font sizes everywhere else: 11 and 13. It made me wonder if the card text sizes were actually 12 and 14, but scaled down using the CSS `scale` transform or something like that.
 
 {{< figureUIdesign 
     src="20230422_Copywork_NextDoor_cardcomponent.webp" 
