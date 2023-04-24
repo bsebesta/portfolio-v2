@@ -17,7 +17,7 @@ There's a similar truth with the idea of "UX process." Any process is useless th
 At the same time, a default process, checklist, or basic approach is a good _presupposition_. It can't be a rigid rule, but it can be a useful default: a toolbox to draw on with wisdom and prudence.
 
 ## I have a process...
-Broadly speaking, when I'm approaching a new product or flow in a relatively stable environment, my process looks something like the following[^1].
+Broadly speaking, when I'm approaching a new product or flow in a relatively stable environment, my process looks something like the following:
 
 1. Understand the problem (from user, business, and technical POVs)
 2. Determine the nature of the complexity—how, and how much

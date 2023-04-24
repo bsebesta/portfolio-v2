@@ -694,8 +694,6 @@
       @media screen and (min-width: 800px) {
          .homepage__sectionheader_large h2 {
             flex: 0 1 auto;
-            font-size: var(--step-3);
-            color: var(--color-accent-800);
          }
       }
 
