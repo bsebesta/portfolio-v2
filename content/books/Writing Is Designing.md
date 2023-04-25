@@ -19,3 +19,9 @@ shelves:
 portfolioFeature: true
 weight: 4
 ---
+
+Years ago, I read an article making the argument that "everything on the web is typography." Basically, the web consists _principally_ of words. And that is, even in this media-saturated environment, still basically true. Without words, few interfaces would make any sense! They're the backbone of every interface. In many ways, they _are_ the interface.
+
+This is the _assumption_ of the book. The _argument_ of the book is that words should never be an afterthought in the design process: designers should be creating the words as the product and interface is developed, iteratively and collaboratively. Writing is part of the design process! Writing _is_ designing.
+
+My favorite chapters were on voice and tone, and the chapter outlining error messages. Highly recommend this to any product designer, but especially anyone who wants to improve in their ability to write well.

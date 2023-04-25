@@ -3,7 +3,7 @@ title: Eclectic Generalists and Pi-Shaped People
 deck: 
 date: 2023-04-06
 category: essay
-growthStage: budding
+growthStage: evergreen
 epistemicStatus: 
 assumedAudience: 
 weight: 6

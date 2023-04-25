@@ -22,3 +22,9 @@ skills:
 portfolioFeature: true
 weight: 5
 ---
+
+Right in the introduction, Gothelf and Seiden setup the main metaphors: the "two-way conversation" and "playbook". They contextualizes the "problem" this book diagnoses by explaining how the economy has shifted (mainly due to digital technology, and so the speed/complexity of today's markets demand a different *management* approach, a different playbook, from anyone building technology or technological products. To borrow a biblical metaphor, we can't put "new wine in old wineskins"; we have to revamp our institutions dramatically. The diagnosis is the same as in Bungay's "Art of Action" or Yamashita's article ["Welcome to the WIP."](https://www.figma.com/blog/welcome-to-the-wip/)
+
+The first half of the book does a rigorous job outlining the diagnosis. The second half focuses on the playbook, which (they acknowledge) has been around for awhile: it's called agile. They note what makes agile different from the waterfall (industrial) approach, mainly: smaller batch sizes and continuous feedback from customers. And they note that this "Lean UX" approach (written about in their earlier book) often failed to be adopted becuase businesses were not setup to support it; hence, *this* book.
+
+The rest is great. When I read this, I worked at an agency, where it was difficult to apply all of these ideas. But I hope to take another crack at these ideas in the future.

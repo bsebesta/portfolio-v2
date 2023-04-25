@@ -22,3 +22,5 @@ skills:
 portfolioFeature: true
 weight: 6
 ---
+
+In the past, I've recommended Cathy Pearl's O'Reilly book, "Designing Voice User Interfaces," as the standard go-to for beginning conversational designers. But this book updates many ideas there and brings it into more current technology stacks and best practices, systematically breaking down the task of designing conversations "that are useful, ethical, and human–centered. The chapters on persona design and voice/tone selection was especially good. Recommended for anyone interested in conversational UI design.

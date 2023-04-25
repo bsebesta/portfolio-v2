@@ -18,7 +18,7 @@ No one gets anywhere on their own; every person owes their personal and professi
 * [Mike Fisher](https://www.linkedin.com/in/mike-fischer-95500819/), who provided space and resources at my High School to design and code—and who forgave me after I dropped our High School's entire MySQL database
 * [Jesjit Birak](https://www.linkedin.com/in/jesjit-birak-6b401337), who mentored me in web design in High School (and went on to become the director of Engineering at Reddit! Freakin' _go_)
 * Dallin, Pmo, and Jake—you know who you are. Friends through thick and thin!
-* [Nathan Crowther](https://www.linkedin.com/in/njcrowther/), who helped start the BYU UX Club, and helped me when I accidentally became President of the same club!
+* [Nathan Crowther](https://www.linkedin.com/in/njcrowther/), who helped start the BYU UX Club, and helped me when I accidentally became President of the same club! A good designer and a better friend
 * [Ben Peck](https://www.linkedin.com/in/bpeck/), who has done so much for the design community in Utah through organizing [Front](https://www.frontutah.com/) and [Product Hive](https://www.producthive.org/), and who's always been willing to be a friend
 * [Bradley Gregory](https://www.linkedin.com/in/bradleysgregory/), who introduced me to RAIN and whose passion for sustainability and living intentionally has continued to inspire me
 * [Dan Hatch](https://www.linkedin.com/in/daniel-hatch-mfa/), who invited me to teach as an adjunct at UVU, fueling a passion for teaching and giving me the chance to teach and work with amazing people

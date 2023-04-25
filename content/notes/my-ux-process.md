@@ -5,38 +5,40 @@ date: 2023-04-06
 category: note
 growthStage: budding
 epistemicStatus: 
-assumedAudience: Those interested in the various definitions of UX on offer, or in how I approach UX in particular.
+assumedAudience: Hiring managers or colleagues interested in how I approach UX as a process. Nothing novel here if you've been following industry trends for awhile, but it's worthwhile to me to collect my POV in one place!
 weight: 3
 favorite: true
 ---
 
 It's been said that "Plans are useless but planning is indepensible."
 
-There's a similar truth with the idea of "UX process." Any process is useless the moment it encounters the real world—which is complex, fast-moving, and unpredictable. In such a world, continuous every project is a work-in-progress.
+There's a similar truth with the idea of UX process. [Process is an indispensable aspect of what makes UX "UX"]({{< relref "what-is-ux" >}}), but the moment any process encounters the real world, it begins to break down.
 
-At the same time, a default process, checklist, or basic approach is a good _presupposition_. It can't be a rigid rule, but it can be a useful default: a toolbox to draw on with wisdom and prudence.
+Why? The real world is complex, fast-moving, and unpredictable. In such a world, every project is a continuous work-in-progress.
 
-## I have a process...
+Thus the tension. A standard process, checklist, or approach is a good _presupposition_, a useful default, and a toolbox to draw on with wisdom and prudence. But it can't be rigid.
+
+## My Process
 Broadly speaking, when I'm approaching a new product or flow in a relatively stable environment, my process looks something like the following:
 
 1. Understand the problem (from user, business, and technical POVs)
-2. Determine the nature of the complexity—how, and how much
-3. Use the appropriate tools (content maps, flows, lists) to manage the complex, guide the conversation, and render risky assumptions visible
+2. Determine the nature of the complexity
+3. Use the appropriate tools (content maps, flows, lists) to manage the complexity, guide the conversation, and render risky assumptions visible
 4. Wireframe (if appropriate)
 5. Set design direction
 6. Present early, present often
 7. Explore/ship/iterate, measuring along the way
 8. Systematize
 
-## ... but I never follow it perfectly
+## The Real world
 But I've never been in a project that follows that perfectly. "Relatively stable environments" are rare and _usually manufactured_—a useful but fruitless self-deception.
 
-I believe that our modern design environment is complex, fast-moving, and unpredictable. That fact, together with the reality of how we can get design feedback asynchronously in teams anytime from nearly anyone anywhere, means **that any strict process breaks down**. It's either impossible, or if possible, not desirable because it works against the grain of our how things really are.
+I believe that our modern design environment is complex, fast-moving, and unpredictable. That fact, together with the reality of how we can get design feedback asynchronously in teams anytime from nearly anyone anywhere, means **that any strict process breaks down**. It's either impossible (or if possible _not desirable_) because it works against the grain of our how things really are.
 
 This is diagnosed eloquently by Yuhki Yamashita, Chief Product Officer at Figma, in his excellent article [Welcome to the WIP](https://www.figma.com/blog/welcome-to-the-wip/)—one of the most important articles.
 
-> Products today never get built in such a clear, linear, and picture-perfect way. The reality is so much messier. So why do we act like it isn’t?
-> 
+> Products today never get built in such a clear, linear, and picture-perfect way. The reality is so much messier. So why do we act like it isn’t?  
+>   
 > Well, for a long time, this was the process. Back when product design meant physical products, it was materially important that everyone follow a carefully constructed, linear process. As the world became increasingly digital, the spaces we designed for became faster to build and iterate on. Product teams can ship an update in a matter of minutes versus leaving their users stuck with a design for years to come. Today, every digital product is a work in progress. And this has changed how we design.
 
 Yamashita historicizes design, pointing out that _this linear mindset worked at one time; but it works no longer_. Other authors have made this same point. In their book [Sense and Respond]({{< relref "Sense and Respond" >}}), Gotthelf and Seiden call this the "manufacturing mindset." In his book [The Art of Action]({{< relref "The Art of Action" >}}), Stephen Bungay describes this same phenomenon as "legacy thinking," consisting of three basic principles:
@@ -47,7 +49,7 @@ Yamashita historicizes design, pointing out that _this linear mindset worked at 
 
 Bungay makes the same point Yamashita does: we live in a complex, fast-moving, unpredictable environment.
 
-## We Need a New Approach
+## Dealing with Uncertainty
 So in an ideal world, there's less a _linear process_ and more of a _system of recurring practices_ that help usher products into the future. Gotthelf and Seiden call this "continous deployment." We're always learning. We're always treating our project as a WIP.
 
 Outlining some recurring practices that might facilitate such continous work, Yamashita makes three suggestions:

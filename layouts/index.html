@@ -106,7 +106,7 @@
                 </header>
                 <div class="grid-small">
                     <!-- Right now, only book pages have "portfolioFeature." If that changes, I'll need to redo the "first 5" section to make this work properly. -->
-                    {{ range first 12 (where .Site.RegularPages.ByWeight ".Params.portfolioFeature" true) }}
+                    {{ range first 6 (where .Site.RegularPages.ByWeight ".Params.portfolioFeature" true) }}
                     {{ if eq .Section "books" }}
                     <article class="homepage__bookscard stack-smaller" onclick="window.location.href='{{ .Permalink }}';">
                         <div class="homepage__bookscard_cover" style="background-image: url('{{ .Site.Params.urlBookCovers }}{{ .Params.cover }}')">&nbsp;</div>
