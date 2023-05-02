@@ -48,7 +48,7 @@
     <section class="homepage__visualuidesigns stack">
         <header class="homepage__sectionheader_large">
             <h2>Visual UI</h2>
-            <p>A record of my learning in UI design for web and mobile<!-- see <a href="">100 Days of Learning UI Design</a>--></p>
+            <p>Currently upskilling with <a href="{{ relref . "100-days-of-learning-visual-ui" }}" class="animate-link">100 Days of UI Design</a>, following my completion of <a href="https://shiftnudge.com/" class="animate-link">Shift Nudge</a> and <a href="https://www.figma.academy/" class="animate-link">Figma Academy</a>.</p>
         </header>
         <div class="grid-small">
             {{ range first 9 (where .Site.RegularPages.ByDate.Reverse "Section" "uidesigns") }}
@@ -56,11 +56,11 @@
             <article class="stack-smallest">
                 <div class="homepage__skillscard_frame"{{ with .Params.thumbnail }} style="background-image: url('https://portfolio-v2.s3.us-west-004.backblazeb2.com/uidesigns/{{ . }}')"{{ end }}>&nbsp;</div>
                 <h2>{{ .Title }}</h2>
-                <div class="cluster homepage__skillscard_tags">
+                <!-- <div class="cluster homepage__skillscard_tags">
                     {{ range .Params.tags }}
                     <span class="homepage__skillscard_tag">{{ . }}</span>
                     {{ end }}
-                </div>
+                </div> -->
             </article>
             </a>
             {{ end }}
@@ -72,7 +72,7 @@
 
         <!-- Digital Garden / Header -->
         <header class="homepage__sectionheader_large">
-            <h2>Garden</h2>
+            <h2>Digital Garden</h2>
             <p>My digital garden includes my collection of imperfect and ever-evolving notes, essays, and snapshots of learning</p>
         </header>
 
