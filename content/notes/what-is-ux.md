@@ -29,9 +29,9 @@ We do not, in other words, get to dictate the state of the person approaching us
 ## UX as Principle
 From this truth, emerges a principle: we should be laser-focused on our users. We do everything in our power to serve the human being experiencing our design. We should be human-centric.
 
-Jeff Bezos calls this "customer obsession." Though I don't love the idea of being "obssessed" with users—in truth, we're mindful of other factors, such as business needs, technical constraints, the like—it's a useful exaggeration to make a critical point: we never drop our gaze from being focused on the users. And we use whatever tools necessary (personas, job stories, etc) to keep our focus thus. Because we know that, at the end of the day, it's in our best interest to make a product that makes our customers happy and coming back[^1]. And the only way to know that is to know our product's users intimately, and listen to them.
+Jeff Bezos calls this "customer obsession." And obsession is a useful exaggeration, because it makes a critical point: we never drop our gaze from being focused on the users. And we use whatever tools necessary (personas, job stories, etc) to keep our focus thus. Because we know that, at the end of the day, it's in our best interest to make a product that makes our customers happy and coming back[^1]. And the only way to know that is to know our product's users intimately, and listen to them.
 
-(One caveat: although being human-centric is vital, we must also keep a wider aperture that encompasses the business, the market, and user's broader context. This is systems thinking, and it can help us understand any potential cascade of unintended consequences; see the next point!)
+(One caveat: although being human-centric is vital, we have to also keep a wider aperture that encompasses the business, the market, constraints, and a user's broader context. Systems Thinking, too, can help us keep an eye for unintended consequences that can easily slip past our awareness if we're single-mindedly about "the user."[^6])
 
 ## UX as Posture
 We aren't our users! And our users aren't us. So UX requires a posture of _epistemic humility_—humility about what we know, and how we know it. It requires a _willingness to be wrong_. 
@@ -75,14 +75,16 @@ Being able to contribute to the conversation means we're aware of the conversati
 
 ---
 
-I don't know that the question of "What is UX?" will ever be easily be settled. But I think it's worth trying ot think of UX as simultaneously many things. That's my working answer, at least. And I'm proud to be part of this great profession.
+I don't know that the question of "What is UX?" will ever be easily be settled. But I think it's worth trying ot think of UX as simultaneously many things. Different jobs and roles in the industry will emphasize different things at different times—in one role, I might be more focused on the _process_ as a researcher, and in another role, I might be focused on the _craft_ of UI or motion design. But there's a grand _tradition_ of trying to make the world better that unites us, even if it's in tension with the other grand tradition of trying to make a buck at others' expense. May we all work to design a better world, and (I hope) continue to debate what it is, exactly, that makes UX design UX design.
 
-[^1]: I should note here that it is not _always_ in the best interests of the company to make great products. As Ed Zitron notes in [Big Tech's Big Downgrade](https://www.businessinsider.com/tech-companies-ruining-apps-websites-internet-worse-google-facebook-amazon-2023-3), many companies prioritize shareholder and investor interests, seeking short-term gains at the expense of a good product. But I think it's fair to say that any gains thus realized will result in user attrition over time. (The pull of profit is probably the biggest "distortion field" exerting force on the discipline of UX today.)
+[^1]: I should note here that it is not _always_ in the best interests of the company to make great products. As Ed Zitron notes in [Big Tech's Big Downgrade](https://www.businessinsider.com/tech-companies-ruining-apps-websites-internet-worse-google-facebook-amazon-2023-3), many companies prioritize shareholder and investor interests, seeking short-term gains at the expense of a good product. But I think it's fair to say that any gains thus realized will result in user attrition over time. (The pull of short-term profits is possibly the biggest "distortion field" exerting force on the discipline of UX today.)
 
-[^2]: I want to write more about how to determine whether a product is well-crafted, but for now, I like Adam Stoddard's definition in ["Craft at scale" is a white whale"](https://aaadaaam.com/notes/craft-at-scale/): 1) Is it well-made? 2) Is it well-considered? 3) Is it beneficial? 4) Is it opinionated?
+[^6]: Sheryl Cababa makes this point wonderfully in the first few chapters of [Closing the Loop: Systems Thinking for Designers](https://rosenfeldmedia.com/books/systems-thinking-for-designers/). Not considering contexts and systems that the user is embedded in, and the unintended consequences that might result, is still another "distortion field" at work.
+
+[^2]: I want to write more about how to determine whether a product is well-crafted, but for now, I like Adam Stoddard's definition in ["Craft at scale" is a white whale"](https://aaadaaam.com/notes/craft-at-scale/): 1) Is it well-made? 2) Is it well-considered? 3) Is it beneficial? 4) Is it opinionated? (Still another side note: scale could be considered still _another_ potential UX distortion field, at least if measures aren't taken to empower teams and culture.)
 
 [^3]: The "unending conversation" is [a wonderful metaphor used by Kenneth Burke](https://kairos.technorhetoric.net/2.1/features/brent/burke.htm). It's used by him to describe philosophy and the humanities, and in the sense that design is a tradition that philosophizes about itself, I think applying the metaphor here is apt.
 
-[^4]: "The tension between craftmanship and profit" may be among my favorite (and provocative) answers to the question leading this essay.
+[^4]: "The tension between craftmanship and profit" may be among my favorite answers to the question leading this essay.
 
-[^5]: From Neil Postman's wonderful book "Technopoly"
+[^5]: From Neil Postman's provocative book [Technopoly](https://www.google.com/books/edition/Technopoly/-t56GrAjJEsC?hl=en).
