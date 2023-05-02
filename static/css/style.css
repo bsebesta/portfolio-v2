@@ -221,6 +221,12 @@
          text-underline-offset: .2ex;
       }
 
+         .prose a {
+            text-decoration: underline;
+            text-underline-offset: .3ex;
+            text-decoration-color: var(--color-accent-400);
+         }
+
       strong {
          font-weight: bold;
       }
