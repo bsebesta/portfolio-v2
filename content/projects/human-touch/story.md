@@ -116,11 +116,13 @@ class="wider" >}}
     title="Giving feedback and changing settings" 
     style="max-width: 420px" >}}
 
-And, I should note, from here I was just beginning to _systematize_ the visual design, and port things over into high-fidelity in preparation for the inevitable usability testing.
+{{< smallHeader >}}Transitioning to High-Fidelity{{< /smallHeader >}}
+{{< prominentText >}}Creating a high-fidelity visual system{{< /prominentText >}}
 
 {{< figureImage 
-src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/human-touch/humantouch_visualdesignbeginnings.png" 
-class="wider" >}}
+src="https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/human-touch/humantouch_preview_2.webp" 
+class="wider"
+title="Selections from the high-fidelity onboarding flow" >}}
 
 ---
 
@@ -129,7 +131,12 @@ class="wider" >}}
 
 One of the realities of agency life is _lots of contingency_. Due to the hardware around the chair taking longer than expected to deliver, the project was paused—and then I left. This left us with lots of research, some initial designs, and lots of untested assumptions.
 
-**Had I been able to proceed, I would have focused on usability testing around the onboarding and massage selection flows.** Some critical questions I would have liked to answer:
+---
+
+{{< smallHeader >}}Retrospective{{< /smallHeader >}}
+{{< prominentText >}}Had I been able to finish the project what would I have focused on?{{< /prominentText >}}
+
+I would have focused on usability testing around the onboarding and massage selection flows. Some critical questions I would have liked to answer:
 
 1. Did the goals we outline (relax specific muscle groups, tension relief, stretching, athletic performance) make sense? Do most users have one specific goal that they can prioritize easily? Or do most have multiple goals? And if the latter, would this screen have been difficult?
 2. Did framing the specific massage names in "simpler" language, like renaming "Swedish" as a "Moderate" massage, make sense? For users primed by these screens and the language we use, what _words_ do they use?
