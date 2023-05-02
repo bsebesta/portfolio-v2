@@ -791,7 +791,7 @@
    .homepage__sectionheader_small p {
       font-size: var(--step--1);
       line-height: var(--line-height-deck);
-      color: var(--color-neutral-600);
+      color: var(--color-article-metadata);
    }
 
    /* Project gallery grid
@@ -920,7 +920,7 @@
          }
 
       .homepage__notescard_metadata {
-         color: var(--color-neutral-300);
+         color: var(--color-neutral-400);
          font-size: var(--step--1);
          font-weight: bold;
          font-variant: small-caps;
