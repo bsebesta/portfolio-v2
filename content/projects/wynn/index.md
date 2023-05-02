@@ -25,7 +25,7 @@ layoutDetails:
 fpgallery:
     galleryShow: true
     galleryTitle: Wynn
-    galleryDesc: Creating an in-room virtual concierge for Wynn Resorts
+    galleryDesc: Designed an in-room voice concierge for 5,000 Wynn Resorts rooms with an 83% satisfaction rate
     galleryThumbnail: https://bsebesta-portfolio.s3.us-west-004.backblazeb2.com/case-studies/thumbnail_wynn_1.png
     galleryClass: workgallery-wynn
 weight: 3

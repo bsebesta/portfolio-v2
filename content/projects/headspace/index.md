@@ -25,7 +25,7 @@ layoutDetails:
 fpgallery:
     galleryShow: true
     galleryTitle: Headspace
-    galleryDesc: Guided meditations without touching your phone
+    galleryDesc: Crafted a voice-driven smart speaker app for guided meditations with almost 2 million users and an 85% retention rate
     galleryThumbnail: https://bsebesta-portfolio.s3.us-west-004.backblazeb2.com/case-studies/thumbnail_headspace_1.png
     galleryClass: workgallery-headspace
 weight: 4

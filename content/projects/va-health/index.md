@@ -29,7 +29,7 @@ layoutDetails:
 fpgallery:
     galleryShow: true
     galleryTitle: VA Health
-    galleryDesc: Re-imagining parts of the healthcare experience for US veterans
+    galleryDesc: Created a multimodal prescription management tool that improved time-on-task by 400%
     galleryThumbnail: https://bsebesta-portfolio.s3.us-west-004.backblazeb2.com/case-studies/thumbnail_vah_1.png
     galleryClass: workgallery-vah
 weight: 1

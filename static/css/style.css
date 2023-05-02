@@ -706,9 +706,8 @@
    /* Large section headers */
    .homepage__sectionheader_large {
       display: flex;
-      flex-flow: row nowrap;
-      align-items: center;
-      gap: var(--space-m);
+      flex-flow: column nowrap;
+      align-items: flex-start;
       /* These two properties give it a slight separation */
       /*padding-block-end: var(--space-3xs);
       border-bottom: solid 1px var(--color-accent-100);*/
@@ -720,7 +719,7 @@
 
       .homepage__sectionheader_large h2 {
          flex: 0 1 auto;
-         font-size: var(--step-3);
+         font-size: var(--step-4);
          color: var(--color-accent-800);
       }
 
@@ -795,10 +794,13 @@
       display: grid;
       grid-template-columns: repeat(var(--u-grid-columns),1fr);
       grid-template-areas:
+         "vah vah vah vah vah vah ht ht ht ht ht ht"
+         "wynn wynn wynn wynn wynn wynn hs hs hs hs hs hs";
+      /*grid-template-areas:
          "vah vah vah vah vah vah vah vah vah vah vah vah"
          "ht ht ht ht ht ht ht ht ht ht ht ht"
          "wynn wynn wynn wynn wynn wynn wynn wynn wynn wynn wynn wynn"
-         "hs hs hs hs hs hs hs hs hs hs hs hs";
+         "hs hs hs hs hs hs hs hs hs hs hs hs";*/
       gap: var(--u-grid-gutter);
    }
 
@@ -862,6 +864,12 @@
       .homepage__projectcard p {
          font-size: var(--step--1);
          color: var(--color-article-metadata);
+      }
+
+      @media screen and (min-width: 650px) {
+         .homepage__projectcard p {
+            font-size: var(--step--1);
+         }
       }
 
    /* Garden subgrid

@@ -22,7 +22,7 @@ layoutDetails:
 fpgallery:
     galleryShow: true
     galleryTitle: Human Touch
-    galleryDesc: Rethinking onboarding and multimodal interactions for luxury massage chairs
+    galleryDesc: Rethought onboarding and multimodal interactions for a luxury massage chair mobile app
     galleryThumbnail: https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/human-touch/thumbnail-humantouch-fp.png
     galleryClass: workgallery-humantouch
 weight: 2
