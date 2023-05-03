@@ -619,7 +619,6 @@
       grid-template-areas:
          "header header header header header header header header header header header header"
          "work work work work work work work work work work work work"
-         "visualui visualui visualui visualui visualui visualui visualui visualui visualui visualui visualui visualui"
          "garden garden garden garden garden garden garden garden garden garden garden garden";
    }
 
@@ -629,7 +628,6 @@
          grid-template-areas:
             ". header header header header header header header header header header ."
             "work work work work work work work work work work work work"
-            "visualui visualui visualui visualui visualui visualui visualui visualui visualui visualui visualui visualui"
             "garden garden garden garden garden garden garden garden garden garden garden garden";
       }
    }

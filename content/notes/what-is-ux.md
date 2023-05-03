@@ -3,7 +3,7 @@ title: What is UX?
 deck: Truth, principle, posture, process, craft, and tradition
 date: 2023-04-06
 category: essay
-growthStage: evergreen
+growthStage: budding
 epistemicStatus: 
 assumedAudience: Those interested in the various definitions of UX on offer, or in how I approach UX in particular.
 favorite: true
@@ -22,7 +22,7 @@ What is user experience design? Precision here can feel like a moving target, bu
 ## UX as Truth
 The phrase "UX design" can be stated as a fact: users _experience_ design. Which is to say, it is our designs (in combination with context) that influences, though doesn't dictate, the experience. The experience might be goal-oriented, 
 
-It's worth noting that we do not control all aspects of the experience. Our fellow human beings might use our product as we intended, or for something else entirely. They might be happy, or angry, or sad. They might be on a phone in a checkout line; a smart speaker in a kitchen; or a laoptop on a train. They might have fond feelings for our brand and product, or be predisposed to hate us for reasons rational or not.
+It's worth noting that we do not control all aspects of the experience. Our fellow human beings might use our product as we intended, or for something else entirely. They might be happy, or angry, or sad. They might be on a phone in a checkout line; a smart speaker in a kitchen; or a laptop on a train. They might have fond feelings for our brand and product, or be predisposed to hate us for reasons rational or not.
 
 We do not, in other words, get to dictate the state of the person approaching us. But we can do everything in our power to anticipate, and serve, their needs. We can do everything in our power to shape their experience.
 
@@ -38,7 +38,7 @@ We aren't our users! And our users aren't us. So UX requires a posture of _epist
 
 * **A Lack of Ego.** Any good technologist has confidence in their work, but they should also be willing to "kill their darlings" (to use Stephen King's memorable phrase). Our darlings might include our assumptions; our hopes; or our exciting feature idea sketched on a napkin after waking up at midnight with some brilliant idea. In other words, we must be willing to be wrong.
 * **Epistemic Humility.** Part-and-parcel with a lack of ego is a humility about what we know, and how we know it. Again, we have to render our assumptions visible and question them _ruthlessly_. It's fine to have hunches and intuition, but we should be on our guard to question all of them—or at least the riskiest ones!
-* **A Generalist's Mindset.** To some extent, designers should think broadly as well as deeply. Historically, designers have beeen [eclectic generalists]({{< relref "eclectic-generalists" >}}). Think Leonard DaVinci's interests in fields as different as biology and architecture, or Steve Jobs' passion for calligraphy.
+* **A Generalist's Mindset.** To some extent, designers should think broadly as well as deeply. Historically, designers have been [eclectic generalists]({{< relref "eclectic-generalists" >}}). Think Leonard DaVinci's interests in fields as different as biology and architecture, or Steve Jobs' passion for calligraphy.
 * **A Systems-oriented Mindset.** Unintended consequences follow when we don't zoom out and consider different levels of context, or look at problems from other angles, looking for possible second- and third-order consequences. We should be mindful of how every human being, product, and business is embedded in a plethora of _systems_.
 * **Empathy.** UX as principle blends with UX as posture: we must have empathy for the people on the other end of our designs. What are they after? What is their "job to be done"? Do they approach the problem the way we assume? What's their mental model? What really satisfies their desire? Are they using our the product the way we expect? We must be natively curious and empathetic.
 
@@ -75,7 +75,7 @@ Being able to contribute to the conversation means we're aware of the conversati
 
 ---
 
-I don't know that the question of "What is UX?" will ever be easily be settled. But I think it's worth trying ot think of UX as simultaneously many things. Different jobs and roles in the industry will emphasize different things at different times—in one role, I might be more focused on the _process_ as a researcher, and in another role, I might be focused on the _craft_ of UI or motion design. But there's a grand _tradition_ of trying to make the world better that unites us, even if it's in tension with the other grand tradition of trying to make a buck at others' expense. May we all work to design a better world, and (I hope) continue to debate what it is, exactly, that makes UX design UX design.
+I don't know that the question of "What is UX?" will ever be easily be settled. But I think it's worth trying to think of UX as simultaneously many things. Different jobs and roles in the industry will emphasize different things at different times—in one role, I might be more focused on the _process_ as a researcher, and in another role, I might be focused on the _craft_ of UI or motion design. But there's a grand _tradition_ of trying to make the world better that unites us, even if it's in tension with the other grand tradition of trying to make a buck at others' expense. May we all work to design a better world, and (I hope) continue to debate what it is, exactly, that makes UX design UX design.
 
 [^1]: I should note here that it is not _always_ in the best interests of the company to make great products. As Ed Zitron notes in [Big Tech's Big Downgrade](https://www.businessinsider.com/tech-companies-ruining-apps-websites-internet-worse-google-facebook-amazon-2023-3), many companies prioritize shareholder and investor interests, seeking short-term gains at the expense of a good product. But I think it's fair to say that any gains thus realized will result in user attrition over time. (The pull of short-term profits is possibly the biggest "distortion field" exerting force on the discipline of UX today.)
 
