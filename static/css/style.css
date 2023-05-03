@@ -946,13 +946,12 @@
       ========================================================================== */
 
       .homepage__skills {
-         /*background-color: blue;*/
       }
 
       .homepage__skillscard {
          transition: var(--transition-card-hover);
          cursor: pointer;
-         text-decoration: none;
+         text-decoration: none !important;
          overflow: hidden;
       }
 

@@ -41,8 +41,16 @@ My creative process is simple:
 ---
 
 ## Days 1-14: Copywork
-My goal for the first week? Just do copywork! I intentionally tried to jump around to different styles and systems (web, iOS, and Android) and do them quickly, noting how my workflow changed. Lessons I've learned so far:
+My goal for the first week? Copy. An unglorified form of work, but as Erik Kennedy notes, [an old tradition](https://www.smashingmagazine.com/2017/02/improving-ui-design-skills-copywork/):
 
+> Copywork is a technique that writers and painters have been using for centuries. It is the process of recreating an existing work as closely as possible in order to improve one’s skill. In our case, this means recreating a user interface (UI) design pixel for pixel.
+
+I intentionally tried to jump around to different styles and systems (web, iOS, and Android) and do them quickly, noting how my workflow changed.
+
+{{< regions/uidesigns count=3 >}}
+
+<!--
+Lessons I've learned so far:
 1. **Have iOS and Material Design kits handy.** I would frequently draw on toggles, buttons, bars, and switches from these two, so I made sure that I always had the Figma files with these laid out. I also made sure I had a standard artboard size for both iOS and Material Design: 390x?? for iOS, and 360x?? for Android. (These are, apparently, some of the most common resolutions out there.)
 2. **Check for Design Systems.** Some websites, such as Shopify, had their own design systems that are publicly accessible. I got used to doing a quick check to see if the product had a design langauge I could draw on.
 3. **Recognizing type families.** I quickly gained some fluency in identifying font stacks. For example, humanist; traditional; neogothic; geometric. I wouldn't always find a perfect fit, but I was able to keep my copied design in the same family.
@@ -51,7 +59,8 @@ My goal for the first week? Just do copywork! I intentionally tried to jump arou
 6. **Analyzing UI Designs.** Whenever I looked back over a design, I tried to 
 7. **Making components early.** Following Ridd's advice, I learned to make components early and often.
 8. **Essential Figma Plugins and Shortcuts.** Shortcuts, man. Use them!
+-->
 
 ---
 
-This is where I'm at so far, in the middle of copywork. I'll fill in more details (and screenshots!) once I get them!
+This is where I'm at so far, in the middle of _more intentional copywork_.
