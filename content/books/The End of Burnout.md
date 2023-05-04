@@ -26,6 +26,6 @@ Burnout, Malesic argues, originates in the gap between our ideals for work and t
 
 Alternatively, we can let go of both ideal and reality; the reality of work and our ideals go flying apart. And when *that* happens, well, that's *true* burnout. 
 
-Our cultural conversation focuses almost entirely on exhaustion, and so people who are "only" overextended are likely overcounted. This is in part because exhaustion is the "noble" excess. It's noble to work too hard! But to feel ineffective, that's nothing to be proud of or admit. But the most common profile is the frustrated.
+Our cultural conversation focuses almost entirely on exhaustion, and so people who are "only" overextended are likely overcounted. This is in part because exhaustion is the "noble" excess. It's noble to work too hard! But to feel ineffective or frustrated, that's nothing to be proud of or admit—yet it's the _most common profile_.
 
-The book contains a lot more than this, but this is my biggest takeaway. It's a wonderful read from a former academic who was himself burned out, and wanted to understand what it means. I recommend it to anyone worried about burnout in themselves or in their friends.
+The book contains a lot more than this, but this is my biggest takeaway. It's a wonderful read from a former academic who was himself burned out, and wanted to understand what it means.
