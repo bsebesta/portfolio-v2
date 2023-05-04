@@ -1,0 +1,31 @@
+{{- define "main" -}}
+
+<main>
+<article class="center stack page-margin">
+
+    {{ partial "headers/book.html" . }}
+
+    <section class="book-info wide">
+        <div class="book-info__cover" style="background-image: url('{{ .Site.Params.urlBookCovers }}{{ .Params.cover }}')">&nbsp;</div>
+        <div class="book-info__metadata prose">
+            <h2 class="book-info__minorheader">Author</h2>
+            <p class="book-info__metadata__authors">{{ partial "strings/str-authors-nolinks.html" .Params.authors }}</p>
+            <h2 class="book-info__minorheader">Publisher</h2>
+            <p class="book-info__metadata__publisher">{{ .Params.publishers }}</p>
+            <h2 class="book-info__minorheader">Published</h2>
+            <p class="book-info__metadata__year">{{ .Params.publishedYear }}</p>
+            <h2 class="book-info__minorheader">Read</h2>
+            <p class="book-info__metadata__isbn">{{ .Params.dateYear }}</p>
+        </div>
+    </section>
+    
+    <section class="center-intrinsic prose">
+
+        {{ .Content }}
+
+    </section>
+        
+</article>
+</main>
+
+{{- end -}}

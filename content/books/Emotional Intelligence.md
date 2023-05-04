@@ -10,7 +10,7 @@ coverGoogle: https://books.google.com/books/content?id=OgXxhmGiRB0C&printsec=fro
 pageCount: 368
 authors: Daniel Goleman
 publishers: Bantam
-published: 2012-01-11
+published: 1995-09-27
 publishedYear: 2012
 shelves:
 - non-fiction

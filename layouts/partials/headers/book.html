@@ -1,0 +1,8 @@
+<header class="header_garden wider">
+    <p class="breadcrumb">{{ with .Params.category }}<a href="/books/">{{ . }}</a>{{ end }}</p>
+    <h1 class="header_garden__title">{{ .Title }}</h1>
+    <p class="deck">by <em>{{ partial "strings/str-authors-nolinks.html" .Params.authors }}</em></p>
+    <!-- {{ with .Date }} <p class="header_garden__origin">
+        <strong>Planted</strong> {{ .Format "January 2006" }}
+    </p>{{ end }} -->
+</header>

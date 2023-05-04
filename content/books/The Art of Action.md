@@ -22,3 +22,5 @@ skills:
 portfolioFeature: true
 weight: 8
 ---
+
+This book is a fascinating mix of modern business/ software strategy and cultural critique, with a dash of military history to boot. It's also a fascinating insight into a model of leadership Bungay calls "directed opportunism," which is precisely about how to lead humans in a business setting when we exist in a complex, fast-paced, and always-changing world.

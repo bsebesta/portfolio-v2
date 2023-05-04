@@ -2082,3 +2082,34 @@
             .casestudy__footer_buttonwrapper svg {
                fill: var(--color-accent-700);
             }
+
+   /* Case Study "Learn More" CTA
+      ========================================================================== */
+
+   .book-info {
+      display: flex;
+      flex-flow: row nowrap;
+      width: 100%;
+      gap: var(--space-s);
+   }
+
+   .book-info__cover {
+      aspect-ratio: 1/1.5;
+      width: 100%;
+      max-width: calc(var(--space-3xl)*3);
+      background-size: cover;
+   }
+
+   /* Variation on .casestudy__minorheader */
+   .book-info__minorheader {
+      font-size: var(--step--1);
+      font-family: var(--font-family-body);
+      font-weight: 700;
+      color: var(--color-accent-800);
+      font-variant: small-caps;
+      text-transform: lowercase;
+   }
+
+      .book-info__minorheader + * {
+         margin-block-start: var(--space-3xs);
+      }
