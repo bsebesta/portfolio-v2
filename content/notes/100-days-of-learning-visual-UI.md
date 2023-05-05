@@ -41,7 +41,7 @@ My creative process is simple:
 ---
 
 ## Days 1-14: Copywork
-My goal for the first week? Copy. An unglorified form of work, but as Erik Kennedy notes, [an old tradition](https://www.smashingmagazine.com/2017/02/improving-ui-design-skills-copywork/):
+My goal for the first week? Copywork. An unglorified form of work, but as Erik Kennedy notes, [an old tradition](https://www.smashingmagazine.com/2017/02/improving-ui-design-skills-copywork/)[^1].
 
 > Copywork is a technique that writers and painters have been using for centuries. It is the process of recreating an existing work as closely as possible in order to improve one’s skill. In our case, this means recreating a user interface (UI) design pixel for pixel.
 
@@ -64,3 +64,5 @@ Lessons I've learned so far:
 ---
 
 This is where I'm at so far, in the middle of _more intentional copywork_.
+
+[^1]: See also [Khoi Vinh's post on copywork](https://www.subtraction.com/2016/08/11/the-underestimated-merits-of-copying-someone-elses-work/).

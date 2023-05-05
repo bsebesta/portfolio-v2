@@ -44,28 +44,27 @@
         </div>
     </section>
 
-    <!-- Work
     <section class="homepage__visualuidesigns stack">
         <header class="homepage__sectionheader_large">
             <h2>Visual UI</h2>
-            <p>Currently upskilling with <a href="{{ relref . "100-days-of-learning-visual-ui" }}">100 Days of UI Design</a>, following my completion of <a href="https://shiftnudge.com/">Shift Nudge</a> and <a href="https://www.figma.academy/">Figma Academy</a>.</p>
+            <p>Snapshots of visual UI designs</p>
         </header>
         <div class="grid-small">
-            {{ range first 9 (where .Site.RegularPages.ByDate.Reverse "Section" "uidesigns") }}
-            <a href="{{ .Permalink }}" class="homepage__skillscard">
-            <article class="stack-smallest">
-                <div class="homepage__skillscard_frame"{{ with .Params.thumbnail }} style="background-image: url('https://portfolio-v2.s3.us-west-004.backblazeb2.com/uidesigns/{{ . }}')"{{ end }}>&nbsp;</div>
-                <h2>{{ .Title }}</h2>
-                <div class="cluster homepage__skillscard_tags">
-                    {{ range .Params.tags }}
-                    <span class="homepage__skillscard_tag">{{ . }}</span>
-                    {{ end }}
-                </div>
+
+            <article class="homepage__skillscard">
+                <div class="homepage__skillscard_frame" style="background-image: url('https://portfolio-v2.s3.us-west-004.backblazeb2.com/uidesigns/frontpage/uidesign_frontpage_1.webp')">&nbsp;</div>
             </article>
-            </a>
-            {{ end }}
+
+            <article class="homepage__skillscard">
+                <div class="homepage__skillscard_frame" style="background-image: url('https://portfolio-v2.s3.us-west-004.backblazeb2.com/uidesigns/frontpage/uidesign_frontpage_2.webp')">&nbsp;</div>
+            </article>
+
+            <article class="homepage__skillscard">
+                <div class="homepage__skillscard_frame" style="background-image: url('https://portfolio-v2.s3.us-west-004.backblazeb2.com/uidesigns/frontpage/uidesign_frontpage_3.webp')">&nbsp;</div>
+            </article>
+
         </div>
-    </section>-->
+    </section>
 
     <!-- Digital Garden -->
     <section class="homepage__garden stack">

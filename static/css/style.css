@@ -619,6 +619,7 @@
       grid-template-areas:
          "header header header header header header header header header header header header"
          "work work work work work work work work work work work work"
+         "uidesigns uidesigns uidesigns uidesigns uidesigns uidesigns uidesigns uidesigns uidesigns uidesigns uidesigns uidesigns "
          "garden garden garden garden garden garden garden garden garden garden garden garden";
    }
 
@@ -628,13 +629,14 @@
          grid-template-areas:
             ". header header header header header header header header header header ."
             "work work work work work work work work work work work work"
+            "uidesigns uidesigns uidesigns uidesigns uidesigns uidesigns uidesigns uidesigns uidesigns uidesigns uidesigns uidesigns "
             "garden garden garden garden garden garden garden garden garden garden garden garden";
       }
    }
 
    .homepage__header { grid-area: header; }
    .homepage__work { grid-area: work; }
-   .homepage__visualuidesigns { grid-area: visualui; }
+   .homepage__visualuidesigns { grid-area: uidesigns; }
    .homepage__garden { grid-area: garden; }
 
    /* Header
@@ -950,7 +952,6 @@
 
       .homepage__skillscard {
          transition: var(--transition-card-hover);
-         cursor: pointer;
          text-decoration: none !important;
          overflow: hidden;
       }
