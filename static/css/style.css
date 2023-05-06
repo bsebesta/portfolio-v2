@@ -639,6 +639,29 @@
    .homepage__visualuidesigns { grid-area: uidesigns; }
    .homepage__garden { grid-area: garden; }
 
+   /* Visual UI Designs Grid
+      ========================================================================== */
+   
+      .homepage__visualuidesigns_grid1 {
+         display: grid;
+         gap: var(--space-m);
+         grid-template-columns: 1fr;
+      }
+
+      @media screen and (min-width: 950px) {
+      }
+
+      .homepage__visualuidesigns_grid2 {
+         display: grid;
+         gap: var(--space-m);
+         grid-template-columns: 1fr;
+      }
+
+      @media screen and (min-width: 600px) {
+         .homepage__visualuidesigns_grid1 { grid-template-columns: 1fr 1fr 1fr; }
+         .homepage__visualuidesigns_grid2 { grid-template-columns: 1fr 1fr; }
+      }
+
    /* Header
       ========================================================================== */
 
