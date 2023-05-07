@@ -2158,3 +2158,8 @@
       .book-info__minorheader + * {
          margin-block-start: var(--space-3xs);
       }
+
+
+   .scroll-reveal {
+      visibility: hidden;
+   }
