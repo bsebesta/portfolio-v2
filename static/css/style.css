@@ -930,6 +930,40 @@
          }
       }
 
+   /* Homepage recommendations grid
+      ========================================================================== */
+
+   .homepage__recommendations_grid {
+      display: grid;
+      grid-template-columns: repeat(var(--u-grid-columns),1fr);
+      gap: var(--u-grid-gutter);
+      grid-template-areas:
+         "dale dale dale dale dale dale dale dale dale dale dale dale"
+         "greg greg greg greg greg greg greg greg greg greg greg greg"
+         "ben ben ben ben ben ben ben ben ben ben ben ben"
+         "lauren lauren lauren lauren lauren lauren lauren lauren lauren lauren lauren lauren";
+   }
+
+   @media screen and (min-width: 650px) {
+      .homepage__recommendations_grid {
+         grid-template-areas:
+            "dale dale dale dale dale dale greg greg greg greg greg greg"
+            "ben ben ben ben ben ben lauren lauren lauren lauren lauren lauren";
+      }
+   }
+
+   @media screen and (min-width: 1400px) {
+      .homepage__recommendations_grid {
+         grid-template-areas:
+            "dale dale dale greg greg greg ben ben ben lauren lauren lauren";
+      }
+   }
+
+   .reco_dale { grid-area: dale; }
+   .reco_greg { grid-area: greg; }
+   .reco_ben { grid-area: ben; }
+   .reco_lauren { grid-area: lauren; }
+
    /* Garden subgrid
       ========================================================================== */
 
@@ -1184,16 +1218,13 @@
       transition: var(--transition-card-hover);
    }
 
-      figure.about__recommendationcard:hover {
-         transform: scale(1.01);
-         transform-origin: center;
-      }
-
       figure.about__recommendationcard blockquote {
          font-size: var(--step--1);
          background-color: var(--color-accent-100);
          border: solid 1px var(--color-accent-100);
          padding: var(--space-s);
+         box-shadow: var(--box-shadow-sm);
+         transition: var(--transition-card-hover);
       }
 
       figure.about__recommendationcard figcaption {
@@ -1208,6 +1239,15 @@
          display: block;
          color: var(--color-neutral-500);
          font-size: var(--step--1);
+      }
+
+   figure.about__recommendationcard:hover {
+      transform: scale(1.01);
+      transform-origin: center;
+   }
+
+      figure.about__recommendationcard:hover blockquote {
+         box-shadow: var(--box-shadow-md);
       }
 
    .about__keynotes {
