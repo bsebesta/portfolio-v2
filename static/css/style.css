@@ -620,6 +620,7 @@
          "header header header header header header header header header header header header"
          "work work work work work work work work work work work work"
          "uidesigns uidesigns uidesigns uidesigns uidesigns uidesigns uidesigns uidesigns uidesigns uidesigns uidesigns uidesigns "
+         "recos recos recos recos recos recos recos recos recos recos recos recos"
          "garden garden garden garden garden garden garden garden garden garden garden garden";
    }
 
@@ -629,7 +630,8 @@
          grid-template-areas:
             ". header header header header header header header header header header ."
             "work work work work work work work work work work work work"
-            "uidesigns uidesigns uidesigns uidesigns uidesigns uidesigns uidesigns uidesigns uidesigns uidesigns uidesigns uidesigns "
+            "uidesigns uidesigns uidesigns uidesigns uidesigns uidesigns uidesigns uidesigns uidesigns uidesigns uidesigns uidesigns"
+            "recos recos recos recos recos recos recos recos recos recos recos recos"
             "garden garden garden garden garden garden garden garden garden garden garden garden";
       }
    }
@@ -637,6 +639,7 @@
    .homepage__header { grid-area: header; }
    .homepage__work { grid-area: work; }
    .homepage__visualuidesigns { grid-area: uidesigns; }
+   .homepage__recommendations { grid-area: recos; }
    .homepage__garden { grid-area: garden; }
 
    .homepage__pattern {
