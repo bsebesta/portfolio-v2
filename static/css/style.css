@@ -875,7 +875,7 @@
       }
    }
 
-   @media screen and (min-width: 1100px) {
+   @media screen and (min-width: 1400px) {
       .homepage__work_casestudygrid {
          display: grid;
          grid-template-columns: repeat(var(--u-grid-columns),1fr);
