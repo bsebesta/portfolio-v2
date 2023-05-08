@@ -18,7 +18,7 @@ intro:
     - Visual UI Design
 assetPath: 'https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/headspace/'
 layoutDetails:
-    headerImage: thumbnail-headspace-hero.png
+    headerImage: thumbnail-headspace-hero.webp
     #previewPartialPath: "projects/headspace/preview.html"
     #resultsPartialPath: "projects/headspace/results.html"
     #audioFileClasses:
@@ -26,7 +26,7 @@ fpgallery:
     galleryShow: true
     galleryTitle: Headspace
     galleryDesc: Crafted a voice-driven smart speaker app for guided meditations with almost 2 million users and an 85% retention rate
-    galleryThumbnail: https://bsebesta-portfolio.s3.us-west-004.backblazeb2.com/case-studies/thumbnail_headspace_1.png
+    galleryThumbnail: https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/headspace/thumbnail_headspace_1.webp
     galleryClass: workgallery-headspace
 weight: 4
 head: |

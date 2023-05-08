@@ -30,7 +30,7 @@ fpgallery:
     galleryShow: true
     galleryTitle: VA Health
     galleryDesc: Created a multimodal prescription management tool that improved time-on-task by 400%
-    galleryThumbnail: https://bsebesta-portfolio.s3.us-west-004.backblazeb2.com/case-studies/thumbnail_vah_1.png
+    galleryThumbnail: https://portfolio-v2.s3.us-west-004.backblazeb2.com/projects/va-health/thumbnail_vah_1.webp
     galleryClass: workgallery-vah
 weight: 1
 head: |
